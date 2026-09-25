@@ -1,0 +1,7 @@
+README.md
+package.json
+sources.json
+editorial-prompt.md
+index.html
+scripts/fetch-and-summarize.mjs
+.github/workflows/daily-signal.yml
