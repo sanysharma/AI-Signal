@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-25",
+  "stories": [
+    {
+      "category": "AI-Native UX",
+      "title": "Canvas interfaces replace chat for complex developer tasks",
+      "summary": "GitHub explores moving beyond conversational chat boxes to canvas-based UIs when developers require tangible, spatial manipulation of code and artifacts.",
+      "design_implication": "Platform designers should replace ephemeral, single-stream chat logs with multi-dimensional canvas surfaces that let users directly inspect and manipulate persistent AI-generated artifacts.",
+      "source_name": "GitHub Blog",
+      "source_url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+      "source_date": "2026-09-24T20:00:00.000Z"
+    },
+    {
+      "category": "AI Telemetry & UX",
+      "title": "Datadog infers AI agent satisfaction from telemetry instead of ratings",
+      "summary": "Datadog introduced a weak-labeling approach to infer AI agent user satisfaction directly from telemetry when users bypass explicit thumbs-up or thumbs-down feedback.",
+      "design_implication": "Enterprise AI designers cannot rely on explicit rating widgets alone; platform telemetry and implicit user behavior must be captured to evaluate agent performance and identify UX friction.",
+      "source_name": "Datadog Blog",
+      "source_url": "https://www.datadoghq.com/blog/agent-feedback-classification-skill/",
+      "source_date": "2026-09-22T00:00:00.000Z"
+    },
+    {
+      "category": "Agentic Developer Platforms",
+      "title": "Cloudflare Worker Previews isolate environments for AI agent changes",
+      "summary": "Cloudflare introduced Worker Previews, providing each code branch with dedicated URLs, configurations, state, and observability so humans and AI agents can test parallel changes safely.",
+      "design_implication": "As AI agents autonomously author changes, platform UX must provide ephemeral, isolated staging views with dedicated observability so operators can inspect side effects before merging to production.",
+      "source_name": "Cloudflare Blog",
+      "source_url": "https://blog.cloudflare.com/worker-previews/",
+      "source_date": "2026-09-22T13:00:00.000Z"
+    },
+    {
+      "category": "Agentic UX Architecture",
+      "title": "NN/g defines three distinct tiers of context for AI agents",
+      "summary": "Nielsen Norman Group outlines three critical tiers of context curated by power users: global (across tasks), local (task-specific), and ambient (raw streams like email).",
+      "design_implication": "Agent interfaces should cleanly separate context controls into persistent global configurations, focused task workspaces, and ambient background data feeds, rather than collapsing all context into a single prompt box.",
+      "source_name": "Nielsen Norman Group",
+      "source_url": "https://www.nngroup.com/articles/3-agent-context-roles/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "source_date": "2026-09-18T17:00:00.000Z"
+    },
+    {
+      "category": "Cloud Observability UX",
+      "title": "AWS CloudWatch Omni introduces agentic workload evaluation",
+      "summary": "AWS launched CloudWatch Omni to trace, evaluate, and experiment with AI agents across frameworks, providing built-in evaluators for quality, correctness, and coherence inside IDEs and web views.",
+      "design_implication": "AI observability dashboards need to blend runtime traces with qualitative evaluation metrics like coherence and correctness, embedded directly inside developer workspaces rather than siloed monitoring tools.",
+      "source_name": "AWS News Blog",
+      "source_url": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/",
+      "source_date": "2026-09-22T22:21:13.000Z"
+    },
+    {
+      "category": "Enterprise IAM",
+      "title": "Cloudflare adds granular access controls for AI agents and teammates",
+      "summary": "Cloudflare updated Workers authorization to support resource-scoped access and narrower Developer Platform roles for human teammates, CI tokens, and automated AI agents.",
+      "design_implication": "Enterprise IAM design systems must treat autonomous AI agents and bots as distinct identity personas, offering granular, per-resource permission controls alongside traditional human user management.",
+      "source_name": "Cloudflare Blog",
+      "source_url": "https://blog.cloudflare.com/workers-granular-authorization/",
+      "source_date": "2026-09-15T13:00:00.000Z"
+    },
+    {
+      "category": "Large-Scale Diff UX",
+      "title": "GitHub rebuilds diff rendering for massive agent-generated pull requests",
+      "summary": "GitHub re-engineered the diff surface within the GitHub Copilot app to open million-line pull requests containing hundreds of inline review comments without degradation.",
+      "design_implication": "As coding agents generate larger volumes of code, review surfaces require high-performance diff virtualization and chunking to keep human oversight legible and responsive.",
+      "source_name": "GitHub Blog",
+      "source_url": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/",
+      "source_date": "2026-09-23T18:29:49.000Z"
+    }
+  ]
+}
