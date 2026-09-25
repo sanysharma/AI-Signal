@@ -1,3 +1,39 @@
+const RETRYABLE_STATUS_CODES = new Set([429, 500, 502, 503, 504]);
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function requestGemini(model, body) {
+  const maxAttempts = 4;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${GEMINI_API_KEY}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      }
+    );
+
+    if (res.ok) {
+      return res.json();
+    }
+
+    const errorText = await res.text();
+
+    if (!RETRYABLE_STATUS_CODES.has(res.status) || attempt === maxAttempts) {
+      throw new Error(`Gemini API error ${res.status}: ${errorText}`);
+    }
+
+    const delayMs = 2 ** (attempt - 1) * 2000;
+    console.warn(
+      `Gemini ${model} failed with ${res.status}; retrying in ${delayMs / 1000}s`
+    );
+    await sleep(delayMs);
+  }
+}
 #!/usr/bin/env node
 // AI Signal — daily digest job.
 // Fetches configured RSS sources, runs the candidates through the editorial
