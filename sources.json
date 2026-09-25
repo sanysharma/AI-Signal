@@ -1,0 +1,39 @@
+{
+  "_readme": "The 'sources' array is wired into the pipeline and verified working as of Sept 2026. 'candidates_to_verify' are the rest of the ~35-source registry from the pitch — check each has a working RSS/Atom feed before moving it into 'sources'. Expand deliberately, a few at a time.",
+
+  "sources": [
+    { "name": "Google AI Blog", "group": "AI / Product", "feed": "https://blog.google/technology/ai/rss/" },
+    { "name": "Cloudflare Blog", "group": "Enterprise / Cloud", "feed": "https://blog.cloudflare.com/rss/" },
+    { "name": "Nielsen Norman Group", "group": "Design / Research", "feed": "https://www.nngroup.com/feed/rss/" },
+    { "name": "GitHub Blog", "group": "AI / Product", "feed": "https://github.blog/feed/" },
+    { "name": "AWS News Blog", "group": "Enterprise / Cloud", "feed": "https://aws.amazon.com/blogs/aws/feed/" },
+    { "name": "Shopify Engineering", "group": "Design / Engineering", "feed": "https://shopify.engineering/blog.atom" },
+    { "name": "Datadog Blog", "group": "Enterprise / Cloud", "feed": "https://www.datadoghq.com/blog/index.xml" }
+  ],
+
+  "candidates_to_verify": [
+    { "name": "OpenAI", "group": "AI / Product", "note": "check openai.com/news for a feed" },
+    { "name": "Anthropic", "group": "AI / Product", "note": "check anthropic.com/news for a feed" },
+    { "name": "Microsoft AI", "group": "AI / Product", "note": "check blogs.microsoft.com/ai" },
+    { "name": "Adobe", "group": "AI / Product", "note": "blog.adobe.com likely has /feed" },
+    { "name": "Figma", "group": "AI / Product", "note": "figma.com/blog — verify feed path" },
+    { "name": "Vercel", "group": "AI / Product", "note": "vercel.com/blog — verify feed path" },
+    { "name": "Google Cloud", "group": "AI / Product", "note": "cloud.google.com/blog — has RSS by topic" },
+    { "name": "Microsoft Azure", "group": "AI / Product", "note": "azure.microsoft.com/blog — verify feed path" },
+    { "name": "Microsoft Design", "group": "Design / Engineering", "note": "verify feed path" },
+    { "name": "Google Design", "group": "Design / Engineering", "note": "often a Medium publication — try /feed" },
+    { "name": "IBM Design", "group": "Design / Engineering", "note": "verify feed path" },
+    { "name": "Airbnb Design", "group": "Design / Engineering", "note": "Medium publication — try medium.com/feed/airbnb-design" },
+    { "name": "Uber Engineering", "group": "Design / Engineering", "note": "uber.com/blog/engineering — verify feed path" },
+    { "name": "Stripe", "group": "Design / Engineering", "note": "stripe.com/blog — try /feed.rss" },
+    { "name": "Okta", "group": "Enterprise", "note": "okta.com/blog — verify feed path" },
+    { "name": "Palo Alto Networks", "group": "Enterprise", "note": "verify feed path" },
+    { "name": "Wiz", "group": "Enterprise", "note": "wiz.io/blog — verify feed path" },
+    { "name": "ServiceNow", "group": "Enterprise", "note": "verify feed path" },
+    { "name": "Salesforce", "group": "Enterprise", "note": "salesforce.com/news — verify feed path" },
+    { "name": "HubSpot", "group": "Enterprise", "note": "verify feed path" },
+    { "name": "arXiv cs.HC", "group": "Research", "note": "http://export.arxiv.org/rss/cs.HC — feed exists but blocked WebFetch's robots check; test directly from the script" },
+    { "name": "Google Research", "group": "Research", "note": "research.google/blog — verify feed path" },
+    { "name": "Microsoft Research", "group": "Research", "note": "microsoft.com/research/blog — verify feed path" }
+  ]
+}
