@@ -1,0 +1,11 @@
+{
+  "name": "ai-signal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "digest": "node scripts/fetch-and-summarize.mjs"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}
