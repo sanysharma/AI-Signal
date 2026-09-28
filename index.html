@@ -1,80 +1,1213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Signal</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#EDF1EE; --surface:#FFFFFF; --text:#12211B; --muted:#57685F;
-    --line:#D5DED8; --accent:#0E7A56; --accent-soft:#DCEEE5;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#0C1210; --surface:#131C18; --text:#E6EEE9; --muted:#8FA398;
-      --line:#213029; --accent:#3FDBA0; --accent-soft:#173229;
-    }
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--bg);color:var(--text);font-family:'Public Sans',-apple-system,sans-serif;padding:24px 20px 60px;}
-  .wrap{max-width:720px;margin:0 auto;}
-  h1{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:2rem;margin:0;}
-  .meta{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:6px;}
-  header{border-bottom:2px solid var(--text);padding-bottom:16px;margin-bottom:28px;}
-  .story{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:22px 24px;margin-bottom:18px;}
-  .cat{font-family:'JetBrains Mono',monospace;font-size:0.66rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);background:var(--accent-soft);padding:3px 8px;border-radius:3px;display:inline-block;margin-bottom:10px;}
-  .story h2{font-family:'Newsreader',Georgia,serif;font-size:1.15rem;font-weight:600;margin:0 0 10px 0;}
-  .story p{font-size:0.94rem;line-height:1.6;margin:0 0 10px 0;}
-  .impl{font-size:0.88rem;border-top:1px dashed var(--line);padding-top:10px;margin-top:4px;}
-  .impl b{font-family:'JetBrains Mono',monospace;font-size:0.66rem;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px;}
-  .src{font-size:0.78rem;color:var(--muted);margin-top:10px;}
-  .src a{color:var(--accent);}
-  .empty{font-size:0.95rem;color:var(--muted);padding:40px 0;text-align:center;}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="A 4-minute daily brief on how AI is changing design work, with a design implication for every story.">
+<meta property="og:title" content="AI Signal — AI news for designers">
+<meta property="og:description" content="A 4-minute daily brief on how AI is changing design work.">
+<meta property="og:url" content="https://sanysharma.github.io/AI-Signal/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<!-- PostHog: paste the snippet from PostHog → Settings → Project → "Web snippet" here (it defines window.posthog).
+     Until it is added, all track() calls do nothing. -->
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>AI Signal — AI news for designers</title>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>AI Signal</h1>
-      <div class="meta" id="date-line">Loading…</div>
-    </header>
-    <div id="stories"></div>
-  </div>
-
-<script>
-async function load() {
-  const container = document.getElementById('stories');
-  const dateLine = document.getElementById('date-line');
-  try {
-    const index = await fetch('data/index.json').then(r => r.json());
-    const latest = index.latest;
-    if (!latest) throw new Error('no digest yet');
-    dateLine.textContent = latest;
-    const day = await fetch(`data/${latest}.json`).then(r => r.json());
-    if (!day.stories || day.stories.length === 0) {
-      container.innerHTML = '<div class="empty">No stories cleared the bar today.</div>';
-      return;
-    }
-    container.innerHTML = day.stories.map(s => `
-      <article class="story">
-        <span class="cat">${escapeHtml(s.category)}</span>
-        <h2>${escapeHtml(s.title)}</h2>
-        <p>${escapeHtml(s.summary)}</p>
-        <div class="impl"><b>Design implication</b>${escapeHtml(s.design_implication)}</div>
-        <div class="src"><a href="${s.source_url}" target="_blank" rel="noopener">${escapeHtml(s.source_name)}</a> · ${escapeHtml(s.source_date || '')}</div>
-      </article>
-    `).join('');
-  } catch (err) {
-    dateLine.textContent = 'No digest published yet';
-    container.innerHTML = '<div class="empty">Run the workflow once (Actions tab → Daily AI Signal → Run workflow) to publish the first digest.</div>';
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ECEDF0; --surface:#FFFFFF; --surface-2:#F6F7F9; --text:#0F1115; --muted:#5B6270;
+  --line:#D9DCE2; --accent:#3D5AFE; --accent-soft:#E3E8FF; --redline:#F0442F;
+  --splash-bg:#0F1115; --splash-text:#F2F3F5; --splash-muted:#8B92A0;
+  --c-iam:#0E7A56; --c-iam-soft:#DCEEE5;
+  --c-cloud:#33538F; --c-cloud-soft:#DFE5F1;
+  --c-ai:#A6701A; --c-ai-soft:#F4E7CE;
+  --c-design:#7C4188; --c-design-soft:#EEDFF0;
+  --c-martech:#2F7471; --c-martech-soft:#D8ECEA;
+  --c-other:#A6501F; --c-other-soft:#F3E0D2;
+  --shadow:0 18px 40px -22px rgba(15,17,21,.35);
+  --display:'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+  --body:'Geist', -apple-system, 'Segoe UI', sans-serif;
+  --mono:'Geist Mono', ui-monospace, 'SFMono-Regular', monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B0C0F; --surface:#15171C; --surface-2:#1B1E24; --text:#ECEDEF; --muted:#9097A4;
+    --line:#262A32; --accent:#8193FF; --accent-soft:#1D2345; --redline:#FF7867;
+    --splash-bg:#07080A;
+    --c-iam:#3FDBA0; --c-iam-soft:#12291F;
+    --c-cloud:#86A2E6; --c-cloud-soft:#18203A;
+    --c-ai:#E6B458; --c-ai-soft:#2E2412;
+    --c-design:#D29BDC; --c-design-soft:#2B1D30;
+    --c-martech:#6BC7C2; --c-martech-soft:#132B2A;
+    --c-other:#E8925A; --c-other-soft:#2D1E14;
+    --shadow:0 18px 40px -22px rgba(0,0,0,.8);
+    color-scheme:dark;
   }
 }
-function escapeHtml(str) {
-  return String(str ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+:root[data-theme="dark"]{
+  --bg:#0B0C0F; --surface:#15171C; --surface-2:#1B1E24; --text:#ECEDEF; --muted:#9097A4;
+  --line:#262A32; --accent:#8193FF; --accent-soft:#1D2345; --redline:#FF7867;
+  --splash-bg:#07080A;
+  --c-iam:#3FDBA0; --c-iam-soft:#12291F;
+  --c-cloud:#86A2E6; --c-cloud-soft:#18203A;
+  --c-ai:#E6B458; --c-ai-soft:#2E2412;
+  --c-design:#D29BDC; --c-design-soft:#2B1D30;
+  --c-martech:#6BC7C2; --c-martech-soft:#132B2A;
+  --c-other:#E8925A; --c-other-soft:#2D1E14;
+  --shadow:0 18px 40px -22px rgba(0,0,0,.8);
+  color-scheme:dark;
 }
-load();
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow:hidden}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- app shell ---------- */
+.app{height:100%;display:flex;flex-direction:column}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--bg);position:relative;z-index:5}
+.brand{display:flex;align-items:baseline;gap:8px;min-width:0}
+.logo{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:-.03em;line-height:1;display:flex;align-items:center;gap:6px}
+.logo i{width:10px;height:10px;border:2px solid var(--accent);display:inline-block;position:relative;transform:rotate(45deg)}
+.logo i::after{content:"";position:absolute;inset:2px;background:var(--accent)}
+.brand small{font-family:var(--mono);font-size:.68rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.tools{display:flex;align-items:center;gap:10px}
+.seg{display:flex;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:3px;position:relative}
+.seg button{position:relative;z-index:1;padding:6px 12px;font-size:.8rem;font-weight:500;border-radius:999px;color:var(--muted);transition:color .25s}
+.seg button[aria-pressed="true"]{color:var(--text)}
+.seg .thumb{position:absolute;top:3px;bottom:3px;border-radius:999px;background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.15);transition:left .35s cubic-bezier(.3,1.4,.5,1),width .35s}
+.ring{width:34px;height:34px;position:relative;display:grid;place-items:center}
+.ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.ring span{font-family:var(--mono);font-size:.62rem;font-variant-numeric:tabular-nums}
+.icon-btn{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--muted)}
+.icon-btn:hover{color:var(--text);border-color:var(--muted)}
+.view{flex:1;min-height:0;position:relative}
+
+/* ---------- swipe (stack) mode ---------- */
+.stack{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;overscroll-behavior:contain}
+.stack::-webkit-scrollbar{display:none}
+.slide{height:100%;scroll-snap-align:start;scroll-snap-stop:always;display:grid;place-items:center;padding:14px 16px}
+.card{width:100%;max-width:470px;height:100%;max-height:780px;background:var(--surface);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);border:1px solid var(--line);transform-origin:50% 100%;transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .5s}
+.slide.away .card{transform:scale(.94) translateY(-10px);opacity:.45}
+.art{position:relative;flex:0 0 40%;min-height:150px;overflow:hidden}
+@media (max-height:860px){.card .art{flex-basis:30%;min-height:120px}}
+.art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.spec{position:absolute;right:14px;top:12px;font-family:var(--mono);font-size:.6rem;color:var(--redline);letter-spacing:.04em}
+.cbody{flex:1;min-height:0;overflow-y:auto;padding:18px 22px 16px;display:flex;flex-direction:column;gap:12px}
+.meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted)}
+.chip{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px;font-weight:500}
+.card h2,.dg h3{font-family:var(--display);font-weight:600;letter-spacing:-.02em;text-wrap:balance;margin:0}
+.card h2{font-size:clamp(1.3rem,4.6vw,1.6rem);line-height:1.15}
+.summary{margin:0;color:var(--text);max-width:62ch}
+.impl{border-radius:12px;padding:12px 14px;font-size:.9rem;line-height:1.5;position:relative}
+.impl b{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;font-weight:500}
+.cfoot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:12px;border-top:1px dashed var(--line);font-size:.8rem;color:var(--muted)}
+.cfoot a{color:var(--text);font-weight:600;text-decoration:none}
+.cfoot a:hover{text-decoration:underline}
+.acts{display:flex;gap:6px}
+.act{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--muted);transition:transform .2s,color .2s,background .2s}
+.act:hover{color:var(--text)}
+.act[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.act.pop{animation:pop .35s}
+@keyframes pop{50%{transform:scale(1.25)}}
+.rail{position:absolute;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:7px;z-index:3}
+.rail button{width:6px;height:6px;border-radius:3px;background:var(--line);transition:height .3s,background .3s}
+.rail button.on{height:22px;background:var(--accent)}
+.rail button.read:not(.on){background:var(--muted)}
+.hint{position:absolute;left:50%;top:22px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:var(--text);color:var(--bg);font-size:.75rem;font-weight:500;z-index:3;pointer-events:none;transition:opacity .4s}
+.hint svg{animation:nudge 1.4s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateY(-4px)}}
+.endcard{text-align:center;padding:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.endcard h2{font-size:1.8rem}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;transition:transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+
+/* ---------- digest (expand/collapse) mode ---------- */
+.digest{height:100%;overflow-y:auto;padding:22px 16px 40px}
+.dwrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.dhead{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.dhead h1{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,5vw,2.6rem);letter-spacing:-.035em;line-height:1;margin:0}
+.dhead h1 em{font-style:normal;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;align-items:start}
+.dg{grid-column:span 3;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;opacity:0;transform:translateY(14px);animation:rise .6s cubic-bezier(.2,.8,.2,1) forwards;position:relative}
+.dg.lead{grid-column:span 6;display:grid;grid-template-columns:1.1fr 1fr}
+.dg.third{grid-column:span 2}
+@keyframes rise{to{opacity:1;transform:none}}
+.dg .art{flex:none;height:150px;min-height:0}
+.dg.lead .art{height:auto;min-height:260px}
+.dtoggle{display:flex;flex-direction:column;gap:10px;text-align:left;padding:16px 18px;width:100%}
+.dg h3{font-size:1.14rem;line-height:1.2}
+.dg.lead h3{font-size:clamp(1.4rem,3vw,1.9rem)}
+.drow{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted);font-size:.8rem}
+.chev{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .4s cubic-bezier(.3,1.4,.5,1),background .3s}
+.dg.open .chev{transform:rotate(180deg);background:var(--accent);border-color:var(--accent);color:#fff}
+.panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1)}
+.dg.open .panel{grid-template-rows:1fr}
+.panel>div{overflow:hidden}
+.pin{padding:0 18px 16px;display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(-6px);transition:opacity .3s .05s,transform .35s .05s}
+.dg.open .pin{opacity:1;transform:none}
+.dg .corner{position:absolute;width:7px;height:7px;border:1.5px solid var(--accent);background:var(--surface);opacity:0;transition:opacity .2s;z-index:2}
+.dg:hover .corner,.dg.open .corner{opacity:1}
+.corner.tl{top:-1px;left:-1px}.corner.tr{top:-1px;right:-1px}.corner.bl{bottom:-1px;left:-1px}.corner.br{bottom:-1px;right:-1px}
+.dg:hover,.dg.open{border-color:var(--accent)}
+.note{font-size:.78rem;color:var(--muted);text-align:center;padding-top:6px}
+
+/* ---------- splash ---------- */
+.splash{position:fixed;inset:0;z-index:50;background:var(--splash-bg);color:var(--splash-text);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 18px) 16px calc(env(safe-area-inset-bottom,0px) + 18px);transition:transform .8s cubic-bezier(.7,0,.2,1),border-radius .8s;overflow:hidden}
+.splash.leave{transform:translateY(-102%);border-radius:0 0 40px 40px}
+.splash[hidden]{display:none}
+.sp-top{display:flex;justify-content:space-between;align-items:center;gap:10px;position:relative;z-index:2}
+.sp-top .logo{color:var(--splash-text)}
+.sp-top .mono{color:var(--splash-muted)}
+.stage{flex:1;min-height:0;position:relative;display:flex;flex-direction:column;justify-content:center;max-width:760px;width:100%;margin:0 auto}
+.variant{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:22px}
+.variant[hidden]{display:none}
+.sp-cta{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.sp-cta .btn{background:var(--splash-text);color:var(--splash-bg);padding:15px 24px;font-size:1rem}
+.sp-cta small{color:var(--splash-muted);font-size:.8rem}
+.picker{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;position:relative;z-index:2}
+.picker .mono{color:var(--splash-muted);margin-right:4px}
+.picker button{padding:6px 12px;border-radius:999px;border:1px solid #2E323A;color:var(--splash-muted);font-size:.78rem}
+.picker button[aria-pressed="true"]{border-color:var(--splash-text);color:var(--splash-text)}
+
+/* A: count */
+.big{font-family:var(--display);font-weight:800;letter-spacing:-.05em;line-height:.88;font-size:clamp(4.6rem,22vw,11rem);font-variant-numeric:tabular-nums}
+.vA h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,6vw,2.6rem);line-height:1.08;letter-spacing:-.025em;margin:0;max-width:18ch;text-wrap:balance}
+.vA h1 span{color:#8193FF}
+.teaser{border-left:2px solid #F0442F;padding-left:12px;color:var(--splash-muted);font-size:.9rem;max-width:44ch}
+.teaser b{color:var(--splash-text);font-weight:500;display:block}
+/* B: signal */
+.vB canvas{width:100%;height:clamp(140px,30vh,240px);display:block}
+.vB h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,9vw,4.4rem);line-height:.95;letter-spacing:-.04em;margin:0}
+.vB h1 .noise{color:var(--splash-muted);text-decoration:line-through;text-decoration-color:#F0442F;text-decoration-thickness:3px}
+/* C: reel */
+.reel{display:flex;flex-direction:column;gap:10px;transform:rotate(-4deg);margin-inline:-40px}
+.strip{white-space:nowrap;font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,5vw,2.2rem);letter-spacing:-.02em;display:flex;gap:28px;width:max-content;animation:marq 26s linear infinite}
+.strip:nth-child(2){animation-direction:reverse;animation-duration:32s;color:var(--splash-muted)}
+.strip:nth-child(3){animation-duration:38s}
+.strip span{display:inline-flex;align-items:center;gap:28px}
+.strip span::after{content:"";width:10px;height:10px;transform:rotate(45deg);border:2px solid #8193FF}
+@keyframes marq{to{transform:translateX(-50%)}}
+.vC h1{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,5.5vw,2.3rem);letter-spacing:-.025em;line-height:1.1;margin:0;max-width:20ch}
+
+/* entrance choreography for splash pieces */
+.in{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.8,.2,1) forwards}
+.d1{animation-delay:.15s}.d2{animation-delay:.45s}.d3{animation-delay:.9s}.d4{animation-delay:1.3s}
+
+/* illustration motion */
+.spin{transform-origin:center;transform-box:fill-box;animation:spin 14s linear infinite}
+.float{animation:float 4.5s ease-in-out infinite}
+.pulse{transform-origin:center;transform-box:fill-box;animation:pulse 2.6s ease-in-out infinite}
+.dash{stroke-dasharray:6 6;animation:dash 3s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-8px)}}
+@keyframes pulse{50%{transform:scale(1.35);opacity:.6}}
+@keyframes dash{to{stroke-dashoffset:-48}}
+
+.view>section{position:absolute;inset:0;transition:opacity .35s,transform .35s}
+.view>section.off{opacity:0;transform:scale(.98);pointer-events:none}
+
+@media (max-width:760px){
+  .grid{grid-template-columns:1fr}
+  .dg,.dg.lead,.dg.third{grid-column:auto}
+  .dg.lead{display:flex}
+  .dg.lead .art{min-height:0;height:170px}
+  .brand small{display:none}
+  .rail{right:6px}
+}
+@media (max-width:380px){.seg button{padding:6px 9px}}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .in,.dg{opacity:1;transform:none}
+}
+
+/* ---------- v5: filters, saved drawer, retention ---------- */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.filters{display:flex;gap:8px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none;background:var(--bg)}
+.filters::-webkit-scrollbar{display:none}
+.daysel{appearance:none;-webkit-appearance:none;font:500 .8rem var(--body);color:var(--text);background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;border:1px solid var(--line);border-radius:999px;padding:7px 28px 7px 12px;cursor:pointer;flex:none}
+.vdiv{width:1px;height:20px;background:var(--line);flex:none}
+.tchip{flex:none;padding:7px 12px;border-radius:999px;border:1px solid var(--line);font-size:.8rem;font-weight:500;color:var(--muted);transition:background .2s,color .2s,border-color .2s;display:inline-flex;gap:6px;align-items:center}
+.tchip small{font-family:var(--mono);font-size:.64rem;opacity:.7}
+.tchip:hover{color:var(--text)}
+.tchip[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
+.badge-wrap{position:relative}
+.badge{position:absolute;top:-4px;right:-4px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:var(--accent);color:#fff;font:600 .62rem/17px var(--mono);text-align:center;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.badge.bump{transform:scale(1.35)}
+.scrim{position:fixed;inset:0;background:rgba(10,12,16,.45);z-index:30;opacity:0;pointer-events:none;transition:opacity .3s}
+.scrim.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--surface);z-index:31;transform:translateX(102%);transition:transform .45s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 16px) 18px calc(env(safe-area-inset-bottom,0px) + 16px);border-left:1px solid var(--line)}
+.drawer.open{transform:none}
+.drawer h2{font-family:var(--display);font-weight:600;font-size:1.5rem;letter-spacing:-.02em;margin:0}
+.dr-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
+.dr-list{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding-block:12px}
+.sitem{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:14px}
+.sitem .thumbart{width:56px;height:56px;border-radius:10px;overflow:hidden;position:relative}
+.sitem .thumbart svg{position:absolute;inset:0;width:100%;height:100%}
+.sitem h4{margin:0 0 3px;font-size:.9rem;line-height:1.3;font-weight:600}
+.sitem .sm{font-size:.74rem;color:var(--muted)}
+.sitem a{color:var(--accent);text-decoration:none;font-weight:500}
+.dr-empty{color:var(--muted);text-align:center;padding:40px 10px;font-size:.9rem}
+.dr-note{font-size:.75rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px}
+
+/* retention block */
+.retain{display:flex;flex-direction:column;gap:18px;text-align:left;width:100%}
+.retain h2{font-family:var(--display);font-weight:600;font-size:1.7rem;letter-spacing:-.02em;margin:0;line-height:1.1}
+.rblock{display:flex;flex-direction:column;gap:8px}
+.rblock>.mono{color:var(--muted)}
+.streak{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:14px;background:var(--accent-soft)}
+.streak b{font-family:var(--display);font-size:1.4rem;letter-spacing:-.02em;color:var(--accent);display:block;line-height:1}
+.streak span.sm{font-size:.76rem;color:var(--muted)}
+.week{display:flex;gap:5px}
+.week i{width:22px;height:22px;border-radius:6px;border:1.5px solid var(--accent);display:grid;place-items:center;font:500 .58rem var(--mono);font-style:normal;color:var(--accent)}
+.week i.on{background:var(--accent);color:#fff}
+.week i.today{animation:pop .6s .4s}
+.dayrow{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;text-align:left;padding:10px 12px;border:1px solid var(--line);border-radius:12px;width:100%;transition:border-color .2s,transform .2s}
+.dayrow:hover{border-color:var(--accent);transform:translateX(3px)}
+.dayrow .dd{font-family:var(--mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:center;line-height:1.2}
+.dayrow .dd b{display:block;font-family:var(--display);font-size:1.25rem;color:var(--text);letter-spacing:-.02em}
+.dayrow .dt{font-size:.86rem;font-weight:500;line-height:1.3}
+.dayrow .dt small{display:block;color:var(--muted);font-weight:400;font-size:.74rem;margin-top:2px}
+.topicgrid{display:flex;flex-wrap:wrap;gap:8px}
+.channels{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.chan{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 6px;border:1px solid var(--line);border-radius:12px;font-size:.74rem;font-weight:500;color:var(--muted);transition:all .2s}
+.chan svg{width:18px;height:18px}
+.chan[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.fine{font-size:.72rem;color:var(--muted);margin:0}
+.card.endcard{overflow-y:auto;padding:24px 22px;justify-content:flex-start}
+.dg-end{grid-column:1/-1;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.dg-end .retain{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
+.dg-end .retain>.full{grid-column:1/-1}
+@media (max-width:760px){.dg-end .retain{display:flex}}
+.swing{animation:swing 3.2s ease-in-out infinite}
+@keyframes swing{50%{transform:rotate(14deg)}}
+
+
+/* ---------- Find more / search ---------- */
+.findbtn{flex:none;display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;border:1.5px dashed var(--accent);color:var(--accent);font-size:.8rem;font-weight:600;transition:background .2s,transform .2s}
+.findbtn:hover:not(:disabled){background:var(--accent-soft);transform:translateY(-1px)}
+.findbtn.solid{border-style:solid;background:var(--accent);color:#fff}
+.findbtn.solid:hover:not(:disabled){background:var(--accent);filter:brightness(1.08)}
+.findbtn:disabled{opacity:.45;cursor:default;border-style:solid;border-color:var(--line);color:var(--muted);background:none}
+.newtag{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:2px 7px;animation:pop .5s}
+.beyond{padding:14px;border-radius:14px;border:1.5px dashed var(--accent)}
+.divcard{justify-content:center;align-items:flex-start;padding:30px 26px;gap:12px;background:var(--text);color:var(--bg);border:0;position:relative;overflow:hidden}
+.divcard h2{font-size:clamp(1.8rem,7vw,2.4rem)!important;line-height:1.05}
+.divcard p{margin:0;opacity:.75;max-width:34ch}
+.divcard .hint2{margin-top:14px;font-size:.8rem;display:inline-flex;gap:6px;align-items:center;opacity:.8}
+.divcard .hint2::after{content:"↑";animation:nudge 1.4s ease-in-out infinite;display:inline-block}
+.radar{position:absolute;right:-60px;top:-60px;width:260px;height:260px;pointer-events:none}
+.radar i{position:absolute;inset:0;border:1.5px solid var(--accent);border-radius:50%;opacity:0;animation:ping 3s ease-out infinite}
+.radar i:nth-child(2){animation-delay:1s}.radar i:nth-child(3){animation-delay:2s}
+@keyframes ping{0%{transform:scale(.2);opacity:.9}100%{transform:scale(1);opacity:0}}
+.dg-div{grid-column:1/-1;display:flex;flex-direction:column;gap:4px;padding:22px 4px 4px;border-top:1.5px dashed var(--accent);margin-top:8px}
+.dg-div h2{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,3.2vw,1.7rem);letter-spacing:-.025em;margin:0}
+.dg-div .sm{font-size:.82rem;color:var(--muted)}
+.sx{position:fixed;inset:0;z-index:40;background:rgba(7,8,10,.55);display:grid;place-items:center;padding:16px;opacity:0;transition:opacity .3s}
+.sx.open{opacity:1}
+.sx-panel{position:relative;width:min(460px,100%);max-height:100%;overflow-y:auto;background:var(--splash-bg);color:var(--splash-text);border-radius:22px;padding:24px;transform:translateY(20px) scale(.97);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.sx.open .sx-panel{transform:none}
+.sx-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:var(--splash-muted);border:1px solid #2E323A}
+.sx-body{display:flex;flex-direction:column;gap:12px}
+.sx-body h2{font-family:var(--display);font-weight:600;font-size:1.6rem;letter-spacing:-.025em;margin:0;line-height:1.1;padding-right:36px}
+.sx-sub{margin:0;color:var(--splash-muted);font-size:.9rem}
+.sx-pick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+.sx-pick button{text-align:left;padding:14px;border:1px solid #2E323A;border-radius:14px;display:flex;flex-direction:column;gap:4px;transition:border-color .2s,background .2s}
+.sx-pick button:hover:not(:disabled){border-color:#8193FF;background:rgba(129,147,255,.08)}
+.sx-pick button:disabled{opacity:.4;cursor:default}
+.sx-pick b{font-family:var(--display);font-size:1.05rem;font-weight:600}
+.sx-pick small{color:var(--splash-muted);font-size:.74rem}
+.sx-orbit{position:relative;height:120px;margin:4px 0}
+.sx-orbit .core{position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px;border-radius:50%;background:#8193FF;box-shadow:0 0 0 0 rgba(129,147,255,.6);animation:core 1.2s ease-out infinite}
+@keyframes core{to{box-shadow:0 0 0 28px rgba(129,147,255,0)}}
+.sx-orbit .dot{position:absolute;left:50%;top:50%;width:8px;height:8px;margin:-4px;border-radius:50%;background:var(--splash-text);transform:rotate(var(--a)) translateX(54px);animation:suck 1.6s var(--d) ease-in infinite}
+@keyframes suck{0%{transform:rotate(var(--a)) translateX(54px);opacity:1}80%{opacity:.8}100%{transform:rotate(calc(var(--a) + 90deg)) translateX(4px);opacity:0}}
+.sx-src{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.sx-src li{font-size:.72rem;padding:4px 9px;border-radius:999px;border:1px solid #2E323A;color:var(--splash-muted);transition:all .3s}
+.sx-src li.done{border-color:#8193FF;color:var(--splash-text)}
+.sx-src li.done::before{content:"✓ ";color:#8193FF}
+.sx-bar{height:4px;border-radius:2px;background:#22252C;overflow:hidden}
+.sx-bar i{display:block;height:100%;background:#8193FF;transform-origin:left;transform:scaleX(0)}
+.sx-stats{display:flex;gap:16px;flex-wrap:wrap;font-size:.76rem;color:var(--splash-muted)}
+.sx-stats b{color:var(--splash-text);font-family:var(--display);font-size:1.1rem;margin-right:3px;font-variant-numeric:tabular-nums}
+.sx-steps{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:.84rem;color:#5B6270}
+.sx-steps li{transition:color .3s}
+.sx-steps li.on{color:var(--splash-text)}
+.sx-steps li.done{color:var(--splash-muted);text-decoration:line-through;text-decoration-color:#8193FF}
+.sx-note{margin:4px 0 0;font-size:.72rem;color:var(--splash-muted);border-top:1px dashed #2E323A;padding-top:10px}
+
+
+/* ---------- v8: share ---------- */
+.sharepill{margin-left:auto;flex:none;display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border-radius:999px;background:var(--text);color:var(--bg);font-size:.8rem;font-weight:600}
+.sharebox{display:flex;flex-direction:row!important;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px!important;padding:16px;border-radius:14px;background:var(--accent-soft)}
+.sharebox b{display:block;font-family:var(--display);font-size:1.15rem;letter-spacing:-.015em}
+.sharebox .sm{font-size:.8rem;color:var(--muted)}
+.sx-share{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:4px}
+.sx-share a,.sx-share button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 4px;border:1px solid #2E323A;border-radius:14px;color:var(--splash-text);text-decoration:none;font-size:.74rem;transition:border-color .2s,background .2s}
+.sx-share a:hover,.sx-share button:hover{border-color:#8193FF;background:rgba(129,147,255,.08)}
+.sx-share b{width:34px;height:34px;border-radius:50%;background:#8193FF;color:#0F1115;display:grid;place-items:center;font:700 .8rem var(--mono)}
+.sx-linkbox{width:100%;background:#1A1D23;border:1px solid #2E323A;border-radius:10px;color:var(--splash-text);padding:9px 11px;font:.78rem var(--mono)}
+.sx-other{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.sx-other div{display:flex;gap:8px}
+.sx-other input{flex:1;min-width:0;background:#1A1D23;border:1px solid #2E323A;border-radius:999px;color:var(--splash-text);padding:10px 14px;font:.9rem var(--body)}
+.sx-other .btn{background:var(--splash-text);color:var(--splash-bg);padding:10px 16px}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);transform:translate(-50%,30px);opacity:0;z-index:35;display:flex;align-items:center;gap:10px;padding:10px 10px 10px 16px;border-radius:999px;background:var(--text);color:var(--bg);box-shadow:var(--shadow);transition:transform .45s cubic-bezier(.3,1.4,.5,1),opacity .3s;width:max-content;max-width:calc(100% - 32px);font-size:.84rem}
+.toast.show{transform:translate(-50%,0);opacity:1}
+.toast .btn{padding:7px 14px;font-size:.8rem}
+.toast-x{width:26px;height:26px;border-radius:50%;color:var(--bg);opacity:.7;font-size:1.1rem}
+@media (max-width:480px){.toast{border-radius:16px;flex-wrap:wrap}.sx-share{grid-template-columns:1fr 1fr}}
+
+
+/* ---------- v10: focused last slide ---------- */
+.endactions{display:flex;flex-direction:column;gap:10px}
+.endbtn{display:flex;align-items:center;gap:14px;text-align:left;padding:16px;border-radius:16px;border:1.5px solid var(--line);background:var(--surface);color:var(--text);transition:transform .2s,border-color .2s}
+.endbtn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.endbtn svg{flex:none;width:20px;height:20px}
+.endbtn b{display:block;font-family:var(--display);font-size:1.1rem;font-weight:600;letter-spacing:-.015em}
+.endbtn small{display:block;font-size:.8rem;color:var(--muted);margin-top:2px}
+.endbtn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.endbtn.primary small{color:rgba(255,255,255,.8)}
+.more{display:flex;flex-direction:column;align-items:stretch;align-self:stretch;width:100%;text-align:left;border-top:1px dashed var(--line);padding-top:6px}
+.endactions{align-self:stretch;width:100%}
+.morelink{width:100%;color:var(--text);display:flex;justify-content:space-between;align-items:center;padding:12px 2px;font-size:.9rem;font-weight:500;border-bottom:1px solid var(--line);text-align:left}
+.morelink b{font-family:var(--mono);font-size:.72rem;background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:999px}
+.moredet{border-bottom:1px solid var(--line);width:100%;text-align:left}
+.moredet summary{color:var(--text);padding:12px 2px;font-size:.9rem;font-weight:500;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+.moredet summary::after{content:"+";color:var(--muted)}
+.moredet[open] summary::after{content:"–"}
+.moredet .dayrow{margin-bottom:8px}
+.bm-steps{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:.92rem}
+.bm-steps kbd{font-family:var(--mono);font-size:.78rem;border:1px solid #2E323A;border-bottom-width:2px;border-radius:6px;padding:1px 6px}
+.bm-row{display:flex;gap:8px}
+.bm-row .btn{background:var(--splash-text);color:var(--splash-bg);padding:9px 16px}
+
+/* ---------- Learn ---------- */
+.seg2{display:flex;gap:2px;flex:none;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg2 button{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;font-size:.78rem;font-weight:500;color:var(--muted)}
+.seg2 button[aria-pressed="true"]{background:var(--surface);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.learn{height:100%;overflow-y:auto;padding:26px 16px 56px}
+.lwrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:38px}
+.lhero{display:flex;flex-direction:column;gap:10px;max-width:640px}
+.lhero h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,6vw,3.2rem);letter-spacing:-.04em;line-height:.98;margin:0}
+.lhero h1 em{font-style:normal;color:var(--accent)}
+.lhero p{margin:0;color:var(--muted);max-width:56ch}
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-14px}
+.lvl{text-align:left;padding:16px 18px;border:1.5px solid var(--line);border-radius:16px;background:var(--surface);display:flex;flex-direction:column;gap:6px;transition:border-color .2s,box-shadow .2s,transform .2s}
+.lvl:hover{transform:translateY(-2px)}
+.lvl[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.lvl b{font-family:var(--display);font-size:1.15rem;font-weight:600;letter-spacing:-.02em}
+.lvl .sm,.lsec .sm{font-size:.82rem;color:var(--muted);line-height:1.45}
+.lvl-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.bars{display:flex;gap:3px;align-items:flex-end;height:18px}
+.bars i{width:5px;border-radius:2px;background:var(--line)}
+.bars i.on{background:var(--accent)}
+.lvl[aria-pressed="true"] .bars i.on{animation:grow .5s cubic-bezier(.3,1.5,.5,1) both}
+.lvl[aria-pressed="true"] .bars i.on:nth-child(2){animation-delay:.08s}.lvl[aria-pressed="true"] .bars i.on:nth-child(3){animation-delay:.16s}
+@keyframes grow{from{transform:scaleY(.2);transform-origin:bottom}}
+.lsec{display:flex;flex-direction:column;gap:14px}
+.lsec-h{display:flex;justify-content:space-between;align-items:end;gap:6px 16px;flex-wrap:wrap}
+.lsec-h h2{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,3.4vw,1.7rem);letter-spacing:-.025em;margin:0}
+.soon{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.scard{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--text);text-decoration:none;transition:border-color .2s,transform .2s}
+.scard:hover{border-color:var(--accent);transform:translateY(-2px)}
+.scard.mine{border-color:var(--accent);background:linear-gradient(var(--accent-soft),var(--accent-soft)) padding-box}
+.count{width:68px;height:68px;border-radius:14px;background:var(--text);color:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.6rem;font-family:var(--mono);text-transform:uppercase;letter-spacing:.04em;text-align:center;line-height:1.1}
+.count b{font-family:var(--display);font-size:1.6rem;letter-spacing:-.03em;text-transform:none;line-height:1}
+.sbody{display:flex;flex-direction:column;gap:3px;min-width:0}
+.sbody .mono{color:var(--accent)}
+.sbody b{font-size:.95rem;line-height:1.3}
+.path{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;position:relative}
+.path::before{content:"";position:absolute;left:15px;top:18px;bottom:18px;width:2px;background:repeating-linear-gradient(var(--line) 0 6px,transparent 6px 12px)}
+.step{display:grid;grid-template-columns:32px 1fr;gap:14px;align-items:start;opacity:0;transform:translateY(10px);animation:rise .5s cubic-bezier(.2,.8,.2,1) forwards}
+.step:nth-child(2){animation-delay:.06s}.step:nth-child(3){animation-delay:.12s}.step:nth-child(4){animation-delay:.18s}.step:nth-child(5){animation-delay:.24s}.step:nth-child(6){animation-delay:.3s}
+.num{width:32px;height:32px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);color:var(--accent);display:grid;place-items:center;font:600 .8rem var(--mono);position:relative;z-index:1}
+.practice .num{background:var(--accent);color:#fff}
+.course{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.practice .course{background:var(--accent-soft);border-color:transparent}
+.ctop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted)}
+.date{font-size:.72rem;font-weight:600;color:var(--redline)}
+.date.alt{color:var(--muted);font-weight:500}
+.course b{font-family:var(--display);font-size:1.12rem;font-weight:600;letter-spacing:-.015em}
+.course p{margin:0;font-size:.9rem;color:var(--text);max-width:68ch}
+.cmeta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.78rem;color:var(--muted);align-items:center}
+.cmeta span+span::before{content:"·";margin-right:14px;color:var(--line)}
+.cmeta a{margin-left:auto;color:var(--accent);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+.cmeta a:hover{text-decoration:underline}
+.gf{display:flex;gap:6px;flex-wrap:wrap}
+.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:start}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .2s}
+.term:hover,.term.open{border-color:var(--accent)}
+.tbtn{display:flex;flex-direction:column;gap:4px;text-align:left;padding:16px;width:100%}
+.tname{font-family:var(--display);font-weight:800;font-size:1.45rem;letter-spacing:-.03em;line-height:1.05;margin-top:4px}
+.tfull{font-size:.78rem;color:var(--muted)}
+.tone{font-size:.88rem;line-height:1.5;margin-top:6px}
+.more{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:.78rem;font-weight:600;color:var(--accent)}
+.term.open .chev{transform:rotate(180deg);background:var(--accent);border-color:var(--accent);color:#fff}
+.term.open .panel{grid-template-rows:1fr}
+.qa{margin:0;padding:0 16px 16px;display:grid;gap:4px}
+.qa dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.qa dd{margin:0;font-size:.86rem;line-height:1.5}
+.qa .eg{background:var(--accent-soft);padding:0 10px}
+.qa dt.eg{border-radius:8px 8px 0 0;padding-top:8px;margin-top:12px;color:var(--accent)}
+.qa dd.eg{border-radius:0 0 8px 8px;padding-bottom:10px}
+@media (max-width:860px){.gloss{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.levels,.gloss{grid-template-columns:1fr}.cmeta a{margin-left:0}}
+@media (max-width:440px){#ring{display:none}}
+</style>
+
+<div class="app" id="app">
+  <header class="bar">
+    <div class="brand">
+      <span class="logo"><i aria-hidden="true"></i>AI Signal</span>
+      <small>for designers</small>
+    </div>
+    <div class="tools">
+      <div class="seg" role="group" aria-label="Section">
+        <span class="thumb" id="thumb"></span>
+        <button id="t-news" aria-pressed="true">News</button>
+        <button id="t-learn" aria-pressed="false">Learn</button>
+      </div>
+      <div class="ring" id="ring" title="Stories read in this brief" hidden>
+        <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="14" fill="none" stroke="var(--line)" stroke-width="3"/><circle id="ring-arc" cx="17" cy="17" r="14" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="88" stroke-dashoffset="88" style="transition:stroke-dashoffset .5s"/></svg>
+        <span id="ring-txt">0/0</span>
+      </div>
+      <div class="badge-wrap" hidden>
+        <button class="icon-btn" id="open-saved" title="Saved stories" aria-label="Saved stories">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+        </button>
+        <span class="badge" id="saved-count" hidden>0</span>
+      </div>
+      <button class="icon-btn" id="replay" title="Replay intro" aria-label="Replay intro">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="filters" hidden>
+    <div class="seg2" role="group" aria-label="Reading mode">
+      <button id="m-swipe" aria-pressed="true" title="Swipe one story at a time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="6" y="3" width="12" height="18" rx="3"/></svg>Swipe</button>
+      <button id="m-digest" aria-pressed="false" title="Scan all stories"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="8" rx="2"/><rect x="3" y="14" width="8" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>Digest</button>
+    </div>
+    <span class="vdiv" aria-hidden="true" hidden></span>
+    <label class="sr" for="day">Brief date</label>
+    <select id="day" class="daysel" hidden></select>
+    <span class="vdiv" aria-hidden="true" hidden></span>
+    <div id="topics" role="group" aria-label="Topics" style="display:flex;gap:8px" hidden></div>
+    <button class="findbtn solid" id="find-more" hidden></button>
+    <button class="sharepill" data-share-app><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7M16 6l-4-4-4 4M12 2v13"/></svg>Share</button>
+  </div>
+  <main class="view">
+    <section id="stack-view"><div class="stack" id="stack"></div><nav class="rail" id="rail" aria-label="Stories"></nav><div class="hint" id="hint" style="opacity:0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>Swipe up for the next story</div></section>
+    <section id="digest-view" class="off"><div class="digest"><div class="dwrap">
+      <div class="dhead"><h1 id="dg-title">Today's <em>signal</em>, in one scan</h1><span class="mono" style="color:var(--muted)" id="dg-date"></span></div>
+      <div class="grid" id="grid"></div>
+    </div></div></section>
+    <section id="learn-view" class="off"><div class="learn"><div class="lwrap">
+      <div class="lhero">
+        <span class="mono" style="color:var(--accent)">Learn</span>
+        <h1>Learn AI at <em>your</em> pace</h1>
+        <p>Pick where you are today. We’ll show a learning path, courses that start soon, and the basic terms explained for designers.</p>
+      </div>
+      <div class="levels" id="levels" role="group" aria-label="Your level"></div>
+      <div class="lsec">
+        <div class="lsec-h"><h2>Starting soon</h2><span class="sm">Cohorts with a fixed start date. Your level is highlighted.</span></div>
+        <div class="soon" id="soon"></div>
+      </div>
+      <div class="lsec">
+        <div class="lsec-h"><h2 id="path-title">Your path</h2><span class="sm">In the order we suggest. Free options first where they exist.</span></div>
+        <ol class="path" id="path"></ol>
+      </div>
+      <div class="lsec">
+        <div class="lsec-h"><h2>AI basics, explained for designers</h2>
+          <div class="gf" role="group" aria-label="Filter terms"><button class="tchip" data-gf="all" aria-pressed="true">All</button><button class="tchip" data-gf="basic" aria-pressed="false">Basics</button><button class="tchip" data-gf="next" aria-pressed="false">Going further</button></div></div>
+        <div class="gloss" id="gloss"></div>
+      </div>
+      <p class="note">Course details, dates and prices were checked in late September 2026. Confirm on the provider’s site before you enrol.</p>
+    </div></div></section>
+  </main>
+</div>
+
+<div class="sx" id="search" hidden inert role="dialog" aria-label="Find more news"><div class="sx-panel"><button class="sx-close" aria-label="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div class="sx-body"></div></div></div>
+<div class="toast" id="toast" hidden role="status"><span>Enjoying the brief? <b>Share it with a designer friend.</b></span><button class="btn" data-share-app>Share</button><button class="toast-x" aria-label="Dismiss">×</button></div>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Saved stories" inert>
+  <div class="dr-head"><h2>Saved</h2><button class="icon-btn" id="close-saved" aria-label="Close saved stories"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="dr-list" id="saved-list"></div>
+  <p class="dr-note">Saved on this device and browser. In the live app these would sync to your account, and could also be sent to Notion or Readwise.</p>
+</aside>
+
+<!-- Splash -->
+<div class="splash" id="splash">
+  <div class="sp-top"><span class="logo"><i aria-hidden="true"></i>AI Signal</span><span class="mono" id="sp-date"></span></div>
+  <div class="stage">
+    <div class="variant vA" id="vA">
+      <div class="big in d1" id="count">0</div>
+      <h1 class="in d2">AI updates shipped this week. <span id="sp-cut">7 are worth your morning.</span></h1>
+      <div class="teaser in d3"><span class="mono">Leading today</span><b id="lead-title"></b></div>
+    </div>
+    <div class="variant vB" id="vB" hidden>
+      <canvas id="wave" class="in d1" aria-hidden="true"></canvas>
+      <h1 class="in d2"><span class="noise">Less noise.</span><br>More signal.</h1>
+      <p class="in d3" style="margin:0;color:var(--splash-muted);max-width:42ch">We read 40 trusted sources overnight and kept only what changes how designers work: process, tools, trends and impact.</p>
+    </div>
+    <div class="variant vC" id="vC" hidden>
+      <h1 class="in d1">Your 4-minute morning brief on how AI is changing design work.</h1>
+      <div class="reel in d2" id="reel" aria-hidden="true"></div>
+    </div>
+  </div>
+  <div class="sp-cta in d4" style="max-width:760px;width:100%;margin:0 auto 18px">
+    <button class="btn" id="start">Start today's brief
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+    <small id="sp-meta"></small>
+  </div>
+  <div class="picker" hidden><span class="mono">Hook layout</span>
+    <button data-v="A" aria-pressed="true">A · The count</button>
+    <button data-v="B" aria-pressed="false">B · Noise → signal</button>
+    <button data-v="C" aria-pressed="false">C · Headline reel</button>
+  </div>
+</div>
+
+<script type="module">
+/* ---------- content: real stories, grouped by brief date ---------- */
+const TOPICS = [{id:'all', label:'All'},{id:'design', label:'Design'}];
+/* Topics outside design are never in the daily feed. They are searched only when a reader asks. */
+const EXPLORE = [{id:'labs', label:'AI labs'},{id:'robo', label:'Robotics'},{id:'aero', label:'Aerospace'}];
+const ALLT = TOPICS.concat(EXPLORE);
+const APP_URL = 'https://sanysharma.github.io/AI-Signal/';
+const U = {
+  report:'https://stateofaidesign.com/', tools:'https://stateofaidesign.com/chapters/tools',
+  claude:'https://releasebot.io/updates/anthropic/claude', anth:'https://releasebot.io/updates/anthropic',
+  fig:'https://www.figma.com/blog/config-2026-recap/', figmcp:'https://www.figma.com/blog/design-systems-ai-mcp/',
+  firefly:'https://community.adobe.com/announcements-402/what-s-new-in-adobe-firefly-september-2026-1642552',
+  adobe:'https://news.adobe.com/news/2026/06/adobe-unveils-major-expansion',
+  framer:'https://letsdatascience.com/news/framer-launches-framer-30-with-ai-agents-and-branching-ecc6f7f1',
+  sf:'https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/',
+  robo:'https://objectways.com/blog/humanoid-robots-news-roundup-for-september-2026/',
+};
+/* category → colour + illustration motif */
+const CAT = {
+  process:{cat:'Design process', k:'design', m:'craft'},
+  tools:{cat:'Design tools', k:'cloud', m:'cloud'},
+  trends:{cat:'Design trends', k:'ai', m:'labs'},
+  impact:{cat:'Design impact', k:'iam', m:'iam'},
+};
+const D = (c, o) => Object.assign({topic:'design'}, CAT[c], o);
+/* ---------- live data: data/index.json + data/YYYY-MM-DD.json (written by the daily GitHub Action) ---------- */
+function bucket(cat){ const c=(cat||'').toLowerCase();
+  if(/process|workflow|research|handoff|collab|team|role|critique|ops/.test(c)) return 'process';
+  if(/tool|figma|prototyp|code|motion|design system|generative|editor|diff|canvas/.test(c)) return 'tools';
+  if(/trend|pattern|ux|interaction|conversation|multimodal|agentic|native|trust|hci/.test(c)) return 'trends';
+  return 'impact'; }
+function hashId(str){ let h=5381; for(const ch of String(str)) h=((h<<5)+h+ch.charCodeAt(0))|0; return 'u'+(h>>>0).toString(36); }
+function fmtSrcDate(v){ if(!v) return ''; const d=new Date(v); return isNaN(d)?String(v):d.toLocaleDateString('en-GB',{day:'numeric',month:'short'}); }
+function toStory(x){ const b=bucket(x.category);
+  return Object.assign({topic:'design'}, CAT[b], {cat:/^design_/.test(x.category||'')?CAT[b].cat:(x.category||CAT[b].cat), title:x.title, summary:x.summary,
+    impl:x.design_implication, src:x.source_name, url:x.source_url, date:fmtSrcDate(x.source_date), id:hashId(x.source_url||x.title)}); }
+async function loadBriefs(){
+  /* Daily files are data/YYYY-MM-DD.json. Probe the last 14 days (no shared index, so review PRs never conflict),
+     plus any days listed in the older data/index.json. */
+  const dates=new Set(Array.from({length:14},(_,i)=>new Date(Date.now()-i*864e5).toISOString().slice(0,10)));
+  try{ const idx=await fetch('data/index.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null); (idx?.days||[]).forEach(d=>dates.add(d)); }catch(_){}
+  const list=[...dates].sort().reverse();
+  const files=await Promise.all(list.map(d=>fetch(`data/${d}.json`,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null)));
+  const out=[];
+  list.forEach((d,i)=>{ const j=files[i]; if(!j||!Array.isArray(j.stories)||!j.stories.length||out.length>=7) return;
+    const dt=new Date(d+'T00:00:00Z'), o=k=>dt.toLocaleDateString('en-GB',{[k]:k==='weekday'||k==='month'?'short':'numeric',timeZone:'UTC'});
+    out.push({iso:d,label:`${o('weekday')} ${o('day')} ${o('month')}`, short:[o('weekday'),o('day')], stories:j.stories.map(toStory)}); });
+  return out;
+}
+const DAYS = await loadBriefs();
+if(!DAYS.length) DAYS.push({iso:'',label:'today’s', short:['—','—'], stories:[]});
+const ALL = DAYS.flatMap(d=>d.stories);
+
+/* ---------- "Find more": stories the engine finds on a fresh search, per topic ----------
+   Prototype: these were found by a real search on 28 Sep and are revealed in batches.
+   Live: the same UI would call the search endpoint and render what it returns. */
+const MORE = {design:[], labs:[], robo:[], aero:[]}; /* live build: filled later by the pipeline's overflow pool */
+const SOURCES = {
+  design:['Figma Blog','AI in Design Report','Adobe Newsroom','Smashing Magazine','UX Collective','Nielsen Norman Group','Framer Blog','Sidebar'],
+  labs:['Anthropic','OpenAI','Google DeepMind','Meta AI','Mistral','TechCrunch AI','The Verge AI','Releasebot'],
+  robo:['IEEE Spectrum','The Robot Report','Humanoids Daily','TechCrunch Robotics','Objectways','Robot Magazine'],
+  aero:['Aerospace America','AIAA News','Aviation Week','SpaceNews','NASA News','Simple Flying'],
+};
+let fid=0; Object.entries(MORE).forEach(([t,l])=>l.forEach(s=>{s.topic=t;s.found=true;s.id='f'+(fid++)}));
+const FOUND=[]; const revealed=Object.fromEntries(Object.keys(MORE).map(k=>[k,0])); let lastSearch='';
+const byId = id => ALL.find(s=>s.id===id) || Object.values(MORE).flat().find(s=>s.id===id);
+
+const track = (event, props={}) => { try { window.posthog?.capture?.(event, props); } catch(_){} };
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
+const jget = (k,d) => { try{ return JSON.parse(store.get(k)) ?? d }catch(e){ return d } };
+
+/* ---------- generative illustrations ---------- */
+function rng(str){let h=1779033703^str.length;for(let i=0;i<str.length;i++){h=Math.imul(h^str.charCodeAt(i),3432918353);h=h<<13|h>>>19}
+  return ()=>{h=Math.imul(h^h>>>16,2246822507);h=Math.imul(h^h>>>13,3266489909);return((h^=h>>>16)>>>0)/4294967296}}
+function illo(s){
+  const r=rng(s.title), c=`var(--c-${s.k})`, soft=`var(--c-${s.k}-soft)`, W=400, H=240;
+  let g=`<rect width="${W}" height="${H}" fill="${soft}"/>`;
+  for(let x=20;x<W;x+=20)for(let y=20;y<H;y+=20)g+=`<circle cx="${x}" cy="${y}" r=".9" fill="${c}" opacity=".25"/>`;
+  if(s.m==='iam'){
+    const cx=200+(r()-.5)*80, cy=120;
+    for(let i=4;i>0;i--)g+=`<rect x="${cx-i*26}" y="${cy-i*26}" width="${i*52}" height="${i*52}" rx="${i*10}" fill="none" stroke="${c}" stroke-width="1.5" opacity="${.2+i*.12}" ${i===3?'class="dash"':''}/>`;
+    g+=`<circle cx="${cx}" cy="${cy-6}" r="10" fill="${c}"/><path d="M${cx-6} ${cy} L${cx+6} ${cy} L${cx+4} ${cy+20} L${cx-4} ${cy+20}Z" fill="${c}"/>`;
+    g+=`<g class="spin" style="transform-origin:${cx}px ${cy}px"><circle cx="${cx+78}" cy="${cy}" r="7" fill="var(--surface)" stroke="${c}" stroke-width="2"/><circle cx="${cx-78}" cy="${cy}" r="4" fill="${c}"/></g>`;
+  } else if(s.m==='cloud'){
+    for(let i=0;i<4;i++){const y=150-i*30, x=200+(r()-.5)*30;
+      g+=`<g class="float" style="animation-delay:${i*.3}s"><path d="M${x} ${y-28} L${x+90} ${y} L${x} ${y+28} L${x-90} ${y}Z" fill="${i===3?c:'var(--surface)'}" stroke="${c}" stroke-width="1.5"/></g>`}
+  } else if(s.m==='labs'){
+    const n=[];for(let i=0;i<9;i++)n.push([40+r()*320,30+r()*180]);
+    n.forEach((a,i)=>n.slice(i+1).forEach(b=>{if(Math.hypot(a[0]-b[0],a[1]-b[1])<150)g+=`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="${c}" stroke-width="1.2" opacity=".45" class="dash"/>`}));
+    n.forEach((a,i)=>g+=`<circle cx="${a[0]}" cy="${a[1]}" r="${i%3?5:9}" fill="${i%3?'var(--surface)':c}" stroke="${c}" stroke-width="2" ${i%3?'':`class="pulse" style="animation-delay:${i*.2}s"`}/>`);
+  } else if(s.m==='craft'){
+    const y1=60+r()*120, y2=60+r()*120;
+    g+=`<path d="M40 ${y1} C 140 ${y1-90}, 260 ${y2+90}, 360 ${y2}" fill="none" stroke="${c}" stroke-width="3"/>`;
+    g+=`<line x1="40" y1="${y1}" x2="140" y2="${y1-90}" stroke="var(--redline)" stroke-width="1"/><line x1="360" y1="${y2}" x2="260" y2="${y2+90}" stroke="var(--redline)" stroke-width="1"/>`;
+    [[40,y1],[360,y2]].forEach(p=>g+=`<rect x="${p[0]-6}" y="${p[1]-6}" width="12" height="12" fill="var(--surface)" stroke="${c}" stroke-width="2"/>`);
+    [[140,y1-90],[260,y2+90]].forEach((p,i)=>g+=`<circle class="pulse" style="animation-delay:${i*.6}s" cx="${p[0]}" cy="${p[1]}" r="5" fill="var(--redline)"/>`);
+    g+=`<rect x="${150+r()*40}" y="70" width="110" height="80" rx="10" fill="var(--surface)" stroke="${c}" stroke-width="1.5" class="float"/>`;
+  } else if(s.m==='robo'){
+    const bx=110+r()*180, by=205, L1=70+r()*40, L2=60+r()*50, tx=(bx+140)%380+10, ty=40+r()*40;
+    g+=`<rect x="${bx-40}" y="${by}" width="80" height="14" rx="4" fill="${c}"/>`;
+    g+=`<g class="swing" style="transform-origin:${bx}px ${by}px"><rect x="${bx-7}" y="${by-L1-4}" width="14" height="${L1+6}" rx="7" fill="var(--surface)" stroke="${c}" stroke-width="2"/>`;
+    g+=`<g class="swing" style="transform-origin:${bx}px ${by-L1}px;animation-delay:-${(r()*3).toFixed(1)}s"><rect x="${bx-6}" y="${by-L1-6}" width="${L2}" height="12" rx="6" fill="var(--surface)" stroke="${c}" stroke-width="2"/>`;
+    g+=`<path d="M${bx+L2-6} ${by-L1-14} l14 0 0 8 -8 0 0 8 8 0 0 8 -14 0z" fill="${c}"/></g>`;
+    g+=`<circle cx="${bx}" cy="${by-L1}" r="9" fill="${c}"/></g><circle cx="${bx}" cy="${by}" r="10" fill="${c}"/>`;
+    g+=`<circle cx="${tx}" cy="${ty}" r="20" fill="none" stroke="var(--redline)" stroke-width="1.2" class="dash"/><circle cx="${tx}" cy="${ty}" r="4" fill="var(--redline)" class="pulse"/>`;
+  } else if(s.m==='aero'){
+    const y0=150+r()*50;
+    g+=`<path d="M20 ${y0} Q 200 ${y0-150} 380 ${y0-40}" fill="none" stroke="${c}" stroke-width="1.5" class="dash"/>`;
+    g+=`<g class="float"><path d="M${190+r()*40} ${y0-80} l40 -8 l-6 8 l6 8z" fill="${c}"/><circle cx="${150+r()*40}" cy="${y0-70}" r="3" fill="${c}" opacity=".5"/></g>`;
+    for(let i=0;i<3;i++)g+=`<circle cx="${60+i*120+r()*40}" cy="${210}" r="${2+i}" fill="${c}" opacity=".4"/>`;
+    g+=`<circle cx="340" cy="50" r="18" fill="none" stroke="var(--redline)" stroke-width="1.2" class="dash"/>`;
+  } else {
+    g+=`<path d="M110 40 L290 40 L220 130 L220 200 L180 200 L180 130Z" fill="var(--surface)" stroke="${c}" stroke-width="1.5"/>`;
+    for(let i=0;i<14;i++){const x=120+r()*160;g+=`<circle cx="${x}" cy="${20+r()*20}" r="4" fill="${c}" opacity="${.4+r()*.6}" class="float" style="animation-delay:${(r()*3).toFixed(2)}s"/>`}
+    g+=`<circle cx="200" cy="215" r="7" fill="${c}" class="pulse"/>`;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${g}</svg>`;
+}
+
+const ICON_SHARE='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7M16 6l-4-4-4 4M12 2v13"/></svg>';
+const ICON_SEARCH='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>';
+const tLabel = id => (ALLT.find(t=>t.id===id)||{label:id}).label;
+/* ---------- state ---------- */
+let dayIdx=0, topic='all', mode='swipe';
+const read=new Set(jget('ain-read',[])), saved=new Set(jget('ain-saved',[]));
+const current = () => DAYS[dayIdx].stories.filter(s=>topic==='all'||s.topic===topic).concat(FOUND.filter(s=>topic==='all'||s.topic===topic));
+const topicCount = t => DAYS[dayIdx].stories.filter(s=>t==='all'||s.topic===t).length + FOUND.filter(s=>t==='all'||s.topic===t).length;
+
+/* streak: consecutive days with a visit, stored per browser */
+const iso = d => d.toISOString().slice(0,10);
+
+
+function updateRing(){
+  const list=current(), n=list.filter(s=>read.has(s.id)).length, t=list.length||1;
+  document.getElementById('ring-txt').textContent=`${n}/${list.length}`;
+  document.getElementById('ring-arc').style.strokeDashoffset = 88 - 88*n/t;
+  rail.querySelectorAll('button').forEach(b=>b.classList.toggle('read',read.has(b.dataset.id)));
+}
+let sessionReads=0, toastShown=false;
+function markRead(id){ if(read.has(id))return; read.add(id); store.set('ain-read',JSON.stringify([...read])); updateRing();
+  ++sessionReads; /* share toast hidden: sharing lives on each story and the last slide */ }
+function showToast(){const t=document.getElementById('toast'); t.hidden=false; requestAnimationFrame(()=>t.classList.add('show')); setTimeout(hideToast,9000);}
+function hideToast(){const t=document.getElementById('toast'); t.classList.remove('show'); setTimeout(()=>t.hidden=true,400);}
+
+const saveIcon = on => `<svg width="14" height="14" viewBox="0 0 24 24" fill="${on?'currentColor':'none'}" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg>`;
+const actions = s => `<div class="acts"><button class="act" data-save="${s.id}" aria-pressed="${saved.has(s.id)}" aria-label="Save story">${saveIcon(saved.has(s.id))}</button>
+  <button class="act" data-share="${s.id}" aria-label="Share story"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button></div>`;
+const srcLink = (s,label) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${label} ↗</a>`;
+const chip = s => `<span class="chip" style="background:var(--c-${s.k}-soft);color:var(--c-${s.k})">${esc(s.cat)}</span>`;
+const implLabel = s => 'Design implication';
+const implBox = s => `<div class="impl" style="background:var(--c-${s.k}-soft)"><b style="color:var(--c-${s.k})">${implLabel(s)}</b>${esc(s.impl)}</div>`;
+
+/* ---------- retention block, shared by both modes ---------- */
+const CHANNELS = [
+  ['slack','Slack','<path d="M9 3a2 2 0 0 0 0 4h2V5a2 2 0 0 0-2-2zM5 9a2 2 0 0 0 0 4h6V9zM15 21a2 2 0 0 0 0-4h-2v2a2 2 0 0 0 2 2zM19 15a2 2 0 0 0 0-4h-6v4zM13 3v6h4V5a2 2 0 0 0-4-2zM11 21v-6H7v4a2 2 0 0 0 4 2z"/>'],
+  ['teams','Teams','<rect x="3" y="6" width="12" height="12" rx="2"/><path d="M7 10h4M9 10v5M17 9h3a1 1 0 0 1 1 1v5a3 3 0 0 1-4 2.8"/>'],
+  ['email','Email','<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>'],
+  ['telegram','Telegram','<path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/><path d="M9 13l8-6"/>'],
+  ['figma','Figma plugin','<rect x="7" y="3" width="5" height="6" rx="2.5"/><rect x="12" y="3" width="5" height="6" rx="2.5"/><rect x="7" y="9" width="5" height="6" rx="2.5"/><circle cx="14.5" cy="12" r="2.5"/><path d="M9.5 15a2.5 2.5 0 1 0 2.5 2.5V15z"/>'],
+  ['rss','RSS','<path d="M5 19h.01M5 12a7 7 0 0 1 7 7M5 5a14 14 0 0 1 14 14"/>'],
+];
+const chanOn = new Set(jget('ain-chan',[]));
+function retainHTML(){
+  const others = DAYS.map((d,i)=>({d,i})).filter(x=>x.i!==dayIdx);
+  return `<div class="retain">
+    <div class="full" style="display:flex;flex-direction:column;gap:6px">
+      <span class="mono" style="color:var(--accent)">You're caught up</span>
+      <h2>${DAYS[dayIdx].stories.length?'That’s the '+esc(DAYS[dayIdx].label)+' brief.':'No stories cleared the bar today.'}</h2>
+      <p class="fine" style="font-size:.9rem">Next brief tomorrow morning. Keep it one tap away, or pass it on to a designer who’d find it useful.</p>
+    </div>
+    <div class="endactions full">
+      <button class="endbtn primary" data-share-app>${ICON_SHARE}<span><b>Share AI Signal</b><small>Send the link on LinkedIn, WhatsApp or X</small></span></button>
+      <button class="endbtn" data-bookmark-app><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span><b>Bookmark AI Signal</b><small>Save this link to come back tomorrow</small></span></button>
+    </div>
+    <div class="more full">
+      <button class="morelink" data-open-saved>Your saved stories <b>${saved.size}</b></button>
+      ${others.length?`<details class="moredet"><summary>Earlier briefs</summary>${others.map(({d,i})=>`<button class="dayrow" data-goto-day="${i}"><span class="dd">${d.short[0]}<b>${d.short[1]}</b></span><span class="dt">${esc(d.stories[0].title)}<small>${d.stories.length} stories</small></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>`).join('')}</details>`:''}
+      ${Object.values(MORE).some(a=>a.length)?'<button class="morelink" data-explore-other>Explore beyond design <span aria-hidden="true">→</span></button>':''}
+    </div>
+  </div>`;
+}
+function openBookmark(){
+  track('app_bookmark_opened');
+  const mac=/Mac|iPhone|iPad/.test(navigator.platform||navigator.userAgent), mobile=/Android|iPhone|iPad/.test(navigator.userAgent);
+  searchEl.querySelector('.sx-body').innerHTML=`<span class="mono" style="color:var(--splash-muted)">Bookmark AI Signal</span>
+    <h2>Keep the brief one tap away</h2>
+    <ol class="bm-steps">${mobile
+      ?`<li>Open this link in your browser</li><li>Tap <b>Share</b> (or the ⋮ menu)</li><li>Choose <b>Add to Home Screen</b> or <b>Bookmark</b></li>`
+      :`<li>Press <kbd>${mac?'⌘':'Ctrl'}</kbd> + <kbd>D</kbd> to bookmark this page</li><li>Or copy the link below and keep it where you’ll see it</li>`}</ol>
+    <label class="mono" for="bm-link" style="color:var(--splash-muted)">Link</label>
+    <div class="bm-row"><input id="bm-link" class="sx-linkbox" readonly value="${esc(APP_URL)}"><button class="btn" id="bm-copy" type="button">Copy</button></div>
+    <p class="sx-note">Browsers don’t let a page add itself to your bookmarks, so this takes one step from you.</p>`;
+  document.getElementById('bm-copy').onclick=()=>{const b=document.getElementById('bm-copy'),i=document.getElementById('bm-link');
+    (navigator.clipboard?navigator.clipboard.writeText(APP_URL):Promise.reject()).then(()=>b.textContent='Copied').catch(()=>{i.select();b.textContent=mac?'Press ⌘C':'Press Ctrl+C'});};
+  showSearch();
+}
+
+/* ---------- swipe mode ---------- */
+const stack=document.getElementById('stack'), rail=document.getElementById('rail');
+let slides=[], io, briefDone=false;
+function renderStack(){
+  const list=current(), n=list.length;
+  const firstFound=list.findIndex(s=>s.found), nf=list.filter(s=>s.found).length;
+  stack.innerHTML = list.map((s,i)=>(i===firstFound?`
+  <div class="slide"><article class="card divcard"><span class="radar" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="mono" style="color:var(--accent)">Beyond the brief</span>
+    <h2>${nf} more ${nf===1?'story':'stories'}${(()=>{const ts=[...new Set(list.filter(x=>x.found).map(x=>x.topic))];return ts.length===1?' on '+esc(ts[0]==='design'?'design':tLabel(ts[0])):''})()}</h2>
+    <p>You asked for these at ${lastSearch}. They stay out of your daily brief.</p>
+    <span class="hint2">Keep swiping</span></article></div>`:'')+`
+  <div class="slide" data-id="${s.id}"><article class="card">
+    <div class="art">${illo(s)}<span class="spec">${i+1} of ${n}</span></div>
+    <div class="cbody">
+      <div class="meta">${chip(s)}<span style="font-size:.8rem">${esc(s.date)}</span>${s.found?'<span class="newtag">New · from search</span>':''}</div>
+      <h2>${esc(s.title)}</h2>
+      <p class="summary">${esc(s.summary)}</p>
+      ${implBox(s)}
+      <div class="cfoot">${srcLink(s, esc(s.src))}${actions(s)}</div>
+    </div>
+  </article></div>`).join('') + `<div class="slide" data-end="1"><article class="card endcard">${retainHTML()}</article></div>`;
+  rail.innerHTML = list.map((s,i)=>`<button aria-label="Story ${i+1}" data-go="${i}" data-id="${s.id}"></button>`).join('');
+  slides=[...stack.querySelectorAll('.slide')];
+  io?.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{
+    const id=e.target.dataset.id;
+    e.target.classList.toggle('away', !e.isIntersecting);
+    if(e.isIntersecting && e.target.dataset.end && !briefDone){ briefDone=true; track('brief_completed',{brief:DAYS[dayIdx].iso, stories:current().length}); }
+    if(e.isIntersecting && id){ const st=byId(id), pos=current().findIndex(x=>x.id===id)+1; if(document.getElementById('splash').hidden) track('story_viewed',{story_url:st?.url, title:st?.title, category:st?.cat, position:pos, brief:DAYS[dayIdx].iso}); markRead(id); rail.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.id===id)); }
+    if(e.isIntersecting && e.target!==slides[0]) document.getElementById('hint').style.opacity=0;
+  }),{root:stack,threshold:.6});
+  slides.forEach(s=>io.observe(s));
+  stack.scrollTop=0;
+}
+const go = i => slides[i]?.scrollIntoView({behavior: reduce?'auto':'smooth'});
+rail.addEventListener('click',e=>{const b=e.target.closest('[data-go]'); if(b) go(+b.dataset.go)});
+addEventListener('keydown',e=>{
+  if(e.key==='Escape') closeSaved();
+  if(mode!=='swipe'||!splash.hidden||drawer.classList.contains('open')||e.target.closest('select'))return;
+  const cur=slides.findIndex(s=>!s.classList.contains('away'));
+  if(['ArrowDown','j'].includes(e.key)){e.preventDefault();go(cur+1)}
+  if(['ArrowUp','k'].includes(e.key)){e.preventDefault();go(cur-1)}
+});
+
+/* ---------- digest mode ---------- */
+const grid=document.getElementById('grid');
+function renderGrid(){
+  const list=current();
+  const ff=list.findIndex(s=>s.found), bl=ff<0?list.length:ff, fl=list.length-bl;
+  const span = i => i===0 ? 'lead' : i<bl ? ((bl-1)%2===1 && i===bl-1 ? 'lead' : '') : ((fl%2===1 && i===list.length-1) ? 'lead' : '');
+  document.getElementById('dg-title').innerHTML = dayIdx===0 ? "Today's <em>signal</em>, in one scan" : `The <em>${esc(DAYS[dayIdx].label)}</em> brief`;
+  document.getElementById('dg-date').textContent = `${list.length} ${list.length===1?'story':'stories'}${topic!=='all'?' · '+TOPICS.find(t=>t.id===topic).label:''}`;
+  const firstFound=list.findIndex(s=>s.found);
+  grid.innerHTML = list.map((s,i)=>(i===firstFound?`<div class="dg-div"><span class="mono" style="color:var(--accent)">Beyond the brief</span><h2>Found by a fresh search at ${lastSearch}</h2><span class="sm">${list.length-firstFound} more ${topic!=='all'?'on '+esc(tLabel(topic)):'across topics'} · not in today’s brief</span></div>`:'')+`
+  <article class="dg ${span(i)}${i===0?' open':''}" style="animation-delay:${60+i*60}ms" data-id="${s.id}">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div class="art">${illo(s)}</div>
+    <div>
+      <button class="dtoggle" aria-expanded="${i===0}" aria-controls="p-${s.id}">
+        <div class="meta">${chip(s)}<span style="font-size:.78rem">${esc(s.date)}</span>${s.found?'<span class="newtag">New</span>':''}</div>
+        <h3>${esc(s.title)}</h3>
+        <div class="drow"><span>${esc(s.src)}</span><span class="chev"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span></div>
+      </button>
+      <div class="panel" id="p-${s.id}"><div><div class="pin">
+        <p class="summary" style="font-size:.93rem">${esc(s.summary)}</p>${implBox(s)}
+        <div class="cfoot">${srcLink(s, 'Read at '+esc(s.src))}${actions(s)}</div>
+      </div></div></div>
+    </div>
+  </article>`).join('') + `<div class="dg-end">${retainHTML()}</div>`;
+  if(mode==='digest' && list[0]) markRead(list[0].id);
+}
+grid.addEventListener('click',e=>{
+  const t=e.target.closest('.dtoggle'); if(!t)return;
+  const card=t.closest('.dg'), open=!card.classList.contains('open');
+  card.classList.toggle('open',open); t.setAttribute('aria-expanded',open);
+  if(open) markRead(card.dataset.id);
+});
+
+/* ---------- filters ---------- */
+const daySel=document.getElementById('day'), topicsEl=document.getElementById('topics');
+daySel.innerHTML = DAYS.map((d,i)=>`<option value="${i}">${i===0?'Today · ':''}${esc(d.label)}</option>`).join('');
+function renderTopics(){
+  topicsEl.innerHTML = TOPICS.map(t=>{const n=topicCount(t.id);return `<button class="tchip" data-topic="${t.id}" aria-pressed="${t.id===topic}" ${n||t.id==='all'?'':'disabled style="opacity:.4"'}>${t.label} <small>${n}</small></button>`}).join('');
+}
+function renderFindBtn(){const b=document.getElementById('find-more');
+  if(topic==='all'){b.innerHTML=ICON_SEARCH+'Find more';b.disabled=false;return}
+  const left=MORE[topic].length-revealed[topic]; b.disabled=!left; b.innerHTML=ICON_SEARCH+(left?'Find more on '+tLabel(topic):'No more new stories');}
+function renderAll(){ renderTopics(); renderFindBtn(); renderStack(); renderGrid(); updateRing(); document.querySelector('.digest').scrollTop=0; }
+function setDay(i){ dayIdx=i; daySel.value=i; if(topic!=='all'&&!topicCount(topic)) topic='all'; renderAll(); }
+function setTopic(t){ topic=t; renderAll(); }
+daySel.onchange=()=>setDay(+daySel.value);
+topicsEl.addEventListener('click',e=>{const b=e.target.closest('[data-topic]'); if(b&&!b.disabled) setTopic(b.dataset.topic)});
+
+/* ---------- saved drawer ---------- */
+const drawer=document.getElementById('drawer'), scrim=document.getElementById('scrim');
+function renderSaved(){
+  const c=document.getElementById('saved-count'); c.textContent=saved.size; c.hidden=!saved.size;
+  const items=[...saved].map(byId).filter(Boolean);
+  document.getElementById('saved-list').innerHTML = items.length ? items.map(s=>`
+    <div class="sitem"><div class="thumbart">${illo(s)}</div>
+      <div><h4>${esc(s.title)}</h4><div class="sm">${esc(s.cat)} · ${esc(s.date)} · ${srcLink(s,'Source')}</div></div>
+      <button class="act" data-save="${s.id}" aria-pressed="true" aria-label="Remove from saved">${saveIcon(true)}</button></div>`).join('')
+    : `<div class="dr-empty">Nothing saved yet.<br>Tap the bookmark on any story to keep it here.</div>`;
+}
+function openSaved(){ renderSaved(); drawer.classList.add('open'); scrim.classList.add('open'); drawer.inert=false; document.getElementById('close-saved').focus(); }
+function closeSaved(){ drawer.classList.remove('open'); scrim.classList.remove('open'); drawer.inert=true; }
+document.getElementById('open-saved').onclick=openSaved;
+document.getElementById('close-saved').onclick=closeSaved;
+scrim.onclick=closeSaved;
+
+/* ---------- delegated actions ---------- */
+document.addEventListener('click',e=>{
+  const sv=e.target.closest('[data-save]');
+  if(sv){const id=sv.dataset.save, on=!saved.has(id); on?saved.add(id):saved.delete(id);
+    store.set('ain-saved',JSON.stringify([...saved]));
+    document.querySelectorAll(`[data-save="${id}"]`).forEach(b=>{b.setAttribute('aria-pressed',on);b.innerHTML=saveIcon(on);b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')});
+    const badge=document.getElementById('saved-count'); badge.textContent=saved.size; badge.hidden=!saved.size; badge.classList.add('bump'); setTimeout(()=>badge.classList.remove('bump'),250);
+    if(drawer.classList.contains('open')) renderSaved();
+    document.querySelectorAll('.morelink[data-open-saved] b').forEach(b=>b.textContent=saved.size);
+  }
+  const cp=e.target.closest('[data-copy]');
+  if(cp){const s=byId(cp.dataset.copy); navigator.clipboard?.writeText(`${s.title}\n${s.url}`).then(()=>{cp.classList.remove('pop');void cp.offsetWidth;cp.classList.add('pop');cp.title='Copied'}).catch(()=>{cp.title='Copy is not available here'});}
+  if(e.target.closest('[data-open-saved]')) openSaved();
+  const gd=e.target.closest('[data-goto-day]'); if(gd) setDay(+gd.dataset.gotoDay);
+  const gt=e.target.closest('[data-goto-topic]'); if(gt) setTopic(gt.dataset.gotoTopic);
+  const ch=e.target.closest('[data-chan]');
+  if(ch){const id=ch.dataset.chan, on=!chanOn.has(id); on?chanOn.add(id):chanOn.delete(id); store.set('ain-chan',JSON.stringify([...chanOn]));
+    document.querySelectorAll(`[data-chan="${id}"]`).forEach(b=>b.setAttribute('aria-pressed',on));}
+});
+
+/* ---------- mode switch ---------- */
+function setMode(m){
+  mode=m; store.set('ain-mode',m);
+  document.getElementById('m-swipe').setAttribute('aria-pressed',m==='swipe');
+  document.getElementById('m-digest').setAttribute('aria-pressed',m==='digest');
+  if(m==='digest'){ const f=current()[0]; if(f) markRead(f.id); }
+  setTab('news');
+}
+document.getElementById('m-swipe').onclick=()=>setMode('swipe');
+document.getElementById('m-digest').onclick=()=>setMode('digest');
+addEventListener('resize',placeThumb);
+
+/* ---------- splash ---------- */
+const splash=document.getElementById('splash');
+const today=new Date().toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
+const todays=DAYS[0].stories;
+document.getElementById('sp-date').textContent=today;
+document.getElementById('lead-title').textContent=todays[0]?.title||'';
+document.getElementById('sp-cut').textContent=`${todays.length} are worth your morning.`;
+document.getElementById('sp-meta').textContent=`${todays.length} stories · design process, tools, trends and impact · about 4 min`;
+document.getElementById('reel').innerHTML=[0,1,2].map(r=>{
+  const items=todays.slice(r*2).concat(todays).slice(0,5).map(s=>`<span>${esc(s.title)}</span>`).join('');
+  return `<div class="strip">${items}${items}</div>`}).join('');
+
+let variant='B', raf; /* A (count) and C (reel) kept in code, hidden for now */
+function countUp(){const el=document.getElementById('count'), target=1284, t0=performance.now();
+  if(reduce){el.textContent=target.toLocaleString('en-IN');return}
+  const tick=t=>{const p=Math.min(1,(t-t0-150)/1600), e=1-Math.pow(1-Math.max(0,p),4); el.textContent=Math.round(target*e).toLocaleString('en-IN'); if(p<1)requestAnimationFrame(tick)}; requestAnimationFrame(tick);}
+function wave(){
+  const cv=document.getElementById('wave'), ctx=cv.getContext('2d'), dpr=devicePixelRatio||1, t0=performance.now();
+  cv.width=cv.clientWidth*dpr; cv.height=cv.clientHeight*dpr;
+  cancelAnimationFrame(raf);
+  const draw=t=>{
+    const w=cv.width,h=cv.height,k=reduce?1:Math.min(1,(t-t0)/2600), calm=k*k*(3-2*k);
+    ctx.clearRect(0,0,w,h);
+    for(let l=0;l<14;l++){
+      const hero=l===7; ctx.beginPath();
+      for(let x=0;x<=w;x+=4*dpr){
+        const n=Math.sin(x*.013/dpr+l*1.7+t*.002)*Math.sin(x*.041/dpr+l+t*.003)*h*.38*(1-calm);
+        const s=Math.sin(x*.012/dpr+t*.0015)*h*.18*calm;
+        const y=h/2+(hero? n*.6+s : n+(l-7)*calm*h*.004);
+        x?ctx.lineTo(x,y):ctx.moveTo(x,y);
+      }
+      ctx.strokeStyle=hero?'#8193FF':`rgba(139,146,160,${.35*(1-calm*.75)})`; ctx.lineWidth=(hero?3:1)*dpr; ctx.stroke();
+    }
+    if(!document.getElementById('vB').hidden && !splash.hidden && !reduce) raf=requestAnimationFrame(draw);
+  };
+  requestAnimationFrame(draw);
+}
+function restartAnims(el){el.querySelectorAll('.in').forEach(n=>{n.style.animation='none';void n.offsetWidth;n.style.animation=''})}
+function showVariant(v){
+  variant=v; store.set('ain-splash',v);
+  ['A','B','C'].forEach(x=>document.getElementById('v'+x).hidden=x!==v);
+  document.querySelectorAll('.picker button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===v));
+  restartAnims(splash);
+  if(v==='A')countUp(); if(v==='B')wave();
+}
+document.querySelector('.picker').addEventListener('click',e=>{const b=e.target.closest('[data-v]'); if(b)showVariant(b.dataset.v)});
+function closeSplash(){
+  splash.classList.add('leave');
+  setTimeout(()=>{splash.hidden=true;cancelAnimationFrame(raf)}, reduce?0:800);
+  setDay(0); placeThumb();
+  if(mode==='swipe'){const h=document.getElementById('hint'); h.style.opacity=1; setTimeout(()=>h.style.opacity=0, 5000);}
+}
+function openSplash(){splash.hidden=false;splash.classList.remove('leave');showVariant(variant)}
+document.getElementById('start').onclick=closeSplash;
+document.getElementById('replay').onclick=openSplash;
+
+
+/* ---------- search engine UI ---------- */
+const searchEl=document.getElementById('search');
+let searching=false;
+function openPicker(){
+  searchEl.querySelector('.sx-body').innerHTML=`<span class="mono" style="color:var(--splash-muted)">Explore beyond design</span><h2>What do you want to read about?</h2>
+    <p class="sx-sub">We’ll search every source for this topic now. It won’t be added to your daily brief.</p>
+    <div class="sx-pick">${EXPLORE.map(t=>{const left=MORE[t.id].length-revealed[t.id];return `<button data-find="${t.id}" ${left?'':'disabled'}><b>${t.label}</b><small>${SOURCES[t.id].length} sources${left?'':' · all caught up'}</small></button>`}).join('')}</div>
+    <form class="sx-other" id="sx-other"><label for="other-q" class="mono" style="color:var(--splash-muted)">Or type any topic</label>
+      <div><input id="other-q" placeholder="e.g. healthcare, automotive, fintech" autocomplete="off"><button class="btn" type="submit">Search</button></div></form>`;
+  document.getElementById('sx-other').onsubmit=e=>{e.preventDefault();runCustom(document.getElementById('other-q').value)};
+  showSearch();
+}
+function runCustom(q){
+  q=(q||'').trim(); if(!q)return;
+  const map={robot:'robo',humanoid:'robo',aero:'aero',aviation:'aero',space:'aero',flight:'aero',lab:'labs',openai:'labs',anthropic:'labs',gemini:'labs',model:'labs',design:'design'};
+  const hit=Object.keys(map).find(k=>q.toLowerCase().includes(k));
+  if(hit && MORE[map[hit]].length-revealed[map[hit]]>0) return runSearch(map[hit]);
+  searchEl.querySelector('.sx-body').innerHTML=`<span class="mono" style="color:var(--splash-muted)">Explore · ${esc(q)}</span><h2>Nothing to show for “${esc(q)}” in this prototype</h2>
+    <p class="sx-sub">The live engine would search all sources for “${esc(q)}” now and bring back a fresh list. This preview only holds results for AI labs, Robotics and Aerospace.</p>
+    <button class="btn" data-explore-other style="align-self:flex-start">Try another topic</button>`;
+}
+let shareCtx={};
+function openShare(st){
+  shareCtx={target:st?'story':'app', story_url:st?.url}; track('share_opened',shareCtx);
+  const text = st ? `${st.title} — via AI Signal` : 'AI Signal: a 4-minute daily brief on how AI is changing design work.';
+  const link = st ? st.url : APP_URL;
+  const full = st ? `${text}\n${st.url}\n\nGet the daily brief: ${APP_URL}` : `${text}\n${APP_URL}`;
+  const E=encodeURIComponent;
+  searchEl.querySelector('.sx-body').innerHTML=`<span class="mono" style="color:var(--splash-muted)">${st?'Share this story':'Share AI Signal'}</span>
+    <h2>${st?esc(st.title):'Send today’s brief to a designer friend'}</h2>
+    <div class="sx-share">
+      <a data-channel="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=${E(st?st.url:APP_URL)}" target="_blank" rel="noopener"><b>in</b>LinkedIn</a>
+      <a data-channel="whatsapp" href="https://wa.me/?text=${E(full)}" target="_blank" rel="noopener"><b>wa</b>WhatsApp</a>
+      <a data-channel="x" href="https://twitter.com/intent/tweet?text=${E(text)}&url=${E(link)}" target="_blank" rel="noopener"><b>X</b>X</a>
+      <button type="button" id="sx-copy" data-channel="copy"><b>⧉</b>Copy link</button>
+    </div>
+    <label class="mono" for="sx-link" style="color:var(--splash-muted)">Link</label><input id="sx-link" class="sx-linkbox" readonly value="${esc(st?st.url:APP_URL)}">`;
+  document.getElementById('sx-copy').onclick=()=>{const b=document.getElementById('sx-copy'), inp=document.getElementById('sx-link');
+    (navigator.clipboard?navigator.clipboard.writeText(full):Promise.reject()).then(()=>{b.lastChild.textContent='Copied';}).catch(()=>{inp.select();b.lastChild.textContent='Press Ctrl+C';});};
+  showSearch();
+}
+function showSearch(){searchEl.hidden=false;requestAnimationFrame(()=>searchEl.classList.add('open'));searchEl.inert=false;}
+function hideSearch(){searchEl.classList.remove('open');setTimeout(()=>{searchEl.hidden=true},reduce?0:350);searching=false;}
+async function runSearch(t){
+  if(searching)return; searching=true;
+  const src=SOURCES[t], left=MORE[t].length-revealed[t], take=Math.min(left, revealed[t]===0?3:left);
+  const items=120+Math.floor(Math.random()*140);
+  searchEl.querySelector('.sx-body').innerHTML=`<span class="mono" style="color:var(--splash-muted)">Searching · ${esc(tLabel(t))}</span>
+    <h2>Looking beyond today’s brief</h2>
+    <div class="sx-orbit" aria-hidden="true"><span class="core"></span>${src.map((n,i)=>`<span class="dot" style="--a:${i*360/src.length}deg;--d:${i*.08}s"></span>`).join('')}</div>
+    <ul class="sx-src">${src.map((n,i)=>`<li style="--d:${i}">${esc(n)}</li>`).join('')}</ul>
+    <div class="sx-bar"><i></i></div>
+    <div class="sx-stats"><span><b id="sx-s">0</b>/${src.length} sources</span><span><b id="sx-i">0</b> items read</span><span><b id="sx-n">0</b> new for you</span></div>
+    <ol class="sx-steps"><li>Re-scanning sources</li><li>Removing stories already in your feed</li><li>Ranking by relevance to designers</li></ol>
+    <p class="sx-note">Prototype: this replays stories found by a real search on 28 Sep. The live engine would run the search now.</p>`;
+  if(!searchEl.classList.contains('open')) showSearch();
+  const D=reduce?300:3400, t0=performance.now(), steps=[...searchEl.querySelectorAll('.sx-steps li')], lis=[...searchEl.querySelectorAll('.sx-src li')];
+  await new Promise(res=>{const tick=now=>{const p=Math.min(1,(now-t0)/D);
+    searchEl.querySelector('.sx-bar i').style.transform=`scaleX(${p})`;
+    const ns=Math.min(src.length,Math.floor(p*1.4*src.length)); document.getElementById('sx-s').textContent=ns; lis.forEach((l,i)=>l.classList.toggle('done',i<ns));
+    document.getElementById('sx-i').textContent=Math.round(items*Math.min(1,p*1.3));
+    document.getElementById('sx-n').textContent=p>.8?take:p>.55?Math.max(0,take-1):0;
+    steps.forEach((s,i)=>{s.classList.toggle('on',p>=i*.33);s.classList.toggle('done',p>=(i+1)*.33)});
+    p<1?requestAnimationFrame(tick):res()}; requestAnimationFrame(tick)});
+  FOUND.push(...MORE[t].slice(revealed[t],revealed[t]+take)); revealed[t]+=take;
+  lastSearch=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+  hideSearch();
+  if(topic!==t && topic!=='all') topic=t;
+  const firstNew=FOUND.length-take;
+  renderAll();
+  // jump to the new results
+  setTimeout(()=>{ if(mode==='swipe'){const i=slides.findIndex(sl=>sl.dataset.id===FOUND[firstNew].id); go(Math.max(0,i-1));}
+    else {document.querySelector('.dg-div')?.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});} },80);
+}
+document.getElementById('find-more').onclick=()=>topic==='all'?openPicker():runSearch(topic);
+document.addEventListener('click',e=>{const f=e.target.closest('[data-find]'); if(f&&!f.disabled) runSearch(f.dataset.find);
+  if(e.target.closest('[data-explore-other]')) openPicker();
+  if(e.target.closest('[data-share-app]')) openShare(null);
+  if(e.target.closest('[data-bookmark-app]')) openBookmark();
+  const sh=e.target.closest('[data-share]'); if(sh) openShare(byId(sh.dataset.share));
+  if(e.target.closest('.toast-x')) hideToast();
+});
+searchEl.addEventListener('click',e=>{if(e.target===searchEl||e.target.closest('.sx-close')) { if(!searching) hideSearch(); }});
+
+/* ---------- LEARN: levels, courses, basics ---------- */
+const LEVELS = [
+  {id:'new', bars:1, name:'New to AI', desc:'You have tried a chatbot a few times. You want to understand what AI is and use it with confidence.',
+   practice:'Take one research synthesis you did recently. Ask an assistant to do the same from the raw notes, then compare its themes with yours and note what it missed.'},
+  {id:'using', bars:2, name:'Using AI in my design work', desc:'You already use AI tools for research, copy or prototypes. You want a repeatable workflow and better results.',
+   practice:'Pick one weekly task (a critique checklist, release notes, UX copy review) and write it as reusable instructions. Run it three times and refine.'},
+  {id:'build', bars:3, name:'Building agents', desc:'You want AI to take multi-step actions for you or your users, and to design and build agentic products.',
+   practice:'Connect an assistant to one real tool (Figma, Jira or Drive) with a connector, then give it a three-step task and review every action it takes.'},
+];
+const COURSES = [
+  {lv:'new', p:'Anthropic Academy', t:'AI Fluency: Framework & Foundations', f:'Self-paced', d:'Short course', price:'Free', url:'https://anthropic.skilljar.com/', why:'How to work with AI effectively, efficiently, ethically and safely. The best first step.'},
+  {lv:'new', p:'Anthropic Academy', t:'AI Capabilities and Limitations', f:'Self-paced', d:'Short course', price:'Free', url:'https://anthropic.skilljar.com/', why:'An introduction to how AI works and where it fails, so you know when to trust it.'},
+  {lv:'new', p:'DeepLearning.AI', t:'Generative AI for Everyone', f:'Self-paced', d:'About 3 hours', price:'Free to audit', url:'https://www.deeplearning.ai/courses/generative-ai-for-everyone/', why:'Andrew Ng explains what generative AI can and cannot do, without code.'},
+  {lv:'new', p:'Anthropic Academy', t:'Claude 101', f:'Self-paced', d:'Short course', price:'Free', url:'https://anthropic.skilljar.com/', why:'Hands-on use of an assistant for everyday work tasks.'},
+  {lv:'using', p:'Interaction Design Foundation', t:'AI for Designers', f:'Self-paced', d:'14.5 h · 58 lessons', price:'$349 or free for members', url:'https://ixdf.org/courses/ai-for-designers', why:'Ioana Teleanu covers AI across the design process, with templates and a certificate.'},
+  {lv:'using', p:'Designlab', t:'AI for UX Design', f:'Mentor-led cohort', d:'4 weeks · ~6 h/week', price:'$799', start:'2026-10-16', url:'https://designlab.com/advanced/ai-for-ux-design-and-product-design', why:'Build an AI tool stack across research, wireframes, content and testing. Needs 2+ years in UX.'},
+  {lv:'using', p:'UX Design Institute', t:'Certificate in AI Fundamentals for UX', f:'Live online', d:'3 weeks · 7.5 h', price:'€550 early bird', start:'2026-10-20', url:'https://www.uxdesigninstitute.com/courses/ai-fundamentals-for-ux', why:'One evening session a week, with recordings if you miss one.'},
+  {lv:'using', p:'Patricia Reiners', t:'AI for Designers Bootcamp', f:'Live cohort', d:'5 weeks', price:'See site', url:'https://www.ai-for-designers.com/', why:'AI tools and workflows for UX professionals, taught live.'},
+  {lv:'using', p:'Anthropic Academy', t:'Introduction to Claude Cowork', f:'Self-paced', d:'Short course', price:'Free', url:'https://anthropic.skilljar.com/', why:'Hand off multi-step work (docs, decks, files) to an assistant and review it.'},
+  {lv:'build', p:'Maven · Rupa Chaturvedi', t:'Master UX Design for AI', f:'Live cohort · 10 sessions', d:'6 weeks', price:'$2,450', start:'2026-10-02', url:'https://maven.com/hcaiinstitute/mxdai', why:'For senior designers moving into AI-native product work. Needs 5+ years of experience.'},
+  {lv:'build', p:'Anthropic Academy', t:'Introduction to agent skills', f:'Self-paced', d:'Short course', price:'Free', url:'https://anthropic.skilljar.com/', why:'Build, configure and share Skills that give an agent your team’s way of working.'},
+  {lv:'build', p:'Anthropic Academy', t:'Introduction to Model Context Protocol', f:'Self-paced', d:'Short course', price:'Free', url:'https://anthropic.skilljar.com/', why:'Connect AI to tools and data by building MCP servers and clients. Uses Python.'},
+  {lv:'build', p:'Hugging Face', t:'AI Agents Course', f:'Self-paced + live sessions', d:'5 units', price:'Free, with certificate', url:'https://huggingface.co/agents-course', why:'Agent fundamentals, frameworks and a final project. Needs basic Python.'},
+];
+const TERMS = [
+  {id:'llm', g:'basic', t:'LLM', full:'Large language model', one:'The engine behind Claude, ChatGPT and Gemini. It learned from huge amounts of text to predict what comes next, which lets it write, summarise, reason and code.',
+   when:'Any task that is mostly language: drafting, summarising, restructuring, explaining.', how:'Give it context and a clear goal. Judge the output; don’t just accept it.', where:'Claude, ChatGPT, Gemini, and the AI features inside Figma, Notion and Slack.', eg:'Turn 20 interview transcripts into themes in minutes, then check each theme against real quotes.'},
+  {id:'prompt', g:'basic', t:'Prompt', full:'Your instruction to the model', one:'What you type to get a result. Quality in, quality out: a good prompt reads like a good design brief.',
+   when:'Every interaction with an AI tool.', how:'Include the role, the context, the task, constraints and an example of good output.', where:'Chat boxes, AI buttons in tools, and system prompts inside products.', eg:'“You are reviewing a checkout flow for accessibility. Here are the screens. List issues by WCAG criterion, most severe first.”'},
+  {id:'tokens', g:'basic', t:'Tokens', full:'How AI measures text', one:'Models read and write in small chunks called tokens. In English one token is about ¾ of a word, or roughly 4 characters.',
+   when:'When you hit a limit, when cost matters, or when replies get slow.', how:'Send only what is relevant. Files and images use tokens too.', where:'Usage meters, message limits and API pricing (priced per million tokens).', eg:'A 30-page PRD is about 20,000 tokens. Pasting only the relevant section keeps answers sharper and cheaper.'},
+  {id:'context', g:'basic', t:'Context window', full:'The model’s working memory', one:'How much the model can hold in view at once: your messages, files and instructions, measured in tokens.',
+   when:'Long conversations, big documents, or many files at once.', how:'Start a fresh chat for a new task. Put key instructions first. Summarise long threads.', where:'Every assistant. Project features keep files and instructions available across chats.', eg:'If the assistant forgets your design principles in a long thread, keep them in project instructions instead.'},
+  {id:'assistant', g:'basic', t:'AI assistant', full:'A chat product built on an LLM', one:'An LLM plus extras such as file uploads, web search, memory and tools, packaged as a chat you can work with.',
+   when:'As a thinking partner, for drafting and analysis, and for quick prototypes.', how:'Brief it like a smart new colleague, then review its work.', where:'Claude, ChatGPT, Gemini, Microsoft Copilot.', eg:'Critique a flow, generate edge cases, or write five microcopy options for an error state.'},
+  {id:'halluc', g:'basic', t:'Hallucination', full:'Confident but wrong output', one:'The model can state things that sound right but are made up, such as facts, numbers, quotes or citations.',
+   when:'Watch for it with facts, statistics, research findings and sources.', how:'Give it the source material, ask for citations, and verify anything you will present.', where:'Every model, especially when it answers from memory instead of from your files.', eg:'Never put an AI-written “user quote” in a readout unless it traces back to a real transcript.'},
+  {id:'multi', g:'basic', t:'Multimodal', full:'Beyond text', one:'Models that understand images, audio and video as well as text, and can sometimes produce them.',
+   when:'Screenshot critiques, whiteboard photos, voice notes and video walkthroughs.', how:'Attach the image and ask a specific question about it.', where:'Most leading assistants and many design tools.', eg:'Upload a competitor’s dashboard and ask it to map the information hierarchy.'},
+  {id:'agents', g:'next', t:'Agentic AI', full:'AI that takes action', one:'Instead of only answering, an agent works toward a goal: it plans steps, uses tools, checks results and keeps going until done.',
+   when:'Multi-step tasks with a clear definition of done: research across sources, file clean-up, building a prototype.', how:'Set the goal, the boundaries and what “done” means. Review before it does anything you can’t undo.', where:'Claude Cowork and Claude Code, ChatGPT agent, browser agents, design-to-code tools.', eg:'“Audit all 40 screens for inconsistent button styles and list them in a table with links.”'},
+  {id:'skills', g:'next', t:'Skills', full:'Reusable know-how for an assistant', one:'A packaged set of instructions, examples and sometimes scripts that an assistant loads only when a task needs it, so it follows your way of working every time.',
+   when:'Repeated workflows with a house style: case-study format, UX writing rules, design review checklists.', how:'Write the steps and good examples once in a skill file. The assistant picks it up when relevant.', where:'Claude Agent Skills. Similar ideas appear as custom instructions or custom GPTs.', eg:'A “design critique” skill that always reviews against your design system and Nielsen’s heuristics.'},
+  {id:'mcp', g:'next', t:'MCP & connectors', full:'Model Context Protocol', one:'An open standard that lets assistants and agents connect to tools and data, such as Figma, Jira, Slack or Drive, through one common interface.',
+   when:'When AI needs your real data, or needs to act inside another tool.', how:'Turn on a connector in your assistant and check what it is allowed to read and change.', where:'Claude connectors, coding tools and agents. Figma offers an MCP server for design context.', eg:'Ask the assistant to read a Figma frame and generate matching code, or to file the bugs it found in Jira.'},
+  {id:'rag', g:'next', t:'RAG / grounding', full:'Retrieval-augmented generation', one:'The system looks up relevant documents first, then answers from them, so replies come from your sources instead of the model’s memory.',
+   when:'Questions about internal knowledge: your research repository, design system docs, policies.', how:'Attach or connect the sources and ask it to cite them.', where:'Projects with files, enterprise search tools, custom chatbots.', eg:'“What did users say about onboarding?” answered from your research repo, with links to each session.'},
+  {id:'proto', g:'next', t:'AI prototyping', full:'Also called vibe coding', one:'Describe an interface or app in plain language and AI builds working code you can click, test and refine.',
+   when:'Testing real interactions, data states and flows that static mockups can’t show.', how:'Start small, iterate in steps, and keep your design system as the reference.', where:'Figma Make, Claude artifacts, v0, Lovable, Bolt.', eg:'Test a filter-heavy dashboard with real sample data in a user session, instead of a click-through.'},
+];
+
+let level = store.get('ain-level') || 'new', gfilter='all';
+const DAY_MS=864e5;
+const daysTo = iso => Math.ceil((new Date(iso+'T00:00:00') - new Date(new Date().toDateString()))/DAY_MS);
+const fmtDate = iso => new Date(iso+'T00:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+const bars = n => `<span class="bars" aria-hidden="true">${[1,2,3].map(i=>`<i class="${i<=n?'on':''}" style="height:${i*6}px"></i>`).join('')}</span>`;
+const lvName = id => LEVELS.find(l=>l.id===id).name;
+const ext = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>`;
+
+function renderLearn(){
+  const L=LEVELS.find(l=>l.id===level);
+  document.getElementById('levels').innerHTML = LEVELS.map(l=>`
+    <button class="lvl" data-level="${l.id}" aria-pressed="${l.id===level}">
+      <span class="lvl-top">${bars(l.bars)}<span class="mono">Level ${l.bars}</span></span>
+      <b>${l.name}</b><span class="sm">${l.desc}</span></button>`).join('');
+  const soon = COURSES.filter(c=>c.start && daysTo(c.start)>=0).sort((a,b)=>a.start.localeCompare(b.start));
+  document.getElementById('soon').innerHTML = soon.map(c=>{const n=daysTo(c.start);return `
+    <a class="scard ${c.lv===level?'mine':''}" href="${c.url}" target="_blank" rel="noopener">
+      <span class="count"><b>${n===0?'Today':n}</b>${n===0?'':n===1?'day to go':'days to go'}</span>
+      <span class="sbody"><span class="mono">${fmtDate(c.start)} · ${esc(lvName(c.lv))}</span><b>${esc(c.t)}</b><span class="sm">${esc(c.p)} · ${esc(c.d)} · ${esc(c.price)}</span></span></a>`}).join('');
+  const mine = COURSES.filter(c=>c.lv===level);
+  document.getElementById('path-title').textContent = `Your path: ${L.name}`;
+  document.getElementById('path').innerHTML = mine.map((c,i)=>`
+    <li class="step">
+      <span class="num">${i+1}</span>
+      <div class="course">
+        <div class="ctop"><span class="mono">${esc(c.p)}</span>${c.start?`<span class="date">Starts ${fmtDate(c.start)}</span>`:`<span class="date alt">Start anytime</span>`}</div>
+        <b>${esc(c.t)}</b><p>${esc(c.why)}</p>
+        <div class="cmeta"><span>${esc(c.f)}</span><span>${esc(c.d)}</span><span>${esc(c.price)}</span><a href="${c.url}" target="_blank" rel="noopener">View course ${ext}</a></div>
+      </div></li>`).join('') + `
+    <li class="step practice"><span class="num">✓</span><div class="course"><div class="ctop"><span class="mono">Try this week</span></div><p style="margin:0">${esc(L.practice)}</p></div></li>`;
+  renderGloss();
+}
+function renderGloss(){
+  document.querySelectorAll('[data-gf]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.gf===gfilter));
+  document.getElementById('gloss').innerHTML = TERMS.filter(t=>gfilter==='all'||t.g===gfilter).map(t=>`
+    <article class="term" id="term-${t.id}">
+      <button class="tbtn" aria-expanded="false" aria-controls="tp-${t.id}">
+        <span class="mono" style="color:var(--${t.g==='basic'?'c-cloud':'c-design'})">${t.g==='basic'?'Basics':'Going further'}</span>
+        <span class="tname">${esc(t.t)}</span><span class="tfull">${esc(t.full)}</span>
+        <span class="tone">${esc(t.one)}</span>
+        <span class="more">Know more <span class="chev"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span></span>
+      </button>
+      <div class="panel" id="tp-${t.id}"><div><dl class="qa">
+        <dt>When to use it</dt><dd>${esc(t.when)}</dd>
+        <dt>How to use it</dt><dd>${esc(t.how)}</dd>
+        <dt>Where you’ll find it</dt><dd>${esc(t.where)}</dd>
+        <dt class="eg">In design work</dt><dd class="eg">${esc(t.eg)}</dd>
+      </dl></div></div>
+    </article>`).join('');
+}
+function openTerm(id){
+  setTab('learn');
+  if(gfilter!=='all'){gfilter='all';renderGloss();}
+  const el=document.getElementById('term-'+id); if(!el)return;
+  el.classList.add('open'); el.querySelector('.tbtn').setAttribute('aria-expanded','true');
+  setTimeout(()=>el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'}),380);
+}
+document.getElementById('learn-view').addEventListener('click',e=>{
+  const lv=e.target.closest('[data-level]'); if(lv){level=lv.dataset.level;store.set('ain-level',level);renderLearn();document.getElementById('path-title').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});return}
+  const gf=e.target.closest('[data-gf]'); if(gf){gfilter=gf.dataset.gf;renderGloss();return}
+  const tb=e.target.closest('.tbtn'); if(tb){const a=tb.closest('.term'),o=!a.classList.contains('open');a.classList.toggle('open',o);tb.setAttribute('aria-expanded',o)}
+});
+document.addEventListener('click',e=>{const lt=e.target.closest('[data-learn-term]'); if(lt) openTerm(lt.dataset.learnTerm)});
+
+/* ---------- primary tabs ---------- */
+let tab='news';
+function placeThumb(){const b=document.getElementById(tab==='news'?'t-news':'t-learn'), th=document.getElementById('thumb'); th.style.left=b.offsetLeft+'px'; th.style.width=b.offsetWidth+'px';}
+function setTab(t){
+  tab=t; store.set('ain-tab',t);
+  document.getElementById('t-news').setAttribute('aria-pressed',t==='news');
+  document.getElementById('t-learn').setAttribute('aria-pressed',t==='learn');
+  document.getElementById('stack-view').classList.toggle('off', !(t==='news'&&mode==='swipe'));
+  document.getElementById('digest-view').classList.toggle('off', !(t==='news'&&mode==='digest'));
+  document.getElementById('learn-view').classList.toggle('off', t!=='learn');
+  placeThumb();
+}
+document.getElementById('t-news').onclick=()=>setTab('news');
+document.getElementById('t-learn').onclick=()=>setTab('learn');
+renderLearn();
+
+renderAll(); renderSaved();
+mode='swipe'; setMode(mode); /* Digest hidden for now */
+setTab(store.get('ain-tab')==='learn'?'learn':'news');
+showVariant(variant);
+document.fonts?.ready.then(placeThumb);
+/* ---------- analytics events (PostHog) ---------- */
+track('app_opened',{brief:DAYS[0]?.iso, stories:DAYS[0]?.stories.length||0});
+document.addEventListener('click',e=>{
+  const t=e.target;
+  const ch=t.closest('[data-channel]'); if(ch) track('shared',{...shareCtx, channel:ch.dataset.channel});
+  const src=t.closest('.cfoot a'); if(src){ const st=byId(src.closest('[data-id]')?.dataset.id); track('source_clicked',{story_url:src.href, title:st?.title}); }
+  const sv=t.closest('[data-save]'); if(sv){ const st=byId(sv.dataset.save); track(saved.has(sv.dataset.save)?'story_unbookmarked':'story_bookmarked',{story_url:st?.url}); }
+  if(t.closest('#start')){ track('brief_started',{splash:'B'}); const f=current()[0]; if(f) setTimeout(()=>track('story_viewed',{story_url:f.url, title:f.title, category:f.cat, position:1, brief:DAYS[dayIdx].iso}),900); }
+  if(t.closest('[data-open-saved]')) track('saved_opened',{count:saved.size});
+  const gd=t.closest('[data-goto-day]'); if(gd) track('earlier_brief_opened',{brief:DAYS[+gd.dataset.gotoDay]?.iso});
+  if(t.closest('#t-learn')) track('learn_opened');
+  const lv=t.closest('[data-level]'); if(lv) track('learn_level_selected',{level:lv.dataset.level});
+  const cr=t.closest('.course a, a.scard'); if(cr) track('course_clicked',{url:cr.href});
+  const tm=t.closest('.tbtn'); if(tm) track('term_opened',{term:tm.closest('.term')?.id.replace('term-','')});
+}, true); /* capture phase: runs before handlers that re-render the clicked button */
 </script>
+
 </body>
 </html>
