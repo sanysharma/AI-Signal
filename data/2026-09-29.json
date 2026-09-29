@@ -8,26 +8,21 @@
       "status": "draft",
       "category": "design_impact",
       "tags": [
-        "agentic-ux",
-        "embedded-ui",
-        "permissions-and-identity"
+        "agents-as-users",
+        "embedded-ui"
       ],
       "title": "Shopify opens checkout to browser-based AI agents",
       "summary": "Shopify is expanding WebMCP support to checkout, allowing browser-based AI agents to update order details and complete purchases with a buyer’s authorization.",
-      "design_implication": "As agents execute end-to-end user journeys, designers must craft explicit permission artifacts and session-bound authorization controls for headless transactions, shifting interface responsibility from form-filling to intent-auditing.",
-      "implication_lens": "trust_and_risk",
+      "design_implication": "As non-human actors execute transactions directly on web surfaces, design must shift from human-oriented purchase funnels to providing programmatic audit trails and transparent consent checkpoints.",
+      "implication_lens": "capability",
       "visual_need": "illustrate",
       "source_name": "TechCrunch (AI)",
       "source_url": "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/",
       "source_date": "2026-09-28T19:33:57.000Z",
       "evidence": [
         {
-          "claim": "Shopify is expanding WebMCP support to checkout for AI agents.",
+          "claim": "Shopify expands WebMCP support to checkout for browser-based AI agents.",
           "quote": "Shopify opens checkout to browser-based AI agents"
-        },
-        {
-          "claim": "Agents can update order details and complete purchases with authorization.",
-          "quote": "Shopify is expanding WebMCP support to checkout, allowing browser-based AI agents to update order details and complete purchases with a buyer’s authorization."
         }
       ],
       "scores": {
@@ -40,7 +35,7 @@
       },
       "related_sources": [],
       "source_tier": 2,
-      "word_count": 55,
+      "word_count": 54,
       "discovered_date": "2026-09-29",
       "visual_type": "generated",
       "visual_url": null,
@@ -49,17 +44,16 @@
       "visual_license": "original"
     },
     {
-      "id": "2026-09-29-github-introduces-canvas-workflows-for-beginner-ai-app-build",
+      "id": "2026-09-29-github-copilot-app-for-beginners-how-to-build-custom-workflo",
       "status": "draft",
       "category": "design_tools",
       "tags": [
         "code-prototyping",
-        "design-tools",
         "agents-in-tools"
       ],
-      "title": "GitHub introduces canvas workflows for beginner AI app building",
-      "summary": "GitHub announced that users can describe the interface they need in plain English, allowing an agent to build a live surface that users can both use and update.",
-      "design_implication": "Canvas-based interfaces replace rigid chat streams with co-editable artifacts, requiring new interaction patterns for direct manipulation of AI-generated code surfaces during prototyping.",
+      "title": "GitHub Copilot app for beginners: how to build custom workflows with canvases",
+      "summary": "GitHub published a guide for beginners on describing interface requirements in plain English, allowing an AI agent to build a live surface that users can view and update directly.",
+      "design_implication": "Natural language generation of live software components blurs the boundary between prototyping and production code, requiring design systems to supply explicit semantic tokens that AI can parse reliably.",
       "implication_lens": "workflow",
       "visual_need": "illustrate",
       "source_name": "GitHub Blog",
@@ -67,8 +61,8 @@
       "source_date": "2026-09-25T18:00:00.000Z",
       "evidence": [
         {
-          "claim": "Users can describe required interfaces in plain English to build live surfaces.",
-          "quote": "Describe the interface you need in plain English, then let the agent build a live surface you can both use and update"
+          "claim": "GitHub outlines how beginners can build custom workflows using canvases and plain English prompts.",
+          "quote": "GitHub Copilot app for Beginners: How to build custom workflows with canvases"
         }
       ],
       "scores": {
@@ -79,11 +73,9 @@
         "design_leverage": 3,
         "total": 14
       },
-      "related_sources": [
-        "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/"
-      ],
+      "related_sources": [],
       "source_tier": 1,
-      "word_count": 59,
+      "word_count": 69,
       "discovered_date": "2026-09-29",
       "visual_type": "source_image",
       "visual_url": "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-23-at-3.59.20-PM.png",
@@ -94,45 +86,50 @@
   ],
   "review": {
     "model": "gemini-3.5-flash-lite",
-    "candidates_reviewed": 91,
+    "candidates_reviewed": 92,
     "held": [
       {
-        "source_url": "https://www.nngroup.com/articles/disclose-ai-paced/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
-        "reason": "awaiting_ga"
+        "source_url": "https://www.figma.com/blog/what-it-takes-to-build-great-products-now/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/index/basis-tax-workbook-with-astra",
+        "reason": "below_bar"
       },
       {
         "source_url": "https://arxiv.org/abs/2609.31922",
-        "reason": "pattern_watch"
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-agents-are-about-to-flood-the-workforce-no-ones-ready-for-it/",
+        "reason": "below_bar"
       }
     ],
     "consolidated": [
       {
-        "source_url": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/",
+        "source_url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
         "reason": "duplicate"
       }
     ],
     "rejected": [
       {
-        "source_url": "https://www.figma.com/blog/what-it-takes-to-build-great-products-now/",
+        "source_url": "https://www.figma.com/blog/the-power-of-product-based-learning/",
         "reason": "out_of_scope"
       },
       {
-        "source_url": "https://openai.com/index/basis-tax-workbook-with-astra",
+        "source_url": "https://openai.com/index/how-we-will-do-better-for-australia",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/ifixai",
         "reason": "below_bar"
       }
     ],
-    "patterns": [
-      {
-        "id": "canvas-interfaces-replacing-chat",
-        "name": "Canvas interfaces replacing chat for complex tasks",
-        "description": "Platforms are shifting from chat streams to editable canvas surfaces for generative tools and agent workflows.",
-        "source_urls": [
-          "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
-          "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/"
-        ],
-        "confidence": "established"
-      }
-    ],
+    "patterns": [],
     "feed_health": [
       {
         "source": "Figma Blog",
@@ -251,7 +248,7 @@
         "source": "Product Hunt",
         "ok": true,
         "items": 50,
-        "fresh": 4
+        "fresh": 5
       }
     ],
     "visual_log": [
