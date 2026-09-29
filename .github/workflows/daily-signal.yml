@@ -54,3 +54,6 @@ jobs:
           else
             gh pr create --base main --head "$BRANCH" --title "AI Signal draft: $DAY" --body-file "$RUNNER_TEMP/pr-body.md"
           fi
+          # Assign the draft to you so GitHub notifies you (email + GitHub mobile app)
+          gh pr edit "$BRANCH" --add-assignee "${{ github.repository_owner }}" || true
+          gh pr edit "$BRANCH" --add-reviewer "${{ github.repository_owner }}" || true
