@@ -5,10 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="A 4-minute daily brief on how AI is changing design work, with a design implication for every story.">
 <meta property="og:title" content="AI Signal — AI news for designers">
-<meta property="og:description" content="A 4-minute daily brief on how AI is changing design work.">
+<meta property="og:description" content="A free 4-minute daily AI brief for designers, with courses and AI basics for every level. No sign-up.">
 <meta property="og:url" content="https://sanysharma.github.io/AI-Signal/">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://sanysharma.github.io/AI-Signal/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="AI Signal: Less noise. More signal. A free 4-minute daily AI brief for designers.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sanysharma.github.io/AI-Signal/og-image.png">
 <!-- Google tag (gtag.js) — GA4 property G-NTSW3HPY93. Page views are automatic; app events are sent by track(). -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTSW3HPY93"></script>
 <script>
@@ -796,6 +801,7 @@ function retainHTML(){
       ${others.length?`<details class="moredet"><summary>Earlier briefs</summary>${others.map(({d,i})=>`<button class="dayrow" data-goto-day="${i}"><span class="dd">${d.short[0]}<b>${d.short[1]}</b></span><span class="dt">${esc(d.stories[0].title)}<small>${d.stories.length} stories</small></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>`).join('')}</details>`:`<div class="morelink muted">Earlier briefs <small>appear here as new briefs publish</small></div>`}
       ${Object.values(MORE).some(a=>a.length)?'<button class="morelink" data-explore-other>Explore beyond design <span aria-hidden="true">→</span></button>':''}
     </div>
+    <p class="fine full" style="text-align:left;font-size:.72rem">AI Signal uses anonymous usage analytics to improve the brief. No sign-up, no personal data.</p>
   </div>`;
 }
 function openBookmark(){
@@ -1035,7 +1041,7 @@ function wave(){
         const y=h/2+(hero? n*.6+s : n+(l-7)*calm*h*.004);
         x?ctx.lineTo(x,y):ctx.moveTo(x,y);
       }
-      ctx.strokeStyle=hero?'#8193FF':`rgba(139,146,160,${.35*(1-calm*.75)})`; ctx.lineWidth=(hero?3:1)*dpr; ctx.stroke();
+      ctx.strokeStyle=hero?'#8193FF':`rgba(139,146,160,${.35*(1-calm)})`; ctx.lineWidth=(hero?3:1)*dpr; ctx.stroke();
     }
     if(!document.getElementById('vB').hidden && !splash.hidden && !reduce) raf=requestAnimationFrame(draw);
   };
