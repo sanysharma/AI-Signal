@@ -1,5 +1,5 @@
 {
-  "_readme": "AI Signal source registry (Editorial Engine v1, approved 28 Sep 2026). tier 1 = primary, can be sole evidence. tier 2 = secondary, trace to the original where possible. tier 3 = discovery only, never sole evidence. 'feed' is the RSS/Atom URL; null means no feed (manual source). 'feed_verified' is true only for feeds proven by a successful pipeline run. Every run writes a feed health report into the day's data file: fix or remove feeds that keep failing. image_policy decides whether the Visual Agent may show the source's own image: 'press' (newsroom/press kit, preferred), 'official_with_credit' (the company's own blog image about its own product, shown with a visible credit and link), 'never' (publications and research whose images are licensed or unclear: Getty/AP/Reuters photos, third-party figures). When in doubt, use 'never'. This is an editorial policy, not legal advice.",
+  "_readme": "AI Signal source registry (Editorial Engine v1, approved 28 Sep 2026). tier 1 = primary, can be sole evidence. tier 2 = secondary, trace to the original where possible. tier 3 = discovery only, never sole evidence. 'feed' is the RSS/Atom URL; null means no feed (manual source). 'feed_verified' is true only for feeds proven by a successful pipeline run. Every run writes a feed health report into the day's data file: fix or remove feeds that keep failing. image_policy decides whether the Visual Agent may show the source's own image: 'press' (newsroom/press kit, preferred), 'official_with_credit' (the company's own blog image about its own product, shown with a visible credit and link), 'never' (publications and research whose images are licensed or unclear: Getty/AP/Reuters photos, third-party figures). When in doubt, use 'never'. This is an editorial policy, not legal advice. image_hosts lists extra domains where a source serves its own images (e.g. its CDN). The daily pull request tells you which host to add when a genuine company image was rejected.",
   "sources": [
     {
       "name": "Figma Blog",
@@ -7,35 +7,39 @@
       "type": "design tool",
       "url": "https://www.figma.com/blog/",
       "feed": "https://www.figma.com/blog/feed/atom.xml",
-      "feed_verified": false,
-      "image_policy": "official_with_credit"
+      "feed_verified": true,
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Adobe Blog",
       "tier": 1,
       "type": "design tool",
       "url": "https://blog.adobe.com/",
-      "feed": "https://blog.adobe.com/en/feed.xml",
-      "feed_verified": false,
-      "image_policy": "official_with_credit"
+      "feed": null,
+      "image_policy": "official_with_credit",
+      "note": "No public RSS feed (404 on 29 Sep 2026). Check manually.",
+      "image_hosts": []
     },
     {
       "name": "Framer Blog",
       "tier": 1,
       "type": "design tool",
       "url": "https://www.framer.com/blog/",
-      "feed": "https://www.framer.com/blog/rss",
-      "feed_verified": false,
-      "image_policy": "official_with_credit"
+      "feed": null,
+      "image_policy": "official_with_credit",
+      "note": "No public RSS feed (404 on 29 Sep 2026). Check manually.",
+      "image_hosts": []
     },
     {
       "name": "Miro Blog",
       "tier": 1,
       "type": "collaboration tool",
       "url": "https://miro.com/blog/",
-      "feed": "https://miro.com/blog/feed/",
-      "feed_verified": false,
-      "image_policy": "official_with_credit"
+      "feed": null,
+      "image_policy": "official_with_credit",
+      "note": "No public RSS feed (404 on 29 Sep 2026). Check manually.",
+      "image_hosts": []
     },
     {
       "name": "OpenAI News",
@@ -43,8 +47,9 @@
       "type": "AI lab",
       "url": "https://openai.com/news/",
       "feed": "https://openai.com/news/rss.xml",
-      "feed_verified": false,
-      "image_policy": "official_with_credit"
+      "feed_verified": true,
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Google DeepMind Blog",
@@ -52,8 +57,9 @@
       "type": "AI lab",
       "url": "https://deepmind.google/discover/blog/",
       "feed": "https://deepmind.google/blog/rss.xml",
-      "feed_verified": false,
-      "image_policy": "official_with_credit"
+      "feed_verified": true,
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Google AI Blog",
@@ -62,7 +68,8 @@
       "url": "https://blog.google/technology/ai/",
       "feed": "https://blog.google/technology/ai/rss/",
       "feed_verified": true,
-      "image_policy": "official_with_credit"
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Microsoft Design",
@@ -70,8 +77,9 @@
       "type": "design team",
       "url": "https://microsoft.design/",
       "feed": "https://medium.com/feed/microsoft-design",
-      "feed_verified": false,
-      "image_policy": "official_with_credit"
+      "feed_verified": true,
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Microsoft Research Blog",
@@ -79,8 +87,9 @@
       "type": "research lab",
       "url": "https://www.microsoft.com/en-us/research/blog/",
       "feed": "https://www.microsoft.com/en-us/research/feed/",
-      "feed_verified": false,
-      "image_policy": "official_with_credit"
+      "feed_verified": true,
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Apple Machine Learning Research",
@@ -88,8 +97,9 @@
       "type": "research lab",
       "url": "https://machinelearning.apple.com/",
       "feed": "https://machinelearning.apple.com/rss.xml",
-      "feed_verified": false,
-      "image_policy": "official_with_credit"
+      "feed_verified": true,
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "GitHub Blog",
@@ -98,7 +108,8 @@
       "url": "https://github.blog/",
       "feed": "https://github.blog/feed/",
       "feed_verified": true,
-      "image_policy": "official_with_credit"
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Vercel Blog",
@@ -106,8 +117,9 @@
       "type": "dev and AI UI tools",
       "url": "https://vercel.com/blog",
       "feed": "https://vercel.com/atom",
-      "feed_verified": false,
-      "image_policy": "official_with_credit"
+      "feed_verified": true,
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Nielsen Norman Group",
@@ -124,7 +136,7 @@
       "type": "research preprints",
       "url": "https://arxiv.org/list/cs.HC/recent",
       "feed": "https://rss.arxiv.org/rss/cs.HC",
-      "feed_verified": false,
+      "feed_verified": true,
       "max_items": 5,
       "image_policy": "never"
     },
@@ -134,7 +146,8 @@
       "type": "AI lab",
       "url": "https://www.anthropic.com/news",
       "feed": null,
-      "image_policy": "official_with_credit"
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Adobe Newsroom",
@@ -142,7 +155,8 @@
       "type": "press releases",
       "url": "https://news.adobe.com/",
       "feed": null,
-      "image_policy": "press"
+      "image_policy": "press",
+      "image_hosts": []
     },
     {
       "name": "Canva Newsroom",
@@ -150,7 +164,8 @@
       "type": "design tool",
       "url": "https://www.canva.com/newsroom/",
       "feed": null,
-      "image_policy": "press"
+      "image_policy": "press",
+      "image_hosts": []
     },
     {
       "name": "Notion Releases",
@@ -158,7 +173,8 @@
       "type": "changelog",
       "url": "https://www.notion.com/releases",
       "feed": null,
-      "image_policy": "official_with_credit"
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Figma Release Notes",
@@ -166,7 +182,8 @@
       "type": "changelog",
       "url": "https://www.figma.com/release-notes/",
       "feed": null,
-      "image_policy": "official_with_credit"
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Meta AI Blog",
@@ -174,7 +191,8 @@
       "type": "AI lab",
       "url": "https://ai.meta.com/blog/",
       "feed": null,
-      "image_policy": "official_with_credit"
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Google Design",
@@ -182,7 +200,8 @@
       "type": "design team",
       "url": "https://design.google/",
       "feed": null,
-      "image_policy": "official_with_credit"
+      "image_policy": "official_with_credit",
+      "image_hosts": []
     },
     {
       "name": "Google PAIR",
@@ -198,7 +217,8 @@
       "type": "enterprise platform",
       "url": "https://www.salesforce.com/news/",
       "feed": null,
-      "image_policy": "press"
+      "image_policy": "press",
+      "image_hosts": []
     },
     {
       "name": "AI in Design Report",
@@ -230,7 +250,7 @@
       "type": "analysis",
       "url": "https://www.technologyreview.com/",
       "feed": "https://www.technologyreview.com/feed/",
-      "feed_verified": false,
+      "feed_verified": true,
       "image_policy": "never"
     },
     {
@@ -239,7 +259,7 @@
       "type": "product launches",
       "url": "https://www.theverge.com/ai-artificial-intelligence",
       "feed": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
-      "feed_verified": false,
+      "feed_verified": true,
       "image_policy": "never"
     },
     {
@@ -248,7 +268,7 @@
       "type": "product launches",
       "url": "https://techcrunch.com/category/artificial-intelligence/",
       "feed": "https://techcrunch.com/category/artificial-intelligence/feed/",
-      "feed_verified": false,
+      "feed_verified": true,
       "image_policy": "never"
     },
     {
@@ -257,7 +277,7 @@
       "type": "reporting",
       "url": "https://www.wired.com/tag/ai/",
       "feed": "https://www.wired.com/feed/tag/ai/latest/rss",
-      "feed_verified": false,
+      "feed_verified": true,
       "image_policy": "never"
     },
     {
@@ -267,7 +287,8 @@
       "url": "https://www.designweek.co.uk/",
       "feed": "https://www.designweek.co.uk/feed/",
       "feed_verified": false,
-      "image_policy": "never"
+      "image_policy": "never",
+      "note": "403 on 29 Sep 2026 (blocks bots). Retrying with a browser-style user agent; set feed to null if it keeps failing."
     },
     {
       "name": "Smashing Magazine",
@@ -275,7 +296,7 @@
       "type": "practitioner UX",
       "url": "https://www.smashingmagazine.com/",
       "feed": "https://www.smashingmagazine.com/feed/",
-      "feed_verified": false,
+      "feed_verified": true,
       "image_policy": "never"
     },
     {
@@ -284,7 +305,7 @@
       "type": "technical reporting",
       "url": "https://arstechnica.com/",
       "feed": "https://feeds.arstechnica.com/arstechnica/technology-lab",
-      "feed_verified": false,
+      "feed_verified": true,
       "image_policy": "never"
     },
     {
@@ -325,7 +346,7 @@
       "type": "discovery",
       "url": "https://uxdesign.cc/",
       "feed": "https://uxdesign.cc/feed",
-      "feed_verified": false,
+      "feed_verified": true,
       "image_policy": "never"
     },
     {
@@ -350,7 +371,7 @@
       "type": "discovery",
       "url": "https://www.producthunt.com/",
       "feed": "https://www.producthunt.com/feed",
-      "feed_verified": false,
+      "feed_verified": true,
       "image_policy": "never"
     }
   ]
