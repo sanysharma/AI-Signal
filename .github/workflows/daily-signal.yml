@@ -2,33 +2,54 @@ name: Daily AI Signal
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # 03:00 UTC daily — edit to taste
-  workflow_dispatch: {}    # lets you trigger a run by hand from the Actions tab
+    - cron: "17 2 * * *"  # 02:17 UTC (07:47 IST). Off the hour: GitHub delays or drops :00 schedules under load
+  workflow_dispatch: {}    # run by hand from the Actions tab
 
 permissions:
   contents: write
+  pull-requests: write
+
+concurrency:
+  group: daily-signal
+  cancel-in-progress: false
 
 jobs:
-  publish:
+  draft:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - run: npm install
 
-      - name: Run editorial engine
+      - name: Run Editorial Engine v1
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_FALLBACK_MODEL: ${{ vars.GEMINI_FALLBACK_MODEL }}
+          PR_BODY_FILE: ${{ runner.temp }}/pr-body.md
         run: npm run digest
 
-      - name: Commit today's digest
+      # Pilot rule: stories are drafts until the editor approves them.
+      # The job opens a pull request; merging it publishes the day's brief.
+      - name: Open review pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          DAY=$(date -u +%F)
+          BRANCH="digest/$DAY"
           git config user.name "ai-signal-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/
-          git diff --staged --quiet || git commit -m "Daily digest: $(date -u +%F)"
-          git push
+          git checkout -B "$BRANCH"
+          git add "data/$DAY.json"
+          if git diff --staged --quiet; then echo "Nothing to review today."; exit 0; fi
+          git commit -m "Draft digest: $DAY"
+          git push --force origin "$BRANCH"
+          if gh pr view "$BRANCH" >/dev/null 2>&1; then
+            gh pr edit "$BRANCH" --body-file "$RUNNER_TEMP/pr-body.md"
+          else
+            gh pr create --base main --head "$BRANCH" --title "AI Signal draft: $DAY" --body-file "$RUNNER_TEMP/pr-body.md"
+          fi
