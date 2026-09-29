@@ -18,10 +18,12 @@ if (!GEMINI_API_KEY) {
   process.exit(1);
 }
 
-const GEMINI_MODELS = [
-  process.env.GEMINI_MODEL || "gemini-3.8-flash",
-  process.env.GEMINI_FALLBACK_MODEL || "gemini-2.5-flash",
-].filter((m, i, arr) => m && arr.indexOf(m) === i);
+// Model chain, tried in order. 2.5 models are closed to new projects (Sep 2026), so fallbacks are 3.x.
+// Override with repo variables: GEMINI_MODELS="a,b,c", or GEMINI_MODEL / GEMINI_FALLBACK_MODEL.
+const GEMINI_MODELS = (process.env.GEMINI_MODELS
+  ? process.env.GEMINI_MODELS.split(",")
+  : [process.env.GEMINI_MODEL || "gemini-3.8-flash", process.env.GEMINI_FALLBACK_MODEL || "gemini-3.7-flash", "gemini-3.5-flash-lite"]
+).map((m) => m.trim()).filter((m, i, arr) => m && arr.indexOf(m) === i);
 const RETRYABLE_STATUS_CODES = new Set([429, 500, 502, 503, 504]);
 
 const ENGINE_VERSION = "editorial-v1";
@@ -32,7 +34,7 @@ const MAX_STORIES = 8;
 const TIER_SCORE = { 1: 3, 2: 2, 3: 0 };
 
 const today = new Date().toISOString().slice(0, 10);
-const parser = new Parser({ timeout: 20000, customFields: { item: [["media:content", "mediaContent"], ["media:thumbnail", "mediaThumb"]] }, headers: { "User-Agent": "AI-Signal/1.0 (+https://sanysharma.github.io/AI-Signal/)" } });
+const parser = new Parser({ timeout: 20000, customFields: { item: [["media:content", "mediaContent"], ["media:thumbnail", "mediaThumb"]] }, headers: { "User-Agent": "Mozilla/5.0 (compatible; AI-Signal/1.0; +https://sanysharma.github.io/AI-Signal/)", Accept: "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8" } });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const daysAgo = (n) => Date.now() - n * 86400000;
 const words = (s) => String(s || "").trim().split(/\s+/).filter(Boolean).length;
@@ -90,7 +92,7 @@ async function loadRecent() {
     const day = f.slice(0, 10);
     if (day < cutoff || day === today) continue;
     const d = await loadJSON(`data/${f}`, null);
-    for (const s of d?.stories || []) recent.push({ title: s.title, source_url: s.source_url, tags: s.tags || [] });
+    for (const s of d?.stories || []) recent.push({ title: s.title, source_url: s.source_url, tags: s.tags || [], visual_url: s.visual_url || null });
   }
   return recent;
 }
@@ -174,7 +176,7 @@ async function requestGemini(model, body) {
       throw new Error(`Gemini API error ${res.status} (${model}): ${errText.slice(0, 500)}`);
     }
     const retryAfter = Number(res.headers.get("retry-after"));
-    const delay = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : 2 ** (attempt - 1) * 5000;
+    const delay = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : 2 ** (attempt - 1) * 15000; // 15s, 30s, 60s: 503 'high demand' spikes usually pass within a minute or two
     console.warn(`HTTP ${res.status} from ${model}; retrying in ${Math.round(delay / 1000)}s (attempt ${attempt}/${maxAttempts})`);
     await sleep(delay);
   }
@@ -184,7 +186,7 @@ async function runEditorialEngine(prompt, candidates, recent) {
   const body = {
     contents: [{
       parts: [{
-        text: `${prompt}\n\nTODAY: ${today}\n\nRECENT (published in the last ${RECENT_DAYS} days):\n${JSON.stringify(recent)}\n\nCANDIDATES:\n${JSON.stringify(candidates)}`,
+        text: `${prompt}\n\nTODAY: ${today}\n\nRECENT (published in the last ${RECENT_DAYS} days):\n${JSON.stringify(recent.map(({ visual_url, ...r }) => r))}\n\nCANDIDATES:\n${JSON.stringify(candidates)}`,
       }],
     }],
     generationConfig: { responseMimeType: "application/json", responseSchema: RESPONSE_SCHEMA, temperature: 0.2 },
@@ -264,45 +266,105 @@ function prBody(out) {
   const fails = out.review.feed_health.filter((f) => !f.ok);
   lines.push("---", `Held: ${out.review.held.length} · Consolidated: ${out.review.consolidated.length} · Rejected: ${out.review.rejected.length} · Patterns: ${out.review.patterns.length}`);
   if (fails.length) lines.push("", `Feeds failing (${fails.length}): ${fails.map((f) => f.source).join(", ")}`);
+  const vlog = (out.review.visual_log || []).filter((v) => !/source policy is "never"/.test(v.reason));
+  if (vlog.length) {
+    lines.push("", "**Images not used** (story got the generated illustration instead):");
+    vlog.forEach((v) => lines.push(`- ${v.title}: ${v.reason}${v.image ? ` ([image](${v.image}))` : ""}`));
+  }
   return lines.join("\n");
 }
 
 
-// ---------- 5. Visual Agent v0: source image (only if allowed) → generated illustration → none ----------
-// Priority 1 is permission. A source image is used only when the source's image_policy allows it AND the
-// image is hosted on the source's own domain (third-party/stock images are rejected). Everything else
-// falls back to AI Signal's own generated illustration, or no image when the story doesn't need one.
+// ---------- 5. Visual Agent v1: permission-first image checks ----------
+// A source image is used only if EVERY check passes; otherwise the story gets AI Signal's own
+// generated illustration (or no image when visual_need is "none"). Every rejection is logged with a reason.
+//  1. Source policy allows it (image_policy: press / official_with_credit in sources.json)
+//  2. Image is on the source's own domain, or on a host listed in that source's image_hosts
+//  3. No stock/wire agency in the image URL, alt text, or the article's photo credits
+//  4. Not a logo, icon, avatar, headshot or placeholder
+//  5. Not the site's generic share image (same image already used by another story)
+//  6. Really an image, and big enough (≥ 600px wide when declared, ≥ 15 KB)
 const ALLOWED_POLICIES = new Set(["press", "official_with_credit"]);
+const AGENCY = /(getty\s*images|gettyimages|\bap\s*photo\b|associated\s*press|apimages|\breuters\b|shutterstock|alamy|adobe\s*stock|stock\.adobe|istock|\bafp\b|\bepa\b|bloomberg\s*via|dreamstime|depositphotos|123rf|unsplash|pexels)/i;
+const NON_EDITORIAL = /(logo|favicon|icon|avatar|headshot|author|profile|sprite|placeholder|default[-_ ]?(og|share|social|image)|social[-_]?share|blank|spacer)/i;
 const baseDomain = (u) => { try { return new URL(u).hostname.split(".").slice(-2).join("."); } catch { return ""; } };
+const metaContent = (html, names) => {
+  for (const n of names) {
+    const re1 = new RegExp(`<meta[^>]+(?:property|name)=["']${n}["'][^>]*content=["']([^"']+)["']`, "i");
+    const re2 = new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]*(?:property|name)=["']${n}["']`, "i");
+    const m = html.match(re1) || html.match(re2);
+    if (m) return m[1];
+  }
+  return null;
+};
 
-async function findOgImage(url) {
+async function readArticle(url) {
   try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(10000), headers: { "User-Agent": "AI-Signal/1.0" } });
+    const res = await fetch(url, { signal: AbortSignal.timeout(12000), headers: { "User-Agent": "Mozilla/5.0 (compatible; AI-Signal/1.0; +https://sanysharma.github.io/AI-Signal/)" } });
     if (!res.ok) return null;
-    const html = (await res.text()).slice(0, 200000);
-    const m = html.match(/<meta[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]*content=["']([^"']+)["']/i)
-      || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]*(?:property|name)=["'](?:og:image|twitter:image)["']/i);
-    return m ? new URL(m[1], url).href : null;
+    const html = (await res.text()).slice(0, 400000);
+    const og = metaContent(html, ["og:image:secure_url", "og:image", "twitter:image", "twitter:image:src"]);
+    const credits = [...html.matchAll(/<figcaption[^>]*>([\s\S]{0,400}?)<\/figcaption>/gi)].map((m) => m[1])
+      .concat([...html.matchAll(/(?:photo|image|credit|courtesy)\s*(?:by|:|©|&copy;)[^<]{0,80}/gi)].map((m) => m[0]))
+      .map((t) => t.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim()).slice(0, 20);
+    return {
+      image: og ? new URL(og, url).href : null,
+      alt: metaContent(html, ["og:image:alt", "twitter:image:alt"]) || "",
+      width: Number(metaContent(html, ["og:image:width"])) || null,
+      credits,
+    };
   } catch { return null; }
 }
 
-async function visualAgent(stories, candidates, sources) {
+async function probeImage(url) {
+  try {
+    let res = await fetch(url, { method: "HEAD", signal: AbortSignal.timeout(8000) });
+    if (!res.ok || !res.headers.get("content-type")) res = await fetch(url, { signal: AbortSignal.timeout(10000) });
+    if (!res.ok) return { ok: false, why: `image returned HTTP ${res.status}` };
+    const type = res.headers.get("content-type") || "";
+    const size = Number(res.headers.get("content-length")) || null;
+    if (!type.startsWith("image/")) return { ok: false, why: `not an image (${type || "unknown type"})` };
+    if (type.includes("svg")) return { ok: false, why: "SVG (usually a logo or icon)" };
+    if (size && size < 15000) return { ok: false, why: `too small (${Math.round(size / 1024)} KB)` };
+    return { ok: true };
+  } catch (err) { return { ok: false, why: `image not reachable (${err.name})` }; }
+}
+
+async function visualAgent(stories, candidates, sources, recentImages) {
   const srcByName = new Map(sources.map((s) => [s.name, s]));
   const candByUrl = new Map(candidates.map((c) => [normUrl(c.source_url), c]));
+  const usedToday = new Map();
   const log = [];
   for (const s of stories) {
     const src = srcByName.get(s.source_name) || {};
     const policy = src.image_policy || "never";
     let decision = null;
-    if (ALLOWED_POLICIES.has(policy)) {
+    const reject = (reason, extra = {}) => log.push({ story: s.id, title: s.title, source: s.source_name, reason, ...extra });
+
+    if (!ALLOWED_POLICIES.has(policy)) {
+      reject(`source policy is "${policy}"`);
+    } else {
       const cand = candByUrl.get(normUrl(s.source_url));
-      const img = cand?.image || (await findOgImage(s.source_url));
-      const allowedHosts = new Set([baseDomain(s.source_url), baseDomain(src.url), ...(src.image_hosts || [])]);
-      if (img && img.startsWith("https://") && allowedHosts.has(baseDomain(img))) {
-        const org = s.source_name.replace(/ (Blog|News|Newsroom|Release Notes|Releases|Research Blog|Machine Learning Research)$/i, "");
-        decision = { visual_type: "source_image", visual_url: img, visual_credit: `Image: ${org}`, visual_source_url: s.source_url, visual_license: policy };
-      } else {
-        log.push({ story: s.id, reason: img ? `image host not allowed (${baseDomain(img)})` : "no source image found" });
+      const page = await readArticle(s.source_url);
+      const img = page?.image || cand?.image || null;
+      const allowedHosts = new Set([baseDomain(s.source_url), baseDomain(src.url), ...(src.image_hosts || []).map(baseDomain)]);
+      const agencyCredit = (page?.credits || []).find((c) => AGENCY.test(c));
+      if (!img) reject("no source image found");
+      else if (!img.startsWith("https://")) reject("image is not served over https", { image: img });
+      else if (!allowedHosts.has(baseDomain(img))) reject(`image host not allowed (${new URL(img).hostname}). If this is the company's own image server, add "${baseDomain(img)}" to image_hosts for ${src.name} in sources.json`, { image: img });
+      else if (AGENCY.test(img) || AGENCY.test(page?.alt || "")) reject("stock/wire agency image", { image: img });
+      else if (agencyCredit) reject(`article credits a stock/wire agency ("${agencyCredit.slice(0, 80)}")`, { image: img });
+      else if (NON_EDITORIAL.test(img) || NON_EDITORIAL.test(page?.alt || "")) reject("looks like a logo, icon, avatar or placeholder", { image: img });
+      else if (recentImages.has(img) || usedToday.has(img)) reject("generic share image (already used by another story)", { image: img });
+      else if (page?.width && page.width < 600) reject(`too small (${page.width}px wide)`, { image: img });
+      else {
+        const probe = await probeImage(img);
+        if (!probe.ok) reject(probe.why, { image: img });
+        else {
+          const org = s.source_name.replace(/ (Blog|News|Newsroom|Release Notes|Releases|Research Blog|Machine Learning Research)$/i, "");
+          decision = { visual_type: "source_image", visual_url: img, visual_credit: `Image: ${org}`, visual_source_url: s.source_url, visual_license: policy };
+          usedToday.set(img, s.id);
+        }
       }
     }
     if (!decision) {
@@ -334,7 +396,8 @@ async function main() {
   else console.log("No new candidates today.");
 
   const { stories, held, rejected } = enforce(result, candidates);
-  const visualLog = await visualAgent(stories, candidates, sources);
+  const recentImages = new Set(recent.map((r) => r.visual_url).filter(Boolean));
+  const visualLog = await visualAgent(stories, candidates, sources, recentImages);
   const out = {
     date: today,
     engine_version: ENGINE_VERSION,
