@@ -1,49 +1,357 @@
 {
-  "_readme": "AI Signal source registry (Editorial Engine v1, approved 28 Sep 2026). tier 1 = primary, can be sole evidence. tier 2 = secondary, trace to the original where possible. tier 3 = discovery only, never sole evidence. 'feed' is the RSS/Atom URL; null means no feed (manual source). 'feed_verified' is true only for feeds proven by a successful pipeline run. Every run writes a feed health report into the day's data file: fix or remove feeds that keep failing.",
+  "_readme": "AI Signal source registry (Editorial Engine v1, approved 28 Sep 2026). tier 1 = primary, can be sole evidence. tier 2 = secondary, trace to the original where possible. tier 3 = discovery only, never sole evidence. 'feed' is the RSS/Atom URL; null means no feed (manual source). 'feed_verified' is true only for feeds proven by a successful pipeline run. Every run writes a feed health report into the day's data file: fix or remove feeds that keep failing. image_policy decides whether the Visual Agent may show the source's own image: 'press' (newsroom/press kit, preferred), 'official_with_credit' (the company's own blog image about its own product, shown with a visible credit and link), 'never' (publications and research whose images are licensed or unclear: Getty/AP/Reuters photos, third-party figures). When in doubt, use 'never'. This is an editorial policy, not legal advice.",
   "sources": [
-    { "name": "Figma Blog", "tier": 1, "type": "design tool", "url": "https://www.figma.com/blog/", "feed": "https://www.figma.com/blog/feed/atom.xml", "feed_verified": false },
-    { "name": "Adobe Blog", "tier": 1, "type": "design tool", "url": "https://blog.adobe.com/", "feed": "https://blog.adobe.com/en/feed.xml", "feed_verified": false },
-    { "name": "Framer Blog", "tier": 1, "type": "design tool", "url": "https://www.framer.com/blog/", "feed": "https://www.framer.com/blog/rss", "feed_verified": false },
-    { "name": "Miro Blog", "tier": 1, "type": "collaboration tool", "url": "https://miro.com/blog/", "feed": "https://miro.com/blog/feed/", "feed_verified": false },
-    { "name": "OpenAI News", "tier": 1, "type": "AI lab", "url": "https://openai.com/news/", "feed": "https://openai.com/news/rss.xml", "feed_verified": false },
-    { "name": "Google DeepMind Blog", "tier": 1, "type": "AI lab", "url": "https://deepmind.google/discover/blog/", "feed": "https://deepmind.google/blog/rss.xml", "feed_verified": false },
-    { "name": "Google AI Blog", "tier": 1, "type": "AI lab", "url": "https://blog.google/technology/ai/", "feed": "https://blog.google/technology/ai/rss/", "feed_verified": true },
-    { "name": "Microsoft Design", "tier": 1, "type": "design team", "url": "https://microsoft.design/", "feed": "https://medium.com/feed/microsoft-design", "feed_verified": false },
-    { "name": "Microsoft Research Blog", "tier": 1, "type": "research lab", "url": "https://www.microsoft.com/en-us/research/blog/", "feed": "https://www.microsoft.com/en-us/research/feed/", "feed_verified": false },
-    { "name": "Apple Machine Learning Research", "tier": 1, "type": "research lab", "url": "https://machinelearning.apple.com/", "feed": "https://machinelearning.apple.com/rss.xml", "feed_verified": false },
-    { "name": "GitHub Blog", "tier": 1, "type": "dev tools", "url": "https://github.blog/", "feed": "https://github.blog/feed/", "feed_verified": true },
-    { "name": "Vercel Blog", "tier": 1, "type": "dev and AI UI tools", "url": "https://vercel.com/blog", "feed": "https://vercel.com/atom", "feed_verified": false },
-    { "name": "Nielsen Norman Group", "tier": 1, "type": "UX research", "url": "https://www.nngroup.com/articles/", "feed": "https://www.nngroup.com/feed/rss/", "feed_verified": true },
-    { "name": "arXiv cs.HC", "tier": 1, "type": "research preprints", "url": "https://arxiv.org/list/cs.HC/recent", "feed": "https://rss.arxiv.org/rss/cs.HC", "feed_verified": false, "max_items": 5 },
-
-    { "name": "Anthropic News", "tier": 1, "type": "AI lab", "url": "https://www.anthropic.com/news", "feed": null },
-    { "name": "Adobe Newsroom", "tier": 1, "type": "press releases", "url": "https://news.adobe.com/", "feed": null },
-    { "name": "Canva Newsroom", "tier": 1, "type": "design tool", "url": "https://www.canva.com/newsroom/", "feed": null },
-    { "name": "Notion Releases", "tier": 1, "type": "changelog", "url": "https://www.notion.com/releases", "feed": null },
-    { "name": "Figma Release Notes", "tier": 1, "type": "changelog", "url": "https://www.figma.com/release-notes/", "feed": null },
-    { "name": "Meta AI Blog", "tier": 1, "type": "AI lab", "url": "https://ai.meta.com/blog/", "feed": null },
-    { "name": "Google Design", "tier": 1, "type": "design team", "url": "https://design.google/", "feed": null },
-    { "name": "Google PAIR", "tier": 1, "type": "human-AI research", "url": "https://pair.withgoogle.com/", "feed": null },
-    { "name": "Salesforce Newsroom", "tier": 1, "type": "enterprise platform", "url": "https://www.salesforce.com/news/", "feed": null },
-    { "name": "AI in Design Report", "tier": 1, "type": "industry research", "url": "https://stateofaidesign.com/", "feed": null },
-    { "name": "Stanford HAI", "tier": 1, "type": "research institute", "url": "https://hai.stanford.edu/news", "feed": null },
-    { "name": "ACM Digital Library", "tier": 1, "type": "peer-reviewed research", "url": "https://dl.acm.org/", "feed": null },
-
-    { "name": "MIT Technology Review", "tier": 2, "type": "analysis", "url": "https://www.technologyreview.com/", "feed": "https://www.technologyreview.com/feed/", "feed_verified": false },
-    { "name": "The Verge (AI)", "tier": 2, "type": "product launches", "url": "https://www.theverge.com/ai-artificial-intelligence", "feed": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "feed_verified": false },
-    { "name": "TechCrunch (AI)", "tier": 2, "type": "product launches", "url": "https://techcrunch.com/category/artificial-intelligence/", "feed": "https://techcrunch.com/category/artificial-intelligence/feed/", "feed_verified": false },
-    { "name": "Wired (AI)", "tier": 2, "type": "reporting", "url": "https://www.wired.com/tag/ai/", "feed": "https://www.wired.com/feed/tag/ai/latest/rss", "feed_verified": false },
-    { "name": "Design Week", "tier": 2, "type": "design industry", "url": "https://www.designweek.co.uk/", "feed": "https://www.designweek.co.uk/feed/", "feed_verified": false },
-    { "name": "Smashing Magazine", "tier": 2, "type": "practitioner UX", "url": "https://www.smashingmagazine.com/", "feed": "https://www.smashingmagazine.com/feed/", "feed_verified": false },
-    { "name": "Ars Technica", "tier": 2, "type": "technical reporting", "url": "https://arstechnica.com/", "feed": "https://feeds.arstechnica.com/arstechnica/technology-lab", "feed_verified": false },
-    { "name": "Reuters Technology", "tier": 2, "type": "news agency", "url": "https://www.reuters.com/technology/", "feed": null },
-    { "name": "Fast Company (Co.Design)", "tier": 2, "type": "design industry", "url": "https://www.fastcompany.com/co-design", "feed": null },
-    { "name": "Harvard Business Review", "tier": 2, "type": "business impact", "url": "https://hbr.org/", "feed": null },
-    { "name": "ACM Interactions", "tier": 2, "type": "HCI practice", "url": "https://interactions.acm.org/", "feed": null },
-
-    { "name": "UX Collective", "tier": 3, "type": "discovery", "url": "https://uxdesign.cc/", "feed": "https://uxdesign.cc/feed", "feed_verified": false },
-    { "name": "Sidebar", "tier": 3, "type": "discovery", "url": "https://sidebar.io/", "feed": null },
-    { "name": "Hacker News", "tier": 3, "type": "discovery", "url": "https://news.ycombinator.com/", "feed": null },
-    { "name": "Product Hunt", "tier": 3, "type": "discovery", "url": "https://www.producthunt.com/", "feed": "https://www.producthunt.com/feed", "feed_verified": false }
+    {
+      "name": "Figma Blog",
+      "tier": 1,
+      "type": "design tool",
+      "url": "https://www.figma.com/blog/",
+      "feed": "https://www.figma.com/blog/feed/atom.xml",
+      "feed_verified": false,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Adobe Blog",
+      "tier": 1,
+      "type": "design tool",
+      "url": "https://blog.adobe.com/",
+      "feed": "https://blog.adobe.com/en/feed.xml",
+      "feed_verified": false,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Framer Blog",
+      "tier": 1,
+      "type": "design tool",
+      "url": "https://www.framer.com/blog/",
+      "feed": "https://www.framer.com/blog/rss",
+      "feed_verified": false,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Miro Blog",
+      "tier": 1,
+      "type": "collaboration tool",
+      "url": "https://miro.com/blog/",
+      "feed": "https://miro.com/blog/feed/",
+      "feed_verified": false,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "OpenAI News",
+      "tier": 1,
+      "type": "AI lab",
+      "url": "https://openai.com/news/",
+      "feed": "https://openai.com/news/rss.xml",
+      "feed_verified": false,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Google DeepMind Blog",
+      "tier": 1,
+      "type": "AI lab",
+      "url": "https://deepmind.google/discover/blog/",
+      "feed": "https://deepmind.google/blog/rss.xml",
+      "feed_verified": false,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Google AI Blog",
+      "tier": 1,
+      "type": "AI lab",
+      "url": "https://blog.google/technology/ai/",
+      "feed": "https://blog.google/technology/ai/rss/",
+      "feed_verified": true,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Microsoft Design",
+      "tier": 1,
+      "type": "design team",
+      "url": "https://microsoft.design/",
+      "feed": "https://medium.com/feed/microsoft-design",
+      "feed_verified": false,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Microsoft Research Blog",
+      "tier": 1,
+      "type": "research lab",
+      "url": "https://www.microsoft.com/en-us/research/blog/",
+      "feed": "https://www.microsoft.com/en-us/research/feed/",
+      "feed_verified": false,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Apple Machine Learning Research",
+      "tier": 1,
+      "type": "research lab",
+      "url": "https://machinelearning.apple.com/",
+      "feed": "https://machinelearning.apple.com/rss.xml",
+      "feed_verified": false,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "GitHub Blog",
+      "tier": 1,
+      "type": "dev tools",
+      "url": "https://github.blog/",
+      "feed": "https://github.blog/feed/",
+      "feed_verified": true,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Vercel Blog",
+      "tier": 1,
+      "type": "dev and AI UI tools",
+      "url": "https://vercel.com/blog",
+      "feed": "https://vercel.com/atom",
+      "feed_verified": false,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Nielsen Norman Group",
+      "tier": 1,
+      "type": "UX research",
+      "url": "https://www.nngroup.com/articles/",
+      "feed": "https://www.nngroup.com/feed/rss/",
+      "feed_verified": true,
+      "image_policy": "never"
+    },
+    {
+      "name": "arXiv cs.HC",
+      "tier": 1,
+      "type": "research preprints",
+      "url": "https://arxiv.org/list/cs.HC/recent",
+      "feed": "https://rss.arxiv.org/rss/cs.HC",
+      "feed_verified": false,
+      "max_items": 5,
+      "image_policy": "never"
+    },
+    {
+      "name": "Anthropic News",
+      "tier": 1,
+      "type": "AI lab",
+      "url": "https://www.anthropic.com/news",
+      "feed": null,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Adobe Newsroom",
+      "tier": 1,
+      "type": "press releases",
+      "url": "https://news.adobe.com/",
+      "feed": null,
+      "image_policy": "press"
+    },
+    {
+      "name": "Canva Newsroom",
+      "tier": 1,
+      "type": "design tool",
+      "url": "https://www.canva.com/newsroom/",
+      "feed": null,
+      "image_policy": "press"
+    },
+    {
+      "name": "Notion Releases",
+      "tier": 1,
+      "type": "changelog",
+      "url": "https://www.notion.com/releases",
+      "feed": null,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Figma Release Notes",
+      "tier": 1,
+      "type": "changelog",
+      "url": "https://www.figma.com/release-notes/",
+      "feed": null,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Meta AI Blog",
+      "tier": 1,
+      "type": "AI lab",
+      "url": "https://ai.meta.com/blog/",
+      "feed": null,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Google Design",
+      "tier": 1,
+      "type": "design team",
+      "url": "https://design.google/",
+      "feed": null,
+      "image_policy": "official_with_credit"
+    },
+    {
+      "name": "Google PAIR",
+      "tier": 1,
+      "type": "human-AI research",
+      "url": "https://pair.withgoogle.com/",
+      "feed": null,
+      "image_policy": "never"
+    },
+    {
+      "name": "Salesforce Newsroom",
+      "tier": 1,
+      "type": "enterprise platform",
+      "url": "https://www.salesforce.com/news/",
+      "feed": null,
+      "image_policy": "press"
+    },
+    {
+      "name": "AI in Design Report",
+      "tier": 1,
+      "type": "industry research",
+      "url": "https://stateofaidesign.com/",
+      "feed": null,
+      "image_policy": "never"
+    },
+    {
+      "name": "Stanford HAI",
+      "tier": 1,
+      "type": "research institute",
+      "url": "https://hai.stanford.edu/news",
+      "feed": null,
+      "image_policy": "never"
+    },
+    {
+      "name": "ACM Digital Library",
+      "tier": 1,
+      "type": "peer-reviewed research",
+      "url": "https://dl.acm.org/",
+      "feed": null,
+      "image_policy": "never"
+    },
+    {
+      "name": "MIT Technology Review",
+      "tier": 2,
+      "type": "analysis",
+      "url": "https://www.technologyreview.com/",
+      "feed": "https://www.technologyreview.com/feed/",
+      "feed_verified": false,
+      "image_policy": "never"
+    },
+    {
+      "name": "The Verge (AI)",
+      "tier": 2,
+      "type": "product launches",
+      "url": "https://www.theverge.com/ai-artificial-intelligence",
+      "feed": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "feed_verified": false,
+      "image_policy": "never"
+    },
+    {
+      "name": "TechCrunch (AI)",
+      "tier": 2,
+      "type": "product launches",
+      "url": "https://techcrunch.com/category/artificial-intelligence/",
+      "feed": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "feed_verified": false,
+      "image_policy": "never"
+    },
+    {
+      "name": "Wired (AI)",
+      "tier": 2,
+      "type": "reporting",
+      "url": "https://www.wired.com/tag/ai/",
+      "feed": "https://www.wired.com/feed/tag/ai/latest/rss",
+      "feed_verified": false,
+      "image_policy": "never"
+    },
+    {
+      "name": "Design Week",
+      "tier": 2,
+      "type": "design industry",
+      "url": "https://www.designweek.co.uk/",
+      "feed": "https://www.designweek.co.uk/feed/",
+      "feed_verified": false,
+      "image_policy": "never"
+    },
+    {
+      "name": "Smashing Magazine",
+      "tier": 2,
+      "type": "practitioner UX",
+      "url": "https://www.smashingmagazine.com/",
+      "feed": "https://www.smashingmagazine.com/feed/",
+      "feed_verified": false,
+      "image_policy": "never"
+    },
+    {
+      "name": "Ars Technica",
+      "tier": 2,
+      "type": "technical reporting",
+      "url": "https://arstechnica.com/",
+      "feed": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+      "feed_verified": false,
+      "image_policy": "never"
+    },
+    {
+      "name": "Reuters Technology",
+      "tier": 2,
+      "type": "news agency",
+      "url": "https://www.reuters.com/technology/",
+      "feed": null,
+      "image_policy": "never"
+    },
+    {
+      "name": "Fast Company (Co.Design)",
+      "tier": 2,
+      "type": "design industry",
+      "url": "https://www.fastcompany.com/co-design",
+      "feed": null,
+      "image_policy": "never"
+    },
+    {
+      "name": "Harvard Business Review",
+      "tier": 2,
+      "type": "business impact",
+      "url": "https://hbr.org/",
+      "feed": null,
+      "image_policy": "never"
+    },
+    {
+      "name": "ACM Interactions",
+      "tier": 2,
+      "type": "HCI practice",
+      "url": "https://interactions.acm.org/",
+      "feed": null,
+      "image_policy": "never"
+    },
+    {
+      "name": "UX Collective",
+      "tier": 3,
+      "type": "discovery",
+      "url": "https://uxdesign.cc/",
+      "feed": "https://uxdesign.cc/feed",
+      "feed_verified": false,
+      "image_policy": "never"
+    },
+    {
+      "name": "Sidebar",
+      "tier": 3,
+      "type": "discovery",
+      "url": "https://sidebar.io/",
+      "feed": null,
+      "image_policy": "never"
+    },
+    {
+      "name": "Hacker News",
+      "tier": 3,
+      "type": "discovery",
+      "url": "https://news.ycombinator.com/",
+      "feed": null,
+      "image_policy": "never"
+    },
+    {
+      "name": "Product Hunt",
+      "tier": 3,
+      "type": "discovery",
+      "url": "https://www.producthunt.com/",
+      "feed": "https://www.producthunt.com/feed",
+      "feed_verified": false,
+      "image_policy": "never"
+    }
   ]
 }
