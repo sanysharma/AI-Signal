@@ -1,0 +1,33 @@
+name: Auto-publish unreviewed brief
+
+# Safety net for busy days. If AUTO_PUBLISH is "true" (repo variable), any draft brief
+# still open at 06:43 UTC (12:13 IST) is merged and goes live.
+# To keep a draft from auto-publishing, add the label "hold" to its pull request.
+# To turn this off, set AUTO_PUBLISH to "false" or delete the variable.
+
+on:
+  schedule:
+    - cron: "43 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  publish:
+    if: ${{ vars.AUTO_PUBLISH == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge open draft briefs without a "hold" label
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh pr list --repo "$REPO" --state open --json number,headRefName,labels \
+            --jq '.[] | select(.headRefName | startswith("digest/")) | select([.labels[].name] | index("hold") | not) | .number' |
+          while read -r n; do
+            echo "Publishing draft #$n"
+            gh pr comment "$n" --repo "$REPO" --body "Not reviewed by 12:13 IST, so it was published automatically. Add the label \"hold\" to a draft to stop this."
+            gh pr merge "$n" --repo "$REPO" --merge --delete-branch
+          done
