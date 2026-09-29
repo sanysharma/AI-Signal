@@ -9,8 +9,16 @@
 <meta property="og:url" content="https://sanysharma.github.io/AI-Signal/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<!-- PostHog: paste the snippet from PostHog → Settings → Project → "Web snippet" here (it defines window.posthog).
-     Until it is added, all track() calls do nothing. -->
+<!-- Google tag (gtag.js) — GA4 property G-NTSW3HPY93. Page views are automatic; app events are sent by track(). -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTSW3HPY93"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NTSW3HPY93');
+</script>
+<!-- PostHog (optional): paste the snippet from PostHog → Settings → Project → "Web snippet" here (it defines window.posthog).
+     track() sends every event to GA4 and, once this is added, to PostHog too. -->
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>AI Signal — AI news for designers</title>
 </head>
@@ -388,6 +396,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .bm-row{display:flex;gap:8px}
 .bm-row .btn{background:var(--splash-text);color:var(--splash-bg);padding:9px 16px}
 
+
+/* ---------- v12: feedback, visuals, learn link ---------- */
+.fb{display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:16px;border:1px solid var(--line);background:var(--surface-2);text-align:left;align-self:stretch;width:100%}
+.fb b{font-family:var(--display);font-size:1.05rem;font-weight:600;letter-spacing:-.015em}
+.fb .sm{font-size:.76rem;color:var(--muted)}
+.fb.done{align-items:flex-start;gap:4px}
+.fb-rate{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.fb-rate button{height:40px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);font:600 .95rem var(--mono);color:var(--muted);transition:all .15s}
+.fb-rate button:hover{border-color:var(--accent);color:var(--text)}
+.fb-rate button[aria-checked="true"]{background:var(--accent);border-color:var(--accent);color:#fff;transform:scale(1.04)}
+.fb-scale{display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted);margin-top:-4px}
+.fb-tags{display:flex;flex-wrap:wrap;gap:6px}
+.fb-tags .tchip{padding:5px 10px;font-size:.74rem}
+.fb-text{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font:.88rem var(--body);background:var(--surface);color:var(--text);resize:vertical}
+.fb .btn{align-self:flex-start}
+.fb .btn:disabled{opacity:.45;cursor:default;transform:none}
+.morelink small{font-size:.74rem;color:var(--muted);font-weight:400;margin-left:auto;margin-right:8px}
+.morelink.muted{color:var(--muted);cursor:default}
+.art.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art .credit{position:absolute;left:10px;bottom:8px;font:500 .62rem var(--mono);letter-spacing:.04em;background:rgba(10,12,16,.62);color:#fff;padding:3px 7px;border-radius:6px;text-decoration:none;z-index:2}
+.card .art.none{flex:0 0 52px;min-height:52px}
+.dg .art.none{height:40px}
+.sitem .thumbart svg{position:absolute;inset:0}
+
+.newdot{position:absolute;top:4px;right:6px;width:7px;height:7px;border-radius:50%;background:var(--redline);animation:pulse 2s ease-in-out infinite}
 /* ---------- Learn ---------- */
 .seg2{display:flex;gap:2px;flex:none;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:3px}
 .seg2 button{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;font-size:.78rem;font-weight:500;color:var(--muted)}
@@ -472,7 +505,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
       <div class="seg" role="group" aria-label="Section">
         <span class="thumb" id="thumb"></span>
         <button id="t-news" aria-pressed="true">News</button>
-        <button id="t-learn" aria-pressed="false">Learn</button>
+        <button id="t-learn" aria-pressed="false">Learn<i class="newdot" id="learn-dot" aria-label="New"></i></button>
       </div>
       <div class="ring" id="ring" title="Stories read in this brief" hidden>
         <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="14" fill="none" stroke="var(--line)" stroke-width="3"/><circle id="ring-arc" cx="17" cy="17" r="14" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="88" stroke-dashoffset="88" style="transition:stroke-dashoffset .5s"/></svg>
@@ -608,7 +641,8 @@ function hashId(str){ let h=5381; for(const ch of String(str)) h=((h<<5)+h+ch.ch
 function fmtSrcDate(v){ if(!v) return ''; const d=new Date(v); return isNaN(d)?String(v):d.toLocaleDateString('en-GB',{day:'numeric',month:'short'}); }
 function toStory(x){ const b=bucket(x.category);
   return Object.assign({topic:'design'}, CAT[b], {cat:/^design_/.test(x.category||'')?CAT[b].cat:(x.category||CAT[b].cat), title:x.title, summary:x.summary,
-    impl:x.design_implication, src:x.source_name, url:x.source_url, date:fmtSrcDate(x.source_date), id:hashId(x.source_url||x.title)}); }
+    impl:x.design_implication, src:x.source_name, url:x.source_url, date:fmtSrcDate(x.source_date), id:hashId(x.source_url||x.title),
+    visual_type:x.visual_type||'generated', visual_url:x.visual_url, visual_credit:x.visual_credit, visual_source_url:x.visual_source_url}); }
 async function loadBriefs(){
   /* Daily files are data/YYYY-MM-DD.json. Probe the last 14 days (no shared index, so review PRs never conflict),
      plus any days listed in the older data/index.json. */
@@ -640,7 +674,13 @@ let fid=0; Object.entries(MORE).forEach(([t,l])=>l.forEach(s=>{s.topic=t;s.found
 const FOUND=[]; const revealed=Object.fromEntries(Object.keys(MORE).map(k=>[k,0])); let lastSearch='';
 const byId = id => ALL.find(s=>s.id===id) || Object.values(MORE).flat().find(s=>s.id===id);
 
-const track = (event, props={}) => { try { window.posthog?.capture?.(event, props); } catch(_){} };
+/* analytics: sends every event to PostHog and Google Analytics 4 when their snippets are on the page; no-op otherwise */
+const track = (event, props={}) => {
+  try { window.posthog?.capture?.(event, props); } catch(_){}
+  try { if (typeof window.gtag === 'function') { const p = {};
+    for (const [k,v] of Object.entries(props)) { if (v==null) continue; p[k] = Array.isArray(v) ? v.join(', ').slice(0,100) : (typeof v === 'string' ? v.slice(0,100) : v); }
+    window.gtag('event', event, p); } } catch(_){}
+};
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
@@ -749,9 +789,11 @@ function retainHTML(){
       <button class="endbtn primary" data-share-app>${ICON_SHARE}<span><b>Share AI Signal</b><small>Send the link on LinkedIn, WhatsApp or X</small></span></button>
       <button class="endbtn" data-bookmark-app><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span><b>Bookmark AI Signal</b><small>Save this link to come back tomorrow</small></span></button>
     </div>
+    ${feedbackHTML()}
     <div class="more full">
+      <button class="morelink" data-go-learn>Learn AI for designers <small>courses · AI terms</small></button>
       <button class="morelink" data-open-saved>Your saved stories <b>${saved.size}</b></button>
-      ${others.length?`<details class="moredet"><summary>Earlier briefs</summary>${others.map(({d,i})=>`<button class="dayrow" data-goto-day="${i}"><span class="dd">${d.short[0]}<b>${d.short[1]}</b></span><span class="dt">${esc(d.stories[0].title)}<small>${d.stories.length} stories</small></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>`).join('')}</details>`:''}
+      ${others.length?`<details class="moredet"><summary>Earlier briefs</summary>${others.map(({d,i})=>`<button class="dayrow" data-goto-day="${i}"><span class="dd">${d.short[0]}<b>${d.short[1]}</b></span><span class="dt">${esc(d.stories[0].title)}<small>${d.stories.length} stories</small></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>`).join('')}</details>`:`<div class="morelink muted">Earlier briefs <small>appear here as new briefs publish</small></div>`}
       ${Object.values(MORE).some(a=>a.length)?'<button class="morelink" data-explore-other>Explore beyond design <span aria-hidden="true">→</span></button>':''}
     </div>
   </div>`;
@@ -772,6 +814,53 @@ function openBookmark(){
   showSearch();
 }
 
+
+/* ---------- feedback: rating + quick tags + comment (sent as a PostHog event) ---------- */
+const FB_TAGS=['Just right','Too long','Not relevant to me','Hard to navigate','Love the design','Want more stories'];
+const fbState={rating:0,tags:new Set()};
+function fbKey(){ return 'ain-fb-'+(DAYS[dayIdx].iso||DAYS[dayIdx].label); }
+function feedbackHTML(){
+  if(store.get(fbKey())) return `<div class="fb full done"><b>Thanks for your feedback.</b><span class="sm">It shapes the next brief and the interface.</span></div>`;
+  return `<div class="fb full">
+    <b id="fb-q">How useful was this brief?</b>
+    <div class="fb-rate" role="radiogroup" aria-labelledby="fb-q">${[1,2,3,4,5].map(n=>`<button role="radio" aria-checked="${fbState.rating===n}" data-rate="${n}" aria-label="${n} of 5">${n}</button>`).join('')}</div>
+    <div class="fb-scale"><span>Not useful</span><span>Very useful</span></div>
+    <div class="fb-tags">${FB_TAGS.map(t=>`<button class="tchip" data-fbtag="${esc(t)}" aria-pressed="${fbState.tags.has(t)}">${esc(t)}</button>`).join('')}</div>
+    <label class="sm" for="fb-text-${dayIdx}">What should we improve? <span style="opacity:.7">(optional)</span></label>
+    <textarea id="fb-text-${dayIdx}" class="fb-text" rows="2" maxlength="500" placeholder="The design, the stories, anything"></textarea>
+    <button class="btn" data-fb-send ${fbState.rating?'':'disabled'}>Send feedback</button>
+    <span class="sm">Anonymous. Read by the editor every week.</span>
+  </div>`;
+}
+document.addEventListener('click',e=>{
+  const r=e.target.closest('[data-rate]');
+  if(r){ fbState.rating=+r.dataset.rate; document.querySelectorAll('[data-rate]').forEach(b=>b.setAttribute('aria-checked',+b.dataset.rate===fbState.rating)); document.querySelectorAll('[data-fb-send]').forEach(b=>b.disabled=false); }
+  const t=e.target.closest('[data-fbtag]');
+  if(t){ const v=t.dataset.fbtag, on=!fbState.tags.has(v); on?fbState.tags.add(v):fbState.tags.delete(v); document.querySelectorAll(`[data-fbtag="${CSS.escape(v)}"]`).forEach(b=>b.setAttribute('aria-pressed',on)); }
+  const snd=e.target.closest('[data-fb-send]');
+  if(snd && fbState.rating){
+    const box=snd.closest('.fb'), comment=(box.querySelector('.fb-text')?.value||'').trim().slice(0,500);
+    const payload={rating:fbState.rating, tags:[...fbState.tags], comment, brief:DAYS[dayIdx].iso||DAYS[dayIdx].label, stories:current().length};
+    track('feedback_submitted', payload);
+    store.set(fbKey(),'1');
+    box.outerHTML=`<div class="fb full done"><b>Thanks for your feedback.</b><span class="sm">It shapes the next brief and the interface.</span></div>`;
+  }
+  if(e.target.closest('[data-go-learn]')) document.getElementById('t-learn').click();
+});
+
+/* ---------- story visuals: source image (with credit) · generated illustration · none ---------- */
+function artHTML(s, extra=''){
+  if(s.visual_type==='source_image' && s.visual_url)
+    return `<div class="art photo" style="background:var(--c-${s.k}-soft)"><img src="${esc(s.visual_url)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="${s.id}">${extra}<a class="credit" href="${esc(s.visual_source_url||s.url)}" target="_blank" rel="noopener">${esc(s.visual_credit||('Image: '+s.src))}</a></div>`;
+  if(s.visual_type==='none') return `<div class="art none" style="background:var(--c-${s.k}-soft)">${extra}</div>`;
+  return `<div class="art">${illo(s)}${extra}</div>`;
+}
+document.addEventListener('error',e=>{
+  const im=e.target; if(im.tagName!=='IMG'||!im.dataset.fallback) return;
+  const st=byId(im.dataset.fallback), box=im.closest('.art'); if(!st||!box) return;
+  box.classList.remove('photo'); box.querySelector('.credit')?.remove(); im.remove(); box.insertAdjacentHTML('afterbegin', illo(st));
+}, true);
+
 /* ---------- swipe mode ---------- */
 const stack=document.getElementById('stack'), rail=document.getElementById('rail');
 let slides=[], io, briefDone=false;
@@ -785,7 +874,7 @@ function renderStack(){
     <p>You asked for these at ${lastSearch}. They stay out of your daily brief.</p>
     <span class="hint2">Keep swiping</span></article></div>`:'')+`
   <div class="slide" data-id="${s.id}"><article class="card">
-    <div class="art">${illo(s)}<span class="spec">${i+1} of ${n}</span></div>
+    ${artHTML(s, `<span class="spec">${i+1} of ${n}</span>`)}
     <div class="cbody">
       <div class="meta">${chip(s)}<span style="font-size:.8rem">${esc(s.date)}</span>${s.found?'<span class="newtag">New · from search</span>':''}</div>
       <h2>${esc(s.title)}</h2>
@@ -829,7 +918,7 @@ function renderGrid(){
   grid.innerHTML = list.map((s,i)=>(i===firstFound?`<div class="dg-div"><span class="mono" style="color:var(--accent)">Beyond the brief</span><h2>Found by a fresh search at ${lastSearch}</h2><span class="sm">${list.length-firstFound} more ${topic!=='all'?'on '+esc(tLabel(topic)):'across topics'} · not in today’s brief</span></div>`:'')+`
   <article class="dg ${span(i)}${i===0?' open':''}" style="animation-delay:${60+i*60}ms" data-id="${s.id}">
     <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-    <div class="art">${illo(s)}</div>
+    ${artHTML(s)}
     <div>
       <button class="dtoggle" aria-expanded="${i===0}" aria-controls="p-${s.id}">
         <div class="meta">${chip(s)}<span style="font-size:.78rem">${esc(s.date)}</span>${s.found?'<span class="newtag">New</span>':''}</div>
@@ -1184,7 +1273,8 @@ function setTab(t){
   placeThumb();
 }
 document.getElementById('t-news').onclick=()=>setTab('news');
-document.getElementById('t-learn').onclick=()=>setTab('learn');
+document.getElementById('t-learn').onclick=()=>{ setTab('learn'); store.set('ain-learn-seen','1'); document.getElementById('learn-dot').hidden=true; };
+if(store.get('ain-learn-seen')) document.getElementById('learn-dot').hidden=true;
 renderLearn();
 
 renderAll(); renderSaved();
