@@ -1,0 +1,640 @@
+{
+  "date": "2026-09-30",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-09-30-openai-introduces-dots-always-on-assistants-for-cross-app-ta",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "agents-in-tools",
+        "code-prototyping",
+        "design-tools"
+      ],
+      "title": "OpenAI introduces Dots, always-on assistants for cross-app tasks",
+      "summary": "OpenAI announced Dots, proactive assistants that handle complex projects and everyday tasks. According to The Verge, Dots serve as always-on AI assistants that can do nearly anything across connected apps in the background while learning user preferences over time.",
+      "design_implication": "Proactive background agents require persistent state indicators in application surfaces to show background execution without visual noise.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "OpenAI News",
+      "source_url": "https://openai.com/index/introducing-dots",
+      "source_date": "2026-09-29T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "OpenAI introduced Dots as proactive assistants for complex projects.",
+          "quote": "Dots by OpenAI are proactive assistants that can keep working across complex projects and everyday tasks."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [
+        "https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor",
+        "https://www.wired.com/story/openai-dots-always-on-ai-agents-that-proactively-help/"
+      ],
+      "source_tier": 1,
+      "word_count": 64,
+      "discovered_date": "2026-09-30",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-09-30-openai-releases-gpt-6-1-sol-for-coding-and-multi-step-workfl",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "code-prototyping"
+      ],
+      "title": "OpenAI releases GPT-6.1 Sol for coding and multi-step workflows",
+      "summary": "OpenAI announced GPT-6.1 Sol, offering intelligence for coding, computer use, and professional work at one-fifth of standard API prices. Vercel notes the model handles multi-step workflows, extracts information from complex PDFs, and improves factual accuracy.",
+      "design_implication": "Lower cost and higher reliability for complex reasoning tasks enable real-time generative UI generation directly inside client authoring tools.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "OpenAI News",
+      "source_url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "source_date": "2026-09-29T10:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "OpenAI released GPT-6.1 Sol for professional and coding work.",
+          "quote": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [
+        "https://vercel.com/changelog/gpt-6-1-sol-now-available-on-ai-gateway"
+      ],
+      "source_tier": 1,
+      "word_count": 63,
+      "discovered_date": "2026-09-30",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    },
+    {
+      "id": "2026-09-30-vercel-brings-trace-span-search-directly-to-the-terminal-cli",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "trust-and-explainability",
+        "agentic-ux"
+      ],
+      "title": "Vercel brings trace span search directly to the terminal CLI",
+      "summary": "Vercel released a CLI feature allowing developers and coding agents to search a project's trace spans directly from the terminal. Each span represents a step in a request to help investigate latency, errors, and security behavior.",
+      "design_implication": "Exposing granular execution traces to command-line interfaces shifts agent debugging from visual dashboards to developer text workflows.",
+      "implication_lens": "workflow",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/search-trace-spans-from-the-vercel-cli",
+      "source_date": "2026-09-29T13:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel updated its CLI to allow searching trace spans.",
+          "quote": "You and your coding agents can now search a project’s trace spans from the terminal with vercel traces search."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 63,
+      "discovered_date": "2026-09-30",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6FDKZgR9NYxGHXeNJHVWKc/f4a5c5b13acf4dd6cdc023ee7ba18093/search_trace_spans_-_og_final.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/search-trace-spans-from-the-vercel-cli",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-09-30-anthropic-releases-claude-sonnet-5-5-on-vercel-ai-gateway",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "collaboration",
+        "roles-and-skills"
+      ],
+      "title": "Anthropic releases Claude Sonnet 5.5 on Vercel AI Gateway",
+      "summary": "Vercel announced the availability of Claude Sonnet 5.5 on AI Gateway. Sonnet 5.5 executes multi-step coding tasks, checks its work before completion, and builds features, documents, and spreadsheets.",
+      "design_implication": "Self-checking agent outputs reduce iteration loops in software prototyping interfaces.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/claude-sonnet-5-5-now-available-on-ai-gateway",
+      "source_date": "2026-09-28T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel added Claude Sonnet 5.5 to AI Gateway.",
+          "quote": "Sonnet 5.5 improves on Claude Sonnet 5 for well-scoped everyday work, from building features and fixing bugs to creating documents, slides, and spreadsheets."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 47,
+      "discovered_date": "2026-09-30",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1nxbUaUVfuEnDEKT9lRXrY/a709d6455cfbd73f7ef021e13322f8b4/Vercel_x_Anthropic.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/claude-sonnet-5-5-now-available-on-ai-gateway",
+      "visual_license": "official_with_credit"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 85,
+    "held": [
+      {
+        "source_url": "https://www.figma.com/blog/london-office-expansion/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/what-it-takes-to-build-great-products-now/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/the-power-of-product-based-learning/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-aitana-pico/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/try-these-5-weave-tools-and-share-your-own/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/index/devday-2026-recap",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/how-we-will-do-better-for-australia",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/one-year-in-how-microsoft-research-asia-singapore-is-advancing-research-partnership-and-talent-for-real-world-impact/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/improving-synthesis-prediction-of-small-molecules-at-scale-with-retrochimera/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/communication-bottleneck-serialization",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/federated-variational-inequalities",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/latent-space-distillation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/practical-recipe-federated-asr",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/guide-language-flow",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/dynamically-scaled-activation-steering",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/git/highlights-from-git-2-56/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-connect-service-submissions",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/search-domains-without-authentication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-functionality-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/disclose-ai-paced/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/designing-ai-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2609.35775",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2609.35776",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2609.35777",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2609.35778",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2609.35779",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/29/1145249/the-download-climate-tech-ai-scientific-discovery/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/29/1145183/2026-climate-tech-companies-to-watch-preview/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/29/1145186/making-ai-an-asset-not-an-expense/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/28/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/28/1145202/the-download-rogue-agent-liability-and-the-ai-hype-index/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1002448/elon-musk-grokipedia-ai-updating-again",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1002238/openai-google-anthropic-ai-researchers-safety-interviews",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1002201/openai-sam-altman-openai-devday-protests-ice-data-centers",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/29/america-gov-gets-really-weird-when-you-ask-it-about-minecraft-but-its-not-a-glitch/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/29/openais-latest-features-take-direct-aim-at-the-app-store-model/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/29/openai-reportedly-in-talks-to-raise-30b-round-at-1-4t-valuation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/29/openai-takes-on-microsoft-with-the-launch-of-what-feels-a-whole-lot-like-chatgpts-own-office-suite/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/openai-sued-over-the-hugging-face-hack/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/anthropic-says-it-discovered-a-crispr-like-system-now-what/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/openai-delays-release-of-latest-model-over-safety-concerns/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/the-big-interview-podcast-timnit-gebru/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/openai-pauses-training-most-powerful-models-after-rogue-agents-target-government/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/09/stop-treating-css-container-queries-traditional-media-queries/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/google-ads-caught-delivering-convincing-scareware-ads-to-unsuspecting-users/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/theres-a-new-way-to-break-rsa-thats-faster-than-anything-weve-seen-before/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/09/it-mistake-erases-11-years-of-viewing-history-for-hospitals-maternity-records/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/how-to-de-slopify-your-designs-4c40c57c1dc9?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/if-you-want-to-design-for-underserved-users-look-at-farmers-markets-eefaedb35607?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-strategic-designer-navigating-the-jevons-paradox-in-the-ai-age-e06aa836f9d8?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-next-larger-context-4dd0c91a7c5b?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-makes-a-brand-last-baf152419576?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/regulating-ai-quantifying-stress-the-variance-problem-1ce71d56a34a?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/macaly",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/crawlraven-mcp",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/upsolve-ai",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/pexo-2",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [],
+    "patterns": [
+      {
+        "id": "agent-assistants-and-canvas-interfaces",
+        "name": "Always-on agent assistants and non-chat work surfaces",
+        "description": "Platforms are shifting from conversational chat interfaces to persistent background agents and canvas-based workspaces for complex developer and professional tasks.",
+        "source_urls": [
+          "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+          "https://openai.com/index/introducing-dots",
+          "https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 751,
+        "fresh": 5
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1238,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1619,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 46,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 1
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 4
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-09-30-openai-introduces-dots-always-on-assistants-for-cross-app-ta",
+        "title": "OpenAI introduces Dots, always-on assistants for cross-app tasks",
+        "source": "OpenAI News",
+        "reason": "no source image found"
+      },
+      {
+        "story": "2026-09-30-openai-releases-gpt-6-1-sol-for-coding-and-multi-step-workfl",
+        "title": "OpenAI releases GPT-6.1 Sol for coding and multi-step workflows",
+        "source": "OpenAI News",
+        "reason": "no source image found"
+      }
+    ]
+  }
+}
