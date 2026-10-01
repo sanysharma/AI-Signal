@@ -1,0 +1,536 @@
+{
+  "date": "2026-10-01",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-01-vercel-agent-supports-private-npm-package-installation",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "code-prototyping",
+        "agents-in-tools"
+      ],
+      "title": "Vercel Agent supports private npm package installation",
+      "summary": "Vercel announced that Vercel Agent can now install private dependencies from npm and custom registries using credentials stored as shared environment variables. Classic Yarn and npm running within agent sessions authenticate automatically.",
+      "design_implication": "Extending agentic coding assistants to private registries shifts the security surface from isolated sandboxes to team-level credential management, requiring clear UI indicators for which packages access internal codebases.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/vercel-agent-now-installs-private-packages-from-npm-and-custom-registries",
+      "source_date": "2026-09-30T23:22:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel Agent can install private dependencies from npm and custom registries using stored credentials.",
+          "quote": "Vercel Agent can install private dependencies from npm and custom registries using credentials stored as shared environment variables on Vercel."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 67,
+      "discovered_date": "2026-10-01",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/51AkvmukWt34TIFhJ3XTdX/d5b58e4e05bbcc635816d8658d54617e/image__41_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/vercel-agent-now-installs-private-packages-from-npm-and-custom-registries",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-10-01-vercel-ai-gateway-integrates-browserbase-search-and-fetch",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "design-tools"
+      ],
+      "title": "Vercel AI Gateway integrates Browserbase search and fetch",
+      "summary": "Vercel added Browserbase Search and Fetch tools to AI Gateway. The integration allows developers to give any model supporting tool calling access to web search and page retrieval using a single API key across providers.",
+      "design_implication": "Unifying web search and retrieval tools under a single gateway abstraction simplifies how prototyping environments provision live data access for generative UI components.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/ai-gateway-adds-browserbase-search-and-fetch-tools",
+      "source_date": "2026-09-30T21:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel added Browserbase Search and Fetch tools to AI Gateway.",
+          "quote": "Browserbase Search and Fetch are now available through AI Gateway. Give your models access to current information, find relevant pages, and retrieve their contents"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 66,
+      "discovered_date": "2026-10-01",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/54153N4Mc5l8x9jOlPSzAu/25964dac0e5366f33e050d1a16dae29f/image.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/ai-gateway-adds-browserbase-search-and-fetch-tools",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-10-01-google-announces-gemini-4-argon-frontier-model",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "multimodal"
+      ],
+      "title": "Google announces Gemini 4 Argon frontier model",
+      "summary": "Google announced Gemini 4 Argon, its next frontier intelligence model. Google stated the model delivers frontier performance in complex workflows across software engineering, enterprise knowledge work, and cybersecurity defense, with initial access limited to trusted defenders.",
+      "design_implication": "Phased rollouts of high-capability reasoning models require design systems to gracefully handle tiered access states without breaking complex multi-step user workflows.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "Google DeepMind Blog",
+      "source_url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "source_date": "2026-09-30T20:01:45.000Z",
+      "evidence": [
+        {
+          "claim": "Google announced Gemini 4 Argon for software engineering and enterprise workflows.",
+          "quote": "Gemini 4 Argon: our next era of frontier intelligence"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [
+        "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
+        "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/"
+      ],
+      "source_tier": 1,
+      "word_count": 64,
+      "discovered_date": "2026-10-01",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 89,
+    "held": [
+      {
+        "source_url": "https://arxiv.org/abs/2609.38183",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2609.38184",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2609.38186",
+        "reason": "pattern_watch"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/london-office-expansion/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/what-it-takes-to-build-great-products-now/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/the-power-of-product-based-learning/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-aitana-pico/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/devday-2026-recap",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://openai.com/index/how-we-will-do-better-for-australia",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-synthid-bio/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/one-year-in-how-microsoft-research-asia-singapore-is-advancing-research-partnership-and-talent-for-real-world-impact/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/improving-synthesis-prediction-of-small-molecules-at-scale-with-retrochimera/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/effectiveness-fluency-llm-conditioning",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/sclate-agent-training-evaluation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/communication-bottleneck-serialization",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/federated-variational-inequalities",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/edge-requests-are-now-called-cdn-requests",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/ling-3-1-flash-is-now-available-on-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vary-cookie-responses-no-longer-cached",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-functionality-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/disclose-ai-paced/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/designing-ai-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2609.38182",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2609.38185",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/30/1145350/the-download-openai-chief-research-officer-hacking-response/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/29/1145249/the-download-climate-tech-ai-scientific-discovery/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/29/1145183/2026-climate-tech-companies-to-watch-preview/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/29/1145186/making-ai-an-asset-not-an-expense/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/28/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1003068/elon-musk-grokipedia-v-0-3-spacexai",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1002636/ai-execs-trump-self-policing-deal-comments",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/09/30/the-ugly-economics-of-consumer-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/trumps-ai-safety-accord-is-a-fancy-pinky-swear/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-agents-dots-devday-muse-battling-it-out/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.wired.com/story/you-dont-need-ai-to-be-concerned-about-bioweapons-development-but-it-helps/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/openai-sued-over-the-hugging-face-hack/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/anthropic-says-it-discovered-a-crispr-like-system-now-what/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/openai-dots-always-on-ai-agents-that-proactively-help/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/09/desktop-wallpaper-calendars-october-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/attackers-have-been-exploiting-critical-zimbra-flaw-to-steal-emails/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/cloudflare-plans-to-issue-quantum-safe-tls-certificates/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/five-step-color-balancing-with-genai-60ab1ca5635e?source=rss----138adf9c44c---4",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://uxdesign.cc/federal-pressure-may-force-design-education-to-rethink-identity-22d4ec56b1c2?source=rss----138adf9c44c---4",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://uxdesign.cc/headless-ai-will-make-every-product-a-platform-heres-what-to-consider-when-designing-for-this-f219c33245c7?source=rss----138adf9c44c---4",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-the-bible-got-wrong-about-ai-83634e21ecff?source=rss----138adf9c44c---4",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://uxdesign.cc/intelligent-accessibility-what-if-accessibility-could-adapt-to-you-db601958ea47?source=rss----138adf9c44c---4",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49?source=rss----138adf9c44c---4",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/cura-3",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/twin-2",
+        "reason": "below_bar"
+      }
+    ],
+    "patterns": [],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 751,
+        "fresh": 4
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1240,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 5
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1625,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 64,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 19,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 1
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 5
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-01-google-announces-gemini-4-argon-frontier-model",
+        "title": "Google announces Gemini 4 Argon frontier model",
+        "source": "Google DeepMind Blog",
+        "reason": "image host not allowed (storage.googleapis.com). If this is the company's own image server, add \"googleapis.com\" to image_hosts for Google DeepMind Blog in sources.json",
+        "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/g4_30-09-26_key-art_blog.width-1300.png"
+      }
+    ]
+  }
+}
