@@ -1,0 +1,683 @@
+{
+  "date": "2026-10-02",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-02-figma-outlines-node-workflows-to-generate-campaign-assets-in",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-systems",
+        "design-tools",
+        "generative-media"
+      ],
+      "title": "Figma outlines node workflows to generate campaign assets in Weave",
+      "summary": "Figma demonstrated a workflow connecting design system tokens and raw assets to marketing collateral generation using Figma Weave, the Gen Effect, and canvas nodes. The method treats system components as structured input data for automated visual variations.",
+      "design_implication": "Design system teams should expand component libraries beyond UI elements to structured asset graphs, treating brand guidelines as programmatic constraints for generative production pipelines.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/workflow-lab-from-design-system-to-campaign-in-figma-weave/",
+      "source_date": "2026-10-01",
+      "evidence": [
+        {
+          "claim": "Figma showed how to turn design systems into campaign collateral using Weave and nodes.",
+          "quote": "This workflow shows you how to turn raw materials into brand campaign collateral using the Gen Effect and Figma nodes."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 71,
+      "discovered_date": "2026-10-02",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-02-researchers-introduce-critsly-for-structured-artefact-aware-",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "research-synthesis",
+        "collaboration",
+        "prototyping"
+      ],
+      "title": "Researchers introduce Critsly for structured, artefact-aware AI design critique",
+      "summary": "Researchers presented Critsly and StudioCrit, an AI critique workspace designed around visual boards and structured design intention fields. The system grounds feedback directly in visual artefacts, guided reflection, and perspective-taking rather than unanchored conversational prompts.",
+      "design_implication": "AI critique tools gain practical utility when grounded in specific intent metadata and visual canvas context, moving AI review away from unanchored text chat.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2610.00085",
+      "source_date": "2026-10-02",
+      "evidence": [
+        {
+          "claim": "Critsly combines a visual board with design intention fields for critique.",
+          "quote": "Critsly combines a visual board, design-intention fields, guided reflection, perspective-taking"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 68,
+      "discovered_date": "2026-10-02",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-02-google-launches-guided-vision-for-real-time-camera-assistanc",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "multimodal",
+        "conversational-ui",
+        "agentic-ux"
+      ],
+      "title": "Google launches Guided Vision for real-time camera assistance in Gemini Live",
+      "summary": "Google rolled out Guided Vision for Gemini Live on compatible Android devices. The feature provides real-time audio descriptions and spatial feedback as users point their smartphone camera at real-world objects, text, and physical environments.",
+      "design_implication": "Continuous video-and-audio interaction shifts mobile UI from discrete taps to passive spatial orienting, requiring new audio cueing patterns to prevent perceptual overload.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision",
+      "source_date": "2026-10-01",
+      "evidence": [
+        {
+          "claim": "Guided Vision delivers real-time audio descriptions of camera feeds in Gemini Live.",
+          "quote": "Guided Vision is launching in Gemini Live on compatible Android devices today to use AI to give real-time audio descriptions of anything you point your phone's camera at."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 67,
+      "discovered_date": "2026-10-02",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-02-chatgpt-introduces-photo-based-virtual-try-on-and-shopping-l",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "embedded-ui",
+        "multimodal",
+        "adoption-data"
+      ],
+      "title": "ChatGPT introduces photo-based virtual try-on and shopping library",
+      "summary": "OpenAI rolled out shopping capabilities in ChatGPT that let users virtually try on clothing and accessories onto uploaded photos. Users can save resulting items directly into an in-chat Favorites library.",
+      "design_implication": "Conversational commerce interfaces are embedding persistent inventory and personal asset libraries directly within chat streams, collapsing discovery and visual validation into one surface.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "TechCrunch (AI)",
+      "source_url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
+      "source_date": "2026-10-01",
+      "evidence": [
+        {
+          "claim": "ChatGPT added virtual try-on and a Favorites library for shopping.",
+          "quote": "OpenAI is rolling out new shopping features for ChatGPT that let users virtually try on clothing and accessories using their own photos and save products they like to a Favorites library."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 61,
+      "discovered_date": "2026-10-02",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.7-flash",
+    "candidates_reviewed": 89,
+    "held": [
+      {
+        "source_url": "https://www.nngroup.com/articles/disclose-ai-paced/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.00163",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.00374",
+        "reason": "pattern_watch"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-agents-dots-devday-muse-battling-it-out/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/london-office-expansion/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/what-it-takes-to-build-great-products-now/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/the-power-of-product-based-learning/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-aitana-pico/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/the-eternal-complement",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/albertsons-reimagining-retail",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/the-den-family-social",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-synthid-bio/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+        "reason": "unsupported_claim"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+        "reason": "unsupported_claim"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/one-year-in-how-microsoft-research-asia-singapore-is-advancing-research-partnership-and-talent-for-real-world-impact/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/improving-synthesis-prediction-of-small-molecules-at-scale-with-retrochimera/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/harness-autonomous-ml-engineering",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/rltl-dr-self-improvement",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/effectiveness-fluency-llm-conditioning",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/sclate-agent-training-evaluation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/communication-bottleneck-serialization",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/federated-variational-inequalities",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/git/highlights-from-git-2-56/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/microsoft-ai-models-are-now-available-on-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/edge-requests-are-now-called-cdn-requests",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-sandbox-now-supports-secure-compute",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-functionality-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/designing-ai-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.00073",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.00338",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/02/1145639/dont-be-fooled-llms-dont-reason/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/01/1145592/the-download-ai-mind-reading-small-batteries/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/01/1145588/ai-mind-reading-reconstructs-what-youre-looking-at/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/01/1145435/distributed-batteries/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/30/1145350/the-download-openai-chief-research-officer-hacking-response/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1003068/elon-musk-grokipedia-v-0-3-spacexai",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/01/opus-5-5-loves-to-tell-you-this-matters-and-other-ai-writing-tells/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/whatever-ai-safety-looks-like-its-not-this/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/uncanny-valley-podcast-trumps-pinky-swear-ai-safety-accord-an-ai-agent-worth-the-risk/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/trumps-ai-safety-accord-is-a-fancy-pinky-swear/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/you-dont-need-ai-to-be-concerned-about-bioweapons-development-but-it-helps/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/openai-sued-over-the-hugging-face-hack/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/09/desktop-wallpaper-calendars-october-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/hacks-of-2-federal-agencies-in-a-month-have-spilled-a-bonanza-of-sensitive-data/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/memory-supplies-are-only-getting-tighter-micron-ceo-says/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/attackers-have-been-exploiting-critical-zimbra-flaw-to-steal-emails/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/cloudflare-plans-to-issue-quantum-safe-tls-certificates/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/google-ads-caught-delivering-convincing-scareware-ads-to-unsuspecting-users/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/theres-a-new-way-to-break-rsa-thats-faster-than-anything-weve-seen-before/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/stop-blaming-the-model-for-slow-ai-heres-how-to-design-for-it-doherty-s-threshold-as-a-guideline-5fa6d52e23fc?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/designs-consensus-was-ai-s-first-casualty-8143c1bada80?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ai-beyond-average-from-chatting-to-collaborating-7b308dd9317a?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/five-step-color-balancing-with-genai-60ab1ca5635e?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/federal-pressure-may-force-design-education-to-rethink-its-identity-22d4ec56b1c2?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/headless-ai-will-make-every-product-a-platform-heres-what-to-consider-when-designing-for-this-f219c33245c7?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/audryo",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/gauth-ai-course",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/communicate",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/anthroposcaper",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/pastily",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/never-boring-ai",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "canvas-over-chat-workspaces",
+        "name": "Canvas and Node Workspaces Replacing Linear Chat",
+        "description": "Product tools are replacing single-stream conversational prompts with spatial canvases and node-based graphs to anchor AI generation and critique to structured design artefacts.",
+        "source_urls": [
+          "https://www.figma.com/blog/workflow-lab-from-design-system-to-campaign-in-figma-weave/",
+          "https://arxiv.org/abs/2610.00085",
+          "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+          "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 752,
+        "fresh": 5
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1243,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 5
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1627,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 37,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 19,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 1
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-02-figma-outlines-node-workflows-to-generate-campaign-assets-in",
+        "title": "Figma outlines node workflows to generate campaign assets in Weave",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/be37944153bf6c247bcbc5e778270b950f2a8d1f-1056x704.jpg?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      },
+      {
+        "story": "2026-10-02-researchers-introduce-critsly-for-structured-artefact-aware-",
+        "title": "Researchers introduce Critsly for structured, artefact-aware AI design critique",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-02-google-launches-guided-vision-for-real-time-camera-assistanc",
+        "title": "Google launches Guided Vision for real-time camera assistance in Gemini Live",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-02-chatgpt-introduces-photo-based-virtual-try-on-and-shopping-l",
+        "title": "ChatGPT introduces photo-based virtual try-on and shopping library",
+        "source": "TechCrunch (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
