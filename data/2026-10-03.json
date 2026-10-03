@@ -1,0 +1,341 @@
+{
+  "date": "2026-10-03",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-03-apple-to-tighten-macos-full-disk-access-to-mitigate-ai-risks",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "permissions-and-identity",
+        "trust-and-explainability",
+        "agentic-ux"
+      ],
+      "title": "Apple to tighten macOS Full Disk Access to mitigate AI risks",
+      "summary": "Apple announced it will add new controls around macOS Full Disk Access, stating that increasingly capable AI agents substantially increase the risk of broad access to user files, messages, mail, and browsing history. Explicit user action will be required for such access.",
+      "design_implication": "Platform-level permission models must evolve past binary access toggles to support scoped, time-bound authorizations for autonomous agents reading personal disk data without halting user workflows.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "TechCrunch (AI)",
+      "source_url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+      "source_date": "2026-10-02T18:11:27.000Z",
+      "evidence": [
+        {
+          "claim": "Apple is adding new controls around macOS Full Disk Access due to AI agent risks.",
+          "quote": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files, messages, mail, and browsing history riskier."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "source_tier": 2,
+      "word_count": 78,
+      "discovered_date": "2026-10-03",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-03-meta-open-sources-muse-code-for-custom-ai-gadget-creation",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "conversational-ui"
+      ],
+      "title": "Meta open sources Muse code for custom AI gadget creation",
+      "summary": "Meta open sourced code allowing developers to build custom Muse AI gadgets, suggesting hardware implementations such as color E Ink displays, HDMI screens for television display, or small touchscreen interactive devices.",
+      "design_implication": "Ubiquitous physical assistants require interaction paradigms that transition smoothly from ambient display states to direct multimodal input without relying on traditional screen architectures.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
+      "source_date": "2026-10-02T21:08:37.000Z",
+      "evidence": [
+        {
+          "claim": "Meta open sourced code to let developers build Muse AI gadgets.",
+          "quote": "Meta now lets you make your own Muse gadgets that feature the company's new AI agent with code that the company open sourced."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "source_tier": 2,
+      "word_count": 64,
+      "discovered_date": "2026-10-03",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-03-nielsen-norman-group-warns-agentic-ai-systems-turn-fragile",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "design-ops",
+        "roles-and-skills",
+        "collaboration"
+      ],
+      "title": "Nielsen Norman Group warns agentic AI systems turn fragile",
+      "summary": "Nielsen Norman Group published a study examining how making AI building nearly free leads users to grow agentic systems piecemeal into fragile, messy structures that they no longer understand or maintain effectively.",
+      "design_implication": "Worth watching: As users assemble informal multi-agent systems, designers need diagnostic interfaces that visualize hidden dependencies before systems devolve into unmaintainable operational messes.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Nielsen Norman Group",
+      "source_url": "https://www.nngroup.com/articles/big-ball-of-mud-ai/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "source_date": "2026-10-02T17:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "AI makes building free, causing users to grow agentic systems piecemeal into fragile messes.",
+          "quote": "AI makes building nearly free, so users grow agentic systems piecemeal into fragile messes they no longer understand."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "source_tier": 1,
+      "word_count": 64,
+      "discovered_date": "2026-10-03",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 84,
+    "held": [
+      {
+        "source_url": "https://www.figma.com/blog/london-office-expansion/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/practical-guide-building-gpt-6",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/trillium-labs-wants-to-do-high-risk-ai-research-in-the-open/",
+        "reason": "below_bar"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/what-it-takes-to-build-great-products-now/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/the-eternal-complement",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-synthid-bio/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/language-discrimination-multilingual-learning",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/jev-for-python-engineers",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/02/1143774/redefining-enterprise-intelligence-with-autonomous-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
+        "reason": "duplicate"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-security-boundary-tightening",
+        "name": "Agent Security Boundary Tightening",
+        "description": "Platforms are proactively restricting broad local file access and environment permissions to prevent autonomous AI agents from exploiting security boundaries.",
+        "source_urls": [
+          "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
+          "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+          "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 752,
+        "fresh": 5
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1245,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 5
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1630,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 1
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 5
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-03-apple-to-tighten-macos-full-disk-access-to-mitigate-ai-risks",
+        "title": "Apple to tighten macOS Full Disk Access to mitigate AI risks",
+        "source": "TechCrunch (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-03-meta-open-sources-muse-code-for-custom-ai-gadget-creation",
+        "title": "Meta open sources Muse code for custom AI gadget creation",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-03-nielsen-norman-group-warns-agentic-ai-systems-turn-fragile",
+        "title": "Nielsen Norman Group warns agentic AI systems turn fragile",
+        "source": "Nielsen Norman Group",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
