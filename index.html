@@ -498,6 +498,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 @media (max-width:860px){.gloss{grid-template-columns:1fr 1fr}}
 @media (max-width:760px){.levels,.gloss{grid-template-columns:1fr}.cmeta a{margin-left:0}}
 @media (max-width:440px){#ring{display:none}}
+
+/* ---------- story layout v2 (5 Oct): no card. Image on top, the story below, the design implication as the hero ---------- */
+.slide{padding:0;place-items:stretch}
+.card{max-width:560px;max-height:none;margin:0 auto;background:transparent;border:0;border-radius:0;box-shadow:none}
+.slide.away .card{transform:none;opacity:.3}
+.card .art{flex:0 0 auto;height:clamp(140px,32svh,300px);min-height:0}
+@media (min-width:600px){.card .art{margin:14px 16px 0;border-radius:16px}}
+.card .art.none{height:6px;flex:0 0 6px}
+.card .cbody{overflow:hidden;padding:16px 20px 12px;gap:12px}
+.card .summary{font-size:.9rem;line-height:1.5;color:var(--muted)}
+.impl p{margin:0}
+.card .impl{background:none!important;border-radius:0;padding:2px 0 2px 16px;border-left:3px solid var(--kc,var(--accent))}
+.card .impl b{margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.card .impl b::before{content:"";width:7px;height:7px;transform:rotate(45deg);background:currentColor}
+.card .impl p{font-family:var(--display);font-weight:500;font-size:clamp(1.04rem,4vw,1.2rem);line-height:1.42;letter-spacing:-.008em;color:var(--text);text-wrap:pretty}
+.card .cfoot{padding-top:10px}
+.readtag{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 7px}
+/* fit: a story never scrolls inside the slide (that fought the swipe). If it doesn't fit, the image gives way first. */
+.card.tight .art{height:clamp(96px,20svh,180px)}
+.card.tight .cbody{gap:9px;padding-top:12px}
+.card.tight h2{font-size:clamp(1.15rem,4.2vw,1.4rem)}
+.card.tighter .art:not(.none){height:72px}
+.card.tighter .summary{font-size:.84rem}
+.card.tighter .impl p{font-size:1rem}
+.endcard,.divcard{justify-content:center}
 </style>
 
 <div class="app" id="app">
@@ -600,7 +625,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
     </div>
   </div>
   <div class="sp-cta in d4" style="max-width:760px;width:100%;margin:0 auto 18px">
-    <button class="btn" id="start">Start today's brief
+    <button class="btn" id="start"><span id="start-txt">See the latest stories</span>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
     <small id="sp-meta"></small>
   </div>
@@ -649,20 +674,35 @@ function toStory(x){ const b=bucket(x.category);
     impl:x.design_implication, src:x.source_name, url:x.source_url, date:fmtSrcDate(x.source_date), id:hashId(x.source_url||x.title),
     visual_type:x.visual_type||'generated', visual_url:x.visual_url, visual_credit:x.visual_credit, visual_source_url:x.visual_source_url}); }
 async function loadBriefs(){
-  /* Daily files are data/YYYY-MM-DD.json. Probe the last 14 days (no shared index, so review PRs never conflict),
-     plus any days listed in the older data/index.json. */
-  const dates=new Set(Array.from({length:14},(_,i)=>new Date(Date.now()-i*864e5).toISOString().slice(0,10)));
+  /* Daily files are data/YYYY-MM-DD.json. Probe the last 30 days (no shared index, so review PRs never conflict),
+     plus any days listed in the older data/index.json. Quiet days have no file; the rolling feed carries over. */
+  const dates=new Set(Array.from({length:30},(_,i)=>new Date(Date.now()-i*864e5).toISOString().slice(0,10)));
   try{ const idx=await fetch('data/index.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null); (idx?.days||[]).forEach(d=>dates.add(d)); }catch(_){}
   const list=[...dates].sort().reverse();
   const files=await Promise.all(list.map(d=>fetch(`data/${d}.json`,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null)));
   const out=[];
-  list.forEach((d,i)=>{ const j=files[i]; if(!j||!Array.isArray(j.stories)||!j.stories.length||out.length>=7) return;
+  list.forEach((d,i)=>{ const j=files[i]; if(!j||!Array.isArray(j.stories)||!j.stories.length) return;
     const dt=new Date(d+'T00:00:00Z'), o=k=>dt.toLocaleDateString('en-GB',{[k]:k==='weekday'||k==='month'?'short':'numeric',timeZone:'UTC'});
     out.push({iso:d,label:`${o('weekday')} ${o('day')} ${o('month')}`, short:[o('weekday'),o('day')], stories:j.stories.map(toStory)}); });
   return out;
 }
 const DAYS = await loadBriefs();
 if(!DAYS.length) DAYS.push({iso:'',label:'today’s', short:['—','—'], stories:[]});
+/* ---------- rolling feed (5 Oct): the latest 10 stories, newest first, whatever day they came from ----------
+   AI news that matters to designers doesn't arrive daily, so the feed never resets or goes empty.
+   DAYS[0] becomes the "Latest" feed; older stories stay reachable, grouped by day, under "Older stories". */
+const FEED_SIZE = 10;
+const relDay = d => { if(!d) return ''; const t=new Date(), today=Date.UTC(t.getFullYear(),t.getMonth(),t.getDate()), x=new Date(d+'T00:00:00Z'), n=Math.round((today-x)/864e5);
+  const f=o=>x.toLocaleDateString('en-US',{...o,timeZone:'UTC'});
+  return n<=0?'Today':n===1?'Yesterday':`${f({weekday:'short'})} ${x.getUTCDate()} ${f({month:'short'})}`; };
+(()=>{ /* days arrive newest first; inside a day, stories keep the engine's order (highest signal score first) */
+  const flat=DAYS.flatMap(d=>d.stories.map(s=>Object.assign(s,{day:d.iso||'', dayLabel:relDay(d.iso)||d.label})));
+  const top=flat.slice(0,FEED_SIZE), inTop=new Set(top.map(s=>s.id));
+  const older=DAYS.map(d=>Object.assign({},d,{stories:d.stories.filter(s=>!inTop.has(s.id))})).filter(d=>d.stories.length);
+  const newest=DAYS.find(d=>d.stories.length);
+  DAYS.length=0;
+  DAYS.push({iso:newest?.iso||'', label:'latest', latest:true, newestLabel:newest?(relDay(newest.iso)||newest.label):'', short:['Latest',String(top.length)], stories:top}, ...older);
+})();
 const ALL = DAYS.flatMap(d=>d.stories);
 
 /* ---------- "Find more": stories the engine finds on a fresh search, per topic ----------
@@ -745,6 +785,8 @@ const tLabel = id => (ALLT.find(t=>t.id===id)||{label:id}).label;
 /* ---------- state ---------- */
 let dayIdx=0, topic='all', mode='swipe';
 const read=new Set(jget('ain-read',[])), saved=new Set(jget('ain-saved',[]));
+const readBefore=new Set(read); /* stories read on earlier visits get a quiet “Read” tag */
+const feedOpen=()=>{ const sp=document.getElementById('splash'); return !sp || sp.hidden || sp.classList.contains('leave'); };
 const current = () => DAYS[dayIdx].stories.filter(s=>topic==='all'||s.topic===topic).concat(FOUND.filter(s=>topic==='all'||s.topic===topic));
 const topicCount = t => DAYS[dayIdx].stories.filter(s=>t==='all'||s.topic===t).length + FOUND.filter(s=>t==='all'||s.topic===t).length;
 
@@ -770,7 +812,7 @@ const actions = s => `<div class="acts"><button class="act" data-save="${s.id}" 
 const srcLink = (s,label) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${label} ↗</a>`;
 const chip = s => `<span class="chip" style="background:var(--c-${s.k}-soft);color:var(--c-${s.k})">${esc(s.cat)}</span>`;
 const implLabel = s => 'Design implication';
-const implBox = s => `<div class="impl" style="background:var(--c-${s.k}-soft)"><b style="color:var(--c-${s.k})">${implLabel(s)}</b>${esc(s.impl)}</div>`;
+const implBox = s => `<div class="impl" style="background:var(--c-${s.k}-soft);--kc:var(--c-${s.k})"><b style="color:var(--c-${s.k})">${implLabel(s)}</b><p>${esc(s.impl)}</p></div>`;
 
 /* ---------- retention block, shared by both modes ---------- */
 const CHANNELS = [
@@ -787,18 +829,18 @@ function retainHTML(){
   return `<div class="retain">
     <div class="full" style="display:flex;flex-direction:column;gap:6px">
       <span class="mono" style="color:var(--accent)">You're caught up</span>
-      <h2>${DAYS[dayIdx].stories.length?'That’s the '+esc(DAYS[dayIdx].label)+' brief.':'No stories cleared the bar today.'}</h2>
-      <p class="fine" style="font-size:.9rem">Next brief tomorrow morning. Keep it one tap away, or pass it on to a designer who’d find it useful.</p>
+      <h2>${!DAYS[dayIdx].stories.length?'No stories have cleared the bar yet.':DAYS[dayIdx].latest?`That’s the latest ${DAYS[dayIdx].stories.length}.`:'That’s everything from '+esc(DAYS[dayIdx].label)+'.'}</h2>
+      <p class="fine" style="font-size:.9rem">New stories land when something worth your time ships, not on a schedule. Keep AI Signal one tap away, or pass it on to a designer who’d find it useful.</p>
     </div>
     <div class="endactions full">
       <button class="endbtn primary" data-share-app>${ICON_SHARE}<span><b>Share AI Signal</b><small>Send the link on LinkedIn, WhatsApp or X</small></span></button>
-      <button class="endbtn" data-bookmark-app><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span><b>Bookmark AI Signal</b><small>Save this link to come back tomorrow</small></span></button>
+      <button class="endbtn" data-bookmark-app><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span><b>Bookmark AI Signal</b><small>Save this link to come back anytime</small></span></button>
     </div>
     ${feedbackHTML()}
     <div class="more full">
       <button class="morelink" data-go-learn>Learn AI for designers <small>courses · AI terms</small></button>
       <button class="morelink" data-open-saved>Your saved stories <b>${saved.size}</b></button>
-      ${others.length?`<details class="moredet"><summary>Earlier briefs</summary>${others.map(({d,i})=>`<button class="dayrow" data-goto-day="${i}"><span class="dd">${d.short[0]}<b>${d.short[1]}</b></span><span class="dt">${esc(d.stories[0].title)}<small>${d.stories.length} stories</small></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>`).join('')}</details>`:`<div class="morelink muted">Earlier briefs <small>appear here as new briefs publish</small></div>`}
+      ${others.length?`<details class="moredet"><summary>${DAYS[dayIdx].latest?'Older stories':'More stories'}</summary>${others.map(({d,i})=>`<button class="dayrow" data-goto-day="${i}"><span class="dd">${d.short[0]}<b>${d.short[1]}</b></span><span class="dt">${d.latest?'Latest stories':esc(d.stories[0].title)}<small>${d.stories.length} ${d.stories.length===1?'story':'stories'}</small></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>`).join('')}</details>`:`<div class="morelink muted">Older stories <small>appear here as new stories publish</small></div>`}
       ${Object.values(MORE).some(a=>a.length)?'<button class="morelink" data-explore-other>Explore beyond design <span aria-hidden="true">→</span></button>':''}
     </div>
     <p class="fine full" style="text-align:left;font-size:.72rem">AI Signal uses anonymous usage analytics to improve the brief. No sign-up, no personal data.</p>
@@ -828,7 +870,7 @@ function fbKey(){ return 'ain-fb-'+(DAYS[dayIdx].iso||DAYS[dayIdx].label); }
 function feedbackHTML(){
   if(store.get(fbKey())) return `<div class="fb full done"><b>Thanks for your feedback.</b><span class="sm">It shapes the next brief and the interface.</span></div>`;
   return `<div class="fb full">
-    <b id="fb-q">How useful was this brief?</b>
+    <b id="fb-q">How useful is AI Signal?</b>
     <div class="fb-rate" role="radiogroup" aria-labelledby="fb-q">${[1,2,3,4,5].map(n=>`<button role="radio" aria-checked="${fbState.rating===n}" data-rate="${n}" aria-label="${n} of 5">${n}</button>`).join('')}</div>
     <div class="fb-scale"><span>Not useful</span><span>Very useful</span></div>
     <div class="fb-tags">${FB_TAGS.map(t=>`<button class="tchip" data-fbtag="${esc(t)}" aria-pressed="${fbState.tags.has(t)}">${esc(t)}</button>`).join('')}</div>
@@ -877,12 +919,12 @@ function renderStack(){
   <div class="slide"><article class="card divcard"><span class="radar" aria-hidden="true"><i></i><i></i><i></i></span>
     <span class="mono" style="color:var(--accent)">Beyond the brief</span>
     <h2>${nf} more ${nf===1?'story':'stories'}${(()=>{const ts=[...new Set(list.filter(x=>x.found).map(x=>x.topic))];return ts.length===1?' on '+esc(ts[0]==='design'?'design':tLabel(ts[0])):''})()}</h2>
-    <p>You asked for these at ${lastSearch}. They stay out of your daily brief.</p>
+    <p>You asked for these at ${lastSearch}. They stay out of your main feed.</p>
     <span class="hint2">Keep swiping</span></article></div>`:'')+`
   <div class="slide" data-id="${s.id}"><article class="card">
     ${artHTML(s, `<span class="spec">${i+1} of ${n}</span>`)}
     <div class="cbody">
-      <div class="meta">${chip(s)}<span style="font-size:.8rem">${esc(s.date)}</span>${s.found?'<span class="newtag">New · from search</span>':''}</div>
+      <div class="meta">${chip(s)}<span style="font-size:.8rem">${esc(s.dayLabel||s.date)}</span>${s.found?'<span class="newtag">New · from search</span>':readBefore.has(s.id)?'<span class="readtag">Read</span>':''}</div>
       <h2>${esc(s.title)}</h2>
       <p class="summary">${esc(s.summary)}</p>
       ${implBox(s)}
@@ -896,12 +938,16 @@ function renderStack(){
     const id=e.target.dataset.id;
     e.target.classList.toggle('away', !e.isIntersecting);
     if(e.isIntersecting && e.target.dataset.end && !briefDone){ briefDone=true; track('brief_completed',{brief:DAYS[dayIdx].iso, stories:current().length}); }
-    if(e.isIntersecting && id){ const st=byId(id), pos=current().findIndex(x=>x.id===id)+1; if(document.getElementById('splash').hidden) track('story_viewed',{story_url:st?.url, title:st?.title, category:st?.cat, position:pos, brief:DAYS[dayIdx].iso}); markRead(id); rail.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.id===id)); }
+    if(e.isIntersecting && id && feedOpen()){ const st=byId(id), pos=current().findIndex(x=>x.id===id)+1; if(document.getElementById('splash').hidden) track('story_viewed',{story_url:st?.url, title:st?.title, category:st?.cat, position:pos, brief:DAYS[dayIdx].iso}); markRead(id); rail.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.id===id)); }
     if(e.isIntersecting && e.target!==slides[0]) document.getElementById('hint').style.opacity=0;
   }),{root:stack,threshold:.6});
   slides.forEach(s=>io.observe(s));
   stack.scrollTop=0;
+  fitCards();
 }
+function fitCards(){ stack.querySelectorAll('.slide[data-id] .card').forEach(c=>{ c.classList.remove('tight','tighter'); const b=c.querySelector('.cbody'), over=()=>b.scrollHeight>b.clientHeight+1;
+  if(over()){ c.classList.add('tight'); if(over()) c.classList.add('tighter'); } }); }
+addEventListener('resize',()=>{ clearTimeout(fitCards.t); fitCards.t=setTimeout(fitCards,150); });
 const go = i => slides[i]?.scrollIntoView({behavior: reduce?'auto':'smooth'});
 rail.addEventListener('click',e=>{const b=e.target.closest('[data-go]'); if(b) go(+b.dataset.go)});
 addEventListener('keydown',e=>{
@@ -918,7 +964,7 @@ function renderGrid(){
   const list=current();
   const ff=list.findIndex(s=>s.found), bl=ff<0?list.length:ff, fl=list.length-bl;
   const span = i => i===0 ? 'lead' : i<bl ? ((bl-1)%2===1 && i===bl-1 ? 'lead' : '') : ((fl%2===1 && i===list.length-1) ? 'lead' : '');
-  document.getElementById('dg-title').innerHTML = dayIdx===0 ? "Today's <em>signal</em>, in one scan" : `The <em>${esc(DAYS[dayIdx].label)}</em> brief`;
+  document.getElementById('dg-title').innerHTML = dayIdx===0 ? "The latest <em>signal</em>, in one scan" : `The <em>${esc(DAYS[dayIdx].label)}</em> brief`;
   document.getElementById('dg-date').textContent = `${list.length} ${list.length===1?'story':'stories'}${topic!=='all'?' · '+TOPICS.find(t=>t.id===topic).label:''}`;
   const firstFound=list.findIndex(s=>s.found);
   grid.innerHTML = list.map((s,i)=>(i===firstFound?`<div class="dg-div"><span class="mono" style="color:var(--accent)">Beyond the brief</span><h2>Found by a fresh search at ${lastSearch}</h2><span class="sm">${list.length-firstFound} more ${topic!=='all'?'on '+esc(tLabel(topic)):'across topics'} · not in today’s brief</span></div>`:'')+`
@@ -948,7 +994,7 @@ grid.addEventListener('click',e=>{
 
 /* ---------- filters ---------- */
 const daySel=document.getElementById('day'), topicsEl=document.getElementById('topics');
-daySel.innerHTML = DAYS.map((d,i)=>`<option value="${i}">${i===0?'Today · ':''}${esc(d.label)}</option>`).join('');
+daySel.innerHTML = DAYS.map((d,i)=>`<option value="${i}">${d.latest?'Latest':esc(d.label)}</option>`).join('');
 function renderTopics(){
   topicsEl.innerHTML = TOPICS.map(t=>{const n=topicCount(t.id);return `<button class="tchip" data-topic="${t.id}" aria-pressed="${t.id===topic}" ${n||t.id==='all'?'':'disabled style="opacity:.4"'}>${t.label} <small>${n}</small></button>`}).join('');
 }
@@ -1017,7 +1063,11 @@ const todays=DAYS[0].stories;
 document.getElementById('sp-date').textContent=today;
 document.getElementById('lead-title').textContent=todays[0]?.title||'';
 document.getElementById('sp-cut').textContent=`${todays.length} are worth your morning.`;
-document.getElementById('sp-meta').textContent=`${todays.length} stories · design process, tools, trends and impact · about 4 min`;
+{ const unread=todays.filter(s=>!read.has(s.id)).length, returning=todays.some(s=>read.has(s.id)), n=todays.length;
+  const fresh=DAYS[0].newestLabel==='Today';
+  document.getElementById('start-txt').textContent = !n ? 'Open AI Signal' : returning ? (unread ? `See ${unread} new ${unread===1?'story':'stories'}` : `Revisit the latest ${n}`) : `See the latest ${n} stories`;
+  document.getElementById('sp-meta').textContent = !n ? 'New stories land when something worth your time ships.'
+    : (fresh ? 'New today · ' : `No new stories since ${DAYS[0].newestLabel} · `) + `latest ${n}, newest first · design process, tools, trends and impact`; }
 document.getElementById('reel').innerHTML=[0,1,2].map(r=>{
   const items=todays.slice(r*2).concat(todays).slice(0,5).map(s=>`<span>${esc(s.title)}</span>`).join('');
   return `<div class="strip">${items}${items}</div>`}).join('');
