@@ -415,6 +415,18 @@ async function main() {
     },
   };
 
+  // Quiet day: nothing cleared the bar, so there is nothing to publish or approve.
+  // The site keeps showing the latest stories from earlier days (rolling feed), so it never goes empty.
+  if (!stories.length) {
+    console.log(`Quiet day: no stories cleared the bar for ${today}. No draft, no pull request.`);
+    console.log(`Reviewed ${candidates.length} candidates; held ${held.length}, rejected ${rejected.length}.`);
+    if (process.env.GITHUB_STEP_SUMMARY) {
+      const why = rejected.slice(0, 15).map((r) => `- ${r.title || r.source_url || "item"}: ${r.reason || r.gate || "below the bar"}`).join("\n");
+      await writeFile(process.env.GITHUB_STEP_SUMMARY, `### Quiet day (${today})\nNo stories cleared the bar, so no pull request was opened. The site keeps showing the latest stories.\n\n${why}\n`, { flag: "a" });
+    }
+    return;
+  }
+
   if (!existsSync("data")) await mkdir("data", { recursive: true });
   await writeFile(`data/${today}.json`, JSON.stringify(out, null, 2));
   await writeFile(process.env.PR_BODY_FILE || "pr-body.md", prBody(out));
