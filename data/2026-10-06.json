@@ -1,0 +1,517 @@
+{
+  "date": "2026-10-06",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-06-openai-introduces-text-watermarking-in-chatgpt-and-codex",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "trust-and-explainability",
+        "agentic-ux",
+        "permissions-and-identity"
+      ],
+      "title": "OpenAI introduces text watermarking in ChatGPT and Codex",
+      "summary": "OpenAI is rolling out an invisible, machine-readable text watermarking feature called textGrain to ChatGPT and Codex, starting with users in the European Union to comply with EU AI Act requirements.",
+      "design_implication": "When an editor reviews generated copy or a design system manager checks documentation provenance, machine-readable text markers become critical verification layers. Integrating visible inspection cues or metadata states directly into authoring tools helps teams track content origins without breaking editorial flow.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "none",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+      "source_date": "2026-10-05T18:08:39.000Z",
+      "evidence": [
+        {
+          "claim": "OpenAI is rolling out invisible watermarking for text output in ChatGPT and Codex.",
+          "quote": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex, but only for users in the European Union at first."
+        },
+        {
+          "claim": "The release is designed to meet EU AI Act regulations.",
+          "quote": "Like OpenAI, Anthropic made the move to meet the requirements..."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [
+        "https://openai.com/index/eu-text-provenance",
+        "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/"
+      ],
+      "source_tier": 2,
+      "word_count": 79,
+      "discovered_date": "2026-10-06",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 82,
+    "held": [
+      {
+        "source_url": "https://www.figma.com/blog/london-office-expansion/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/what-it-takes-to-build-great-products-now/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/the-power-of-product-based-learning/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/eu-text-provenance",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/practical-guide-building-gpt-6",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/index/chatham-financial",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/the-eternal-complement",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/albertsons-reimagining-retail",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/one-year-in-how-microsoft-research-asia-singapore-is-advancing-research-partnership-and-talent-for-real-world-impact/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/ontological-boundary-negotiation",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/language-discrimination-multilingual-learning",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/limits-confidence-diffusion",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/harness-autonomous-ml-engineering",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/rltl-dr-self-improvement",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/effectiveness-fluency-llm-conditioning",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/open-source/git/highlights-from-git-2-56/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/jev-for-python-engineers",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/blog/how-rogo-ships-agent-written-code-to-production-in-5-minutes-on-vercel",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/speed-insights-deprecates-first-input-delay-on-november-first",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/microsoft-ai-models-are-now-available-on-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/empathy-mapping/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-functionality-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/disclose-ai-paced/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.03720",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.03721",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.03722",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.03723",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.03724",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/05/1145580/connecting-ai-agents-to-enterprise-knowledge/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/05/1143813/bringing-predictive-analytics-to-the-agentic-ai-era/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/05/1145711/the-download-ai-popularity-paradox-emtech-future-2026/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/05/1145682/people-really-hate-ai-so-why-cant-they-get-enough/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/05/1145413/emtech-future-2026-when-ai-meets-everything/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/02/1143774/redefining-enterprise-intelligence-with-autonomous-ai/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1005177/google-gemini-call-for-me-expansion-rumors",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1005075/nolla-health-acne-ai-prescriptions",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1004933/ai-math-openai-breakthrough-solution",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1004827/openai-sam-altman-vanity-fair-interview-pr",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/05/tiktok-rolls-out-an-ai-shopping-assistant-and-one-click-checkout/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/05/hot-girl-hotline-is-like-dear-abby-for-the-ai-era/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/05/hackerranks-ai-interviewer-offers-a-glimpse-into-what-job-interviews-could-become/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/rural-data-centers-are-in-for-a-big-federal-tax-break/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/7-year-old-tv-now-100-dollars-more-expensive-thank-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/trillium-labs-wants-to-do-high-risk-ai-research-in-the-open/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/trumps-crazy-ai-rebrand-was-a-loyalty-test-for-tech-execs-and-it-worked/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/a-flaw-in-chatgpts-mac-app-could-have-let-hackers-grab-sensitive-data/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/09/desktop-wallpaper-calendars-october-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/hacks-of-2-federal-agencies-in-a-month-have-spilled-a-bonanza-of-sensitive-data/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/memory-supplies-are-only-getting-tighter-micron-ceo-says/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/attackers-have-been-exploiting-critical-zimbra-flaw-to-steal-emails/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/09/cloudflare-plans-to-issue-quantum-safe-tls-certificates/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/is-metas-new-ai-agent-easier-to-trust-because-it-s-cute-c8de13aefc6f?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ai-skill-atrophy-cognitive-offloading-1afbf92eb496?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-taste-paradox-why-the-skill-everyone-says-matters-is-the-one-weve-stopped-building-32d1523f1f95?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/prompt-as-self-portrait-de-slopifying-your-designs-the-strategic-designer-cf8162f43284?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-building-was-there-first-26c6c4e49ba8?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/rill-3",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/pheebs",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/easycut-2",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/iphone-use",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/fuseai",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/floani",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://github.blog/ai-and-ml/reviewbench-an-open-benchmark-for-ai-code-review/",
+        "reason": "unsupported_claim (URL not in candidates)"
+      }
+    ],
+    "patterns": [],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 752,
+        "fresh": 4
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1247,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1631,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 68,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 19,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 1
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-06-openai-introduces-text-watermarking-in-chatgpt-and-codex",
+        "title": "OpenAI introduces text watermarking in ChatGPT and Codex",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
