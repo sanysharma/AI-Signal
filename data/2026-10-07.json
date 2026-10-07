@@ -1,0 +1,335 @@
+{
+  "date": "2026-10-07",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-07-figma-agent-generally-available-for-design-systems-and-workf",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-systems",
+        "design-tools",
+        "agents-in-tools"
+      ],
+      "title": "Figma agent generally available for design systems and workflows",
+      "summary": "Figma says its agent is now generally available, helping product design teams at companies like Uber, Granola, and Atlassian maintain libraries, automate design system adherence, and handle iterative feedback tasks.",
+      "design_implication": "When a designer prepares a component update, managing token changes across hundreds of variants typically demands tedious manual checks. Offloading library maintenance to an integrated agent shifts the designer's role from manual policing to curation, altering how design system governance scales.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/3-ways-product-designers-use-the-figma-agent/",
+      "source_date": "2026-10-06T14:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Figma agent is now generally available for teams.",
+          "quote": "Here’s how teams at Uber, Granola, and Atlassian support high-quality, fast-moving work with the Figma agent, now generally available."
+        },
+        {
+          "claim": "Agent handles library maintenance and adherence.",
+          "quote": "Figma’s agent can take on repetitive work across your design system, from maintaining your library to automating how designs adhere to it."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [
+        "https://www.figma.com/blog/workflow-lab-staying-in-the-flow-with-the-figma-agent/",
+        "https://www.figma.com/blog/figma-agent-and-design-systems/"
+      ],
+      "source_tier": 1,
+      "word_count": 80,
+      "discovered_date": "2026-10-07",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-07-vercel-ai-gateway-adds-confidence-based-decision-fallbacks",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "generative-media",
+        "design-tools"
+      ],
+      "title": "Vercel AI Gateway adds confidence-based decision fallbacks",
+      "summary": "Vercel announced that AI Gateway can now escalate decision requests to a fallback model when a primary model trips user-configured confidence thresholds for choice and score questions.",
+      "design_implication": "In an agentic prototype where downstream user actions depend on probabilistic classification, low confidence outputs risk silent failures. Establishing automated fallback routing directly in the gateway layer allows designers to build graceful degradation states into interface logic before users hit dead ends.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/confidence-based-decision-fallbacks",
+      "source_date": "2026-10-06T17:19:00.000Z",
+      "evidence": [
+        {
+          "claim": "AI Gateway adds confidence-based decision fallbacks.",
+          "quote": "AI Gateway adds confidence-based decision fallbacks"
+        },
+        {
+          "claim": "Conditions cover choice and score questions.",
+          "quote": "Confidence conditions cover Choice and Score questions."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 76,
+      "discovered_date": "2026-10-07",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4CHRdArxtjGTk18HNryZhZ/3e05ce6ba727327ddf183fd3bcb28c0a/image__44_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/confidence-based-decision-fallbacks",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-10-07-openai-and-ironclad-advance-computer-use-evaluation-for-cont",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "trust-and-explainability",
+        "agentic-ux",
+        "permissions-and-identity"
+      ],
+      "title": "OpenAI and Ironclad advance computer use evaluation for contracting",
+      "summary": "OpenAI published details on training and evaluating AI agents on complex contracting workflows with Ironclad, advancing computer use capabilities for professional environments.",
+      "design_implication": "Designing interfaces for autonomous contract execution requires visualizing multi-step document modifications across external systems. Clear audit trails and explicit verification states become core UI components when agents operate inside professional legal workflows.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "OpenAI News",
+      "source_url": "https://openai.com/index/advancing-computer-use-with-ironclad",
+      "source_date": "2026-10-06T10:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "OpenAI and Ironclad evaluate agents on complex contracts.",
+          "quote": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 63,
+      "discovered_date": "2026-10-07",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 92,
+    "held": [
+      {
+        "source_url": "https://www.figma.com/blog/london-office-expansion/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/what-it-takes-to-build-great-products-now/",
+        "reason": "below_bar"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.figma.com/blog/workflow-lab-staying-in-the-flow-with-the-figma-agent/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/figma-agent-and-design-systems/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://openai.com/index/jump-trading",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/atlassian-partnership",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/eu-text-provenance",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-workflow-integration",
+        "name": "Design Tool Agent Integration",
+        "description": "Major design platforms are moving autonomous agents from experimental plugins into generally available workflows for layout, system maintenance, and token governance.",
+        "source_urls": [
+          "https://www.figma.com/blog/3-ways-product-designers-use-the-figma-agent/",
+          "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 755,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1251,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1634,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 44,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 18,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 2
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-07-figma-agent-generally-available-for-design-systems-and-workf",
+        "title": "Figma agent generally available for design systems and workflows",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/db42b5ac107ab5fa407461b3939c98820bba3d2c-3840x2160.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      },
+      {
+        "story": "2026-10-07-openai-and-ironclad-advance-computer-use-evaluation-for-cont",
+        "title": "OpenAI and Ironclad advance computer use evaluation for contracting",
+        "source": "OpenAI News",
+        "reason": "no source image found"
+      }
+    ]
+  }
+}
