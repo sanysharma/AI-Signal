@@ -1,0 +1,668 @@
+{
+  "date": "2026-10-08",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-08-chatgpt-introduces-interactive-visuals-and-forms-in-chat-res",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "generative-ui",
+        "conversational-ui",
+        "multimodal"
+      ],
+      "title": "ChatGPT introduces interactive visuals and forms in chat responses",
+      "summary": "OpenAI is launching a new Intelligent UI feature in ChatGPT that allows the chatbot to answer your questions with interactive visuals. The update, which is rolling out to all users alongside GPT-6, gives ChatGPT the ability to combine a text response with diagrams, charts, forms, tappable buttons, and more.",
+      "design_implication": "In a settings configuration modal or financial dashboard review, a user might see structured text converted instantly into an editable form element or chart. When conversations generate functional UI components on the fly, layout design shifts from crafting static screens to defining bounded generative components and interaction rules.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6",
+      "source_date": "2026-10-07T19:10:42.000Z",
+      "evidence": [
+        {
+          "claim": "OpenAI is launching Intelligent UI in ChatGPT to answer questions with interactive visuals.",
+          "quote": "OpenAI is launching a new Intelligent UI feature in ChatGPT that allows the chatbot to answer your questions with interactive visuals."
+        },
+        {
+          "claim": "The update gives ChatGPT the ability to combine text responses with diagrams, charts, forms, and buttons.",
+          "quote": "gives ChatGPT the ability to combine a text response with diagrams, charts, forms, tappable buttons, and more."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [
+        "https://openai.com/index/gpt-6-for-everyone",
+        "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/",
+        "https://www.wired.com/story/openai-chatgpt-intelligent-ui-is-more-show-than-tell/"
+      ],
+      "source_tier": 2,
+      "word_count": 106,
+      "discovered_date": "2026-10-08",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-08-figma-shares-workflow-strategies-for-managing-design-systems",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "design-ops",
+        "roles-and-skills",
+        "collaboration"
+      ],
+      "title": "Figma shares workflow strategies for managing design systems with an agent",
+      "summary": "Figma highlights how a designer shapes a new temporary-access feature while the Figma agent handles library updates, critique feedback, and a first draft of a design system spec. Figma's agent can take on repetitive work across your design system, from maintaining your library to automating how designs adhere to it.",
+      "design_implication": "During a design system component audit, a designer spends less time manually syncing token properties across variants and more time directing the agent's scope. As routine upkeep moves to automated routines, the core design skillset shifts from file maintenance to defining structural rules and reviewing agent-generated specs.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/workflow-lab-staying-in-the-flow-with-the-figma-agent/",
+      "source_date": "2026-10-06T14:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "The Figma agent handles library updates, critique feedback, and design system specs.",
+          "quote": "while the Figma agent handles the library updates, crit feedback, and a first draft of a design system spec."
+        },
+        {
+          "claim": "The agent takes on repetitive work across the design system.",
+          "quote": "Figma’s agent can take on repetitive work across your design system, from maintaining your library to automating how designs adhere to it."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [
+        "https://www.figma.com/blog/figma-agent-and-design-systems/"
+      ],
+      "source_tier": 1,
+      "word_count": 108,
+      "discovered_date": "2026-10-08",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-08-vercel-adds-openai-decisions-api-to-ai-gateway-for-guardrail",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "agents-in-tools",
+        "trust-and-explainability"
+      ],
+      "title": "Vercel adds OpenAI Decisions API to AI Gateway for guardrails and routing",
+      "summary": "OpenAI's Decisions API is now available on Vercel AI Gateway through an OpenAI-compatible endpoint. Decision models answer typed questions about a shared input and return probabilities, choices, and scores instead of generated text, which suits routing, triage, guardrails, and rubric scoring.",
+      "design_implication": "During frontend form validation or conversational triage, developers can replace generative text generation with structured numerical classification. This architectural shift allows interface designers to build deterministic branching logic driven by high-speed probabilistic classifiers rather than parsing arbitrary strings.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/openai-decisions-api-now-available-on-ai-gateway",
+      "source_date": "2026-10-07T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "OpenAI Decisions API is available on Vercel AI Gateway.",
+          "quote": "OpenAI's Decisions API is now available on AI Gateway through an OpenAI-compatible endpoint."
+        },
+        {
+          "claim": "Decision models return probabilities, choices, and scores instead of generated text.",
+          "quote": "Decision models answer typed questions about a shared input and return probabilities, choices, and scores instead of generated text"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 91,
+      "discovered_date": "2026-10-08",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/49tnH165xjKrraN92XsMr7/68bb1074c0c1daefdb93016363e6b182/image__115_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/openai-decisions-api-now-available-on-ai-gateway",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-10-08-microsoft-updates-copilot-with-local-file-access-and-os-acti",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "permissions-and-identity",
+        "agentic-ux",
+        "trust-and-explainability"
+      ],
+      "title": "Microsoft updates Copilot with local file access and OS action controls",
+      "summary": "Microsoft showed off an upgrade to its Copilot AI system that will give it access to local files on your PC and the ability to take actions across the OS as part of an idea called Hybrid Intelligence, where apps and tools rely on a mix of local and cloud AI models.",
+      "design_implication": "When an agent requests permissions to modify files or execute system-level commands across desktop directories, users face ambiguous system dialogs. Designers must establish clear runtime boundaries and visibility indicators so users can verify what local files an autonomous assistant is currently reading or altering.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1007113/microsoft-windows-copilot-ai-control-search-hybrid-intelligence",
+      "source_date": "2026-10-07T18:01:20.000Z",
+      "evidence": [
+        {
+          "claim": "Copilot upgrade provides access to local files and OS actions.",
+          "quote": "an upgrade to its Copilot AI system that will give it access to local files on your PC and the ability to take actions across the OS."
+        },
+        {
+          "claim": "Hybrid Intelligence relies on a mix of local and cloud models.",
+          "quote": "It's part of an idea Microsoft is calling 'Hybrid Intelligence,' where apps and tools rely on a mix of local and cloud AI models"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 107,
+      "discovered_date": "2026-10-08",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 85,
+    "held": [
+      {
+        "source_url": "https://arxiv.org/abs/2610.08943",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/",
+        "reason": "out_of_scope"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://openai.com/index/gpt-6-for-everyone",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/london-office-expansion/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/what-it-takes-to-build-great-products-now/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/teens-learn-and-plan",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/radisson",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/jump-trading",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/what-ai-gets-wrong-and-what-failure-teaches-us/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/one-year-in-how-microsoft-research-asia-singapore-is-advancing-research-partnership-and-talent-for-real-world-impact/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/rised-multi-environment-selection",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/ontological-boundary-negotiation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/language-discrimination-multilingual-learning",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/limits-confidence-diffusion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/harness-autonomous-ml-engineering",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/rltl-dr-self-improvement",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/microfrontends-routing-is-now-free-for-firewall-mitigated-traffic",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/claude-haiku-5-5-now-available-on-ai-gateway",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/glyph-cluster-is-now-available-in-stealth-for-free-on-ai-gateway",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/timestamp-attributes-are-now-supported-in-vercel-flags",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/empathy-mapping/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-functionality-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/disclose-ai-paced/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.09061",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.09082",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.09099",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.09155",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/08/1144020/building-a-safer-path-to-autonomous-industrial-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/07/1145895/the-download-weight-loss-drugs-slow-aging-carbon-dioxide-batteries/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/06/1145836/weight-loss-drugs-glp1-lilly-novo-aging-clocks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/06/1145796/the-download-10-climate-tech-companies-to-watch/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/06/1143800/2026-climate-tech-companies-to-watch/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/06/1144978/2026-climate-tech-companies-to-watch-how-we-chose/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1007147/microsoft-surface-laptop-ultra-windows-event-everything-announced",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1006915/microsoft-surface-rtx-spark-dev-box-preorder",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1005194/openai-chatgpt-teens-college-planner-notecards",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1006813/muse-ai-agent-ios-app-ipad-support",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/07/meta-rolls-out-new-ai-tools-to-detect-ads-that-secretly-lead-to-child-sexual-abuse-material",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-is-driving-cars-now-oh-boy/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/the-pentagon-hopes-to-speed-up-kill-chain-ai-buys-with-5-minute-videos",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/openai-wants-its-new-agent-to-run-your-life-mine-said-it-loved-me/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/organic-literature-books-by-people-stamp-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/artificial-roasts-ais-creators-and-sends-a-dark-warning-about-its-dangers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/how-name-things/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/09/desktop-wallpaper-calendars-october-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/openai-agents-tried-to-hack-wikipedia-tools-and-flooded-it-with-traffic/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/operational-complexity-a-top-barrier-for-vmware-migrations-survey/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/hacks-of-2-federal-agencies-in-a-month-have-spilled-a-bonanza-of-sensitive-data/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/bounded-delegation-how-much-authority-should-ai-have-823a58fb4192?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/beyond-streaks-and-nudges-ethical-gamification-ai-design-1c4f6e8ef2cc?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/jev-how-to-use-it-for-better-faster-and-cheaper-user-decisions-in-ux-0e9907d2b6f7?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/why-designers-need-to-stop-reporting-and-start-recommending-at-work-6fa861f58097?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/how-apps-know-us-better-than-we-do-and-influence-our-decisions-f7a5182be6f1?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/is-metas-new-ai-agent-easier-to-trust-because-it-s-cute-c8de13aefc6f?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/ahem-calendar-overlay",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/chime-sms-categorized-on-device",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/markdoc-3",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/sineframe-m3",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/liquid-inference",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/simo-3",
+        "reason": "below_bar"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "generative-ui-convergence",
+        "name": "Generative UI Convergence",
+        "description": "Major platform providers are embedding interactive charts, forms, and visual widgets directly into chat interfaces.",
+        "source_urls": [
+          "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6",
+          "https://openai.com/index/gpt-6-for-everyone"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 755,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1255,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1641,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 54,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 2
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-08-chatgpt-introduces-interactive-visuals-and-forms-in-chat-res",
+        "title": "ChatGPT introduces interactive visuals and forms in chat responses",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-08-figma-shares-workflow-strategies-for-managing-design-systems",
+        "title": "Figma shares workflow strategies for managing design systems with an agent",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/bd2c0137b62fb9bdb9bd9bde5e13e1821d6a9992-1056x704.jpg?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      },
+      {
+        "story": "2026-10-08-microsoft-updates-copilot-with-local-file-access-and-os-acti",
+        "title": "Microsoft updates Copilot with local file access and OS action controls",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
