@@ -1,0 +1,549 @@
+{
+  "date": "2026-10-10",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-10-vercel-cli-lets-ai-agents-search-and-stage-domain-purchases",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "permissions-and-identity"
+      ],
+      "title": "Vercel CLI lets AI agents search and stage domain purchases",
+      "summary": "Vercel updated its CLI to allow agents to discover, check availability, and price domains automatically, while requiring explicit human intervention to complete the final purchase.",
+      "design_implication": "In an agent permissions flow, developers often face an all-or-nothing autonomy toggle. When tooling decouples read-only preparation from destructive spending, interfaces must present staged approval checkpoints that summarize agent intent, pricing, and parameters before execution.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli",
+      "source_date": "2026-10-09",
+      "evidence": [
+        {
+          "claim": "Vercel CLI allows agents to search and price domains while leaving the purchase decision with the user.",
+          "quote": "The purchase decision itself stays with you by design. Run non-interactively, returns a structured, machine-readable error"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "source_tier": 1,
+      "word_count": 70,
+      "discovered_date": "2026-10-10",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3WeNobCQwlgEfwQoenasH4/65e5daf73dee11d33ea9f07464795ee6/fx-domain-buy-og.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-10-10-nn-g-study-finds-ai-power-users-abandon-unorganized-context-",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "adoption-data"
+      ],
+      "title": "NN/g study finds AI power users abandon unorganized context libraries",
+      "summary": "Research from Nielsen Norman Group reveals that experienced Claude power users rarely edit their context files and frequently cannot find them, indicating significant friction in managing context libraries.",
+      "design_implication": "A designer configuring an agent workspace often tucks custom instructions into obscure account settings. When power users abandon prompt files because retrieval is broken, tools must transition from hidden configuration files toward modular context drawers surfaced directly beside the prompt.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "Nielsen Norman Group",
+      "source_url": "https://www.nngroup.com/articles/context-libraries/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "source_date": "2026-10-09",
+      "evidence": [
+        {
+          "claim": "Claude power users rarely edit or locate their context files.",
+          "quote": "Claude power users rarely edit their context files and often can’t find them. Your AI agent is only as powerful as its context library."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "source_tier": 1,
+      "word_count": 78,
+      "discovered_date": "2026-10-10",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 80,
+    "held": [
+      {
+        "source_url": "https://uxdesign.cc/designing-for-an-idea-before-it-exists-ecd8cb19999a?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/teslers-law-complexity-survived-the-chat-field-it-just-moved-to-a-different-place-in-the-journey-8a63f099f490?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/are-synthetic-users-really-the-future-of-ux-research-fd76fcb479ec?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/synthetic-users-are-making-me-rethink-imperfect-research-abbadb8ec082?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ai-generated-ui-is-fast-design-not-ux-855ca8abcd28?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-the-ai-era-owes-you-d472b3859bf3?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/claude-dashboards-motion",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/ej-jev-but-for-edge-devices",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/underplane-deleted-1312891",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/skreno",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/letra-3",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.figma.com/blog/figma-agent-and-design-systems/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/4-team-rituals-that-drive-ai-adoption/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/sightlines-issue-no3/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/index/sophos",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/asana-browser-agent",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/oracle",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/pollo-ai",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/legalon-halves-codex-costs",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/what-ai-gets-wrong-and-what-failure-teaches-us/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/one-year-in-how-microsoft-research-asia-singapore-is-advancing-research-partnership-and-talent-for-real-world-impact/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/normalizing-trajectory-models",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/rised-multi-environment-selection",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/ontological-boundary-negotiation",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/language-discrimination-multilingual-learning",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/limits-confidence-diffusion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/harness-autonomous-ml-engineering",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-one-bug-bounty-researcher-chooses-the-features-they-investigate/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/new-pro-teams-now-default-to-30-day-deployment-retention",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/deployment-storage-pricing-expands-to-existing-teams",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/how-rillet-ships-3-faster-with-ai-agents-on-vercel",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/microsoft-decision-1-now-available-on-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/liquid-ai-d1-is-available-on-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-assistant-context/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/empathy-mapping/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/09/1146250/the-download-ai-refusal-problem-weight-loss-drug-side-effects/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/09/1145737/job-titles-delivery-drone-air-traffic-controller-trevor-wischnewsky/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/09/1146094/were-still-figuring-out-the-side-effects-of-glp-1-weight-loss-drugs/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/08/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/08/1146045/the-download-ai-roadblocks-humanoids-portable-rubber-dams/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1008726/openai-mathematics-solutions-chaos",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1008930/nikon-small-world-in-motion-winner-ai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/policy/1008677/trump-super-intelligence-ai-rebranding",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1008254/instinct-agent-ai-hands-on-muse-dots",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1008604/openai-defends-decision-fire-safety-researchers",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://techcrunch.com/video/amazon-and-others-are-done-keeping-data-center-deals-secret-is-it-enough-to-build-trust/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/podcast/amazon-drops-data-center-ndas-and-ai-agents-want-your-credit-card/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/09/danu-robotics-fight-to-build-a-better-recycling-robot/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/book-publishers-are-quietly-using-more-ai-staff-are-revolting/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/even-law-and-order-is-terrified-of-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/uncanny-valley-podcast-inside-elon-musks-midterm-spending-spree/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/she-designed-metas-new-ai-logo-then-came-the-hate/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/tristan-harris-tech-nonprofit-is-laying-off-most-staff-and-going-founder-led/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-is-driving-cars-now-oh-boy/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/how-name-things/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/09/desktop-wallpaper-calendars-october-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/pc-shipments-fall-20-1-percent-in-sharpest-decline-since-q1-2023/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/openai-agents-tried-to-hack-wikipedia-tools-and-flooded-it-with-traffic/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/operational-complexity-a-top-barrier-for-vmware-migrations-survey//",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "staged-agent-authorization",
+        "name": "Staged human-in-the-loop authorization for autonomous agent actions",
+        "description": "Platforms are restricting autonomous agents to read-only search and staging actions while requiring explicit human confirmation before executing financial, system-level, or destructive tasks.",
+        "source_urls": [
+          "https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli",
+          "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/",
+          "https://blog.cloudflare.com/workers-granular-authorization/",
+          "https://www.theverge.com/tech/1007113/microsoft-windows-copilot-ai-control-search-hybrid-intelligence"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 757,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1287,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1651,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 2
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 5
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-10-nn-g-study-finds-ai-power-users-abandon-unorganized-context-",
+        "title": "NN/g study finds AI power users abandon unorganized context libraries",
+        "source": "Nielsen Norman Group",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
