@@ -812,7 +812,7 @@ const actions = s => `<div class="acts"><button class="act" data-save="${s.id}" 
 const srcLink = (s,label) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${label} ↗</a>`;
 const chip = s => `<span class="chip" style="background:var(--c-${s.k}-soft);color:var(--c-${s.k})">${esc(s.cat)}</span>`;
 const implLabel = s => 'Design implication';
-const implBox = s => `<div class="impl" style="background:var(--c-${s.k}-soft);--kc:var(--c-${s.k})"><b style="color:var(--c-${s.k})">${implLabel(s)}</b><p>${esc(s.impl)}</p></div>`;
+const implBox = s => `<div class="impl" style="background:var(--c-${s.k}-soft);--kc:var(--c-${s.k})"><b style="color:var(--c-cloud)">${implLabel(s)}</b><p>${esc(s.impl)}</p></div>`;
 
 /* ---------- retention block, shared by both modes ---------- */
 const CHANNELS = [
