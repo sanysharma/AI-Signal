@@ -257,11 +257,13 @@ function prBody(out) {
   out.stories.forEach((s, i) => {
     lines.push(`### ${i + 1}. ${s.title}`);
     lines.push(`*${s.category.replace("design_", "Design ")} · ${s.tags.join(", ")} · score ${s.scores.total}/15 · ${s.word_count} words · tier ${s.source_tier}*`);
-    lines.push("", s.summary, "", `**Design implication:** ${s.design_implication}`, "", `Source: [${s.source_name}](${s.source_url})`);
+    lines.push("", `**Card front (why it matters):** ${s.design_implication}`, "", `**What happened (story page):** ${s.summary}`, "", `Source: [${s.source_name}](${s.source_url})`);
     lines.push(s.visual_type === "source_image"
       ? `Visual: source image (${s.visual_license}), [view image](${s.visual_url}), credit "${s.visual_credit}". Check you are comfortable reusing it; if not, set visual_type to "generated".`
       : `Visual: ${s.visual_type === "none" ? "none (text-only card)" : "generated illustration"}`, "");
-    if (s.word_count > 90) lines.push(`> Note: ${s.word_count} words, over the 90-word target.`, "");
+    const front = words(s.title) + words(s.design_implication);
+    if (front > 82) lines.push(`> Note: card front is ${front} words, over the 82-word target. Trim the design implication so it fits on a phone.`, "");
+    if (words(s.summary) > 65) lines.push(`> Note: "What happened" is ${words(s.summary)} words, over the 60-word target.`, "");
   });
   const fails = out.review.feed_health.filter((f) => !f.ok);
   lines.push("---", `Held: ${out.review.held.length} · Consolidated: ${out.review.consolidated.length} · Rejected: ${out.review.rejected.length} · Patterns: ${out.review.patterns.length}`);
