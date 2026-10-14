@@ -33,7 +33,7 @@
 <style>
 :root{
   --bg:#ECEDF0; --surface:#FFFFFF; --surface-2:#F6F7F9; --text:#0F1115; --muted:#5B6270;
-  --line:#D9DCE2; --accent:#3D5AFE; --accent-soft:#E3E8FF; --redline:#F0442F;
+  --line:#D9DCE2; --accent:#3D5AFE; --accent-soft:#E3E8FF; --redline:#F0442F; --on-accent:#FFFFFF;
   --splash-bg:#0F1115; --splash-text:#F2F3F5; --splash-muted:#8B92A0;
   --c-iam:#0E7A56; --c-iam-soft:#DCEEE5;
   --c-cloud:#33538F; --c-cloud-soft:#DFE5F1;
@@ -49,7 +49,7 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0B0C0F; --surface:#15171C; --surface-2:#1B1E24; --text:#ECEDEF; --muted:#9097A4;
-    --line:#262A32; --accent:#8193FF; --accent-soft:#1D2345; --redline:#FF7867;
+    --line:#262A32; --accent:#8193FF; --accent-soft:#1D2345; --redline:#FF7867; --on-accent:#0B0C0F;
     --splash-bg:#07080A;
     --c-iam:#3FDBA0; --c-iam-soft:#12291F;
     --c-cloud:#86A2E6; --c-cloud-soft:#18203A;
@@ -63,7 +63,7 @@
 }
 :root[data-theme="dark"]{
   --bg:#0B0C0F; --surface:#15171C; --surface-2:#1B1E24; --text:#ECEDEF; --muted:#9097A4;
-  --line:#262A32; --accent:#8193FF; --accent-soft:#1D2345; --redline:#FF7867;
+  --line:#262A32; --accent:#8193FF; --accent-soft:#1D2345; --redline:#FF7867; --on-accent:#0B0C0F;
   --splash-bg:#07080A;
   --c-iam:#3FDBA0; --c-iam-soft:#12291F;
   --c-cloud:#86A2E6; --c-cloud-soft:#18203A;
@@ -111,10 +111,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .art{position:relative;flex:0 0 40%;min-height:150px;overflow:hidden}
 @media (max-height:860px){.card .art{flex-basis:30%;min-height:120px}}
 .art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
-.spec{position:absolute;right:14px;top:12px;font-family:var(--mono);font-size:.6rem;color:var(--redline);letter-spacing:.04em}
+.spec{position:absolute;right:12px;top:12px;z-index:2;font:500 .64rem var(--mono);letter-spacing:.06em;color:var(--text);background:color-mix(in srgb,var(--surface) 82%,transparent);padding:3px 8px;border-radius:999px}
 .cbody{flex:1;min-height:0;overflow-y:auto;padding:18px 22px 16px;display:flex;flex-direction:column;gap:12px}
 .meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted)}
-.chip{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px;font-weight:500}
+.chip{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px;font-weight:500}
 .card h2,.dg h3{font-family:var(--display);font-weight:600;letter-spacing:-.02em;text-wrap:balance;margin:0}
 .card h2{font-size:clamp(1.3rem,4.6vw,1.6rem);line-height:1.15}
 .summary{margin:0;color:var(--text);max-width:62ch}
@@ -129,16 +129,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .act[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
 .act.pop{animation:pop .35s}
 @keyframes pop{50%{transform:scale(1.25)}}
-.rail{position:absolute;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:7px;z-index:3}
-.rail button{width:6px;height:6px;border-radius:3px;background:var(--line);transition:height .3s,background .3s}
-.rail button.on{height:22px;background:var(--accent)}
-.rail button.read:not(.on){background:var(--muted)}
-.hint{position:absolute;left:50%;top:22px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:var(--text);color:var(--bg);font-size:.75rem;font-weight:500;z-index:3;pointer-events:none;transition:opacity .4s}
+/* first-card lesson (13 Oct): the stack peeks up to show the next story, then settles; a one-line caption sits at the bottom, clear of the image */
+.hint{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 72px);transform:translate(-50%,8px);display:flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:var(--text);color:var(--bg);font-size:.75rem;font-weight:500;white-space:nowrap;z-index:3;pointer-events:none;opacity:0;transition:opacity .4s,transform .4s}
+.hint.show{opacity:1;transform:translate(-50%,0)}
+.stack.nudge>.slide{animation:peek 2s cubic-bezier(.45,0,.2,1)}
+@keyframes peek{0%,100%{transform:none}22%{transform:translateY(-84px)}44%{transform:none}62%{transform:translateY(-36px)}80%{transform:none}}
 .hint svg{animation:nudge 1.4s ease-in-out infinite}
 @keyframes nudge{50%{transform:translateY(-4px)}}
 .endcard{text-align:center;padding:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
 .endcard h2{font-size:1.8rem}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;transition:transform .2s}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:.92rem;transition:transform .2s}
 .btn:hover{transform:translateY(-1px)}
 .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
 
@@ -200,6 +200,26 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .vB canvas{width:100%;height:clamp(140px,30vh,240px);display:block}
 .vB h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,9vw,4.4rem);line-height:.95;letter-spacing:-.04em;margin:0}
 .vB h1 .noise{color:var(--splash-muted);text-decoration:line-through;text-decoration-color:#F0442F;text-decoration-thickness:3px}
+/* splash v3 (13 Oct): greeting, live count, headline ticker, 5-second auto start */
+.vB{gap:16px}
+.vB canvas{height:clamp(90px,20vh,200px)}
+.sp-hello{color:#8193FF}
+.sp-stat{margin:0;color:var(--splash-muted);font-size:.95rem;max-width:40ch}
+.sp-stat b{color:var(--splash-text);font-family:var(--display);font-weight:800;font-size:1.15em;font-variant-numeric:tabular-nums}
+.sp-min{white-space:nowrap}
+.sp-min::before{content:" · "}
+.sp-min:empty{display:none}
+.sp-ticker{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;max-width:46ch}
+.sp-ticker li{display:flex;gap:10px;align-items:baseline;font-size:.88rem;line-height:1.35;color:var(--splash-text);opacity:0;transform:translateX(-12px);animation:tick .6s cubic-bezier(.2,.8,.2,1) forwards}
+.sp-ticker li::before{content:"";flex:none;width:7px;height:7px;transform:translateY(-1px) rotate(45deg);background:#8193FF}
+.sp-ticker li:nth-child(2)::before{background:#E6B458}.sp-ticker li:nth-child(3)::before{background:#3FDBA0}
+@keyframes tick{to{opacity:1;transform:none}}
+.sp-go{position:relative;overflow:hidden;isolation:isolate}
+.sp-fill{position:absolute;inset:0;z-index:-1;background:#C9D1FF;transform-origin:left;transform:scaleX(0)}
+.sp-stay{color:var(--splash-muted);font-size:.78rem;padding:4px 0}
+.sp-stay u{text-underline-offset:3px}
+.sp-stay:hover{color:var(--splash-text)}
+@media (max-height:700px){.vB canvas{display:none}.sp-ticker li:nth-child(3){display:none}}
 /* C: reel */
 .reel{display:flex;flex-direction:column;gap:10px;transform:rotate(-4deg);margin-inline:-40px}
 .strip{white-space:nowrap;font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,5vw,2.2rem);letter-spacing:-.02em;display:flex;gap:28px;width:max-content;animation:marq 26s linear infinite}
@@ -233,7 +253,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
   .dg.lead{display:flex}
   .dg.lead .art{min-height:0;height:170px}
   .brand small{display:none}
-  .rail{right:6px}
 }
 @media (max-width:380px){.seg button{padding:6px 9px}}
 @media (prefers-reduced-motion: reduce){
@@ -385,8 +404,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .endbtn svg{flex:none;width:20px;height:20px}
 .endbtn b{display:block;font-family:var(--display);font-size:1.1rem;font-weight:600;letter-spacing:-.015em}
 .endbtn small{display:block;font-size:.8rem;color:var(--muted);margin-top:2px}
-.endbtn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-.endbtn.primary small{color:rgba(255,255,255,.8)}
+.endbtn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.endbtn.primary small{color:var(--on-accent);opacity:.8}
 .more{display:flex;flex-direction:column;align-items:stretch;align-self:stretch;width:100%;text-align:left;border-top:1px dashed var(--line);padding-top:6px}
 .endactions{align-self:stretch;width:100%}
 .morelink{width:100%;color:var(--text);display:flex;justify-content:space-between;align-items:center;padding:12px 2px;font-size:.9rem;font-weight:500;border-bottom:1px solid var(--line);text-align:left}
@@ -523,6 +542,56 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .card.tighter .summary{font-size:.84rem}
 .card.tighter .impl p{font-size:1rem}
 .endcard,.divcard{justify-content:center}
+
+/* ---------- story layout v3 (13 Oct): two pages per story, swipe sideways for what happened ---------- */
+.pager{height:100%;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.pager::-webkit-scrollbar{display:none}
+.pg{flex:0 0 100%;min-width:0;height:100%;scroll-snap-align:start;scroll-snap-stop:always;display:flex}
+.pg>.card{height:100%}
+.card .art{height:clamp(150px,34svh,320px)}
+.card.front .cfoot{justify-content:flex-end;border-top:0}
+.card .impl p{font-size:clamp(1.08rem,4.3vw,1.28rem);line-height:1.45}
+.pnext{margin-left:auto;display:inline-flex;align-items:center;gap:7px;padding:5px 9px 5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--text);font-size:.76rem;font-weight:600;white-space:nowrap}
+.pnext:hover{border-color:var(--muted)}
+.pnext svg{animation:sideways 1.4s ease-in-out 1s 3}
+@keyframes sideways{50%{transform:translateX(3px)}}
+.dots{display:inline-flex;gap:3px;align-items:center}
+.dots i{width:5px;height:5px;border-radius:3px;background:var(--line);transition:width .3s}
+.dots i.on{width:12px;background:var(--text)}
+.storypg .sp2{flex:1;min-height:0;display:flex;flex-direction:column;gap:14px;padding:18px 20px 20px;overflow:hidden}
+@media (min-width:600px){.storypg .sp2{padding:22px 16px}}
+.pnav{display:flex;justify-content:space-between;align-items:center}
+.pback{display:inline-flex;align-items:center;gap:4px;font-size:.84rem;font-weight:600;color:var(--muted);padding:6px 8px 6px 0}
+.pback:hover{color:var(--text)}
+.sp2 .kick{color:var(--kc)}
+.sp2 h3{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,4.6vw,1.6rem);line-height:1.15;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.sp2 .full{margin:0;font-size:1.02rem;line-height:1.6;color:var(--text);max-width:60ch}
+.srcmeta{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;font-size:.84rem;color:var(--muted);padding-top:14px;border-top:1px dashed var(--line)}
+.srcmeta .mono{font-size:.64rem}
+.srcmeta b{color:var(--text);font-weight:600}
+.readsrc{align-self:flex-start;text-decoration:none}
+.sp2 .fine{margin-top:-4px}
+.sp-art{flex:none;height:clamp(84px,15svh,140px);border-radius:14px;overflow:hidden;position:relative}
+.sp-art .art{position:absolute;inset:0;height:100%!important;margin:0!important;border-radius:0}
+.sp-art .credit{display:none}
+.facts{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.facts li{display:flex;gap:10px;align-items:baseline;font-size:.94rem;line-height:1.45}
+.facts li::before{content:"";flex:none;width:6px;height:6px;transform:translateY(-2px) rotate(45deg);background:var(--kc)}
+/* page 2 never scrolls inside the slide: on short screens the image goes first, then type tightens */
+.storypg.tight .sp-art{height:72px}.storypg.tight .fine{display:none}
+.storypg.tighter .sp-art{display:none}.storypg.tighter .sp2{gap:10px}.storypg.tighter .sp2 h3{font-size:1.15rem}.storypg.tighter .sp2 .full{font-size:.94rem}
+/* share sheet becomes a bottom sheet on phones */
+.sx-read{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;border-radius:14px;background:var(--splash-text);color:var(--splash-bg);font-weight:600;font-size:.9rem;text-decoration:none}
+.sx-read:hover{filter:brightness(.94)}
+@media (max-width:600px){
+  .sx{place-items:end center;padding:0}
+  .sx-panel{width:100%;max-height:88svh;border-radius:22px 22px 0 0;padding:28px 20px calc(env(safe-area-inset-bottom,0px) + 22px);transform:translateY(100%)}
+  .sx-panel::before{content:"";position:absolute;top:9px;left:50%;width:36px;height:4px;margin-left:-18px;border-radius:2px;background:#2E323A}
+  .sx.open .sx-panel{transform:none}
+  .sx-body h2{font-size:1.3rem}
+  .sx-share{grid-template-columns:repeat(4,1fr)!important;gap:6px}
+  .sx-share a,.sx-share button{padding:10px 2px;font-size:.7rem}
+}
 </style>
 
 <div class="app" id="app">
@@ -566,7 +635,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
     <button class="sharepill" data-share-app><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7M16 6l-4-4-4 4M12 2v13"/></svg>Share</button>
   </div>
   <main class="view">
-    <section id="stack-view"><div class="stack" id="stack"></div><nav class="rail" id="rail" aria-label="Stories"></nav><div class="hint" id="hint" style="opacity:0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>Swipe up for the next story</div></section>
+    <section id="stack-view"><div class="stack" id="stack"></div><div class="hint" id="hint" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg><span id="hint-txt">Swipe up for the next story</span></div></section>
     <section id="digest-view" class="off"><div class="digest"><div class="dwrap">
       <div class="dhead"><h1 id="dg-title">Today's <em>signal</em>, in one scan</h1><span class="mono" style="color:var(--muted)" id="dg-date"></span></div>
       <div class="grid" id="grid"></div>
@@ -615,9 +684,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
       <div class="teaser in d3"><span class="mono">Leading today</span><b id="lead-title"></b></div>
     </div>
     <div class="variant vB" id="vB" hidden>
+      <span class="mono sp-hello in d1" id="sp-hello"></span>
       <canvas id="wave" class="in d1" aria-hidden="true"></canvas>
       <h1 class="in d2"><span class="noise">Less noise.</span><br>More signal.</h1>
-      <p class="in d3" style="margin:0;color:var(--splash-muted);max-width:42ch">We read 40 trusted sources overnight and kept only what changes how designers work: process, tools, trends and impact.</p>
+      <p class="sp-stat in d3"><b id="sp-n">0</b> <span id="sp-n-txt">stories that change how designers work</span><span class="sp-min" id="sp-min"></span></p>
+      <ol class="sp-ticker" id="sp-ticker" aria-label="Top stories"></ol>
     </div>
     <div class="variant vC" id="vC" hidden>
       <h1 class="in d1">Your 4-minute morning brief on how AI is changing design work.</h1>
@@ -625,9 +696,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
     </div>
   </div>
   <div class="sp-cta in d4" style="max-width:760px;width:100%;margin:0 auto 18px">
-    <button class="btn" id="start"><span id="start-txt">See the latest stories</span>
+    <button class="btn sp-go" id="start"><span class="sp-fill" id="sp-fill" aria-hidden="true"></span><span id="start-txt">Start reading</span>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
     <small id="sp-meta"></small>
+    <button class="sp-stay" id="sp-stay" type="button">Opens in <span id="sp-sec">5</span>s · <u>Stay here</u></button>
   </div>
   <div class="picker" hidden><span class="mono">Hook layout</span>
     <button data-v="A" aria-pressed="true">A · The count</button>
@@ -670,7 +742,7 @@ function bucket(cat){ const c=(cat||'').toLowerCase();
 function hashId(str){ let h=5381; for(const ch of String(str)) h=((h<<5)+h+ch.charCodeAt(0))|0; return 'u'+(h>>>0).toString(36); }
 function fmtSrcDate(v){ if(!v) return ''; const d=new Date(v); return isNaN(d)?String(v):d.toLocaleDateString('en-GB',{day:'numeric',month:'short'}); }
 function toStory(x){ const b=bucket(x.category);
-  return Object.assign({topic:'design'}, CAT[b], {cat:/^design_/.test(x.category||'')?CAT[b].cat:(x.category||CAT[b].cat), title:x.title, summary:x.summary,
+  return Object.assign({topic:'design'}, CAT[b], {cat:/^design_/.test(x.category||'')?CAT[b].cat:(x.category||CAT[b].cat), title:x.title, summary:x.summary, facts:Array.isArray(x.key_facts)?x.key_facts.slice(0,3):[],
     impl:x.design_implication, src:x.source_name, url:x.source_url, date:fmtSrcDate(x.source_date), id:hashId(x.source_url||x.title),
     visual_type:x.visual_type||'generated', visual_url:x.visual_url, visual_credit:x.visual_credit, visual_source_url:x.visual_source_url}); }
 async function loadBriefs(){
@@ -798,7 +870,6 @@ function updateRing(){
   const list=current(), n=list.filter(s=>read.has(s.id)).length, t=list.length||1;
   document.getElementById('ring-txt').textContent=`${n}/${list.length}`;
   document.getElementById('ring-arc').style.strokeDashoffset = 88 - 88*n/t;
-  rail.querySelectorAll('button').forEach(b=>b.classList.toggle('read',read.has(b.dataset.id)));
 }
 let sessionReads=0, toastShown=false;
 function markRead(id){ if(read.has(id))return; read.add(id); store.set('ain-read',JSON.stringify([...read])); updateRing();
@@ -811,8 +882,28 @@ const actions = s => `<div class="acts"><button class="act" data-save="${s.id}" 
   <button class="act" data-share="${s.id}" aria-label="Share story"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button></div>`;
 const srcLink = (s,label) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${label} ↗</a>`;
 const chip = s => `<span class="chip" style="background:var(--c-${s.k}-soft);color:var(--c-${s.k})">${esc(s.cat)}</span>`;
-const implLabel = s => 'Design implication';
-const implBox = s => `<div class="impl" style="background:var(--c-${s.k}-soft);--kc:var(--c-${s.k})"><b style="color:var(--c-cloud-soft)">${implLabel(s)}</b><p>${esc(s.impl)}</p></div>`;
+const ttl = s => esc(s.title).replace(/(\d)-(\w)/g,'$1&#8209;$2'); /* keeps "30-day" on one line */
+/* the takeaway: why it matters, what changes day to day, what to start doing. No label: it is the card's main text. */
+const implBox = s => `<div class="impl" style="background:var(--c-${s.k}-soft);--kc:var(--c-${s.k})"><p>${esc(s.impl)}</p></div>`;
+const CHEV_R='<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>';
+const CHEV_L='<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>';
+const EXT='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>';
+/* horizontal page 2: what happened, from the source, with a link to read the original */
+const storyNext = s => s.summary ? `<button class="pnext" data-page="1" aria-label="See what happened">The story<span class="dots" aria-hidden="true"><i class="on"></i><i></i></span>${CHEV_R}</button>` : '';
+const storyPage = s => !s.summary ? '' : `
+    <div class="pg"><article class="card storypg" aria-label="What happened">
+      <div class="sp2" style="--kc:var(--c-${s.k})">
+        <div class="pnav"><button class="pback" data-page="0" aria-label="Back to why it matters">${CHEV_L}Back</button><span class="dots" aria-hidden="true"><i></i><i class="on"></i></span></div>
+        ${s.visual_type==='none'?'':`<div class="sp-art">${artHTML(s)}</div>`}
+        <span class="mono kick">What happened</span>
+        <h3>${ttl(s)}</h3>
+        <p class="full">${esc(s.summary)}</p>
+        ${s.facts?.length?`<ul class="facts">${s.facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>`:''}
+        <div class="srcmeta"><span class="mono">Source</span><b>${esc(s.src)}</b>${s.date?`<span>${esc(s.date)}</span>`:''}</div>
+        <a class="btn readsrc" data-src-link href="${esc(s.url)}" target="_blank" rel="noopener">Read the full story on ${esc(s.src)} ${EXT}</a>
+        <p class="fine">Summarised by AI Signal from the original article. The source has the full details.</p>
+      </div>
+    </article></div>`;
 
 /* ---------- retention block, shared by both modes ---------- */
 const CHANNELS = [
@@ -910,7 +1001,7 @@ document.addEventListener('error',e=>{
 }, true);
 
 /* ---------- swipe mode ---------- */
-const stack=document.getElementById('stack'), rail=document.getElementById('rail');
+const stack=document.getElementById('stack');
 let slides=[], io, briefDone=false;
 function renderStack(){
   const list=current(), n=list.length;
@@ -921,41 +1012,63 @@ function renderStack(){
     <h2>${nf} more ${nf===1?'story':'stories'}${(()=>{const ts=[...new Set(list.filter(x=>x.found).map(x=>x.topic))];return ts.length===1?' on '+esc(ts[0]==='design'?'design':tLabel(ts[0])):''})()}</h2>
     <p>You asked for these at ${lastSearch}. They stay out of your main feed.</p>
     <span class="hint2">Keep swiping</span></article></div>`:'')+`
-  <div class="slide" data-id="${s.id}"><article class="card">
-    ${artHTML(s, `<span class="spec">${i+1} of ${n}</span>`)}
-    <div class="cbody">
-      <div class="meta">${chip(s)}<span style="font-size:.8rem">${esc(s.dayLabel||s.date)}</span>${s.found?'<span class="newtag">New · from search</span>':readBefore.has(s.id)?'<span class="readtag">Read</span>':''}</div>
-      <h2>${esc(s.title)}</h2>
-      <p class="summary">${esc(s.summary)}</p>
-      ${implBox(s)}
-      <div class="cfoot">${srcLink(s, esc(s.src))}${actions(s)}</div>
-    </div>
-  </article></div>`).join('') + `<div class="slide" data-end="1"><article class="card endcard">${retainHTML()}</article></div>`;
-  rail.innerHTML = list.map((s,i)=>`<button aria-label="Story ${i+1}" data-go="${i}" data-id="${s.id}"></button>`).join('');
+  <div class="slide" data-id="${s.id}"><div class="pager" data-pager="${s.id}">
+    <div class="pg"><article class="card front">
+      ${artHTML(s, `<span class="spec">${i+1} of ${n}</span>`)}
+      <div class="cbody">
+        <div class="meta">${chip(s)}<span style="font-size:.8rem">${esc(s.dayLabel||s.date)}</span>${s.found?'<span class="newtag">New · from search</span>':readBefore.has(s.id)?'<span class="readtag">Read</span>':''}${storyNext(s)}</div>
+        <h2>${ttl(s)}</h2>
+        ${implBox(s)}
+        <div class="cfoot">${actions(s)}</div>
+      </div>
+    </article></div>${storyPage(s)}
+  </div></div>`).join('') + `<div class="slide" data-end="1"><article class="card endcard">${retainHTML()}</article></div>`;
   slides=[...stack.querySelectorAll('.slide')];
   io?.disconnect();
   io=new IntersectionObserver(es=>es.forEach(e=>{
     const id=e.target.dataset.id;
     e.target.classList.toggle('away', !e.isIntersecting);
     if(e.isIntersecting && e.target.dataset.end && !briefDone){ briefDone=true; track('brief_completed',{brief:DAYS[dayIdx].iso, stories:current().length}); }
-    if(e.isIntersecting && id && feedOpen()){ const st=byId(id), pos=current().findIndex(x=>x.id===id)+1; if(document.getElementById('splash').hidden) track('story_viewed',{story_url:st?.url, title:st?.title, category:st?.cat, position:pos, brief:DAYS[dayIdx].iso}); markRead(id); rail.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.id===id)); }
-    if(e.isIntersecting && e.target!==slides[0]) document.getElementById('hint').style.opacity=0;
+    if(e.isIntersecting && id && feedOpen()){ const st=byId(id), pos=current().findIndex(x=>x.id===id)+1; if(document.getElementById('splash').hidden) track('story_viewed',{story_url:st?.url, title:st?.title, category:st?.cat, position:pos, brief:DAYS[dayIdx].iso}); markRead(id); }
+    if(e.isIntersecting && e.target!==slides[0]) endNudge();
   }),{root:stack,threshold:.6});
   slides.forEach(s=>io.observe(s));
   stack.scrollTop=0;
   fitCards();
 }
-function fitCards(){ stack.querySelectorAll('.slide[data-id] .card').forEach(c=>{ c.classList.remove('tight','tighter'); const b=c.querySelector('.cbody'), over=()=>b.scrollHeight>b.clientHeight+1;
+function fitCards(){ stack.querySelectorAll('.slide[data-id] .card.front').forEach(c=>{ c.classList.remove('tight','tighter'); const b=c.querySelector('.cbody'), over=()=>b.scrollHeight>b.clientHeight+1;
+  if(over()){ c.classList.add('tight'); if(over()) c.classList.add('tighter'); } });
+  stack.querySelectorAll('.storypg').forEach(c=>{ c.classList.remove('tight','tighter'); const b=c.querySelector('.sp2'), over=()=>b.scrollHeight>b.clientHeight+1;
   if(over()){ c.classList.add('tight'); if(over()) c.classList.add('tighter'); } }); }
 addEventListener('resize',()=>{ clearTimeout(fitCards.t); fitCards.t=setTimeout(fitCards,150); });
 const go = i => slides[i]?.scrollIntoView({behavior: reduce?'auto':'smooth'});
-rail.addEventListener('click',e=>{const b=e.target.closest('[data-go]'); if(b) go(+b.dataset.go)});
+/* interaction lesson on the first card: shown on the first 3 visits, stops as soon as the reader moves */
+const touch = matchMedia('(pointer:coarse)').matches;
+let nudgeT=[];
+function endNudge(){ nudgeT.forEach(clearTimeout); nudgeT=[]; stack.classList.remove('nudge'); document.getElementById('hint').classList.remove('show'); }
+function nudge(){
+  const seen=+(store.get('ain-nudge')||0); if(seen>=3 || !slides[1] || tab!=='news') return;
+  store.set('ain-nudge', String(seen+1));
+  document.getElementById('hint-txt').textContent = touch ? 'Swipe up for the next story' : 'Scroll for the next story';
+  document.getElementById('hint').classList.add('show');
+  if(!reduce){ stack.classList.remove('nudge'); void stack.offsetWidth; stack.classList.add('nudge'); nudgeT.push(setTimeout(()=>stack.classList.remove('nudge'),2100)); }
+  nudgeT.push(setTimeout(endNudge, 3600));
+}
+['touchstart','wheel','keydown'].forEach(ev=>addEventListener(ev,()=>{ if(nudgeT.length) endNudge(); },{passive:true}));
+/* sideways pages inside a story: tap "The story" / "Back", swipe, or use the left and right arrow keys */
+const pageTo = (pager, p) => pager && pager.scrollTo({left: p*pager.clientWidth, behavior: reduce?'auto':'smooth'});
+const detailSeen = new Set();
+stack.addEventListener('click',e=>{ const b=e.target.closest('[data-page]'); if(b) pageTo(b.closest('.pager'), +b.dataset.page); });
+stack.addEventListener('scroll',e=>{ const pg=e.target; if(!pg.classList?.contains('pager')) return;
+  clearTimeout(pg._t); pg._t=setTimeout(()=>{ const id=pg.dataset.pager;
+    if(pg.scrollLeft > pg.clientWidth/2 && !detailSeen.has(id)){ detailSeen.add(id); const st=byId(id); track('story_detail_viewed',{story_url:st?.url, title:st?.title}); } },150); }, true);
 addEventListener('keydown',e=>{
   if(e.key==='Escape') closeSaved();
   if(mode!=='swipe'||!splash.hidden||drawer.classList.contains('open')||e.target.closest('select'))return;
   const cur=slides.findIndex(s=>!s.classList.contains('away'));
   if(['ArrowDown','j'].includes(e.key)){e.preventDefault();go(cur+1)}
   if(['ArrowUp','k'].includes(e.key)){e.preventDefault();go(cur-1)}
+  if(['ArrowRight','ArrowLeft'].includes(e.key)){ const pg=slides[cur]?.querySelector('.pager'); if(pg){e.preventDefault();pageTo(pg, e.key==='ArrowRight'?1:0);} }
 });
 
 /* ---------- digest mode ---------- */
@@ -1065,9 +1178,18 @@ document.getElementById('lead-title').textContent=todays[0]?.title||'';
 document.getElementById('sp-cut').textContent=`${todays.length} are worth your morning.`;
 { const unread=todays.filter(s=>!read.has(s.id)).length, returning=todays.some(s=>read.has(s.id)), n=todays.length;
   const fresh=DAYS[0].newestLabel==='Today';
-  document.getElementById('start-txt').textContent = !n ? 'Open AI Signal' : returning ? (unread ? `See ${unread} new ${unread===1?'story':'stories'}` : `Revisit the latest ${n}`) : `See the latest ${n} stories`;
+  document.getElementById('start-txt').textContent = !n ? 'Open AI Signal' : returning ? (unread ? `Read ${unread} new ${unread===1?'story':'stories'}` : `Revisit the latest ${n}`) : 'Start reading';
+  const since = /^(Today|Yesterday)$/.test(DAYS[0].newestLabel) ? DAYS[0].newestLabel.toLowerCase() : DAYS[0].newestLabel;
   document.getElementById('sp-meta').textContent = !n ? 'New stories land when something worth your time ships.'
-    : (fresh ? 'New today · ' : `No new stories since ${DAYS[0].newestLabel} · `) + `latest ${n}, newest first · design process, tools, trends and impact`; }
+    : (fresh ? 'New today · ' : `Last update ${since} · `) + `newest first`;
+  /* splash v3: greeting, count, reading time and the top three headlines */
+  const h=new Date().getHours();
+  document.getElementById('sp-hello').textContent = h<12?'Good morning':h<17?'Good afternoon':'Good evening';
+  document.getElementById('sp-n').textContent = n;
+  document.getElementById('sp-n-txt').textContent = n===1?'story that changes how designers work':'stories that change how designers work';
+  const words = todays.reduce((a,s)=>a+String(s.title+' '+s.impl+' '+(s.summary||'')).split(/\s+/).length,0);
+  document.getElementById('sp-min').textContent = n ? `${Math.max(1,Math.round(words/200))} min read` : '';
+  document.getElementById('sp-ticker').innerHTML = todays.slice(0,3).map((s,i)=>`<li style="animation-delay:${1.1+i*.7}s">${esc(s.title)}</li>`).join(''); }
 document.getElementById('reel').innerHTML=[0,1,2].map(r=>{
   const items=todays.slice(r*2).concat(todays).slice(0,5).map(s=>`<span>${esc(s.title)}</span>`).join('');
   return `<div class="strip">${items}${items}</div>`}).join('');
@@ -1097,7 +1219,7 @@ function wave(){
   };
   requestAnimationFrame(draw);
 }
-function restartAnims(el){el.querySelectorAll('.in').forEach(n=>{n.style.animation='none';void n.offsetWidth;n.style.animation=''})}
+function restartAnims(el){el.querySelectorAll('.in, .sp-ticker li').forEach(n=>{n.style.animation='none';void n.offsetWidth;n.style.animation=''})}
 function showVariant(v){
   variant=v; store.set('ain-splash',v);
   ['A','B','C'].forEach(x=>document.getElementById('v'+x).hidden=x!==v);
@@ -1106,13 +1228,31 @@ function showVariant(v){
   if(v==='A')countUp(); if(v==='B')wave();
 }
 document.querySelector('.picker').addEventListener('click',e=>{const b=e.target.closest('[data-v]'); if(b)showVariant(b.dataset.v)});
+/* auto start: the splash opens the feed by itself after 5 s. The fill on the button shows the countdown;
+   "Stay here" cancels it. Uses animation frames, so it also pauses while the tab is in the background. */
+const AUTO_MS=5000; let autoRaf=0, autoOn=false;
+function stopAuto(){ autoOn=false; cancelAnimationFrame(autoRaf); }
+function startAuto(){
+  stopAuto(); autoOn=true;
+  const fill=document.getElementById('sp-fill'), sec=document.getElementById('sp-sec'), stay=document.getElementById('sp-stay');
+  stay.hidden=false; fill.style.transform='scaleX(0)';
+  let t0=null;
+  const tick=t=>{ if(!autoOn) return; if(t0===null) t0=t;
+    const p=Math.min(1,(t-t0)/AUTO_MS);
+    fill.style.transform=`scaleX(${p})`; sec.textContent=Math.max(1,Math.ceil((AUTO_MS-(t-t0))/1000));
+    if(p<1) autoRaf=requestAnimationFrame(tick);
+    else { autoOn=false; track('brief_started',{splash:'B', how:'auto'}); const f=current()[0]; if(f) setTimeout(()=>track('story_viewed',{story_url:f.url, title:f.title, category:f.cat, position:1, brief:DAYS[dayIdx].iso}),900); closeSplash(); } };
+  autoRaf=requestAnimationFrame(tick);
+}
+document.getElementById('sp-stay').onclick=()=>{ stopAuto(); document.getElementById('sp-fill').style.transform='scaleX(0)'; document.getElementById('sp-stay').hidden=true; track('splash_stayed'); };
 function closeSplash(){
+  stopAuto();
   splash.classList.add('leave');
   setTimeout(()=>{splash.hidden=true;cancelAnimationFrame(raf)}, reduce?0:800);
   setDay(0); placeThumb();
-  if(mode==='swipe'){const h=document.getElementById('hint'); h.style.opacity=1; setTimeout(()=>h.style.opacity=0, 5000);}
+  if(mode==='swipe') setTimeout(nudge, reduce?0:900);
 }
-function openSplash(){splash.hidden=false;splash.classList.remove('leave');showVariant(variant)}
+function openSplash(){splash.hidden=false;splash.classList.remove('leave');showVariant(variant);startAuto()}
 document.getElementById('start').onclick=closeSplash;
 document.getElementById('replay').onclick=openSplash;
 
@@ -1153,6 +1293,7 @@ function openShare(st){
       <a data-channel="x" href="https://twitter.com/intent/tweet?text=${E(text)}&url=${E(link)}" target="_blank" rel="noopener"><b>X</b>X</a>
       <button type="button" id="sx-copy" data-channel="copy"><b>⧉</b>Copy link</button>
     </div>
+    ${st?`<a class="sx-read" data-sheet-src="${st.id}" href="${esc(st.url)}" target="_blank" rel="noopener">Read the full story on ${esc(st.src)} ${EXT}</a>`:''}
     <label class="mono" for="sx-link" style="color:var(--splash-muted)">Link</label><input id="sx-link" class="sx-linkbox" readonly value="${esc(st?st.url:APP_URL)}">`;
   document.getElementById('sx-copy').onclick=()=>{const b=document.getElementById('sx-copy'), inp=document.getElementById('sx-link');
     (navigator.clipboard?navigator.clipboard.writeText(full):Promise.reject()).then(()=>{b.lastChild.textContent='Copied';}).catch(()=>{inp.select();b.lastChild.textContent='Press Ctrl+C';});};
@@ -1336,16 +1477,16 @@ renderLearn();
 renderAll(); renderSaved();
 mode='swipe'; setMode(mode); /* Digest hidden for now */
 setTab(store.get('ain-tab')==='learn'?'learn':'news');
-showVariant(variant);
+showVariant(variant); startAuto();
 document.fonts?.ready.then(placeThumb);
 /* ---------- analytics events (PostHog) ---------- */
 track('app_opened',{brief:DAYS[0]?.iso, stories:DAYS[0]?.stories.length||0});
 document.addEventListener('click',e=>{
   const t=e.target;
   const ch=t.closest('[data-channel]'); if(ch) track('shared',{...shareCtx, channel:ch.dataset.channel});
-  const src=t.closest('.cfoot a'); if(src){ const st=byId(src.closest('[data-id]')?.dataset.id); track('source_clicked',{story_url:src.href, title:st?.title}); }
+  const src=t.closest('.cfoot a, [data-src-link], [data-sheet-src]'); if(src){ const st=byId(src.closest('[data-id]')?.dataset.id||src.dataset.sheetSrc); track('source_clicked',{story_url:src.href, title:st?.title, from:src.dataset.srcLink!==undefined?'story_page':src.dataset.sheetSrc?'share_sheet':'other'}); }
   const sv=t.closest('[data-save]'); if(sv){ const st=byId(sv.dataset.save); track(saved.has(sv.dataset.save)?'story_unbookmarked':'story_bookmarked',{story_url:st?.url}); }
-  if(t.closest('#start')){ track('brief_started',{splash:'B'}); const f=current()[0]; if(f) setTimeout(()=>track('story_viewed',{story_url:f.url, title:f.title, category:f.cat, position:1, brief:DAYS[dayIdx].iso}),900); }
+  if(t.closest('#start')){ track('brief_started',{splash:'B', how:'tap'}); const f=current()[0]; if(f) setTimeout(()=>track('story_viewed',{story_url:f.url, title:f.title, category:f.cat, position:1, brief:DAYS[dayIdx].iso}),900); }
   if(t.closest('[data-open-saved]')) track('saved_opened',{count:saved.size});
   const gd=t.closest('[data-goto-day]'); if(gd) track('earlier_brief_opened',{brief:DAYS[+gd.dataset.gotoDay]?.iso});
   if(t.closest('#t-learn')) track('learn_opened');
