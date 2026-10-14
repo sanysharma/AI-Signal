@@ -36,7 +36,8 @@ Out of scope for the daily feed: model benchmarks or releases with no product su
 ## Writing (card front ≤ 82 words: title + design_implication; accuracy beats hitting a count)
 Each story is two pages on a phone. The front holds the title and the design implication, the hero readers come for. Swiping sideways opens "What happened": the summary and a link to the source.
 - title: ≤ 12 words, sentence case, states the development. No questions, no clickbait.
-- summary ("What happened", page 2): ~40–60 words. Facts only, from the candidate: who, what, when, availability, numbers. Attribute vendor claims ("Figma says…"). Copy numbers, names and dates exactly. No superlatives unless the source says so, and then attributed.
+- summary ("What happened", page 2): ~30–40 words. The development in plain words. Facts only, from the candidate. Attribute vendor claims ("Figma says…"). Copy numbers, names and dates exactly. No superlatives unless the source says so, and then attributed.
+- key_facts (page 2 bullets): 2–3 short facts, each ≤ 12 words, that a designer would look for before clicking through: what exactly launched or changed, who gets it (plans, platforms, regions), when or availability (beta, GA, date), and cost or limits. Only facts stated in the candidate's title or excerpt; never guess. Do not repeat the summary. Fewer bullets are fine when the source says less. Written in AI Signal's own words, not copied sentences.
 - design_implication (card front): ~55–70 words, three beats in this order, as flowing sentences with no labels:
   1. Why it matters to designers: the concrete moment in real design work this development touches (a critique, a handoff, a settings screen, a design system file, a user hitting an error). Use a third-person scene ("A designer…", "In an admin console…", "Motion handoff has long meant…").
   2. How it changes everyday work: what is different in that moment because of the development.

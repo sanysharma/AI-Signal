@@ -571,6 +571,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .srcmeta b{color:var(--text);font-weight:600}
 .readsrc{align-self:flex-start;text-decoration:none}
 .sp2 .fine{margin-top:-4px}
+.sp-art{flex:none;height:clamp(84px,15svh,140px);border-radius:14px;overflow:hidden;position:relative}
+.sp-art .art{position:absolute;inset:0;height:100%!important;margin:0!important;border-radius:0}
+.sp-art .credit{display:none}
+.facts{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.facts li{display:flex;gap:10px;align-items:baseline;font-size:.94rem;line-height:1.45}
+.facts li::before{content:"";flex:none;width:6px;height:6px;transform:translateY(-2px) rotate(45deg);background:var(--kc)}
+/* page 2 never scrolls inside the slide: on short screens the image goes first, then type tightens */
+.storypg.tight .sp-art{height:72px}.storypg.tight .fine{display:none}
+.storypg.tighter .sp-art{display:none}.storypg.tighter .sp2{gap:10px}.storypg.tighter .sp2 h3{font-size:1.15rem}.storypg.tighter .sp2 .full{font-size:.94rem}
 /* share sheet becomes a bottom sheet on phones */
 .sx-read{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;border-radius:14px;background:var(--splash-text);color:var(--splash-bg);font-weight:600;font-size:.9rem;text-decoration:none}
 .sx-read:hover{filter:brightness(.94)}
@@ -733,7 +742,7 @@ function bucket(cat){ const c=(cat||'').toLowerCase();
 function hashId(str){ let h=5381; for(const ch of String(str)) h=((h<<5)+h+ch.charCodeAt(0))|0; return 'u'+(h>>>0).toString(36); }
 function fmtSrcDate(v){ if(!v) return ''; const d=new Date(v); return isNaN(d)?String(v):d.toLocaleDateString('en-GB',{day:'numeric',month:'short'}); }
 function toStory(x){ const b=bucket(x.category);
-  return Object.assign({topic:'design'}, CAT[b], {cat:/^design_/.test(x.category||'')?CAT[b].cat:(x.category||CAT[b].cat), title:x.title, summary:x.summary,
+  return Object.assign({topic:'design'}, CAT[b], {cat:/^design_/.test(x.category||'')?CAT[b].cat:(x.category||CAT[b].cat), title:x.title, summary:x.summary, facts:Array.isArray(x.key_facts)?x.key_facts.slice(0,3):[],
     impl:x.design_implication, src:x.source_name, url:x.source_url, date:fmtSrcDate(x.source_date), id:hashId(x.source_url||x.title),
     visual_type:x.visual_type||'generated', visual_url:x.visual_url, visual_credit:x.visual_credit, visual_source_url:x.visual_source_url}); }
 async function loadBriefs(){
@@ -885,9 +894,11 @@ const storyPage = s => !s.summary ? '' : `
     <div class="pg"><article class="card storypg" aria-label="What happened">
       <div class="sp2" style="--kc:var(--c-${s.k})">
         <div class="pnav"><button class="pback" data-page="0" aria-label="Back to why it matters">${CHEV_L}Back</button><span class="dots" aria-hidden="true"><i></i><i class="on"></i></span></div>
+        ${s.visual_type==='none'?'':`<div class="sp-art">${artHTML(s)}</div>`}
         <span class="mono kick">What happened</span>
         <h3>${ttl(s)}</h3>
         <p class="full">${esc(s.summary)}</p>
+        ${s.facts?.length?`<ul class="facts">${s.facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>`:''}
         <div class="srcmeta"><span class="mono">Source</span><b>${esc(s.src)}</b>${s.date?`<span>${esc(s.date)}</span>`:''}</div>
         <a class="btn readsrc" data-src-link href="${esc(s.url)}" target="_blank" rel="noopener">Read the full story on ${esc(s.src)} ${EXT}</a>
         <p class="fine">Summarised by AI Signal from the original article. The source has the full details.</p>
@@ -1026,6 +1037,8 @@ function renderStack(){
   fitCards();
 }
 function fitCards(){ stack.querySelectorAll('.slide[data-id] .card.front').forEach(c=>{ c.classList.remove('tight','tighter'); const b=c.querySelector('.cbody'), over=()=>b.scrollHeight>b.clientHeight+1;
+  if(over()){ c.classList.add('tight'); if(over()) c.classList.add('tighter'); } });
+  stack.querySelectorAll('.storypg').forEach(c=>{ c.classList.remove('tight','tighter'); const b=c.querySelector('.sp2'), over=()=>b.scrollHeight>b.clientHeight+1;
   if(over()){ c.classList.add('tight'); if(over()) c.classList.add('tighter'); } }); }
 addEventListener('resize',()=>{ clearTimeout(fitCards.t); fitCards.t=setTimeout(fitCards,150); });
 const go = i => slides[i]?.scrollIntoView({behavior: reduce?'auto':'smooth'});

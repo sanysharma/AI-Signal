@@ -105,6 +105,7 @@ const STORY_SCHEMA = {
     tags: { type: "array", items: { type: "string" } },
     title: { type: "string" },
     summary: { type: "string" },
+    key_facts: { type: "array", items: { type: "string" } },
     design_implication: { type: "string" },
     implication_lens: { type: "string", enum: ["pattern", "workflow", "capability", "trust_and_risk", "business"] },
     visual_need: { type: "string", enum: ["illustrate", "none"] },
@@ -125,7 +126,7 @@ const STORY_SCHEMA = {
       required: ["relevance", "novelty", "concreteness", "source_quality", "design_leverage"],
     },
   },
-  required: ["category", "tags", "title", "summary", "design_implication", "implication_lens", "visual_need",
+  required: ["category", "tags", "title", "summary", "key_facts", "design_implication", "implication_lens", "visual_need",
     "source_name", "source_url", "source_date", "evidence", "scores"],
 };
 const LOG_ITEM = {
@@ -218,6 +219,7 @@ function enforce(result, candidates) {
     const cand = byUrl.get(normUrl(s.source_url));
     if (!cand) { rejected.push({ source_url: s.source_url, reason: "unsupported_claim (URL not in candidates)" }); continue; }
     if (seenUrls.has(normUrl(cand.source_url))) { rejected.push({ source_url: s.source_url, reason: "duplicate" }); continue; }
+    s.key_facts = (s.key_facts || []).map((f) => String(f).trim()).filter(Boolean).slice(0, 3); // "What happened" bullets, max 3
     s.source_url = cand.source_url;            // exact URL from the feed
     s.source_name = cand.source_name;
     s.source_tier = cand.source_tier;          // tier comes from the registry, not the model
@@ -257,13 +259,14 @@ function prBody(out) {
   out.stories.forEach((s, i) => {
     lines.push(`### ${i + 1}. ${s.title}`);
     lines.push(`*${s.category.replace("design_", "Design ")} · ${s.tags.join(", ")} · score ${s.scores.total}/15 · ${s.word_count} words · tier ${s.source_tier}*`);
-    lines.push("", `**Card front (why it matters):** ${s.design_implication}`, "", `**What happened (story page):** ${s.summary}`, "", `Source: [${s.source_name}](${s.source_url})`);
+    lines.push("", `**Card front (why it matters):** ${s.design_implication}`, "", `**What happened (story page):** ${s.summary}`, ...(s.key_facts || []).map((f) => `- ${f}`), "", `Source: [${s.source_name}](${s.source_url})`);
     lines.push(s.visual_type === "source_image"
       ? `Visual: source image (${s.visual_license}), [view image](${s.visual_url}), credit "${s.visual_credit}". Check you are comfortable reusing it; if not, set visual_type to "generated".`
       : `Visual: ${s.visual_type === "none" ? "none (text-only card)" : "generated illustration"}`, "");
     const front = words(s.title) + words(s.design_implication);
     if (front > 82) lines.push(`> Note: card front is ${front} words, over the 82-word target. Trim the design implication so it fits on a phone.`, "");
-    if (words(s.summary) > 65) lines.push(`> Note: "What happened" is ${words(s.summary)} words, over the 60-word target.`, "");
+    if (words(s.summary) > 45) lines.push(`> Note: "What happened" is ${words(s.summary)} words, over the 40-word target.`, "");
+    if ((s.key_facts || []).some((f) => words(f) > 14)) lines.push("> Note: a key fact is over 14 words. Keep each bullet short enough for one or two lines on a phone.", "");
   });
   const fails = out.review.feed_health.filter((f) => !f.ok);
   lines.push("---", `Held: ${out.review.held.length} · Consolidated: ${out.review.consolidated.length} · Rejected: ${out.review.rejected.length} · Patterns: ${out.review.patterns.length}`);
