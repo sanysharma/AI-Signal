@@ -1,0 +1,565 @@
+{
+  "date": "2026-10-15",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-15-figma-adds-code-layers-specs-and-agent-workflows-to-canvas",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "design-tools",
+        "agents-in-tools"
+      ],
+      "title": "Figma adds code layers, specs, and agent workflows to canvas",
+      "summary": "Figma launched updates uniting design, code, and context on its canvas. Code layers entered open beta for prototypes backed by real code, alongside Specs context containers and integrations for human teams and AI agents.",
+      "design_implication": "Prototyping dynamic UI has long required faking states with static artboards or rebuilding them in code. When interactive code layers and Markdown specs live natively on the canvas, designers iterate on production logic without abandoning visual critique or handoff files.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/build-by-design/",
+      "source_date": "2026-10-15",
+      "evidence": [
+        {
+          "claim": "Figma launched updates to unite teams, agents, design, code, and context on the canvas",
+          "quote": "everything we launched today to bring teams and agents, and the design, code, and context they work with, into Figma’s full-stack creative canvas"
+        },
+        {
+          "claim": "Code layers moved into open beta for real-code prototyping",
+          "quote": "code layers moves into open beta. Now teams can explore and build prototypes backed by real code on the canvas"
+        },
+        {
+          "claim": "Figma launched Specs as a canvas container for context",
+          "quote": "We’re launching Specs, a container for your context that lives on the Figma canvas"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [
+        "https://www.figma.com/blog/design-together-with-code-layers/",
+        "https://www.figma.com/blog/introducing-figma-specs/",
+        "https://www.figma.com/blog/websites-with-payload-in-figma/",
+        "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/"
+      ],
+      "source_tier": 1,
+      "word_count": 84,
+      "discovered_date": "2026-10-15",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.7-flash",
+    "candidates_reviewed": 89,
+    "held": [],
+    "consolidated": [
+      {
+        "source_url": "https://www.figma.com/blog/design-together-with-code-layers/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/introducing-figma-specs/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/websites-with-payload-in-figma/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/figma-deepens-investment-in-india/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-manon-macasaet/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/amp-beyond-coding",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/sentinelone",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/third-moment-research",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/block-ai-powered-security",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/higgsfield-longer-videos-voice",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/what-ai-gets-wrong-and-what-failure-teaches-us/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/code-switching-detection",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mix-dont-tune",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/llm-translation-quality-annotation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/self-compacting-language-agents",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-one-bug-bounty-researcher-chooses-the-features-they-investigate/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/amazon-s3-joins-the-vercel-marketplace",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/nemotron-3-5-lightning-now-available-on-ai-gateway-for-free",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/drama-3-now-available-on-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/mai-image-2-6-and-mai-image-2-6-flash-now-available-on-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/repository-checkout-and-git-lfs-downloads-are-now-faster",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-assistant-context/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/empathy-mapping/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.19152",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.19160",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.19199",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.19337",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.19641",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/14/1146452/the-download-military-fake-blood-future-batteries/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/14/1145807/us-military-race-to-make-fake-blood/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/13/1146382/the-download-open-models-trade-offs-geothermal-power/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/12/1146376/the-download-moon-city-drone-air-traffic-controllers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/news/1011654/mckinsey-ai-client-interview",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1011369/youtube-music-ai-label",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/column/1011264/digital-twin-metabolism-ai-twin-health",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-is-coming-for-science-next-watch-out/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/my-friend-has-no-soul/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/men-cant-stop-faking-how-much-they-know-about-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-models-can-be-easily-modified-to-assist-terrorist-and-extremist-activity/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/an-openai-employee-allegedly-used-a-chatbot-to-help-plant-a-recording-device-at-the-office/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/openai-and-anthropic-tell-british-lawmakers-regulate-us/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/how-name-things/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/fridge-hack-costing-millions-and-sparking-fires-stemmed-from-poor-security/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/topgolf-saved-over-11-3-million-after-leaving-vmware/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/pc-shipments-fall-20-1-percent-in-sharpest-decline-since-q1-2023/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/openai-agents-tried-to-hack-wikipedia-tools-and-flooded-it-with-traffic/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/nobody-wants-your-ai-app-cff8629064a4?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-i-told-the-cfo-when-he-asked-why-design-matters-ceadb07c929e?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/how-getting-good-at-your-job-can-stop-you-getting-better-023b6e7637ec?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/taste-is-not-a-design-methodology-e02b37aea148?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/how-to-talk-about-a-design-that-looks-worse-on-paper-da73da6d7b57?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-synth-everyone-owned-and-few-could-program-a-lesson-for-ai-design-6f618ec2aea0?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/shrine-2",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/basedash",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/saidtrace",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/audio-lip-sync-pro-for-blender",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/cmdround",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/navige",
+        "reason": "below_bar"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "canvas-workspaces-for-agents",
+        "name": "Spatial canvas workspaces for human-agent collaboration",
+        "description": "Design and development tools are replacing linear chat prompts with spatial canvases where humans and AI agents manipulate code, context, and visual artifacts side-by-side.",
+        "source_urls": [
+          "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+          "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
+          "https://www.figma.com/blog/build-by-design/"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 761,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1293,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 5
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 3
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1659,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 31,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 1
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-15-figma-adds-code-layers-specs-and-agent-workflows-to-canvas",
+        "title": "Figma adds code layers, specs, and agent workflows to canvas",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/6fb8bfd609660ecc0fc8729137a58c451db49fe1-3840x2160.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      }
+    ]
+  }
+}
