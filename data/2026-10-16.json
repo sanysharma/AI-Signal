@@ -1,0 +1,671 @@
+{
+  "date": "2026-10-16",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-16-figma-integrates-payload-to-connect-design-canvases-with-pro",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "code-prototyping"
+      ],
+      "title": "Figma integrates Payload to connect design canvases with production CMS",
+      "summary": "Figma launched an integration with Payload, enabling teams to build prototypes backed by real data and manage production website content directly within the design canvas.",
+      "design_implication": "A designer polishing responsive cards traditionally fills frames with static dummy copy that falls apart against real production data. Embedding a headless CMS inside the canvas collapses staging, turning visual mockups into verifiable, data-bound production templates.",
+      "implication_lens": "workflow",
+      "visual_need": "none",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/websites-with-payload-in-figma/",
+      "source_date": "2026-10-15T04:50:00.000Z",
+      "evidence": [
+        {
+          "claim": "Teams can manage content and data from prototype to production inside Figma.",
+          "quote": "teams can go from prototype to production together, managing their content and data all in one place."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "source_tier": 1,
+      "word_count": 71,
+      "discovered_date": "2026-10-16",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    },
+    {
+      "id": "2026-10-16-disarm-introduces-real-time-interface-disclosures-against-ma",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "trust-and-explainability",
+        "conversational-ui"
+      ],
+      "title": "DISARM introduces real-time interface disclosures against manipulative LLM tactics",
+      "summary": "HCI researchers introduced DISARM, an interface investigating whether in-situ disclosures during conversations can alert users to emotionally manipulative tactics and covert persuasion attempts by large language models.",
+      "design_implication": "A user chatting with an assistant easily mistakes empathetic tone for impartial guidance. Revealing persuasive rhetorical framing inline transforms conversational interfaces from deceptive black boxes into transparent environments where intent and psychological steering remain visible.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2610.20878",
+      "source_date": "2026-10-16T04:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "DISARM tests whether in-situ disclosures can protect users from conversational manipulation.",
+          "quote": "investigate whether in-situ disclosures can inoculate users against manipulation during AI conversations. Following a formative study, we developed DISARM"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "source_tier": 1,
+      "word_count": 71,
+      "discovered_date": "2026-10-16",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-16-chatgpt-chrome-extension-enables-direct-querying-of-open-bro",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "conversational-ui",
+        "agentic-ux"
+      ],
+      "title": "ChatGPT Chrome extension enables direct querying of open browser tabs",
+      "summary": "OpenAI updated its Google Chrome extension, allowing ChatGPT to read users' open browser tabs. When users tag Chrome in desktop or web chats, the assistant cross-references information across active tabs.",
+      "design_implication": "A user researching options constantly toggles between browser windows to copy-paste fragments into a chat prompt. When active tabs become addressable objects via explicit mentions, conversational interfaces shift from isolated text boxes to cross-surface context aggregators.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+      "source_date": "2026-10-15T22:43:23.000Z",
+      "evidence": [
+        {
+          "claim": "ChatGPT can inspect active browser tabs when users tag Chrome.",
+          "quote": "ChatGPT can now view your browser tabs when you tag Chrome in ChatGPT's web or desktop app"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "source_tier": 2,
+      "word_count": 76,
+      "discovered_date": "2026-10-16",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-16-bluesky-expands-attie-for-vibe-coding-lightweight-social-app",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "design-tools"
+      ],
+      "title": "Bluesky expands Attie for vibe-coding lightweight social applications",
+      "summary": "Bluesky expanded its AI tool Attie to let users build and publish interactive web applications, games, and polls directly to the social network through conversational vibe-coding prompts.",
+      "design_implication": "A creator brainstorming community interactions previously needed full-stack engineering to launch a custom quiz or game. Lowering app creation to natural-language social prompts turns interactive software into disposable social media posts, redefining casual prototyping.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps",
+      "source_date": "2026-10-15T19:57:16.000Z",
+      "evidence": [
+        {
+          "claim": "Attie lets users generate and share interactive apps and games as standalone websites.",
+          "quote": "Attie AI tool, which initially launched earlier this year as a way to use AI to build your own feeds, now lets you make 'small' social apps like games, polls, and dashboards"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [
+        "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/"
+      ],
+      "source_tier": 2,
+      "word_count": 69,
+      "discovered_date": "2026-10-16",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 85,
+    "held": [
+      {
+        "source_url": "https://uxdesign.cc/designing-for-ai-human-in-the-loop-means-making-sure-the-human-is-not-out-of-the-loop-e38826309c91?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/i-ran-a-7-week-ai-workshop-for-designers-that-wasnt-really-about-ai-804035e7b328?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/nobody-feels-heard-by-a-report-c5a06d96bc39?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-ai-experience-doesnt-care-about-your-org-chart-5ed595c7b373?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/nobody-wants-your-ai-app-cff8629064a4?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-i-told-the-cfo-when-he-asked-why-design-matters-ceadb07c929e?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/parallax-5",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/twelvelabs",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/mozilla",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/fish-speech",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/memory-chess",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/pomerado",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.figma.com/blog/design-together-with-code-layers/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/introducing-figma-specs/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/figma-deepens-investment-in-india/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-manon-macasaet/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/sullivan-cromwell",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/amp-beyond-coding",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/sentinelone",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/third-moment-research",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/what-ai-gets-wrong-and-what-failure-teaches-us/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/selection-structured-reasoning",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/plan-retrieve-tool-discovery",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/code-switching-detection",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mix-dont-tune",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/blog/vercel-ship-2026-recap",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://vercel.com/blog/ai-gateway-production-index-october-2026",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/blog/vercel-for-enterprise",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://vercel.com/blog/introducing-vercel-drives-persistent-storage-for-agents",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/backends-on-vercel-python-containers-and-daemons",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/python-on-vercel-is-now-generally-available",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-assistant-context/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/empathy-mapping/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.20690",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.21067",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.21137",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.21213",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/15/1146755/the-download-reviving-frozen-pig-kidneys-boosting-nuclear-power/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/15/1146577/nuclear-power-upgrade/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/15/1145819/six-wild-ideas-perpetuating-your-mind-cognitive-immortality/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/15/1146091/pig-kidneys-that-were-frozen-for-a-year-have-been-brought-back-to-life/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/14/1146452/the-download-military-fake-blood-future-batteries/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/14/1145807/us-military-race-to-make-fake-blood/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/entertainment/1012438/hollywood-tech-backlash-you-can-see-everything-musk-the-social-reckoning-artificial",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/policy/1012445/donald-trump-ai-photo-white-house-rennovation-column",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/15/last-chance-to-save-up-to-200-on-techcrunch-founder-summit-early-booking-ends-oct-16/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.wired.com/story/uncanny-valley-podcast-we-got-hot-and-heavy-with-metas-muse-and-underwhelmed-by-apples-homeview/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-hacks-leave-a-mess-that-ai-companies-arent-cleaning-up/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-is-coming-for-science-next-watch-out/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/my-friend-has-no-soul/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/men-cant-stop-faking-how-much-they-know-about-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-models-can-be-easily-modified-to-assist-terrorist-and-extremist-activity/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/how-name-things/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/targeted-ads-delivered-0-click-exploits-to-install-mercenary-malware/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/fridge-hack-costing-millions-and-sparking-fires-stemmed-from-poor-security/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/topgolf-saved-over-11-3-million-after-leaving-vmware/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/pc-shipments-fall-20-1-percent-in-sharpest-decline-since-q1-2023/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "social-vibe-coding",
+        "name": "Social vibe coding for instant mini-apps",
+        "description": "Platforms are turning conversational AI code generation into ephemeral, shareable web apps, games, and polls directly within social and creator networks.",
+        "source_urls": [
+          "https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps",
+          "https://www.theverge.com/tech/1009066/google-play-vibe-coded-android-apps-launch",
+          "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/"
+        ],
+        "confidence": "emerging"
+      },
+      {
+        "id": "ambient-cross-surface-context",
+        "name": "Ambient cross-surface context grounding",
+        "description": "AI assistants are expanding beyond isolated chat windows by indexing active desktop files, operating system activities, and browser tabs as dynamic contextual inputs.",
+        "source_urls": [
+          "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+          "https://www.theverge.com/tech/1007113/microsoft-windows-copilot-ai-control-search-hybrid-intelligence",
+          "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 761,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1296,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1676,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 33,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 1
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-16-figma-integrates-payload-to-connect-design-canvases-with-pro",
+        "title": "Figma integrates Payload to connect design canvases with production CMS",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/e2f3fa38dc26a6eb00e472ed04855ecfc34f1e64-3840x2160.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      },
+      {
+        "story": "2026-10-16-disarm-introduces-real-time-interface-disclosures-against-ma",
+        "title": "DISARM introduces real-time interface disclosures against manipulative LLM tactics",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-16-chatgpt-chrome-extension-enables-direct-querying-of-open-bro",
+        "title": "ChatGPT Chrome extension enables direct querying of open browser tabs",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-16-bluesky-expands-attie-for-vibe-coding-lightweight-social-app",
+        "title": "Bluesky expands Attie for vibe-coding lightweight social applications",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
