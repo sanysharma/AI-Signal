@@ -1,0 +1,598 @@
+{
+  "date": "2026-10-20",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-20-trinketry-introduces-preserved-design-elements-as-anchors-fo",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "generative-media"
+      ],
+      "title": "Trinketry introduces preserved design elements as anchors for generative exploration",
+      "summary": "Researchers introduced trinkets, user-preserved design elements that function as reusable materials, retrieval queries, and navigational anchors. The technique helps visual designers preserve promising ideas and context amid proliferating generated alternatives.",
+      "design_implication": "A designer reviewing dozens of AI variants easily loses the exact visual fragment that worked in an earlier concept. When preserved sub-elements serve as direct queries and navigational anchors, exploration stops being disposable prompting and becomes an accretive, traceable history.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2610.24221",
+      "source_date": "2026-10-20T04:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Trinkets function as reusable materials, retrieval queries, and navigational anchors during design exploration.",
+          "quote": "We introduce trinkets: user-preserved design elements that function as reusable materials, retrieval queries, and navigational anchors for design exploration."
+        },
+        {
+          "claim": "The mechanism prevents designers from losing context as generated outputs proliferate.",
+          "quote": "as flawed generated outputs proliferate, designers may lose track of promising ideas and the context of their development."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 80,
+      "discovered_date": "2026-10-20",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-20-github-enables-continuing-copilot-app-agent-sessions-inside-",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "agents-in-tools",
+        "code-prototyping"
+      ],
+      "title": "GitHub enables continuing Copilot app agent sessions inside VS Code",
+      "summary": "GitHub launched the ability to transfer an active agent session from the GitHub Copilot app directly into VS Code, preserving conversation history, code changes, and working context without manual handoff.",
+      "design_implication": "A designer prototyping with an agent in a lightweight app hits the boundary where complex code edits require an IDE. Transferring intact conversational context and uncommitted diffs eliminates the friction of restating intents across tool boundaries.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "GitHub Blog",
+      "source_url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
+      "source_date": "2026-10-19T18:47:22.000Z",
+      "evidence": [
+        {
+          "claim": "Users can transfer an agent session into VS Code without losing working context or code changes.",
+          "quote": "move an agent session from the GitHub Copilot app into VS Code without losing the conversation, code changes, or working context."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 76,
+      "discovered_date": "2026-10-20",
+      "visual_type": "source_image",
+      "visual_url": "https://github.blog/wp-content/uploads/2026/10/Screenshot-2026-10-15-at-3.11.02-PM.png",
+      "visual_credit": "Image: GitHub",
+      "visual_source_url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
+      "visual_license": "official_with_credit"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 88,
+    "held": [
+      {
+        "source_url": "https://uxdesign.cc/anthropic-october-2026-study-human-attention-is-the-new-old-bottleneck-d7bc4642668a?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/playing-the-sanshin-without-a-sound-3ac88df6f65c?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/why-design-still-matters-taste-is-not-a-methodology-borrowed-slopes-62701d4c33dc?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-if-ai-sets-us-free-084f4310709b?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ux-designers-are-not-designing-interfaces-they-design-personalities-d94d874bb43d?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/beyond-the-canvas-03fce0bcbf7b?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/yggy",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/rovalty-creator-program-ugc",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/lugh-xtudio",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/jotform",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/stage-9",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/todo-is",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.figma.com/blog/design-together-with-code-layers/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/introducing-figma-specs/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/figma-deepens-investment-in-india/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-manon-macasaet/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/low-resource-programming-languages",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/itau-generative-ai",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/benefit-street-partners",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/what-ai-gets-wrong-and-what-failure-teaches-us/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/selection-structured-reasoning",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/plan-retrieve-tool-discovery",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/code-switching-detection",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mix-dont-tune",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/updates-to-hobby-and-pro-terms-of-service",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/mercury-3-now-available-on-ai-gateway",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/minimax-m3-1-flash-now-available-on-ai-gateway-for-free",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/ai-gateway-logs-now-show-session-affinity",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-maps-glossary/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-assistant-context/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.24076",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.24186",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.24207",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.24215",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/19/1147186/making-the-internet-better-for-ai-agents-might-make-it-worse-for-everyone-else/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/19/1147149/we-were-looking-at-it-wrong-the-explosive-claim-thats-upended-the-ai-world/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/19/1147103/the-download-preserving-the-arctic-permafrost-and-playful-ai-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/19/1146832/inside-the-quest-to-combat-arctic-fires-and-save-the-planets-frozen-carbon/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/19/1145904/tr-explains-how-far-can-we-push-computing/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/science/1013954/fossil-fuel-power-infrastructure-data-centers-report",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1014045/coreweave-stock-debt-sector-ai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/policy/1013113/democrats-ai-midterms",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/19/mamdani-says-feds-have-abdicated-on-ai-urges-new-yorkers-to-push-back/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/openai-engineer-accused-of-spying-on-executives-ordered-to-remain-in-custody/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/whatsapp-help-pages-leaked-hidden-instructions-for-a-meta-chatbot/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/disney-asked-characterai-to-go-bankrupt-for-a-get-out-of-lawsuits-card/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/onlyfans-creators-are-pissed-that-meta-lets-muse-talk-dirty/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/data-center-industry-is-trying-to-woo-kids/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/why-ai-isnt-ready-to-tackle-our-convoluted-genomes/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/how-name-things/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/recently-fixed-plex-media-vulnerabilities-are-being-exploited-to-install-malware/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/reactos-reaches-major-milestone-with-ntfs-install-support/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/targeted-ads-delivered-0-click-exploits-to-install-mercenary-malware/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/fridge-hack-costing-millions-and-sparking-fires-stemmed-from-poor-security/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "cross-surface-agent-continuity",
+        "name": "Cross-Surface Agent State Transfer",
+        "description": "Agent environments are transitioning from single-window chat silos to persistent cross-surface states that move context between lightweight web apps, OS controls, and desktop IDEs.",
+        "source_urls": [
+          "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
+          "https://openai.com/index/introducing-dots",
+          "https://www.theverge.com/tech/1007113/microsoft-windows-copilot-ai-control-search-hybrid-intelligence"
+        ],
+        "confidence": "emerging"
+      },
+      {
+        "id": "canvas-first-ai-workflows",
+        "name": "Canvases Replacing Chat for Complex Workflows",
+        "description": "Design and development platforms are substituting linear chat boxes with spatial canvas surfaces to ground multi-step agent actions and persistent state.",
+        "source_urls": [
+          "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+          "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
+          "https://www.figma.com/blog/build-by-design/"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 761,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1300,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 2
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1686,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 66,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 2
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-20-trinketry-introduces-preserved-design-elements-as-anchors-fo",
+        "title": "Trinketry introduces preserved design elements as anchors for generative exploration",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
