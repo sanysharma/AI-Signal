@@ -1,0 +1,691 @@
+{
+  "date": "2026-10-21",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-21-researchers-evaluate-interface-designs-for-multi-minute-agen",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "conversational-ui"
+      ],
+      "title": "Researchers evaluate interface designs for multi-minute agent micro-waits",
+      "summary": "An arXiv study examines micro-waits during multi-minute AI agent tasks, finding users experience idle frustration when watching progress but suffer attention fragmentation and lost context when navigating away.",
+      "design_implication": "A user initiates a complex agent prompt and tabs away to another tool, losing task context before completion. Progress interfaces must shift from passive loading spinners to stateful milestone previews and re-entry summaries that support graceful task resumption.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2610.27170",
+      "source_date": "2026-10-21",
+      "evidence": [
+        {
+          "claim": "Agent execution creates micro-waits that leave users caught between waiting and task-switching.",
+          "quote": "where a single turn routinely runs for minutes. This produces a micro-wait that is too long to watch and too short to leave."
+        },
+        {
+          "claim": "Switching away from running agents harms focus and degrades the context needed to resume.",
+          "quote": "switching away fragmented attention and forfeited the context needed to re-"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "source_tier": 1,
+      "word_count": 74,
+      "discovered_date": "2026-10-21",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-21-canvasobs-introduces-spatial-observation-for-agent-editing-o",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "agents-in-tools"
+      ],
+      "title": "CanvasObs introduces spatial observation for agent editing on infinite canvases",
+      "summary": "Researchers developed CanvasObs, a spatial observation layer for infinite canvas environments that allows editing agents to inspect hidden application states, offscreen objects, and connector bindings rather than relying purely on pixels.",
+      "design_implication": "A designer prompts an agent to restyle an entire user flow across multiple boards, but visual grouping tricks pixel-based models into modifying the wrong frames. Exposing structured scene graphs lets tools execute spatial updates without corrupting layered hierarchies.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2610.27176",
+      "source_date": "2026-10-21",
+      "evidence": [
+        {
+          "claim": "Agents editing 2D canvases fail when spatial pixels diverge from underlying object bindings.",
+          "quote": "visual containment and touching arrows may disagree with recorded frame membership or connector bindings."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "source_tier": 1,
+      "word_count": 79,
+      "discovered_date": "2026-10-21",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-21-meta-pauses-muse-artifact-sharing-after-public-exposure-of-c",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "permissions-and-identity",
+        "trust-and-explainability"
+      ],
+      "title": "Meta pauses Muse artifact sharing after public exposure of chat links",
+      "summary": "Meta suspended its Muse conversation sharing feature after security researchers discovered over 6,800 chat URLs exposed through public DNS records, leaving sensitive user prompts and business information accessible on the open web.",
+      "design_implication": "In a collaborative AI app, a designer clicks share to pass an agent output to a teammate, expecting private access. Defaulting shared links to public web exposure creates immediate data leaks, making explicit audience selectors mandatory during generation.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "none",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats",
+      "source_date": "2026-10-20",
+      "evidence": [
+        {
+          "claim": "Meta paused its assistant sharing feature following the public exposure of shared conversation URLs.",
+          "quote": "Meta says it paused a Muse feature that lets you share conversations with the AI assistant after researchers found the URLs publicly available on the web"
+        },
+        {
+          "claim": "Thousands of shared chat links were indexed in public records.",
+          "quote": "researchers at the security firm Claroc say they found more than 6,800 Muse links through public DNS records."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [
+        "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/"
+      ],
+      "source_tier": 2,
+      "word_count": 81,
+      "discovered_date": "2026-10-21",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    },
+    {
+      "id": "2026-10-21-adobe-adds-one-tap-generative-blink-repair-directly-over-lig",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "generative-media",
+        "design-tools"
+      ],
+      "title": "Adobe adds one-tap generative blink repair directly over Lightroom photos",
+      "summary": "Adobe released an Open Eyes Quick Action for Lightroom mobile that automatically detects closed eyes in photos and renders an overlay icon, allowing users to generate open eyes in a single tap.",
+      "design_implication": "A photographer reviewing portraits spots a subject blinking. Instead of typing into a prompt bar or painting with an inpainting brush, the interface renders an actionable badge on the face, turning generative image editing into an inline corrective affordance.",
+      "implication_lens": "pattern",
+      "visual_need": "none",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1014246/adobe-lightroom-mobile-ai-quick-action-open-eyes-closed-blink-repair",
+      "source_date": "2026-10-20",
+      "evidence": [
+        {
+          "claim": "Lightroom mobile presents a one-tap icon directly over detected closed eyes in portraits.",
+          "quote": "When the app detects a person, or a group of people, have their eyes closed in a photo it will automatically present users with a new Open Eyes Quick Action that appears as an icon over the image"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "source_tier": 2,
+      "word_count": 81,
+      "discovered_date": "2026-10-21",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 88,
+    "held": [
+      {
+        "source_url": "https://machinelearning.apple.com/research/selection-structured-reasoning",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/plan-retrieve-tool-discovery",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://vercel.com/blog/making-every-harness-durable",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.27148",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.27248",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1014999/google-gemini-ai-cars-android-auto",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://uxdesign.cc/let-ai-have-the-average-user-why-user-research-should-focus-on-bad-days-e7bba55f855f?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/anthropic-october-2026-study-human-attention-is-the-new-old-bottleneck-d7bc4642668a?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.figma.com/blog/design-together-with-code-layers/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/introducing-figma-specs/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/source-material-ben-ganz/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/figma-deepens-investment-in-india/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/ted-taylor-restaurant",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/terminal-x",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/low-resource-programming-languages",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/itau-generative-ai",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/code-switching-detection",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mix-dont-tune",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/websocket-support-is-now-generally-available",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/deepseek-v4-1-flash-is-now-available-in-token-pass",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/updates-to-hobby-and-pro-terms-of-service",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/mercury-3-now-available-on-ai-gateway",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/minimax-m3-1-flash-now-available-on-ai-gateway-for-free",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-maps-glossary/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-assistant-context/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.27238",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/20/1145205/its-a-bird-its-a-plane-its-a-robo-puffin/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/20/1145274/heres-the-tea/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/20/1145276/melt-it-spin-it-use-it-again/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/20/1145279/a-reason-to-eat-carbs/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/20/1145282/robotic-therapy-for-stroke-patients/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/20/1145287/taking-a-swing-at-a-pickleball-startup/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/science/1013954/fossil-fuel-power-infrastructure-data-centers-report",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/french-government-calls-emergency-meetings-with-platforms-over-protests/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/an-ai-agent-joined-a-listserv-of-top-internet-researchers-the-reply-all-chaos-is-still-unfolding/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/openai-engineer-accused-of-spying-on-executives-ordered-to-remain-in-custody/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/whatsapp-help-pages-leaked-hidden-instructions-for-a-meta-chatbot/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/disney-asked-characterai-to-go-bankrupt-for-a-get-out-of-lawsuits-card/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/onlyfans-creators-are-pissed-that-meta-lets-muse-talk-dirty/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/recently-fixed-plex-media-vulnerabilities-are-being-exploited-to-install-malware/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/reactos-reaches-major-milestone-with-ntfs-install-support/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ai-doesnt-care-about-your-job-title-c08dd4fdf8d8?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/playing-the-sanshin-without-a-sound-3ac88df6f65c?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/why-design-still-matters-taste-is-not-a-methodology-borrowed-slopes-62701d4c33dc?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-if-ai-sets-us-free-084f4310709b?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/hotly",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/the-brains",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/agent-pets",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/askdoozy",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/nativeship",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/iglass",
+        "reason": "below_bar"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "canvas-agent-interaction",
+        "name": "Spatial Canvas Interfaces for Agentic Workflows",
+        "description": "Tool creators and researchers are shifting complex AI agent workflows from linear chat windows onto two-dimensional infinite canvases backed by structured spatial scene graphs.",
+        "source_urls": [
+          "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+          "https://www.figma.com/blog/build-by-design/",
+          "https://arxiv.org/abs/2610.27176"
+        ],
+        "confidence": "established"
+      },
+      {
+        "id": "autonomous-agent-browsing",
+        "name": "Agent-First Web Protocols and Guardrails",
+        "description": "Platforms are building machine-readable checkout flows for automated browsing agents while consumer websites enforce strict scraping blocks against unverified autonomous shoppers.",
+        "source_urls": [
+          "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-AI-agents/",
+          "https://vercel.com/blog/vercel-and-shopify-make-agents-first-class-shoppers",
+          "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 762,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1303,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 5
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1689,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 35,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 2
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-21-researchers-evaluate-interface-designs-for-multi-minute-agen",
+        "title": "Researchers evaluate interface designs for multi-minute agent micro-waits",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-21-canvasobs-introduces-spatial-observation-for-agent-editing-o",
+        "title": "CanvasObs introduces spatial observation for agent editing on infinite canvases",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-21-meta-pauses-muse-artifact-sharing-after-public-exposure-of-c",
+        "title": "Meta pauses Muse artifact sharing after public exposure of chat links",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-21-adobe-adds-one-tap-generative-blink-repair-directly-over-lig",
+        "title": "Adobe adds one-tap generative blink repair directly over Lightroom photos",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
