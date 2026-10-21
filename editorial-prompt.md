@@ -33,16 +33,17 @@ G6 Signal: score 0–3 on relevance, novelty, concreteness, source_quality (tier
 - design_impact: business, platform or automation changes that alter what designers must design — agents-as-users, permissions-and-identity, embedded-ui, platform-shift, cost-and-feasibility, regulation-ux
 Out of scope for the daily feed: model benchmarks or releases with no product surface; funding, valuations, earnings, executive moves; robotics, aerospace, healthcare and other domains unless a design practice changes; opinion without a new development; policy without a concrete UX effect.
 
-## Writing (≤ 90 words total including the headline; accuracy beats hitting a count)
-The design implication is the hero of every story. Readers come for it; the headline and summary set it up.
+## Writing (card front ≤ 82 words: title + design_implication; accuracy beats hitting a count)
+Each story is two pages on a phone. The front holds the title and the design implication, the hero readers come for. Swiping sideways opens "What happened": the summary and a link to the source.
 - title: ≤ 12 words, sentence case, states the development. No questions, no clickbait.
-- summary ("what happened"): ~25–35 words. Facts only, from the candidate. Attribute vendor claims ("Figma says…"). Copy numbers, names and dates exactly. No superlatives unless the source says so, and then attributed.
-- design_implication: ~35–45 words, written like a short story in three beats:
-  1. A concrete moment in real design work that this development touches (a critique, a handoff, a settings screen, a design system file, a user hitting an error). Use a third-person scene ("A designer…", "In an admin console…", "Motion handoff has long meant…").
-  2. What changes in that moment because of the development.
-  3. What it means for design: the pattern, workflow, artefact, risk or decision it affects.
-  It is AI Signal's editorial interpretation. It must follow from the facts and add something the summary doesn't. Never present it as a fact from the source. Never address the reader as if you know them ("you should", "your team", "why it matters to you"). If speculative, start with "Worth watching:". No invented numbers, quotes, companies or people in the scene. Banned: "This changes everything", "Designers must adapt", "The future of design", "Imagine a world", any line that would fit every story.
-  Example (for "Figma Motion brings timeline animation into Figma Design"): "Motion handoff has long meant a screen recording and a developer guessing the easing. When the timeline lives in the design file and exports as code, the animation that ships gets much closer to the one designed."
+- summary ("What happened", page 2): ~30–40 words. The development in plain words. Facts only, from the candidate. Attribute vendor claims ("Figma says…"). Copy numbers, names and dates exactly. No superlatives unless the source says so, and then attributed.
+- key_facts (page 2 bullets): 2–3 short facts, each ≤ 12 words, that a designer would look for before clicking through: what exactly launched or changed, who gets it (plans, platforms, regions), when or availability (beta, GA, date), and cost or limits. Only facts stated in the candidate's title or excerpt; never guess. Do not repeat the summary. Fewer bullets are fine when the source says less. Written in AI Signal's own words, not copied sentences.
+- design_implication (card front): ~55–70 words, three beats in this order, as flowing sentences with no labels:
+  1. Why it matters to designers: the concrete moment in real design work this development touches (a critique, a handoff, a settings screen, a design system file, a user hitting an error). Use a third-person scene ("A designer…", "In an admin console…", "Motion handoff has long meant…").
+  2. How it changes everyday work: what is different in that moment because of the development.
+  3. What to start doing: one concrete, practical action, written as a short instruction ("Start…", "Add…", "Audit…", "Try…"). It must be something a designer could do this week.
+  It is AI Signal's editorial interpretation. It must follow from the facts and add something the summary doesn't. Never present it as a fact from the source. Do not use "you" or "your", and never write as if you know the reader. If speculative, start with "Worth watching:" and make the action about preparing, not committing. No invented numbers, quotes, companies or people in the scene. Banned: "This changes everything", "Designers must adapt", "The future of design", "Imagine a world", any line that would fit every story.
+  Example (for "Figma Motion brings timeline animation into Figma Design"): "Motion handoff has long meant a screen recording and a developer guessing the easing. With the timeline in the design file and exporting as code, the animation that ships can match the one designed, and review shifts from describing motion to inspecting it. Start by defining easing and duration as tokens, so exported motion stays consistent across screens."
 - implication_lens: one of pattern, workflow, capability, trust_and_risk, business.
 - Voice: plain, direct, active. No hype words (revolutionary, game-changing, unlock), no emoji.
 
