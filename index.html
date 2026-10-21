@@ -955,6 +955,7 @@ function openBookmark(){
 
 
 /* ---------- feedback: rating + quick tags + comment (sent as a PostHog event) ---------- */
+const FEEDBACK_EMAIL='sany.sharma09@gmail.com';
 const FB_TAGS=['Just right','Too long','Not relevant to me','Hard to navigate','Love the design','Want more stories'];
 const fbState={rating:0,tags:new Set()};
 function fbKey(){ return 'ain-fb-'+(DAYS[dayIdx].iso||DAYS[dayIdx].label); }
@@ -967,8 +968,8 @@ function feedbackHTML(){
     <div class="fb-tags">${FB_TAGS.map(t=>`<button class="tchip" data-fbtag="${esc(t)}" aria-pressed="${fbState.tags.has(t)}">${esc(t)}</button>`).join('')}</div>
     <label class="sm" for="fb-text-${dayIdx}">What should we improve? <span style="opacity:.7">(optional)</span></label>
     <textarea id="fb-text-${dayIdx}" class="fb-text" rows="2" maxlength="500" placeholder="The design, the stories, anything"></textarea>
-    <button class="btn" data-fb-send ${fbState.rating?'':'disabled'}>Send feedback</button>
-    <span class="sm">Anonymous. Read by the editor every week.</span>
+    <button class="btn" data-fb-send ${fbState.rating?'':'disabled'}>Send feedback by email</button>
+    <span class="sm">Opens your email app with your answers filled in. Press Send there to deliver it.</span>
   </div>`;
 }
 document.addEventListener('click',e=>{
@@ -981,8 +982,11 @@ document.addEventListener('click',e=>{
     const box=snd.closest('.fb'), comment=(box.querySelector('.fb-text')?.value||'').trim().slice(0,500);
     const payload={rating:fbState.rating, tags:[...fbState.tags], comment, brief:DAYS[dayIdx].iso||DAYS[dayIdx].label, stories:current().length};
     track('feedback_submitted', payload);
+    /* 21 Oct: feedback is delivered by email, so ad blockers can't drop it (analytics only counted it) */
+    const body=[`Rating: ${payload.rating} of 5`, payload.tags.length?`Tags: ${payload.tags.join(', ')}`:'', payload.comment?`\nComment:\n${payload.comment}`:'', `\nBrief: ${payload.brief} · ${payload.stories} stories`].filter(Boolean).join('\n');
+    location.href=`mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent('AI Signal feedback: '+payload.rating+'/5')}&body=${encodeURIComponent(body)}`;
     store.set(fbKey(),'1');
-    box.outerHTML=`<div class="fb full done"><b>Thanks for your feedback.</b><span class="sm">It shapes the next brief and the interface.</span></div>`;
+    box.outerHTML=`<div class="fb full done"><b>Thanks for your feedback.</b><span class="sm">If your email app didn’t open, write to <a href="mailto:${FEEDBACK_EMAIL}">${FEEDBACK_EMAIL}</a>.</span></div>`;
   }
   if(e.target.closest('[data-go-learn]')) document.getElementById('t-learn').click();
 });
