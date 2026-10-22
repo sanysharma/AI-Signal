@@ -1,0 +1,560 @@
+{
+  "date": "2026-10-22",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-22-walmart-permits-autonomous-ai-shopping-agents-with-review-an",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "permissions-and-identity",
+        "embedded-ui"
+      ],
+      "title": "Walmart permits autonomous AI shopping agents with review and spending limits",
+      "summary": "Walmart announced it will allow AI agents to shop on its website starting next month. The platform will introduce controls enabling customers to set spending limits and review or approve purchases before transactions complete.",
+      "key_facts": [
+        "Launches next month on Walmart's website for customer AI agents.",
+        "Includes controls to set spending limits on agent purchases.",
+        "Requires systems for customers to review and approve transactions."
+      ],
+      "design_implication": "Designing checkout has always assumed a human carefully reviewing a cart before paying. When autonomous agents make purchases on a customer's behalf, design shifts from multi-step checkout funnels to pre-transaction permission boundaries and asynchronous transaction approvals. Start mapping spending threshold controls and explicit approval modals into checkout settings, establishing clear safeguards before autonomous buyers place automated orders.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents",
+      "source_date": "2026-10-21T19:30:00.000Z",
+      "evidence": [
+        {
+          "claim": "Walmart will soon permit AI agents to make purchases on its website.",
+          "quote": "Walmart will soon let AI agents shop on its website for you. Next month, the retail giant will allow you to use an AI agent on the site"
+        },
+        {
+          "claim": "Shoppers can configure spending limits and transaction approvals for agent purchases.",
+          "quote": "with systems in place to let you approve and review purchases and set spending limits."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 13
+      },
+      "related_sources": [
+        "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/"
+      ],
+      "source_tier": 2,
+      "word_count": 102,
+      "discovered_date": "2026-10-22",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 88,
+    "held": [
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent",
+        "reason": "awaiting_ga"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.28929",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/elevenlabs-realtime-translation",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/design-together-with-code-layers/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/introducing-figma-specs/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/source-material-ben-ganz/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/figma-deepens-investment-in-india/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/att-legal",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/broad-access-through-consistent-standards",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/openai-models-google-cloud",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/selection-structured-reasoning",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/plan-retrieve-tool-discovery",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/code-switching-detection",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mix-dont-tune",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/routing-middleware-now-supports-python",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/basetens-mammoth-1-and-elephant-1-now-available-on-ai-gateway-for-free",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/skipped-monorepo-deployments-no-longer-count-against-limits",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/websocket-support-is-now-generally-available",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/deepseek-v4-1-flash-is-now-available-in-token-pass",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/updates-to-hobby-and-pro-terms-of-service",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-maps-glossary/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-assistant-context/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.29140",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.29312",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.29428",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.29487",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/21/1147573/the-download-introducing-impossible-issue/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/21/1146053/editor-letter-we-can-do-impossible-things/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/21/1146061/nuclear-powered-spaceships-impossible-issue/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/21/1146121/exercise-in-a-pill-impossible-issue/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/21/1146124/interspecies-communication-impossible-issue/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/21/1146128/cleaning-up-pfas-impossible-issue/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1015958/data-center-pollution-rising-report",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1015799/meta-shares-class-ai-q3-2026-earnings",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/transportation/1015281/gemini-ai-apple-carplay-voice-google-maps",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/21/blackstones-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/21/techcrunch-founder-summit-2026-everything-you-need-to-know/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/hackers-exploited-the-php-vulnerabilities-days-before-they-were-patched/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/mark-zuckerberg-agrees-to-stay-in-california-despite-billionaires-tax-ballot-measure/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/recursive-self-improvement-flint-latest-model-scary-good/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huangs-vision-for-europe-runs-on-plug-in-data-centers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/this-is-not-a-drill-2-php-vulnerabilities-are-setting-the-internet-on-fire/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-guardrails-arent-stopping-criminal-hackers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/survey-enterprises-waste-28-percent-of-software-budgets-on-unwanted-upgrades/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/recently-fixed-plex-media-vulnerabilities-are-being-exploited-to-install-malware/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/reactos-reaches-major-milestone-with-ntfs-install-support/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/a-founder-with-a-tool-is-not-a-founder-with-a-clue-65bccb0dc2f8?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/can-you-take-ai-at-its-word-06126b976245?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/design-vs-adhd-4411c3b81d1b?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/let-ai-have-the-average-user-why-user-research-should-focus-on-bad-days-e7bba55f855f?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ai-doesnt-care-about-your-job-title-c08dd4fdf8d8?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/anthropic-october-2026-study-human-attention-is-the-new-old-bottleneck-d7bc4642668a?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/sponkly",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/archivist",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/whiteboard-5",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/notif-2",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/fastlane-3",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agentic-commerce-and-delegated-checkout",
+        "name": "Agentic commerce and delegated checkout",
+        "description": "Retailers and commerce platforms are establishing permissions, spending limits, and transaction review checkpoints as autonomous AI agents begin completing purchases for consumers.",
+        "source_urls": [
+          "https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents",
+          "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/",
+          "https://vercel.com/blog/vercel-and-shopify-make-agents-first-class-shoppers",
+          "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 762,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1312,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 5
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 2
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1692,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 30,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 2
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-22-walmart-permits-autonomous-ai-shopping-agents-with-review-an",
+        "title": "Walmart permits autonomous AI shopping agents with review and spending limits",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
