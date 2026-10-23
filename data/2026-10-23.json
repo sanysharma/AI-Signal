@@ -1,0 +1,730 @@
+{
+  "date": "2026-10-23",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-23-1password-launches-credential-delegation-allowing-ai-agents-",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "permissions-and-identity",
+        "agents-as-users"
+      ],
+      "title": "1Password launches credential delegation allowing AI agents to authenticate without passwords",
+      "summary": "1Password launched a feature enabling AI agents to log into personal accounts on behalf of customers without viewing the underlying passwords. The system acts as a protective layer, safeguarding private credentials while granting task-specific access.",
+      "key_facts": [
+        "Enables AI agents to log into personal accounts without seeing passwords.",
+        "Protects private credentials while delegating login authority to external agents."
+      ],
+      "design_implication": "In an authentication flow, designers have traditionally assumed only a human enters credentials. Delegated agent authentication shifts that paradigm from storing secrets to managing scoped delegation grants and revocation triggers. Designers must now craft explicit delegation handshakes that show what actions agents can take on a user's behalf. Audit current login screens to introduce distinct permission gates for autonomous agents.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "TechCrunch (AI)",
+      "source_url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+      "source_date": "2026-10-22",
+      "evidence": [
+        {
+          "claim": "1Password launched a login delegation feature that keeps passwords hidden from AI agents.",
+          "quote": "The new feature allows agents to log into a customer's personal accounts while still protecting the private credentials that secure those accounts."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "source_tier": 2,
+      "word_count": 106,
+      "discovered_date": "2026-10-23",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-23-canva-launches-canva-craft-image-model-that-plans-layouts-be",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "generative-media",
+        "design-tools"
+      ],
+      "title": "Canva launches Canva Craft image model that plans layouts before generation",
+      "summary": "Canva launched Canva Craft, an in-house image generation model built on a two-stage architecture. The model plans design structure before synthesizing imagery, which Canva says provides greater precision, consistency, and control compared to existing competing models.",
+      "key_facts": [
+        "Employs two-stage architecture that plans layouts prior to image generation.",
+        "Positions Canva Craft as an in-house competitor to major generative models.",
+        "Available to all Canva users for customizable, low-cost asset creation."
+      ],
+      "design_implication": "During visual asset generation, designers usually discard dozens of unpredictable outputs that ignore basic spatial balance. Separating structural layout planning from pixel generation gives generative tools predictable compositional grids. This allows teams to iterate on hierarchy before locking aesthetic details. Start designing generative asset templates with explicit bounding boxes, ensuring automated image generation respects spatial composition rules.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+      "source_date": "2026-10-22",
+      "evidence": [
+        {
+          "claim": "Canva Craft plans designs before generating images to improve precision and control.",
+          "quote": "The model, called Canva Craft, uses a two-stage architecture that allows it to plan a design before generating an image, allowing for \"greater precision, consistency and control\""
+        },
+        {
+          "claim": "Canva released its proprietary image generation model to compete directly with existing providers.",
+          "quote": "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 13
+      },
+      "related_sources": [
+        "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/"
+      ],
+      "source_tier": 2,
+      "word_count": 104,
+      "discovered_date": "2026-10-23",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-23-microsoft-research-introduces-flint-interactive-for-agent-ge",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "generative-ui",
+        "agentic-ux"
+      ],
+      "title": "Microsoft Research introduces Flint-interactive for agent-generated interactive data visualizations",
+      "summary": "Microsoft Research unveiled Flint-interactive, a specialized language that allows AI agents to synthesize interactive data visualizations. Users can click charts, filter datasets, and highlight related elements, exploring dimensions beyond what the initial system author pre-selected.",
+      "key_facts": [
+        "Provides a formal language for agents to generate interactive visualizations.",
+        "Enables dynamic filtering, cross-highlighting, and exploration beyond initial views."
+      ],
+      "design_implication": "When reviewing an analytics dashboard, users frequently hit dead ends with static charts generated by conversational assistants. Dynamic visualization languages allow agents to emit exploratory UI widgets rather than flat graphics. That changes analytics design from rendering finished views to defining interactive manipulation primitives. Start auditing conversational reporting tools to replace static chart images with manipulable state controls.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "Microsoft Research Blog",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+      "source_date": "2026-10-22",
+      "evidence": [
+        {
+          "claim": "Flint-interactive equips AI agents with a language to produce interactive charts.",
+          "quote": "Flint-interactive gives AI agents a language for creating interactive visualizations."
+        },
+        {
+          "claim": "The system allows users to interactively filter and highlight related content.",
+          "quote": "Click a chart, filter data, highlight related content, and explore beyond the view the author originally chose."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "source_tier": 1,
+      "word_count": 102,
+      "discovered_date": "2026-10-23",
+      "visual_type": "source_image",
+      "visual_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/10/FlintInteractive-TWLIFB-1200x627-1.jpg",
+      "visual_credit": "Image: Microsoft",
+      "visual_source_url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-10-23-atlas-framework-introduces-trajectory-sensemaking-for-long-h",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "trust-and-explainability"
+      ],
+      "title": "Atlas framework introduces trajectory sensemaking for long-horizon autonomous AI agents",
+      "summary": "Researchers introduced Atlas, an interface framework designed to help humans evaluate complex agent runs conducted without real-time oversight. As autonomous agents execute extensive multi-step workflows, Atlas organizes lengthy trajectory histories into navigable structures for post-hoc sensemaking.",
+      "key_facts": [
+        "Addresses asynchronous sensemaking for unsupervised, long-horizon agent runs.",
+        "Structures multi-step trajectories so users can audit unmonitored execution."
+      ],
+      "design_implication": "Returning to an agent workspace after several hours, a user faces an overwhelming backlog of actions and decisions. Linear chat transcripts fail when reviewing long-running autonomous tasks. Interfaces must shift toward hierarchical trajectory maps that summarize progress while surfacing branch points for validation. Try structuring background agent activity logs into inspectable checkpoint cards rather than continuous text feeds.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2610.30548",
+      "source_date": "2026-10-23",
+      "evidence": [
+        {
+          "claim": "Atlas helps humans evaluate long-running agent workflows completed without real-time monitoring.",
+          "quote": "When researchers return to a long-horizon run, they must evaluate work they did not monitor in real time."
+        },
+        {
+          "claim": "Autonomous agent execution requires new interfaces for human sensemaking.",
+          "quote": "Yet scaling scientific execution does not automatically scale researchers' ability to make sense of what agents produce."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "source_tier": 1,
+      "word_count": 104,
+      "discovered_date": "2026-10-23",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 91,
+    "held": [
+      {
+        "source_url": "https://uxdesign.cc/buy-versus-build-is-now-also-a-ux-decision-especially-in-enterprise-6b4345715c63?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/a-founder-with-a-tool-is-not-a-founder-with-a-clue-65bccb0dc2f8?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/can-you-take-ai-at-its-word-06126b976245?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/design-vs-adhd-4411c3b81d1b?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/let-ai-have-the-average-user-why-user-research-should-focus-on-bad-days-e7bba55f855f?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ai-doesnt-care-about-your-job-title-c08dd4fdf8d8?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/realtime-max-mini",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/bloblings",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/shogunai",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/plango",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/instant-search-2",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/polylane",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-to-put-your-design-system-to-work-with-the-figma-agent/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/lufthansa-figma-make/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-ben-ganz/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/figma-deepens-investment-in-india/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/design-together-with-code-layers/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/decisions-api",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/index/forward-deployed-engineering-means",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/uber-chatgpt-work-rollout",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/att-legal",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/broad-access-through-consistent-standards",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/selection-structured-reasoning",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/plan-retrieve-tool-discovery",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/code-switching-detection",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mix-dont-tune",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/eight-more-tlds-now-eligible-for-a-free-domain-with-pro",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/death-to-long-lived-static-credentials",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/routing-middleware-now-supports-python",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/basetens-mammoth-1-and-elephant-1-now-available-on-ai-gateway-for-free",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/skipped-monorepo-deployments-no-longer-count-against-limits",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/websocket-support-is-now-generally-available",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-maps-glossary/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ai-assistant-context/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.30195",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.30353",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.30568",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.30599",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/22/1146109/designing-an-ai-serving-harness-built-to-last/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/22/1146103/the-foundations-of-scalable-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/22/1147612/the-download-computing-next-leap-permafrost-climate-threat/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/22/1146812/making-the-case-for-context-aware-ai/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/22/1147591/permafrost-primer/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1017066/meta-muse-sharing-back-on-artifiacts",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/news/1017012/discord-markdown-previews-organize-servers-channels",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1016905/meta-earnings-fall-2026-muse-network",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/aged-intelligence-society-interview/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/meet-mori-a-cute-robot-mushroom-that-doesnt-really-say-or-do-anything/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/hugging-face-new-ai-biology-model-chat-with-dna/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/hackers-exploited-the-php-vulnerabilities-days-before-they-were-patched/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/mark-zuckerberg-agrees-to-stay-in-california-despite-billionaires-tax-ballot-measure/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/recursive-self-improvement-flint-latest-model-scary-good/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/disgraced-emudhra-drops-out-of-tls-business-following-certificate-debacle/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/300-tor-exit-nodes-hijacked-to-intercept-ssh-traffic-and-retrieve-plaintext-email/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/survey-enterprises-waste-28-percent-of-software-budgets-on-unwanted-upgrades/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+        "reason": "duplicate"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-identity-and-credential-delegation",
+        "name": "Agent credential delegation and permission scoping",
+        "description": "Platforms are shifting from exposing raw credentials to issuing scoped, identity-brokered delegations that let autonomous agents perform actions without accessing underlying human secrets.",
+        "source_urls": [
+          "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+          "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+          "https://blog.cloudflare.com/workers-granular-authorization/",
+          "https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents"
+        ],
+        "confidence": "established"
+      },
+      {
+        "id": "agent-generated-interactive-ui",
+        "name": "Agent-generated interactive interfaces",
+        "description": "AI systems are moving beyond static text and flat images to synthesize interactive, stateful interfaces that allow users to directly manipulate, filter, and inspect runtime data.",
+        "source_urls": [
+          "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+          "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6",
+          "https://arxiv.org/abs/2610.02369"
+        ],
+        "confidence": "emerging"
+      },
+      {
+        "id": "long-horizon-agent-inspection",
+        "name": "Asynchronous agent trajectory inspection",
+        "description": "Interfaces are evolving structured overview patterns to help humans audit, navigate, and evaluate massive multi-step agent actions completed asynchronously.",
+        "source_urls": [
+          "https://arxiv.org/abs/2610.30548",
+          "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/",
+          "https://arxiv.org/abs/2610.27170"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 764,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1316,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 2
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1694,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 37,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 2
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-23-1password-launches-credential-delegation-allowing-ai-agents-",
+        "title": "1Password launches credential delegation allowing AI agents to authenticate without passwords",
+        "source": "TechCrunch (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-23-canva-launches-canva-craft-image-model-that-plans-layouts-be",
+        "title": "Canva launches Canva Craft image model that plans layouts before generation",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-23-atlas-framework-introduces-trajectory-sensemaking-for-long-h",
+        "title": "Atlas framework introduces trajectory sensemaking for long-horizon autonomous AI agents",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
