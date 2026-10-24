@@ -1,0 +1,585 @@
+{
+  "date": "2026-10-24",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-24-vercel-connect-generates-task-scoped-stripe-keys-for-autonom",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "permissions-and-identity",
+        "agents-as-users"
+      ],
+      "title": "Vercel Connect generates task-scoped Stripe keys for autonomous agents",
+      "summary": "Vercel Connect added managed Stripe API keys, allowing teams to generate isolated, task-specific credentials for autonomous agents. The connector automatically provisions restricted keys directly in Stripe accounts, constrained to user-selected permissions rather than sharing broad workspace credentials.",
+      "key_facts": [
+        "Creates task-specific restricted Stripe API keys for individual agents.",
+        "Managed API Key available as a new connection method in Vercel Connect.",
+        "Existing MCP and self-managed API key options remain available."
+      ],
+      "design_implication": "In an authorization settings screen, an administrator configuring an autonomous agent has traditionally faced an all-or-nothing choice between sharing master credentials or blocking automation entirely. Granular key provisioning shifts agent security into a task-scoped delegation flow where each capability requires distinct approval. Start designing agent onboarding flows that surface permission scopes per task rather than granting ambient account-level API access.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/vercel-connect-adds-managed-stripe-api-keys",
+      "source_date": "2026-10-23",
+      "evidence": [
+        {
+          "claim": "Vercel Connect can provision separate restricted Stripe keys per agent task",
+          "quote": "can now create a separate for each agent or task. When you create a Stripe connector, you can now choose Managed API Key as the connection method."
+        },
+        {
+          "claim": "Vercel provisions the key in Stripe with user-selected permissions",
+          "quote": "Vercel creates the key in your Stripe account, limited to the permissions you pick."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "source_tier": 1,
+      "word_count": 106,
+      "discovered_date": "2026-10-24",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2LbnsC2Wg0YUHbvUO0lqcl/47adfabad64ec91f06365dda9914b5f2/image__50_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/vercel-connect-adds-managed-stripe-api-keys",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-10-24-nn-g-survey-finds-ux-teams-report-mixed-feelings-despite-ai-",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "roles-and-skills",
+        "design-ops"
+      ],
+      "title": "NN/g survey finds UX teams report mixed feelings despite AI speed gains",
+      "summary": "A Nielsen Norman Group survey finds that while AI tools accelerate nearly every task for UX practitioners, overall sentiment remains lukewarm. Unreliable model outputs, top-down workplace mandates, and inflated stakeholder expectations diminish perceived productivity gains.",
+      "key_facts": [
+        "AI speeds up nearly every UX workflow across design and research.",
+        "Lukewarm sentiment stems from unreliable output and organizational mandates.",
+        "Inflated leadership expectations offset individual time savings."
+      ],
+      "design_implication": "In a sprint planning session, product designers face compressed timelines driven by leadership assuming generative tools eliminate production overhead. When unvetted AI drafts require extensive manual cleanup, design quality suffers under synthetic velocity. Audit project estimations this week to distinguish rapid drafting from production refinement, ensuring sprint schedules budget explicit time for human critique and verification.",
+      "implication_lens": "workflow",
+      "visual_need": "none",
+      "source_name": "Nielsen Norman Group",
+      "source_url": "https://www.nngroup.com/articles/ai-in-ux-survey-26/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "source_date": "2026-10-23",
+      "evidence": [
+        {
+          "claim": "AI speeds up UX tasks while practitioners express mixed sentiment",
+          "quote": "AI saves UX practitioners time on nearly every task, yet most feel lukewarm about it"
+        },
+        {
+          "claim": "Unreliable outputs and mandates diminish productivity gains",
+          "quote": "mandates, unreliable output, and inflated expectations eat the gains."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "source_tier": 1,
+      "word_count": 103,
+      "discovered_date": "2026-10-24",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 82,
+    "held": [
+      {
+        "source_url": "https://vercel.com/blog/how-vercel-agent-accesses-production-safely",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-cli-adds-spend-management",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/send-feedback-from-vercel-mcp",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/selection-structured-reasoning",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/plan-retrieve-tool-discovery",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://uxdesign.cc/can-you-take-ai-at-its-word-06126b976245?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.figma.com/blog/6-ways-teams-are-experimenting-with-code-layers/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-to-put-your-design-system-to-work-with-the-figma-agent/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://openai.com/index/decisions-api",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/canva",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/1password",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/lufthansa-figma-make/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-ben-ganz/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/figma-deepens-investment-in-india/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/forward-deployed-engineering-means",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/uber-chatgpt-work-rollout",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/code-switching-detection",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mix-dont-tune",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/deployments-now-show-build-cache-size",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/how-interfaze-serves-50-million-requests-a-month-on-vercel",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-disciplines-glossary/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-maps-glossary/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/23/1147628/the-download-testing-tech-promises-science-blind-spots/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/23/1147610/biotech-you-can-see-everything-theranos-holmes/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/22/1146109/designing-an-ai-serving-harness-built-to-last/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/22/1146103/the-foundations-of-scalable-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/22/1147612/the-download-computing-next-leap-permafrost-climate-threat/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/22/1146812/making-the-case-for-context-aware-ai/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/podcast/1017447/iphone-duo-ipad-review-score-vergecast",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/aged-intelligence-society-interview/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/meet-mori-a-cute-robot-mushroom-that-doesnt-really-say-or-do-anything/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/hugging-face-new-ai-biology-model-chat-with-dna/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/hackers-exploited-the-php-vulnerabilities-days-before-they-were-patched/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/mark-zuckerberg-agrees-to-stay-in-california-despite-billionaires-tax-ballot-measure/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/recursive-self-improvement-flint-latest-model-scary-good/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/disgraced-emudhra-drops-out-of-tls-business-following-certificate-debacle/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/300-tor-exit-nodes-hijacked-to-intercept-ssh-traffic-and-retrieve-plaintext-email/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/survey-enterprises-waste-28-percent-of-software-budgets-on-unwanted-upgrades/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/entering-atomic-design-from-the-screen-bae744ecc288?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/supersonic-dreams-how-post-war-france-invented-the-future-and-then-stopped-fe2cb26dc7cc?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/buy-versus-build-is-now-also-a-ux-decision-especially-in-enterprise-6b4345715c63?source=rss----138adf9c44c---4",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://uxdesign.cc/a-founder-with-a-tool-is-not-a-founder-with-a-clue-65bccb0dc2f8?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/design-vs-adhd-4411c3b81d1b?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/basedash",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/agentvalley",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/many-displays",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/shedi",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "task-scoped-agent-permissions",
+        "name": "Task-Scoped Agent Permission Delegation",
+        "description": "Platforms and credential managers are replacing broad administrative tokens with ephemeral, task-restricted credentials and scoped approval boundaries for autonomous agents.",
+        "source_urls": [
+          "https://vercel.com/changelog/vercel-connect-adds-managed-stripe-api-keys",
+          "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+          "https://blog.cloudflare.com/workers-granular-authorization/"
+        ],
+        "confidence": "established"
+      },
+      {
+        "id": "canvas-first-agent-workflows",
+        "name": "Canvas-First Agent Workflows",
+        "description": "Development and creative tools are shifting away from linear chat panels toward spatial canvases for multi-step agent orchestration and code generation.",
+        "source_urls": [
+          "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+          "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
+          "https://www.figma.com/blog/build-by-design/"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 765,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1318,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 2
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1704,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 3
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-24-nn-g-survey-finds-ux-teams-report-mixed-feelings-despite-ai-",
+        "title": "NN/g survey finds UX teams report mixed feelings despite AI speed gains",
+        "source": "Nielsen Norman Group",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
