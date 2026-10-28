@@ -1,0 +1,685 @@
+{
+  "date": "2026-10-28",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-10-28-firefox-smart-window-adds-tab-aware-ai-form-filling",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "embedded-ui",
+        "conversational-ui"
+      ],
+      "title": "Firefox Smart Window adds tab-aware AI form filling",
+      "summary": "Mozilla updated Smart Window in Firefox to monitor open browser tabs and automatically populate online forms, such as transferring LinkedIn career data directly into multi-field job applications.",
+      "key_facts": [
+        "Monitors open tabs to auto-populate forms",
+        "Requires at least four text fields to trigger"
+      ],
+      "design_implication": "A user hitting a multi-step checkout or application form no longer types across isolated fields. With the browser synthesizing unstructured background context into inputs, validation shifts from per-field typing errors to high-level review of pre-filled values. Audit form architectures to expose confirmation states and field sources so users can verify imported context before submission.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1019551/firefox-smart-window-ai-fill-forms",
+      "source_date": "2026-10-27T16:14:18.000Z",
+      "evidence": [
+        {
+          "claim": "Firefox Smart Window fills out online forms using open tab context.",
+          "quote": "updating Smart Window - Firefox's AI-powered browsing experience - with a new feature that can help you fill out online forms based on your open tabs."
+        },
+        {
+          "claim": "The feature activates on forms containing at least four fields.",
+          "quote": "You can try out this feature by clicking into a form with at least four text fields"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "source_tier": 2,
+      "word_count": 89,
+      "discovered_date": "2026-10-28",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-28-vercel-observability-adds-tracking-dashboard-for-ai-bot-traf",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "platform-shift"
+      ],
+      "title": "Vercel Observability adds tracking dashboard for AI bot traffic",
+      "summary": "Vercel added AI traffic insights to its Observability suite, allowing teams to monitor and query how automated AI bots and agents access web applications via dashboard and CLI.",
+      "key_facts": [
+        "Visualizes AI bot access patterns in dashboard",
+        "CLI metric queries require Observability Plus"
+      ],
+      "design_implication": "Web telemetry has long assumed human navigation paths through landing pages and menus. When autonomous agents browse endpoints directly, traditional bounce rates and conversion funnels produce misleading signals. Review web analytics models to segment synthetic bot sessions from human user journeys, ensuring product discovery designs reflect actual human behavior.",
+      "implication_lens": "business",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/ai-traffic-insights-now-available-in-vercel-observability",
+      "source_date": "2026-10-27T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel Observability provides visibility into how AI bots access websites.",
+          "quote": "You can now query AI traffic in Vercel Observability to understand how AI bots are accessing your site."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "source_tier": 1,
+      "word_count": 86,
+      "discovered_date": "2026-10-28",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/62BrrANN6vuolmGvpCKCra/7b29aac3ebc0552bfb554735e391d37f/ai_traffic_insights_og.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/ai-traffic-insights-now-available-in-vercel-observability",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-10-28-bank-of-america-warns-customers-against-sharing-credentials-",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "permissions-and-identity",
+        "agents-as-users",
+        "trust-and-explainability"
+      ],
+      "title": "Bank of America warns customers against sharing credentials with AI agents",
+      "summary": "Bank of America issued guidance advising customers not to hand over online banking passwords to autonomous AI assistants, reiterating that account holders remain strictly liable for any resulting account activity.",
+      "key_facts": [
+        "Explicitly warns against sharing passwords with AI agents",
+        "Customers remain liable for all agent-initiated activity"
+      ],
+      "design_implication": "In an admin or account settings screen, credential sharing has become a high-risk user workaround for delegating tasks. As financial institutions penalize direct password delegation, product designers must stop relying on raw credential inputs and build scoped delegation patterns. Start designing explicit authorization handoffs with defined spending limits and time-bounded sessions instead of full login bypasses.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "TechCrunch (AI)",
+      "source_url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
+      "source_date": "2026-10-27T21:44:34.000Z",
+      "evidence": [
+        {
+          "claim": "Bank of America told customers not to give passwords to AI assistants.",
+          "quote": "The banking giant reminds customers that \"you're responsible for activity\" resulting from your AI agents' access."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "source_tier": 2,
+      "word_count": 97,
+      "discovered_date": "2026-10-28",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-10-28-apple-adds-document-aware-ai-assistant-to-iwork-suite",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "conversational-ui",
+        "multimodal",
+        "design-tools"
+      ],
+      "title": "Apple adds document-aware AI assistant to iWork suite",
+      "summary": "Apple introduced an AI assistant built with OpenAI and proprietary models into Keynote, Pages, and Numbers to manipulate slide layouts, restructure written text, and calculate table data in place.",
+      "key_facts": [
+        "Integrated across Keynote, Pages, and Numbers",
+        "Understands document context to design and animate slides"
+      ],
+      "design_implication": "Presentation handoff frequently stalls as designers manually reformat slide layouts and copy variants across productivity decks. Bringing context-aware generation directly onto the native document canvas turns static drafting into continuous generative refinement. Start testing native document assistant prompts to automate repetitive deck structure variants while retaining manual control over typography hierarchy.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1019373/apple-pages-keynote-numbers-ai-chatbot-update",
+      "source_date": "2026-10-27T13:50:51.000Z",
+      "evidence": [
+        {
+          "claim": "Apple integrated an AI assistant into Pages, Keynote, and Numbers.",
+          "quote": "Apple is bringing an AI assistant to its suite of productivity apps, including Keynote, Pages, and Numbers."
+        },
+        {
+          "claim": "The assistant designs and animates slides using document context.",
+          "quote": "can understand a document's context to perform tasks like designing, animating, and refining slides in Keynote."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 11
+      },
+      "source_tier": 2,
+      "word_count": 88,
+      "discovered_date": "2026-10-28",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.7-flash",
+    "candidates_reviewed": 84,
+    "held": [],
+    "consolidated": [
+      {
+        "source_url": "https://www.figma.com/blog/6-ways-teams-are-experimenting-with-code-layers/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-to-put-your-design-system-to-work-with-the-figma-agent/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://theverge.com/tech/1019076/google-genie-4-ai-model",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/lufthansa-figma-make/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-ben-ganz/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/figma-deepens-investment-in-india/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/retell-ai",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/oracle-apps-in-chatgpt",
+        "reason": "awaiting_ga"
+      },
+      {
+        "source_url": "https://openai.com/index/check-point-daybreak/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/greptile-code-review-codex-astra",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/gharp-head-animation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/selection-structured-reasoning",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/plan-retrieve-tool-discovery",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/elevenlabs-on-ai-gateway",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/fx-harness-adapter-now-separates-host-and-sandbox",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-plugin-now-available-in-opencode",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/deploy-a-container-from-plain-dockerfile",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-agent-sessions-now-cost-67-percent-less",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-disciplines-glossary/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-maps-glossary/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.36014",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.36674",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.36698",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.36769",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2610.37131",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/27/1147693/the-download-anthropic-ipo-smarter-power-grids-exercise-pills/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/27/1147142/industrial-intelligence-the-next-growth-opportunity-for-manufacturing/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/27/1147684/solid-state-transformers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/26/1147672/will-the-real-anthropic-please-stand-up/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/26/1147650/the-download-everyday-ai-harms-nuclear-spaceflight/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1017064/visionquest-marvel-rogue-ai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1019470/anthropic-ipo-resist-investor-pressure-cut-corners-safety",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-emergency-alerts-coming-humans-not-ready/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/geoffrey-vos-uk-judge-ai-legal-profession-challenges/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/anthropic-says-it-will-revolutionize-biology-some-day/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/uk-home-office-may-face-investigation-over-use-of-openai-tools/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-agents-are-medias-new-favorite-audience/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/i-tested-every-major-ai-agent-for-a-day-heres-the-best-one/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/disgraced-emudhra-drops-out-of-tls-business-following-certificate-debacle/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/300-tor-exit-nodes-hijacked-to-intercept-ssh-traffic-and-retrieve-plaintext-email/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/survey-enterprises-waste-28-percent-of-software-budgets-on-unwanted-upgrades/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-time-ai-saves-designers-usually-disappears-heres-how-to-keep-it-61eb38e1ed69?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/going-nowhere-fast-7436dd29c54f?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/building-an-ai-ready-design-system-library-code-figma-with-mcp-ec5d9e8c90d2?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/does-apples-homeview-reduce-effort-or-ask-for-our-attention-ad7e892d17e2?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/who-gets-to-name-the-future-436d069f16af?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-tap-that-pours-hot-water-not-cold-8983ac0b614c?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/botgauge-2",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/yardlet-2",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/airposture-2",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/zest-6",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-identity-and-access-boundaries",
+        "name": "Agent Identity and Access Boundaries",
+        "description": "Platforms and financial institutions are enforcing explicit permission limits, credential isolation, and activity attribution to restrict autonomous agent access across user interfaces.",
+        "source_urls": [
+          "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
+          "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+          "https://vercel.com/changelog/vercel-connect-adds-managed-stripe-api-keys",
+          "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/"
+        ],
+        "confidence": "established"
+      },
+      {
+        "id": "browser-mediated-task-execution",
+        "name": "Browser-Mediated Task Execution",
+        "description": "Browsers and extensions are shifting from passive viewports to active agents that observe open tabs and synthesize external page context directly into web interfaces.",
+        "source_urls": [
+          "https://www.theverge.com/ai-artificial-intelligence/1019551/firefox-smart-window-ai-fill-forms",
+          "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+          "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 765,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1331,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 3
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 2
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 1720,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 32,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 3
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 4
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-10-28-firefox-smart-window-adds-tab-aware-ai-form-filling",
+        "title": "Firefox Smart Window adds tab-aware AI form filling",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-28-bank-of-america-warns-customers-against-sharing-credentials-",
+        "title": "Bank of America warns customers against sharing credentials with AI agents",
+        "source": "TechCrunch (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-10-28-apple-adds-document-aware-ai-assistant-to-iwork-suite",
+        "title": "Apple adds document-aware AI assistant to iWork suite",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
