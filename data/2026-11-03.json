@@ -1,0 +1,643 @@
+{
+  "date": "2026-11-03",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-03-vercel-mcp-now-renders-deployments-as-interactive-cards-in-c",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "embedded-ui",
+        "permissions-and-identity"
+      ],
+      "title": "Vercel MCP now renders deployments as interactive cards in chat clients",
+      "summary": "Vercel MCP can now display deployments as an interactive card inside ChatGPT and other chat clients that support MCP apps, providing live deployment status, build logs, and commit details.",
+      "key_facts": [
+        "Renders deployment status as an interactive card in chat clients",
+        "Shows live build logs, source details, and commit information",
+        "Includes a Visit button once the deployment URL is ready"
+      ],
+      "design_implication": "Embedding production build states directly inside conversational chat threads blurs the line between developer tooling interfaces and chat logs. As deployment logs and preview links migrate into conversational UI wrappers, design reviews must account for how engineers inspect failures without leaving the chat context. Start by establishing strict layout hierarchies for inline debugging cards so system error states remain legible inside confined message containers.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/monitor-vercel-deployments-in-chatgpt",
+      "source_date": "2026-11-02T17:05:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel MCP renders deployments as interactive cards in chat clients supporting MCP apps.",
+          "quote": "Vercel MCP can now show your deployments as an interactive card inside ChatGPT and other chat clients that support MCP Apps."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 104,
+      "discovered_date": "2026-11-03",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5G51ONTdXnLfJUJip02oSF/fe5511339b9ccde3b87ab8ebd5897408/CleanShot_2026-10-09_at_4.53.30_PM_2x.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/monitor-vercel-deployments-in-chatgpt",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-03-figma-weave-unifies-ai-generation-and-editing-into-repeatabl",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "code-prototyping",
+        "agents-in-tools"
+      ],
+      "title": "Figma Weave unifies AI generation and editing into repeatable workflows",
+      "summary": "Figma Weave combines AI generation and editing tools into connected, reusable workflows designed to give creative teams a consistent and repeatable process.",
+      "key_facts": [
+        "Brings AI generation and editing together into connected workflows",
+        "Designed to create repeatable processes for creative teams",
+        "Announced on the Figma Blog"
+      ],
+      "design_implication": "When design systems teams try to standardize generative outputs, inconsistent prompts often yield wildly different visual structures across screens. Connecting AI generation directly into repeatable workflow chains shifts design operations from managing one-off prompts to maintaining parameterized generation steps. Start by documenting the exact input constraints and token mappings that feed into your team's most common generative components.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/the-tldr-on-figma-weave/",
+      "source_date": "2026-10-31T00:58:00.000Z",
+      "evidence": [
+        {
+          "claim": "Figma Weave combines AI generation and editing into connected, reusable workflows.",
+          "quote": "Figma Weave brings AI generation and editing tools together into connected, reusable workflows, giving you a process your team can shape, refine, and repeat."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 90,
+      "discovered_date": "2026-11-03",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-03-nielsen-norman-group-outlines-ux-role-shifts-in-agentic-soft",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "research-synthesis",
+        "roles-and-skills",
+        "design-ops"
+      ],
+      "title": "Nielsen Norman Group outlines UX role shifts in agentic software factories",
+      "summary": "Nielsen Norman Group reports that AI-native software development lifecycles reduce traditional UX to AI context, requiring user experience teams to actively discover needs, shape what is built, and evaluate output before and after launch.",
+      "key_facts": [
+        "AI-native software development lifecycles reduce UX to AI context",
+        "UX must discover user needs, shape builds, and evaluate outcomes",
+        "Published by Nielsen Norman Group"
+      ],
+      "design_implication": "When development workflows reduce interface design specifications into raw AI context files, design teams risk losing direct control over component semantics and interaction flows. Shifting toward agentic software production requires designers to evolve from drawing static screens to curating the contextual boundaries and intent constraints consumed by coding agents. Start by auditing your team's design system documentation to ensure structural rules are explicit enough for an automated agent to interpret accurately.",
+      "implication_lens": "workflow",
+      "visual_need": "none",
+      "source_name": "Nielsen Norman Group",
+      "source_url": "https://www.nngroup.com/articles/ux-agentic-software-factories/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "source_date": "2026-10-30T17:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "AI-native development lifecycles reduce UX to AI context according to NN/g.",
+          "quote": "AI-native software development lifecycles reduce UX to AI context. UX must discover user needs, shape what’s built, and evaluate it before and after launch."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 116,
+      "discovered_date": "2026-11-03",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 88,
+    "held": [
+      {
+        "source_url": "https://arxiv.org/abs/2611.00001",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.00004",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.00007",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.00009",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.00179",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/hello-kitty-and-friends-in-figma/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/figma-and-sanrio-celebrate-hello-kitty-and-friends/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/making-something-human-4-things-we-took-away-from-config-india/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-brent-david-freaney/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/scaling-git-at-openai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/grid-protectors-program",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/lifeval",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/qodo-codex-plugin",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-97/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/gharp-head-animation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/projects-can-now-be-configured-with-vercel-toml",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-mcp-now-supports-client-id-metadata-documents",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/flags-explorer-redesigned-for-easier-override-sharing",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-sandbox-with-drives-now-starts-up-to-2-4x-faster",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/evaluate-vercel-flags-from-another-project-without-sharing-sdk-keys",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-vs-experience-design/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-disciplines-glossary/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/02/1147660/raising-the-quality-of-insights-in-agentic-analytics/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/02/1147889/the-download-agentic-web-arrives-eliminating-traffic-deaths/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/10/30/1147843/the-download-glp-1s-eating-disorders-forever-chemicals/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1023820/sam-altman-ram-shortage-cloud-servers",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/02/apple-may-try-to-increase-revenue-by-doing-something-with-third-party-ai-apps/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/when-you-should-and-shouldnt-use-ai-to-search-the-web/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/hundreds-of-mundane-ai-apps-are-hiding-abusive-deepfake-features/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/chatbots-are-leading-hikers-astray-with-dangerous-consequences/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/disgraced-emudhra-drops-out-of-tls-business-following-certificate-debacle/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/300-tor-exit-nodes-hijacked-to-intercept-ssh-traffic-and-retrieve-plaintext-email/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/survey-enterprises-waste-28-percent-of-software-budgets-on-unwanted-upgrades/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/state-of-a-system-5c8473db1e9?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/virtue-ethics-in-everyday-interface-design-5f2aca841781?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/sparkle-buttons-autonomy-by-design-ai-reckoning-in-ux-figma-with-mcp-c93e38fa36e3?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/when-colors-pass-but-palettes-fail-55b7210f8e4d?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/how-to-design-transparent-ai-cost-controls-a44fd52b9104?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/context-is-the-new-interface-c16b7f6e77be?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/peji",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/brink-2",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/flockbay",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/nexupira",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/holdtalk",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/remote-gaze",
+        "reason": "below_bar"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-integration-in-design-tooling",
+        "name": "Agent Integration in Design Tooling",
+        "description": "Major design and development platforms are integrating autonomous agents and conversational layers directly into canvases, workflows, and developer tools.",
+        "source_urls": [
+          "https://www.figma.com/blog/the-tldr-on-figma-weave/",
+          "https://vercel.com/changelog/monitor-vercel-deployments-in-chatgpt",
+          "https://www.figma.com/blog/3-ways-product-designers-use-the-figma-agent/"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 771,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1348,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 4
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 1
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 2116,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 95,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 3
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-03-figma-weave-unifies-ai-generation-and-editing-into-repeatabl",
+        "title": "Figma Weave unifies AI generation and editing into repeatable workflows",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/6ff46e4235ab02c904cb2673573d5fefd08312aa-3264x1836.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      },
+      {
+        "story": "2026-11-03-nielsen-norman-group-outlines-ux-role-shifts-in-agentic-soft",
+        "title": "Nielsen Norman Group outlines UX role shifts in agentic software factories",
+        "source": "Nielsen Norman Group",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
