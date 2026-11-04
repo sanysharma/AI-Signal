@@ -1,0 +1,627 @@
+{
+  "date": "2026-11-04",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-04-omniscribble-exposes-sketch-decomposition-and-motion-plans-a",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "motion",
+        "design-tools",
+        "agents-in-tools"
+      ],
+      "title": "OmniScribble exposes sketch decomposition and motion plans as editable artifacts",
+      "summary": "Researchers developed OmniScribble, a mixed-initiative authoring system for animating multi-object sketches. The tool turns AI-generated object decomposition and motion planning into inspectable, repairable artifacts, allowing creators to correct and redirect automated decisions instead of accepting one-shot generations.",
+      "key_facts": [
+        "Treats object decomposition and motion planning as inspectable, editable artifacts.",
+        "Enables mixed-initiative animation authoring for multi-object sketches.",
+        "Lets creators repair and redirect AI decisions instead of re-prompting."
+      ],
+      "design_implication": "Generative motion tools often force creators into an all-or-nothing loop of re-prompting full video outputs whenever timing or segmentation fails. Exposing intermediate steps as distinct, manipulable canvas layers lets designers debug automated motion trajectories directly without starting over. Add editable intermediate state controls to generative tool concepts so users can adjust object boundaries before motion compiles.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2611.04284",
+      "source_date": "2026-11-04T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "OmniScribble treats object decomposition and motion planning as inspectable, editable artifacts rather than opaque generation.",
+          "quote": "We present OmniScribble, a system for animating multi-object sketches that treats object decomposition and motion planning as editable artifacts."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "source_tier": 1,
+      "word_count": 103,
+      "discovered_date": "2026-11-04",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-04-agentic-path-maps-reveal-unchosen-decision-branches-after-ag",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "trust-and-explainability"
+      ],
+      "title": "Agentic Path Maps reveal unchosen decision branches after agent execution",
+      "summary": "Researchers introduced Agentic Path Maps, a framework addressing how autonomous agents communicate decision trade-offs on underspecified tasks. Instead of interrupting users during execution, the system visualizes impactful, unexplored alternative paths for post-execution user inspection and review.",
+      "key_facts": [
+        "Distills a design space for post-execution agent decision communication.",
+        "Avoids constant mid-task user interruptions during underspecified agent runs.",
+        "Exposes impactful and unexplored decision branches for human review."
+      ],
+      "design_implication": "An agent review screen usually collapses complex multi-step runs into a single linear result, hiding critical trade-offs made along the way. Visualizing discarded decision forks transforms agent oversight from binary approval into an inspectable map where people can evaluate alternatives without enduring endless clarifying prompts. Start prototyping post-run summary views that highlight the two most consequential decision forks the agent rejected.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2611.04183",
+      "source_date": "2026-11-04T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Agentic Path Maps communicate impactful, unexplored decision alternatives after execution instead of interrupting users.",
+          "quote": "However, interrupting the user for clarification on all such decisions is untenable. How might agents communicate impactful, but unexplored, paths to the user after execution? To investigate, we first distill a design space"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "source_tier": 1,
+      "word_count": 107,
+      "discovered_date": "2026-11-04",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-04-apple-lets-siri-ai-perform-cross-app-actions-using-on-screen",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "platform-shift",
+        "agentic-ux",
+        "embedded-ui"
+      ],
+      "title": "Apple lets Siri AI perform cross-app actions using on-screen context",
+      "summary": "Apple announced that developers can integrate Siri AI into all third-party apps in iOS 27.3, released on Tuesday. The update lets Siri complete requests across apps using personal context, natural language prompts, and on-screen awareness.",
+      "key_facts": [
+        "Available in iOS 27.3 rolling out starting Tuesday.",
+        "Developers can integrate Siri AI actions across all third-party apps.",
+        "Siri leverages personal context, natural language, and on-screen awareness."
+      ],
+      "design_implication": "Designing mobile workflows has meant assuming a person navigates every screen and tap target directly. With an OS agent triggering actions through on-screen awareness, interface layouts must expose clear semantic entities and confirmations that an external assistant can safely execute. Audit primary app tasks this week and define explicit confirmation thresholds for actions initiated outside the visible UI.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
+      "source_date": "2026-11-03T20:16:17.000Z",
+      "evidence": [
+        {
+          "claim": "Apple allows developers to integrate Siri AI cross-app actions and on-screen awareness in iOS 27.3.",
+          "quote": "Apple will now let Siri AI perform actions across third-party apps. As part of the iOS 27.3 update rolling out on Tuesday, Apple announced developers can now integrate Siri AI's new features in \"all apps,\""
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 13
+      },
+      "source_tier": 2,
+      "word_count": 103,
+      "discovered_date": "2026-11-04",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 81,
+    "held": [
+      {
+        "source_url": "https://www.theverge.com/tech/1025002/apple-watch-audio-intelligence-watchos-beta",
+        "reason": "pattern_watch"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+        "reason": "awaiting_ga"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.figma.com/blog/figma-and-sanrio-celebrate-hello-kitty-and-friends/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/03/1147940/the-download-controlling-ai-agents-trump-super-intelligence/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/hello-kitty-and-friends-in-figma/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/making-something-human-4-things-we-took-away-from-config-india/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/source-material-brent-david-freaney/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/accelerating-engineering-for-the-physical-world/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/cisco-cyber/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/heimstaden/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/scaling-git-at-openai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/grid-protectors-program/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/learn-the-rules-the-hacker-mindset/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-97/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/gharp-head-animation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-security-review-public-beta",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-ci-no-longer-requires-a-linked-vercel-project",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/how-zapier-turns-ideas-into-working-software-in-hours-with-vercel",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://vercel.com/blog/how-mercor-ships-internal-apps-and-billions-of-production-tokens-on-one-platform",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://vercel.com/blog/how-openevidence-scales-medical-search-for-doctors",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/tencent-hy4-now-available-on-ai-gateway",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-vs-experience-design/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-disciplines-glossary/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.03776",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.03939",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.03976",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/02/1147660/raising-the-quality-of-insights-in-agentic-analytics/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/02/1147889/the-download-agentic-web-arrives-eliminating-traffic-deaths/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1025826/ai-bubble-pimco-apollo-bonds",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1025745/fake-jeff-bezos-hair-replacement-photos-debunk",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/heres-why-you-shouldnt-use-ai-to-vote/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/the-big-interview-podcast-nyc-mayor-zohran-mamdani/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/when-you-should-and-shouldnt-use-ai-to-search-the-web/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/hundreds-of-mundane-ai-apps-are-hiding-abusive-deepfake-features/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/chatbots-are-leading-hikers-astray-with-dangerous-consequences/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/uefi-bootkit-infected-fully-patched-windows-machines-is-microsoft-to-blame/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/disgraced-emudhra-drops-out-of-tls-business-following-certificate-debacle/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/300-tor-exit-nodes-hijacked-to-intercept-ssh-traffic-and-retrieve-plaintext-email/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/10/survey-enterprises-waste-28-percent-of-software-budgets-on-unwanted-upgrades/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/your-ai-is-non-deterministic-but-your-product-cant-be-3ec2a0cf870c?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/i-let-ai-build-i-dont-let-ai-decide-b3892a87feb3?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-do-you-do-when-a-design-solution-is-already-pre-built-85d20edba31f?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/agents-struggle-with-the-same-bad-ux-we-do-98415f2b8981?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-i-learned-teaching-ai-prototyping-at-university-b9fff222625e?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-pole-and-the-stake-2cfba6c08bca?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/mellow-kids",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/render",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/hira",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/sendu",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/eyecon-auto-pause-video",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/chorus-weather",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "post-execution-trajectory-inspection",
+        "name": "Post-execution trajectory inspection",
+        "description": "Agent interfaces are shifting away from interrupting users mid-run toward structured post-execution maps that visualize discarded paths and reasoning branches for asynchronous human review.",
+        "source_urls": [
+          "https://arxiv.org/abs/2611.04183",
+          "https://arxiv.org/abs/2610.30548",
+          "https://arxiv.org/abs/2610.02384"
+        ],
+        "confidence": "emerging"
+      },
+      {
+        "id": "os-level-agent-delegation",
+        "name": "OS-level agent delegation",
+        "description": "Operating systems and platforms are opening direct hooks for background assistants to inspect on-screen state and execute multi-step workflows across third-party applications.",
+        "source_urls": [
+          "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
+          "https://www.theverge.com/tech/1007113/microsoft-windows-copilot-ai-control-search-hybrid-intelligence",
+          "https://vercel.com/changelog/monitor-vercel-deployments-in-chatgpt"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 771,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1354,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 2
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 1
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 2123,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 34,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 3
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-04-omniscribble-exposes-sketch-decomposition-and-motion-plans-a",
+        "title": "OmniScribble exposes sketch decomposition and motion plans as editable artifacts",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-04-agentic-path-maps-reveal-unchosen-decision-branches-after-ag",
+        "title": "Agentic Path Maps reveal unchosen decision branches after agent execution",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-04-apple-lets-siri-ai-perform-cross-app-actions-using-on-screen",
+        "title": "Apple lets Siri AI perform cross-app actions using on-screen context",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
