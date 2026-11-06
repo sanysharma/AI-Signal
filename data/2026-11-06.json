@@ -1,0 +1,722 @@
+{
+  "date": "2026-11-06",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-06-figma-workflow-lab-tests-code-layers-and-agent-collaboration",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "design-tools",
+        "agents-in-tools"
+      ],
+      "title": "Figma workflow lab tests code layers and agent collaboration on canvas",
+      "summary": "Figma released a workflow demonstration showing how teams bring code directly onto the canvas as a shared space to compare working prototypes side by side, refine directions, and collaborate on ideas with teammates using the Figma agent.",
+      "key_facts": [
+        "Brings code directly onto the Figma canvas for side-by-side prototyping",
+        "Combines code layers with the Figma agent to explore new features",
+        "Provides a shared collaborative space for testing development ideas"
+      ],
+      "design_implication": "When a multidisciplinary review stalls over static comps versus dynamic behavior, aligning stakeholders around abstract code snippets can derail the critique. Bringing code directly onto the shared design canvas allows product teams to inspect working implementations alongside layout frames simultaneously. Start by establishing a shared workspace tier where lightweight code prototypes live side-by-side with high-fidelity components during early exploratory phases.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/workflow-lab-build-with-code-on-the-canvas-using-the-figma-agent-and-code-layers/",
+      "source_date": "2026-11-04T22:12:00.000Z",
+      "evidence": [
+        {
+          "claim": "Figma demonstrated bringing code onto the canvas for side-by-side prototype comparison.",
+          "quote": "Bringing code onto the canvas gives teams a shared space to compare working prototypes side by side, refine a direction, and collaborate on ideas with teammates."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 108,
+      "discovered_date": "2026-11-06",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-06-gemini-omni-1-2-flash-brings-native-video-generation-to-verc",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "generative-media",
+        "design-tools",
+        "multimodal"
+      ],
+      "title": "Gemini Omni 1.2 Flash brings native video generation to Vercel AI Gateway",
+      "summary": "Google released Gemini Omni 1.2 Flash, featuring native 15-second video generation and editing, stronger consistency, and lower pricing, now available on Vercel AI Gateway with support for text prompts and reference image clips.",
+      "key_facts": [
+        "Generates and edits 3 to 15-second videos from text prompts",
+        "Supports up to six reference images for source clip editing",
+        "Available on Vercel AI Gateway with 30% lower pricing"
+      ],
+      "design_implication": "When rapid motion explorations require generating multiple short video variations from scratch, manual prompt tuning across disconnected tools disrupts creative flow. Accessing native video models directly inside development gateways shortens the loop between generative media production and interactive application code. Start by integrating multi-second video generation models into prototyping workflows to test motion concepts without leaving the development environment.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/gemini-omni-1-2-flash-now-available-on-ai-gateway",
+      "source_date": "2026-11-05T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Gemini Omni 1.2 Flash offers native video generation and editing with reference images.",
+          "quote": "Gemini Omni 1.2 Flash generates 3–15 second videos with native audio and edits 3–15 second source clips with up to six reference images."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 104,
+      "discovered_date": "2026-11-06",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/38lhFWswSQd6xdOwRCNNKC/9d4006e436aba2c29c165b60f58e816a/image.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/gemini-omni-1-2-flash-now-available-on-ai-gateway",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-06-anthropic-adds-personal-finance-account-integration-to-claud",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "conversational-ui",
+        "trust-and-explainability",
+        "embedded-ui"
+      ],
+      "title": "Anthropic adds personal finance account integration to Claude via Plaid",
+      "summary": "Anthropic introduced a Personal Finance feature for Claude that connects the chatbot directly to bank and card accounts via the Plaid bridge, enabling users to query spending breakdowns by category.",
+      "key_facts": [
+        "Connects Claude to bank and card accounts via Plaid",
+        "Generates categorized monthly spending overviews from natural language prompts",
+        "Provides direct personal finance management within the conversational interface"
+      ],
+      "design_implication": "When conversational interfaces handle sensitive financial queries, presenting raw transaction logs risks overwhelming users who need clear context. Designing chat-based financial tools requires surfacing structured visual breakdowns alongside conversational summaries to ensure comprehension. Start by pairing natural language financial queries with modular card components that clearly categorize account activity.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1027652/anthropic-claude-plaid-personal-finance",
+      "source_date": "2026-11-05T18:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Anthropic added a Personal Finance feature connecting Claude to bank accounts via Plaid.",
+          "quote": "Anthropic has a new pitch for managing your personal finances: let Claude do it instead, with a new Personal Finance feature that connects it to your bank and card accounts via the Plaid bank bridging platform."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 89,
+      "discovered_date": "2026-11-06",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-06-meta-introduces-real-time-video-chat-with-customizable-muse-",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "conversational-ui",
+        "multimodal"
+      ],
+      "title": "Meta introduces real-time video chat with customizable Muse avatars",
+      "summary": "Meta launched real-time voice and video chat capabilities for its Muse AI agent on iOS, featuring a customizable animated avatar that animates in sync with spoken words.",
+      "key_facts": [
+        "Rolls out real-time voice and video conversations with Muse AI agents",
+        "Features a customizable animated avatar that synchronizes with speech",
+        "Available on the iOS app with adjustable voice tones"
+      ],
+      "design_implication": "When conversational agents incorporate animated visual avatars during real-time voice sessions, latency or synchronization glitches can immediately erode user trust and perceived intelligence. Designing synchronous avatar interactions requires clear visual feedback states for listening, processing, and speaking phases. Start by auditing real-time voice interfaces for explicit transition cues that signal when the system is actively processing user input.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1028015/meta-muse-ai-voice-mode-expressive-avatar",
+      "source_date": "2026-11-05T19:03:04.000Z",
+      "evidence": [
+        {
+          "claim": "Meta added real-time voice conversations with synchronized avatars for Muse AI.",
+          "quote": "Meta now lets you have voice conversations with your Muse AI agent in real time... the avatar at the top of your conversation animates in time with the words that it's saying."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 94,
+      "discovered_date": "2026-11-06",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-06-nielsen-norman-group-redefines-experience-design-for-agentic",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "research-synthesis",
+        "roles-and-skills",
+        "collaboration"
+      ],
+      "title": "Nielsen Norman Group redefines experience design for agentic systems",
+      "summary": "Nielsen Norman Group published guidance explaining how AI is expanding UX beyond human users to autonomous agents acting on their behalf, proposing 'Experience design' as a broader term that still centers on human goals.",
+      "key_facts": [
+        "Expands traditional UX definitions to include autonomous agents acting for users",
+        "Proposes 'Experience design' as the broader overarching field",
+        "Emphasizes that human goals remain central to designing multi-agent workflows"
+      ],
+      "design_implication": "When product teams design software exclusively for human interaction, workflows frequently fail to accommodate downstream autonomous agents that execute tasks asynchronously. Mapping multi-stakeholder ecosystems now requires accounting for programmatic users alongside human operators. Start by mapping out agent touchpoints in complex service blueprints to identify where automated actors require structured status logs and explicit permission boundaries.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Nielsen Norman Group",
+      "source_url": "https://www.nngroup.com/articles/ux-vs-experience-design/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "source_date": "2026-10-30T17:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "NN/g explains AI expands UX beyond human users to agents acting on their behalf.",
+          "quote": "AI is expanding UX beyond human users to agents acting on their behalf. Experience design names this broader field, which still centers on people’s goals."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 1,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 99,
+      "discovered_date": "2026-11-06",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 88,
+    "held": [
+      {
+        "source_url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-figma-manages-sandboxes-at-scale/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/hello-kitty-and-friends-in-figma/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/australian-universities-ai-native-graduates",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/cultfit-builds-with-codex",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/introducing-gpt-6-cyber",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/merge-builds-with-openai",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/ads/customers/flipsnack",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/learn-the-rules-the-hacker-mindset/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/faster-retrieval",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/token-pass-credit-now-applies-automatically-across-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-schedules-is-now-in-public-beta",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/atomic-start-hooks-in-the-workflow-sdk",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/kimi-k3-1-pro-now-has-more-zdr-providers-on-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.07345",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.07386",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.07792",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.07798",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.07851",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/05/1144908/the-download-texas-fragile-ai-boom-us-energy-policy/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/05/1148062/permitting-reform/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1028412/airbnb-ai-travel-agent-q3-2026-earnings",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/05/openai-president-greg-brockman-says-company-could-be-ipo-ready-in-2027/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ads-in-chatbots-have-arrived-heres-whats-working-and-whats-not/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/wired-world-fair-2026-alexis-ohanian/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/aina-smart-ring/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/finding-new-drugs-is-laborious-this-ai-startup-is-skipping-the-lab-work/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/wired-world-fair-2026-denise-herzing-wild-dolphin/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/wired-world-fair-2026-evan-ratliff-and-husk/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/hackers-exploited-ios-and-android-flaws-to-infect-phones/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/11/vmware-releases-vsphere-express-for-virtualization-on-up-to-128-cores/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/11/binance-says-hackers-who-stole-billions-in-crypto-spent-months-planning-heist/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/berrypicking-still-beats-the-single-answer-for-search-even-in-the-world-of-ai-6d7174099500?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/native-is-a-floor-not-a-ceiling-09bc4f27ddce?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/audiocentral",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/letterpress-1",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/refern",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/crystl-multitasking-terminal",
+        "reason": "out_of_scope"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/figma-and-sanrio-celebrate-hello-kitty-and-friends/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-97/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/gharp-head-animation",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://vercel.com/blog/introducing-vercel-schedules",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/ux-disciplines-glossary/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/04/1148049/roundtables-inside-the-quest-for-cognitive-immortality/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/04/1148022/us-energy-midterm/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/04/1148001/the-download-blended-meat-sight-restoring-implant-agentic-web/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/uefi-bootkit-infected-fully-patched-windows-machines-is-microsoft-to-blame/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://uxdesign.cc/design-by-numbers-is-ai-ruining-ux-or-just-pouring-gasoline-on-the-fire-24164d49e422?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/everyones-got-a-quick-question-374a736ff7cb?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/in-a-world-of-panic-calm-and-certainty-win-525c17dd927f?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ai-can-generate-the-interface-what-makes-it-worth-caring-about-a5f3a3e81986?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/make0-brain",
+        "reason": "stale"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-avatar-voice-integration",
+        "name": "Real-Time Voice and Avatar Integration in Consumer AI Agents",
+        "description": "Major platforms are introducing synchronized animated avatars and real-time voice interaction modes for conversational AI assistants.",
+        "source_urls": [
+          "https://www.theverge.com/tech/1028015/meta-muse-ai-voice-mode-expressive-avatar",
+          "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 773,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1366,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 5
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 2
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 2128,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 4
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 35,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 4
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 5
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-06-figma-workflow-lab-tests-code-layers-and-agent-collaboration",
+        "title": "Figma workflow lab tests code layers and agent collaboration on canvas",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/c5cbcf8c4cf48ebef3a68f5be108915e8051d6b3-1056x594.jpg?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      },
+      {
+        "story": "2026-11-06-anthropic-adds-personal-finance-account-integration-to-claud",
+        "title": "Anthropic adds personal finance account integration to Claude via Plaid",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-06-meta-introduces-real-time-video-chat-with-customizable-muse-",
+        "title": "Meta introduces real-time video chat with customizable Muse avatars",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-06-nielsen-norman-group-redefines-experience-design-for-agentic",
+        "title": "Nielsen Norman Group redefines experience design for agentic systems",
+        "source": "Nielsen Norman Group",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
