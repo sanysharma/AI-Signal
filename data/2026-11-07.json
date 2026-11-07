@@ -1,0 +1,685 @@
+{
+  "date": "2026-11-07",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-07-vercel-ai-gateway-adds-ampersand-for-turn-taking-in-group-co",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "conversational-ui",
+        "collaboration",
+        "agentic-ux"
+      ],
+      "title": "Vercel AI Gateway adds Ampersand for turn-taking in group conversations",
+      "summary": "Vercel added Humans& Ampersand to AI Gateway, introducing a specialized language model designed for multi-person group chats. The model assesses conversation dynamics and shared objectives on each turn to determine autonomously whether to respond or remain quiet.",
+      "key_facts": [
+        "Evaluates conversation turns to autonomously speak or stay quiet.",
+        "Designed for team chat mediation, shared goals, and resolving disagreements.",
+        "Available on Vercel AI Gateway for free through November 13, 2026."
+      ],
+      "design_implication": "In a collaborative team channel, AI participants that respond to every post quickly clutter conversation threads and alienate human teammates. Designing for autonomous turn-taking shifts the interaction model from explicit mention triggers to quiet background monitoring, where the assistant speaks only when consensus stalls or information is missing. Draft clear visual indicators that distinguish when an agent is passively listening from when it actively prepares an intervention.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/humans-and-ampersand-now-available-on-ai-gateway",
+      "source_date": "2026-11-06T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Ampersand is designed for group chats and determines whether to speak or remain quiet.",
+          "quote": "Ampersand is a language model built to take part in group conversations, such as a team chat, and to decide on each turn whether to speak or stay quiet."
+        },
+        {
+          "claim": "The model helps teams manage shared goals and disagreements.",
+          "quote": "It is designed to understand individual and shared goals, help people work through disagreements, and recognize when a contribution would be useful."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 114,
+      "discovered_date": "2026-11-07",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/18CgCYFxjOjnQJt7A7QCml/ac681af1f15dbf06deef9a3596150a6b/image.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/humans-and-ampersand-now-available-on-ai-gateway",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-07-vercel-chat-sdk-streams-cross-platform-generative-ui-via-jso",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "generative-ui",
+        "design-systems",
+        "conversational-ui"
+      ],
+      "title": "Vercel Chat SDK streams cross-platform generative UI via json-render",
+      "summary": "Vercel updated Chat SDK with json-render, letting agents stream structured UI specs into chat environments. The model writes typed JSON converted into platform-native formats, rendering cards in Slack Block Kit, Microsoft Teams Adaptive Cards, or web components without custom bridges.",
+      "key_facts": [
+        "Streams typed JSON component specs converted into native multi-platform cards.",
+        "Supported target formats include Slack Block Kit and Teams Adaptive Cards.",
+        "Component catalog includes interactive tables, charts, and buttons."
+      ],
+      "design_implication": "Multi-platform chat experiences often force design teams to rebuild identical interactive components separately for Slack, Teams, and web windows. Streaming structured JSON component trees decouples agent output from platform-specific styling, allowing design tokens and layouts to render natively across target hosts without custom bridge code. Map common data display patterns like metric tables and status badges to standard JSON schemas that cross-platform adapters can reliably digest.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/json-render-and-chat-sdk-agents",
+      "source_date": "2026-11-06T21:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Chat SDK agents can stream generative UI using json-render.",
+          "quote": "You can now stream generative UI from your agent with .Chat SDKjson-render"
+        },
+        {
+          "claim": "JSON specs convert into native formats like Slack Block Kit and Teams Adaptive Cards.",
+          "quote": "With a typed catalog of components, the agent writes a JSON spec that converts into a Chat SDK card. Each adapter then posts the card in its platform’s native format, such as Block Kit on Slack and Adaptive Cards on Teams."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 115,
+      "discovered_date": "2026-11-07",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7GBRL4iPtI99gtYPzGUJgT/89543d900cd8337eb22bb11c9712218c/image.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/json-render-and-chat-sdk-agents",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-07-meta-introduces-spaces-for-generating-on-demand-apps-in-muse",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "generative-ui",
+        "agentic-ux",
+        "conversational-ui"
+      ],
+      "title": "Meta introduces Spaces for generating on-demand apps in Muse",
+      "summary": "Meta introduced Spaces within its Muse AI assistant, enabling users to generate and interact with bespoke app-like experiences. By describing needs, users can create dedicated hubs, dashboards, or trackers that connect with external tools like Google Calendar and Gmail.",
+      "key_facts": [
+        "Generates custom interactive hubs and dashboards directly inside the Muse app.",
+        "Generates interfaces from user descriptions and connected external apps.",
+        "Available to build interactive experiences directly in the Muse app."
+      ],
+      "design_implication": "In an assistant interface, static cards quickly collapse when users try to coordinate complex tasks across multiple services. Instead of designing rigid end-to-end screen flows for every user journey, product teams must define composable layout primitives and state rules that an agent can assemble on demand. Audit core product features to identify self-contained workflows that could function as standalone, ephemeral micro-apps within conversational containers.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
+      "source_date": "2026-11-06T18:10:10.000Z",
+      "evidence": [
+        {
+          "claim": "Meta launched Spaces to create customized app-like experiences inside Muse.",
+          "quote": "Meta will now allow you to build customized, app-like experiences within Muse. The new feature, called \"spaces,\" allows its AI assistant to build things like a shopping hub, school dashboard, music tracker, trivia game, and more"
+        },
+        {
+          "claim": "Spaces generate from natural language descriptions and connect to external services.",
+          "quote": "Meta says you can create a new space by describing it. If you connect an outside app to Muse - like Gmail, Google Ca"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 13
+      },
+      "related_sources": [
+        "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/"
+      ],
+      "source_tier": 2,
+      "word_count": 112,
+      "discovered_date": "2026-11-07",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-07-vercel-cli-adds-automatic-expiration-for-ephemeral-prototype",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "prototyping",
+        "design-ops"
+      ],
+      "title": "Vercel CLI adds automatic expiration for ephemeral prototype deployments",
+      "summary": "Vercel added an automatic expiration flag to its CLI deploy command. Expired deployments are deleted automatically, allowing design and engineering teams to distribute ephemeral interactive prototypes, client demos, and concept builds without accumulating manual cleanup overhead.",
+      "key_facts": [
+        "Adds --delete-project-after flag to the deploy command in Vercel CLI.",
+        "Automatically deletes projects after durations like one day or one week.",
+        "Flag applies when Vercel CLI creates the new project deployment."
+      ],
+      "design_implication": "A designer sharing live coded prototypes with stakeholders often leaves behind orphaned deployment URLs, stale staging links, and lingering cloud storage costs. Enforcing automatic expiration at deployment turns staging links into self-cleaning artifacts, making throwaway explorations safe to distribute widely without manual cleanup chores. Add predefined lifespan flags to internal prototyping runbooks so exploratory builds automatically self-destruct after review cycles conclude.",
+      "implication_lens": "workflow",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/vercel-cli-can-now-set-new-projects-to-expire",
+      "source_date": "2026-11-06T18:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel CLI lets users set new projects to expire and delete automatically.",
+          "quote": "You can now set a new project to expire when you deploy it with . Expired projects are deleted automatically, so prototypes, demos, and test apps don't need cleaning up by hand.Vercel CLI"
+        },
+        {
+          "claim": "The feature is triggered via a command flag with duration limits.",
+          "quote": "Run with and a duration:vercel deploy--delete-project-after"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 106,
+      "discovered_date": "2026-11-07",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5nTuYmLKAP5U6aTI3wr4oq/983b7c0fd00a1bd3c09b6bd3b33e9de1/image__71_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/vercel-cli-can-now-set-new-projects-to-expire",
+      "visual_license": "official_with_credit"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 85,
+    "held": [
+      {
+        "source_url": "https://uxdesign.cc/after-the-ai-bubble-a-manifesto-2e3157387662?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/berrypicking-still-beats-the-single-answer-for-search-even-in-the-world-of-ai-6d7174099500?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/native-is-a-floor-not-a-ceiling-09bc4f27ddce?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/design-by-numbers-is-ai-ruining-ux-or-just-pouring-gasoline-on-the-fire-24164d49e422?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/everyones-got-a-quick-question-374a736ff7cb?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/in-a-world-of-panic-calm-and-certainty-win-525c17dd927f?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/sendoff-2",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/context-dev",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/clarifierai-rewrite-text-2",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/deal-pilot",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/kayet",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/instagram",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/in-conversation-dylan-field-and-david-friedberg/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-figma-manages-sandboxes-at-scale/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/hello-kitty-and-friends-in-figma/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/figma-and-sanrio-celebrate-hello-kitty-and-friends/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/partnering-with-hacktron",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/australian-universities-ai-native-graduates",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/cultfit-builds-with-codex",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/introducing-gpt-6-cyber",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/merge-builds-with-openai",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/learn-the-rules-the-hacker-mindset/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-97/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/faster-retrieval",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/gharp-head-animation",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/ai-gateway-adds-deepseek-search-and-fetch-tools",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-tracing-is-now-generally-available",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/token-pass-credit-now-applies-automatically-across-ai-gateway",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/agent-harness/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/usability-101-introduction-to-usability/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/january/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/06/1148154/the-download-humanoid-robot-cleaner-samsung-ai-chip-boom/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/05/1144908/the-download-texas-fragile-ai-boom-us-energy-policy/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/05/1148062/permitting-reform/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/04/1148049/roundtables-inside-the-quest-for-cognitive-immortality/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/podcast/1028731/2026-midterms-tech-ai-vergecast",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-companies-really-really-want-to-buy-your-work-files-and-emails/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ads-in-chatbots-have-arrived-heres-whats-working-and-whats-not/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/wired-world-fair-2026-alexis-ohanian/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/aina-smart-ring/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/finding-new-drugs-is-laborious-this-ai-startup-is-skipping-the-lab-work/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/chainalysis-says-hackers-stole-credentials-and-tokens-for-all-of-its-customers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/hackers-exploited-ios-and-android-flaws-to-infect-phones/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/11/vmware-releases-vsphere-express-for-virtualization-on-up-to-128-cores/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/11/binance-says-hackers-who-stole-billions-in-crypto-spent-months-planning-heist/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/uefi-bootkit-infected-fully-patched-windows-machines-is-microsoft-to-blame/",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "runtime-generative-ui-components",
+        "name": "Runtime Generative UI Components",
+        "description": "AI systems are expanding beyond markdown text streams to dynamically emit structured specs that render interactive, multi-platform UI components on the fly.",
+        "source_urls": [
+          "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
+          "https://vercel.com/changelog/json-render-and-chat-sdk-agents",
+          "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6",
+          "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 774,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1368,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 5
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 2
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 2134,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 4
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-07-meta-introduces-spaces-for-generating-on-demand-apps-in-muse",
+        "title": "Meta introduces Spaces for generating on-demand apps in Muse",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
