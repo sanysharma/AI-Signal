@@ -1,0 +1,330 @@
+{
+  "date": "2026-11-09",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-09-gemini-omni-1-2-flash-brings-15-second-native-video-generati",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "generative-media",
+        "design-tools",
+        "multimodal"
+      ],
+      "title": "Gemini Omni 1.2 Flash brings 15-second native video generation",
+      "summary": "Google AI Blog announced Gemini Omni 1.2 Flash, introducing native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
+      "key_facts": [
+        "Introduces native 15-second video generation and editing",
+        "Delivers stronger visual consistency",
+        "Priced 30% lower than previous versions"
+      ],
+      "design_implication": "When a designer tests motion concepts or storyboard frames inside a generative tool, shorter iteration loops change how video prototypes are evaluated. Instead of waiting minutes for a render, faster generation allows rapid exploration of alternative scenes during early ideation. Start by building video generation steps directly into your storyboard workflows to test motion concepts in real time.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "Google AI Blog",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "source_date": "2026-11-05T17:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
+          "quote": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 14
+      },
+      "related_sources": [
+        "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/"
+      ],
+      "source_tier": 1,
+      "word_count": 88,
+      "discovered_date": "2026-11-09",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-09-pdd-kit-formally-verifies-agent-written-full-stack-web-appli",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "design-systems",
+        "agents-in-tools"
+      ],
+      "title": "PDD Kit formally verifies agent-written full-stack web applications",
+      "summary": "Microsoft Research introduced PDD Kit, a tool that converts developer intent into a Verus specification and tests AI-generated code against it to ensure compliance.",
+      "key_facts": [
+        "Converts developer intent into Verus specifications",
+        "Tests AI-generated code against formal rules for every input",
+        "Allows developers to review high-level intent instead of raw lines of code"
+      ],
+      "design_implication": "When a design team reviews agent-generated prototypes or code components, inspecting thousands of lines of output creates severe verification bottlenecks. Shifting the review process from line-by-line inspection to checking formal behavioral specifications ensures code matches interaction intent safely. Start by defining interaction constraints as testable specifications before handing off generated prototypes to engineering.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "Microsoft Research Blog",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+      "source_date": "2026-11-05T16:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "PDD Kit converts developer intent into a Verus specification and proves AI-generated code meets it.",
+          "quote": "It converts developer intent into a Verus specification, proves AI-generated code meets it for every input, and uses tests where proofs aren't practical."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 85,
+      "discovered_date": "2026-11-09",
+      "visual_type": "source_image",
+      "visual_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/10/PDDKitRecap-TWLIFB-1200x627-1.jpg",
+      "visual_credit": "Image: Microsoft",
+      "visual_source_url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-09-goals-as-a-representational-layer-structure-human-ai-collabo",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "research-synthesis",
+        "collaboration",
+        "roles-and-skills"
+      ],
+      "title": "Goals as a representational layer structure human-AI collaboration",
+      "summary": "arXiv cs.HC researchers introduced goals as an explicit representational layer for human-AI collaboration, addressing the gap where AI context lacks user intent beyond local prompts.",
+      "key_facts": [
+        "Introduces explicit goals as a representational layer",
+        "Bridges the gap between local prompts and broader organizational intent",
+        "Aimed at structuring human-AI collaboration workflows"
+      ],
+      "design_implication": "During complex design synthesis sessions, AI tools often lose track of why a specific research direction was chosen. Making user intent an explicit structural layer on the canvas ensures that generated variants align with core project objectives rather than just immediate prompts. Start by documenting explicit intent anchors alongside design system artifacts so AI agents evaluate suggestions against project goals.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2611.08757",
+      "source_date": "2026-11-09T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Goals are introduced as an explicit representational layer for human-AI collaboration.",
+          "quote": "We argue that goals should become an explicit representational layer for human-AI collaboration."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 93,
+      "discovered_date": "2026-11-09",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 87,
+    "held": [
+      {
+        "source_url": "https://www.nngroup.com/articles/agent-harness/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "awaiting_ga"
+      },
+      {
+        "source_url": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/",
+        "reason": "below_bar"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/in-conversation-dylan-field-and-david-friedberg/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/partnering-with-hacktron",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-verification-and-governance",
+        "name": "Agent Verification and Governance Layers",
+        "description": "Platforms are increasingly introducing structural layers like formal specifications, intent frameworks, and agent harnesses to govern automated workflows and verify correctness.",
+        "source_urls": [
+          "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+          "https://www.nngroup.com/articles/agent-harness/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+          "https://arxiv.org/abs/2611.08757"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 774,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1368,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 5
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 3
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 1
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 2135,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 40,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 4
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-09-gemini-omni-1-2-flash-brings-15-second-native-video-generati",
+        "title": "Gemini Omni 1.2 Flash brings 15-second native video generation",
+        "source": "Google AI Blog",
+        "reason": "image host not allowed (storage.googleapis.com). If this is the company's own image server, add \"googleapis.com\" to image_hosts for Google AI Blog in sources.json",
+        "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-omni-1.2_FZLql41.width-1300.png"
+      },
+      {
+        "story": "2026-11-09-goals-as-a-representational-layer-structure-human-ai-collabo",
+        "title": "Goals as a representational layer structure human-AI collaboration",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
