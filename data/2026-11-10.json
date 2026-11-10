@@ -1,0 +1,276 @@
+{
+  "date": "2026-11-10",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-10-figma-agent-offers-six-ways-to-automate-canvas-busywork",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "agents-in-tools",
+        "generative-media"
+      ],
+      "title": "Figma agent offers six ways to automate canvas busywork",
+      "summary": "Figma blog outlines six ways designers can use the Figma agent to make designs more expressive, automate busywork, and explore more possibilities directly on the design canvas.",
+      "key_facts": [
+        "Outlines six specific ways to use the Figma agent",
+        "Focuses on automating busywork and increasing expressiveness",
+        "Published by Figma blog on November 9, 2026"
+      ],
+      "design_implication": "When a routine design iteration involves updating dozens of layout states by hand, cognitive fatigue leads to missed inconsistencies in spacing and typography. Using an embedded canvas agent to handle repetitive maintenance transforms layout drafting from manual assembly into prompt-driven curation, freeing design hours for systemic problem-solving. Start by identifying one repetitive layout task in your current sprint and test delegating its initial batch generation to the canvas agent.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/6-easy-ways-to-use-the-figma-agent-right-now/",
+      "source_date": "2026-11-09T21:46:00.000Z",
+      "evidence": [
+        {
+          "claim": "Figma outlines six ways to use the Figma agent on the canvas.",
+          "quote": "From making designs more expressive and automating busywork, to exploring more possibilities on the canvas, here are six ways to push designers further with the Figma agent."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 105,
+      "discovered_date": "2026-11-10",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 82,
+    "held": [
+      {
+        "source_url": "https://www.figma.com/blog/in-conversation-dylan-field-and-david-friedberg/",
+        "reason": "opinion_without_new_development"
+      },
+      {
+        "source_url": "https://openai.com/index/closing-ai-guidance-gap-education",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/learn-the-rules-the-hacker-mindset/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/faster-retrieval",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/09/otter-ai-can-now-follow-conversations-across-30-languages/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/",
+        "reason": "out_of_scope"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/entertainment/1030510/paramount-skydance-david-ellison-ai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1030328/what-could-china-get-from-jensen-huang",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/09/jensen-huang-reportedly-engaged-a-pr-firm-with-a-history-of-handling-high-profile-sex-scandals-a-year-ago/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/09/a-short-seller-flagged-nvidia-ceos-ties-to-a-suspected-chinese-spy-six-months-before-the-scandal/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/09/jensen-huang-pulls-out-of-elevenlabs-summit-amid-nvidia-controversy/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huangs-troubles-leaves-the-ai-industry-reeling/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/nvidia-ceo-jensen-huang-hired-a-pr-firm-known-for-handling-sex-scandals-last-year/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/security-flaws-across-uk-government-sites-exposed-god-tier-information/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
+        "reason": "unsupported_claim (URL not in candidates)"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
+        "reason": "below_bar (10/15)"
+      }
+    ],
+    "patterns": [],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 775,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1373,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 2
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 1
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 81,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 4
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-10-figma-agent-offers-six-ways-to-automate-canvas-busywork",
+        "title": "Figma agent offers six ways to automate canvas busywork",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/e45f20141c28283bd8a1a0a1889c5f8e9befd922-7680x4320.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      }
+    ]
+  }
+}
