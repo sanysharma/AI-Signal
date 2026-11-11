@@ -1,0 +1,729 @@
+{
+  "date": "2026-11-11",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-11-openai-launches-verified-business-agents-inside-chatgpt",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "conversational-ui",
+        "agentic-ux",
+        "trust-and-explainability"
+      ],
+      "title": "OpenAI launches verified business agents inside ChatGPT",
+      "summary": "OpenAI introduced Businesses in ChatGPT, enabling companies to manage their presence and deploy verified Business Agents. The Verge reports the beta feature allows users to chat directly with brand representatives for comparison shopping and service inquiries.",
+      "key_facts": [
+        "Launches in beta for eligible US e-commerce and online services.",
+        "Enables verified brand agents for comparison shopping and customer support.",
+        "Provides business consoles to manage listings and track conversational presence."
+      ],
+      "design_implication": "When designing brand storefronts, product discovery moves from browsing static catalog pages into conversational negotiation inside an external host client. Designers must now specify verified persona boundaries, structured product cards for chat streams, and explicit handoff triggers when automated advice fails. Audit existing purchase flows to isolate structured attributes that conversational agents require to represent inventory accurately.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "OpenAI News",
+      "source_url": "https://openai.com/index/introducing-businesses-chatgpt",
+      "source_date": "2026-11-10T10:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "OpenAI is introducing verified business agents in beta for US e-commerce businesses.",
+          "quote": "The feature, available first to \"eligible\" e-commerce and online service businesses in the US, is launching as part of a suite of business-focused features in ChatGPT being announced today in beta."
+        },
+        {
+          "claim": "Businesses can manage their presence and turn customer interest into action.",
+          "quote": "Manage your business information, get insights about how your business shows up, and turn interest into action in ChatGPT."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [
+        "https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub"
+      ],
+      "source_tier": 1,
+      "word_count": 100,
+      "discovered_date": "2026-11-11",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-11-decision-models-reach-26-percent-of-vercel-production-gatewa",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "adoption-data",
+        "agentic-ux"
+      ],
+      "title": "Decision models reach 26 percent of Vercel production gateway traffic",
+      "summary": "Vercel’s November 2026 Production Index reports decision models now handle 26% of requests routed across 100 trillion tokens. The data also reveals Anthropic is capturing new engineering and product teams at a two-to-one ratio.",
+      "key_facts": [
+        "Decision models account for 26% of all gateway production requests.",
+        "Anthropic wins new production teams at a two-to-one ratio.",
+        "Data reflects traffic across more than 100 trillion monthly tokens."
+      ],
+      "design_implication": "In system architecture reviews, product teams are shifting from single text-generation calls toward multi-step reasoning and autonomous decision routing. Because decision models incur higher latency and cost per user action, interfaces require multi-stage progress indicators and interruptible state feedback. Map latency budgets across critical user paths to determine where reasoning models require explicit step-by-step progress UI.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/blog/ai-gateway-production-index-november-2026",
+      "source_date": "2026-11-09T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Decision models account for 26 percent of requests routed on AI Gateway.",
+          "quote": "Decision models take 26% of requests; Anthropic now wins new teams 2:1"
+        },
+        {
+          "claim": "Vercel routes over 100 trillion tokens across production applications monthly.",
+          "quote": "routes more than 100 trillion tokens between production applications and AI labs"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 100,
+      "discovered_date": "2026-11-11",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5sdDYdCG5ozpdjNNyFpGgP/52e02883b34e063b359cc249f177cb17/nov-og-blog-stacked-bars_4x.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/blog/ai-gateway-production-index-november-2026",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-11-project-progress-desk-consolidates-multi-agent-coding-sessio",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "conversational-ui",
+        "code-prototyping"
+      ],
+      "title": "Project Progress Desk consolidates multi-agent coding sessions into one view",
+      "summary": "Researchers introduced Project Progress Desk, a desktop interface aggregating multiple parallel coding agents from Claude Code and Codex. The tool replaces fragmented terminal windows with a consolidated view of agent progress, blockers, and required human approvals.",
+      "key_facts": [
+        "Aggregates parallel agent sessions across Claude Code and Codex.",
+        "Surfaces active blockers and pending decisions in a single view.",
+        "Replaces manual tab switching across separate chats and terminals."
+      ],
+      "design_implication": "When developers and designers run multiple autonomous agents simultaneously, tab-based chat windows fail to communicate which processes require urgent intervention. Oversight shifts from reading continuous log streams to triaging discrete status flags, decision requests, and blocked dependencies across concurrent threads. Design multi-agent management consoles around state summaries and action prompts rather than raw, real-time command line feeds.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2611.13287",
+      "source_date": "2026-11-11T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Project Progress Desk unifies parallel Codex and Claude Code projects into a single view.",
+          "quote": "We present Project Progress Desk, a local desktop interface that brings overall progress, blockers and pending decisions into one view."
+        },
+        {
+          "claim": "Tracking parallel agents previously required switching across separate chats and terminals.",
+          "quote": "keeping track of them still means switching between chats, terminal sessions and providers"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 103,
+      "discovered_date": "2026-11-11",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-11-ebay-blocks-autonomous-ai-agents-from-scraping-and-browsing-",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "platform-shift",
+        "embedded-ui"
+      ],
+      "title": "eBay blocks autonomous AI agents from scraping and browsing listings",
+      "summary": "eBay has blocked autonomous AI agents, including Meta Muse, from browsing listings on its platform. The restriction breaks automated curation workflows that previously gathered daily digests of item prices, shipping terms, and product conditions for buyers.",
+      "key_facts": [
+        "Blocks automated browsing by consumer agents including Meta Muse.",
+        "Breaks automated price tracking and daily inventory curation digests.",
+        "Follows recent agent access restrictions enacted by luxury platforms."
+      ],
+      "design_implication": "When a user relies on an autonomous agent to monitor marketplaces, blocking bots produces empty feeds and broken user expectations without clear cause. Designers of assistant interfaces must build resilient fallback states and bot-detection disclosures rather than assuming open web access remains guaranteed. Add explicit connection status indicators and graceful degradation flows whenever an agent scrapes external platforms on a user's behalf.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "none",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping",
+      "source_date": "2026-11-10T16:20:30.000Z",
+      "evidence": [
+        {
+          "claim": "eBay has blocked autonomous AI agents like Meta Muse from browsing listings.",
+          "quote": "eBay appears to have blocked AI agents, including Meta's Muse, from browsing on the platform"
+        },
+        {
+          "claim": "The block disrupts automated curation digests of prices and shipping terms.",
+          "quote": "browse and curate a daily digest of watches for sale on platforms like eBay, including a link to listings, price, shipping details"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 108,
+      "discovered_date": "2026-11-11",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 93,
+    "held": [
+      {
+        "source_url": "https://arxiv.org/abs/2611.13211",
+        "reason": "unsupported_claim"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
+        "reason": "awaiting_ga"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ai-prototyping-inside-your-design-system-a-hands-on-guide-for-design-product-teams-44825904c08d?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/design-by-numbers-teaching-ai-prototyping-context-is-the-new-ui-c88a432a8df8?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/valin",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/bonds-2",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/elevenlabs",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/nizima-action-by-live2d",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/seedream-4-0",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/stablebar",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/in-conversation-dylan-field-and-david-friedberg/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-figma-manages-sandboxes-at-scale/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/hello-kitty-and-friends-in-figma/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/figma-and-sanrio-celebrate-hello-kitty-and-friends/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/chatgpt-plus-for-veterans",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/closing-ai-guidance-gap-education",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/singapore-airlines-travel-work",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/learn-the-rules-the-hacker-mindset/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-97/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/faster-retrieval",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/attention-mamba-distillation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/minimax-h3-image-and-highspeed-now-available-on-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/gemini-4-carbon-now-available-on-ai-gateway",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/speed-insights-and-web-analytics-now-support-custom-environments",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-sandbox-snapshot-creation-is-now-up-to-10x-faster",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/glm-5-3-flash-is-now-available-in-token-pass",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/agent-harness/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/usability-101-introduction-to-usability/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/january/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.13027",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.13368",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.13386",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/10/1148150/the-download-pelosi-successor-ai-regulation-data-center-backlash/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/10/1147726/evolving-metal-extraction-processes/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/09/1148194/the-backlash-about-data-centers-might-really-just-be-about-electricity/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/09/1148176/the-download-empty-ai-climate-claims-and-an-nvidia-investigation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/games/1030994/big-walk-independent-games-festival-igf-ai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/kora-new-linux-based-desktop-operating-system-is-built-for-ai-nerds/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/tear-down-those-guardrails-meet-the-renegades-freeing-chatbots-from-corporate-enslavers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/the-ai-safety-debate-has-lost-the-plot-we-asked-10-experts-what-the-real-nightmares-are/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/security-flaws-across-uk-government-sites-exposed-god-tier-information/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huangs-troubles-leaves-the-ai-industry-reeling/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/vulnerability-that-lets-hackers-ssh-into-linux-devices-is-under-active-exploitation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/chainalysis-says-hackers-stole-credentials-and-tokens-for-all-of-its-customers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/hackers-exploited-ios-and-android-flaws-to-infect-phones/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/11/vmware-releases-vsphere-express-for-virtualization-on-up-to-128-cores/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-being-the-new-kid-taught-me-about-persuasion-as-a-designer-c731818f91d9?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/every-new-medium-gets-called-cheating-b990d7d53c0e?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-a-ruler-leaves-out-9250724a7f85?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/five-pairs-of-hands-what-the-typesetters-can-teach-designers-about-ai-9d6b8e8c2285?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-blocking-and-gating",
+        "name": "Marketplaces erect defensive gates and blocks against autonomous shopping agents",
+        "description": "Major e-commerce platforms are actively rejecting third-party AI agents, forcing consumer agent systems to design robust fallback and authorization flows.",
+        "source_urls": [
+          "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+          "https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents",
+          "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
+          "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 775,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1380,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 2
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 46,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 4
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-11-openai-launches-verified-business-agents-inside-chatgpt",
+        "title": "OpenAI launches verified business agents inside ChatGPT",
+        "source": "OpenAI News",
+        "reason": "no source image found"
+      },
+      {
+        "story": "2026-11-11-project-progress-desk-consolidates-multi-agent-coding-sessio",
+        "title": "Project Progress Desk consolidates multi-agent coding sessions into one view",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-11-ebay-blocks-autonomous-ai-agents-from-scraping-and-browsing-",
+        "title": "eBay blocks autonomous AI agents from scraping and browsing listings",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
