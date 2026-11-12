@@ -1,0 +1,534 @@
+{
+  "date": "2026-11-12",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-12-minimax-h3-image-and-highspeed-added-to-vercel-ai-gateway",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "generative-media",
+        "design-tools"
+      ],
+      "title": "MiniMax H3 Image and Highspeed added to Vercel AI Gateway",
+      "summary": "Vercel announced that MiniMax H3 Image and MiniMax H3 Image Highspeed are now available on AI Gateway, allowing users to generate and edit images with custom dimensions up to 4K using a single API key.",
+      "key_facts": [
+        "Includes MiniMax H3 Image and Highspeed models",
+        "Supports custom dimensions up to 2K and 4K",
+        "Enables text-to-image and image editing via API"
+      ],
+      "design_implication": "When a designer tests iterative layout concepts in a prototype loop, waiting on high-resolution image rendering often disrupts the creative flow. Accessing fast, multi-aspect generation directly through API routing means concept variations appear inline without switching authoring tools. Start by connecting generative API parameters directly to prototyping variables to keep image variations responsive during early exploration.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/minimax-h3-image-and-highspeed-now-available-on-ai-gateway",
+      "source_date": "2026-11-10T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "MiniMax H3 Image and Highspeed are available on Vercel AI Gateway",
+          "quote": "MiniMax H3 Image and MiniMax H3 Image Highspeed are now available on AI Gateway."
+        },
+        {
+          "claim": "Supports 2K and 4K outputs and image editing instructions",
+          "quote": "Both models support custom dimensions and aspect ratios, including 2K and 4K outputs."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 101,
+      "discovered_date": "2026-11-12",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/20yZQiIRVIrL4Y5mvQlsTe/3c8935388762292ca142432e205b9b9f/Vercel_x_MiniMax.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/minimax-h3-image-and-highspeed-now-available-on-ai-gateway",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-12-gemini-decisions-api-provides-fast-multimodal-choices",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "conversational-ui"
+      ],
+      "title": "Gemini Decisions API provides fast multimodal choices",
+      "summary": "Google introduced the Gemini Decisions API powered by Gemini Decision, returning Boolean probabilities, choices, and scores across text, images, audio, video, and PDF documents without generating output tokens.",
+      "key_facts": [
+        "Powered by Gemini Decision model",
+        "Supports multimodal inputs including video and PDFs",
+        "Returns probabilities and choices without generation tokens"
+      ],
+      "design_implication": "In conversational interfaces where an AI evaluates user content or routes requests behind the scenes, latency degrades trust. Fast probability responses eliminate visible generation lags during background validation tasks. Start by auditing your conversational flows to isolate background decision logic from visible text generation streams, using low-latency classification endpoints to speed up interface feedback.",
+      "implication_lens": "pattern",
+      "visual_need": "none",
+      "source_name": "Google AI Blog",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "source_date": "2026-11-11T18:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Google launched the Gemini Decisions API",
+          "quote": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal decisions."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 89,
+      "discovered_date": "2026-11-12",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    },
+    {
+      "id": "2026-11-12-gemini-4-carbon-brings-1m-token-context-to-vercel-ai-gateway",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "design-tools"
+      ],
+      "title": "Gemini 4 Carbon brings 1M token context to Vercel AI Gateway",
+      "summary": "Google's Gemini 4 Carbon is now available on Vercel AI Gateway with a 1M-token context window, offering a 50% discount through November 30, 2026, to support complex software engineering and agentic workflows.",
+      "key_facts": [
+        "Features a 1-million-token context window",
+        "Available at 50% off through November 30, 2026",
+        "Built for multi-stage software engineering and agentic tasks"
+      ],
+      "design_implication": "When engineers and designers inspect multi-file codebases during handoff, fragmented context often leads to misinterpretation of design intent. Massive context windows allow whole component libraries and specifications to be evaluated simultaneously by coding agents. Start by packaging your complete design system documentation into structured markdown files that coding agents can ingest in a single pass.",
+      "implication_lens": "workflow",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/gemini-4-carbon-now-available-on-ai-gateway",
+      "source_date": "2026-11-10T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Gemini 4 Carbon is available on Vercel AI Gateway",
+          "quote": "Gemini 4 Carbon is now available on AI Gateway."
+        },
+        {
+          "claim": "Includes 1M-token context window",
+          "quote": "It has a 1M-token context window for working with large codebases and long inputs."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 98,
+      "discovered_date": "2026-11-12",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    },
+    {
+      "id": "2026-11-12-vercel-sandbox-improves-snapshot-creation-speed",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "design-tools"
+      ],
+      "title": "Vercel Sandbox improves snapshot creation speed",
+      "summary": "Vercel announced that Vercel Sandbox now creates snapshots up to 10x faster, reducing median snapshot time under 0.4 seconds and improving restore speed by 50% using the Vercel Hive Snapshot format.",
+      "key_facts": [
+        "Snapshot creation is up to 10x faster",
+        "Median snapshot time reduced from 4.4 to under 0.4 seconds",
+        "Snapshot restore speed improved by 50% to 250ms at p50"
+      ],
+      "design_implication": "In browser-based prototyping environments where AI agents continuously spin up isolated test states, sandbox latency creates frustrating pauses. Instantaneous snapshot creation and restoration make live code execution feel immediate during interactive testing. Start by leveraging high-speed sandbox states to build responsive preview layers into your interactive component prototypes.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/vercel-sandbox-snapshot-creation-is-now-up-to-10x-faster",
+      "source_date": "2026-11-09T21:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel Sandbox creates snapshots up to 10x faster",
+          "quote": "Vercel Sandbox now creates snapshots up to 10x faster. Median time to snapshot is under 0.4 seconds, down from 4.4 seconds."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 85,
+      "discovered_date": "2026-11-12",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3Kx2eGDsv1d8kbZCKHFjvw/b18f48c92a064439ab18337f71949dbc/image__70_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/vercel-sandbox-snapshot-creation-is-now-up-to-10x-faster",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-12-vercel-speed-insights-and-web-analytics-add-custom-environme",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "design-ops",
+        "roles-and-skills"
+      ],
+      "title": "Vercel Speed Insights and Web Analytics add custom environments",
+      "summary": "Vercel updated Speed Insights and Web Analytics to fully support custom environments, attributing traffic and performance data from staging, QA, or canary deployments separately from Production and Preview.",
+      "key_facts": [
+        "Supports custom staging and QA environments",
+        "Separates canary metrics from Production and Preview",
+        "Viewable across standard performance dashboards"
+      ],
+      "design_implication": "When design teams evaluate how interface updates perform in pre-production builds, skewed telemetry data from preview links makes performance auditing unreliable. Segmenting metrics by custom environments allows designers to isolate UX rendering regressions before code reaches production. Start by aligning your analytics environment tags with your staging design review milestones to track performance changes accurately.",
+      "implication_lens": "workflow",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/speed-insights-and-web-analytics-now-support-custom-environments",
+      "source_date": "2026-11-10T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Speed Insights and Web Analytics support custom environments",
+          "quote": "Speed Insights and Web Analytics now fully support custom environments."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 1,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 92,
+      "discovered_date": "2026-11-12",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5kTmvzPXrjGgMWSyLZiFRR/28d77a8ecc8c0f215b7777f98997939b/image__1_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/speed-insights-and-web-analytics-now-support-custom-environments",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-12-united-airlines-blocks-personal-ai-agents-from-booking-fligh",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "trust-and-risk"
+      ],
+      "title": "United Airlines blocks personal AI agents from booking flights",
+      "summary": "United Airlines announced it will not allow personal AI assistants to book tickets on its platform, citing privacy and regulatory concerns over unauthorized agent interactions.",
+      "key_facts": [
+        "United forbids automated flight bookings by personal AI assistants",
+        "Cites privacy and regulatory compliance risks",
+        "Follows similar cautionary moves by services like DoorDash"
+      ],
+      "design_implication": "As autonomous shopping and booking agents attempt to interact with consumer services, platforms are erecting barriers against unverified automation. Designers building user-facing agent tools must anticipate sudden blocks and design fallback authentication states. Start by incorporating explicit verification hurdles and clear status indicators when an agent attempts cross-platform transactional workflows.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "none",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+      "source_date": "2026-11-11T21:54:21.000Z",
+      "evidence": [
+        {
+          "claim": "United blocks personal AI assistants from booking tickets",
+          "quote": "United says it won't let personal AI assistants book tickets on the airline, citing both privacy and regulatory concerns."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 84,
+      "discovered_date": "2026-11-12",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    },
+    {
+      "id": "2026-11-12-google-launches-tabletop-for-collaborative-group-planning",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "generative-ui",
+        "collaboration"
+      ],
+      "title": "Google launches Tabletop for collaborative group planning",
+      "summary": "Google Labs launched Tabletop, an experimental collaboration platform that lets groups build interactive itineraries, polls, and brackets together.",
+      "key_facts": [
+        "New Google Labs experiment for group collaboration",
+        "Generates interactive itineraries, polls, and brackets",
+        "Currently accessible via a waitlist"
+      ],
+      "design_implication": "Coordinating group decisions across asynchronous team members usually requires stitching together disparate chat threads and static documents. Flexible generative collaboration spaces replace rigid form layouts with context-aware coordination modules. Start by mapping out multi-user decision flows that allow teams to manipulate structured data widgets directly inside shared planning workspaces.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "Google AI Blog",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+      "source_date": "2026-11-11T16:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Google released Tabletop as a group collaboration experiment",
+          "quote": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets with your team."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [
+        "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability"
+      ],
+      "source_tier": 1,
+      "word_count": 74,
+      "discovered_date": "2026-11-12",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 84,
+    "held": [
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/evaluating-evaluators-llm-judges",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/startup-fights-ai-bioweapons-with-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/teen-girl-asked-gemini-about-suicide-for-months-until-it-was-flagged/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
+        "reason": "below_bar (10/15)"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-booking-restrictions",
+        "name": "Platform restrictions on autonomous booking agents",
+        "description": "Major consumer platforms are actively blocking autonomous shopping and booking agents to mitigate privacy, security, and regulatory risks.",
+        "source_urls": [
+          "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+          "https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 775,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1381,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 4
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-12-gemini-decisions-api-provides-fast-multimodal-choices",
+        "title": "Gemini Decisions API provides fast multimodal choices",
+        "source": "Google AI Blog",
+        "reason": "image host not allowed (storage.googleapis.com). If this is the company's own image server, add \"googleapis.com\" to image_hosts for Google AI Blog in sources.json",
+        "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini__decisions__blog-header_2784x1566.width-1300.png"
+      },
+      {
+        "story": "2026-11-12-gemini-4-carbon-brings-1m-token-context-to-vercel-ai-gateway",
+        "title": "Gemini 4 Carbon brings 1M token context to Vercel AI Gateway",
+        "source": "Vercel Blog",
+        "reason": "generic share image (already used by another story)",
+        "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/38lhFWswSQd6xdOwRCNNKC/9d4006e436aba2c29c165b60f58e816a/image.png"
+      },
+      {
+        "story": "2026-11-12-united-airlines-blocks-personal-ai-agents-from-booking-fligh",
+        "title": "United Airlines blocks personal AI agents from booking flights",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-12-google-launches-tabletop-for-collaborative-group-planning",
+        "title": "Google launches Tabletop for collaborative group planning",
+        "source": "Google AI Blog",
+        "reason": "image host not allowed (storage.googleapis.com). If this is the company's own image server, add \"googleapis.com\" to image_hosts for Google AI Blog in sources.json",
+        "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/labs_tabletop_blog_image_2784x1566.max-1440x810.jpg"
+      }
+    ]
+  }
+}
