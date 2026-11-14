@@ -1,0 +1,287 @@
+{
+  "date": "2026-11-14",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-14-chatgpt-wallet-lets-ai-agents-shop-and-check-out-for-you",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "permissions-and-identity",
+        "embedded-ui"
+      ],
+      "title": "ChatGPT Wallet lets AI agents shop and check out for you",
+      "summary": "OpenAI introduced ChatGPT Wallet, allowing agents in ChatGPT Work, Codex, and dots to complete purchases using user approval and existing card protections. The wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older with a US billing address and eligible American Express, Chase, Mastercard, and Visa cards.",
+      "key_facts": [
+        "Rolls out starting today for US ChatGPT Pro subscribers aged 18 and older.",
+        "Supports eligible US-issued American Express, Chase, Mastercard, and Visa cards.",
+        "Enables Dots agents to complete purchases on the user's behalf with approval."
+      ],
+      "design_implication": "When an autonomous shopping agent initiates a financial transaction inside a conversational interface, users need clear, unambiguous confirmation of total costs and permissions before funds move. In an admin console or checkout screen, designers must build explicit verification steps that pause agent execution without breaking context. Start by adding explicit spend confirmation screens and auditable transaction logs into agent-driven workflows so users retain absolute control over automated purchasing.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "OpenAI News",
+      "source_url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "source_date": "2026-11-13T15:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "ChatGPT Wallet lets agents complete purchases with user approval.",
+          "quote": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections."
+        },
+        {
+          "claim": "The wallet rolls out for US Pro subscribers with specific cards.",
+          "quote": "ChatGPT Wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older using a US billing address and \"eligible US-issued American Express, Chase, Mastercard and Visa cards.\""
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [
+        "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+        "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet"
+      ],
+      "source_tier": 1,
+      "word_count": 133,
+      "discovered_date": "2026-11-14",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-14-nielsen-norman-group-outlines-research-adaptation-in-ai-spee",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "research-synthesis",
+        "roles-and-skills",
+        "design-ops"
+      ],
+      "title": "Nielsen Norman Group outlines research adaptation in AI-speed development",
+      "summary": "Nielsen Norman Group published guidance on how user experience research can adapt to accelerated development cycles driven by AI. The research argues that UX teams can define what each release must measure and what it can help teams discover.",
+      "key_facts": [
+        "Focuses on user research adaptation to high-speed AI development.",
+        "Outlines methods to define release metrics and discovery targets.",
+        "Published by Nielsen Norman Group on November 13, 2026."
+      ],
+      "design_implication": "Rapid iterative deployments often outpace traditional usability testing cadences, leaving product teams guessing whether an automated feature actually solved a user problem. In a sprint review or research repository, designers must shift from testing finished features to continuously validating live assumptions through embedded telemetry and quick feedback loops. Start by attaching a mandatory validation checklist to every rapid code release to capture user friction before the next iteration begins.",
+      "implication_lens": "workflow",
+      "visual_need": "none",
+      "source_name": "Nielsen Norman Group",
+      "source_url": "https://www.nngroup.com/articles/research-in-the-loop/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "source_date": "2026-11-13T18:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Research can define what releases must measure and discover.",
+          "quote": "As AI speeds up development, it can be a challenge for research to adapt. Research can define what each release must measure and what it can help teams discover."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 117,
+      "discovered_date": "2026-11-14",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 91,
+    "held": [
+      {
+        "source_url": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search",
+        "reason": "awaiting_ga"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huang-and-the-end-of-the-founder-fairy-tale/",
+        "reason": "out_of_scope"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/ai-role-in-the-creative-process/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
+        "reason": "below_bar"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-wallet-delegation",
+        "name": "Autonomous Agent Financial Delegation",
+        "description": "Major platforms are introducing authenticated wallet mechanisms and spending controls to let autonomous AI agents execute commercial checkouts and financial transactions on behalf of users.",
+        "source_urls": [
+          "https://openai.com/index/introducing-chatgpt-wallet",
+          "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+          "https://vercel.com/changelog/vercel-connect-adds-managed-stripe-api-keys"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 777,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1387,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 4
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 5
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-14-chatgpt-wallet-lets-ai-agents-shop-and-check-out-for-you",
+        "title": "ChatGPT Wallet lets AI agents shop and check out for you",
+        "source": "OpenAI News",
+        "reason": "no source image found"
+      },
+      {
+        "story": "2026-11-14-nielsen-norman-group-outlines-research-adaptation-in-ai-spee",
+        "title": "Nielsen Norman Group outlines research adaptation in AI-speed development",
+        "source": "Nielsen Norman Group",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
