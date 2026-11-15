@@ -1,0 +1,274 @@
+{
+  "date": "2026-11-15",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-15-github-publishes-practical-guide-for-building-reusable-agent",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "agents-in-tools"
+      ],
+      "title": "GitHub publishes practical guide for building reusable agent skills",
+      "summary": "GitHub published a practical guide for building agent skills, explaining how teams can capture repeatable engineering work in files to review and reuse across different agents while keeping host tools, context, and permissions specific.",
+      "key_facts": [
+        "Agent skills capture repeatable engineering work in reusable files.",
+        "Tools, project context, and permissions remain specific to the host."
+      ],
+      "design_implication": "When designing agentic tools, handoff often breaks because custom agent instructions remain locked inside single-app chat histories. By structuring agent workflows into reusable files that sit alongside code repositories, teams can standardize how assistants interpret tasks across different environments. Start by extracting common design system prompt fragments into dedicated repository files so every coding agent references identical component rules.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "GitHub Blog",
+      "source_url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
+      "source_date": "2026-11-12T22:54:52.000Z",
+      "evidence": [
+        {
+          "claim": "Agent skills capture repeatable engineering work in files teams can review and reuse",
+          "quote": "Agent skills capture repeatable engineering work in files teams can review and reuse, while tools, project context, and permissions remain specific to the host that runs them."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "source_tier": 1,
+      "word_count": 102,
+      "discovered_date": "2026-11-15",
+      "visual_type": "source_image",
+      "visual_url": "https://github.blog/wp-content/uploads/2026/11/5b5fed0ce69f241f469053d4f178383688adb2fb7ef44dff82c1a2dd6a626fa1-1920x1080-1.png",
+      "visual_credit": "Image: GitHub",
+      "visual_source_url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-15-openai-launches-chatgpt-wallet-for-autonomous-agent-purchase",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "permissions-and-identity",
+        "embedded-ui"
+      ],
+      "title": "OpenAI launches ChatGPT Wallet for autonomous agent purchases",
+      "summary": "OpenAI launched ChatGPT Wallet, allowing its Dots AI agents to make purchases and check out automatically. The feature is rolling out for ChatGPT Pro subscribers in the US aged 18 and older using an eligible billing address and supported American Express, Chase, Mastercard, and Visa cards.",
+      "key_facts": [
+        "ChatGPT Wallet allows Dots AI agents to make purchases automatically.",
+        "Available to US ChatGPT Pro subscribers aged 18 and older.",
+        "Supports select US-issued American Express, Chase, Mastercard, and Visa cards."
+      ],
+      "design_implication": "In an e-commerce checkout flow, payment forms are typically optimized for human users entering card numbers manually. When autonomous agents initiate transactions directly via delegated wallets, standard form validation and fraud detection loops are bypassed entirely. Start by auditing checkout APIs to accept pre-authenticated cryptographic tokens from verified agent platforms without triggering manual step-up verification.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+      "source_date": "2026-11-13T20:45:10.000Z",
+      "evidence": [
+        {
+          "claim": "ChatGPT Wallet lets OpenAI's Dots agents make purchases for you",
+          "quote": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "source_tier": 2,
+      "word_count": 109,
+      "discovered_date": "2026-11-15",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 90,
+    "held": [
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/journey-mapping-101/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/ai-role-in-the-creative-process/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/in-conversation-dylan-field-and-david-friedberg/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-reinstate-jensen-huang/",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-wallet-delegation",
+        "name": "Agent Wallet and Credential Delegation",
+        "description": "Major AI platforms are introducing dedicated wallets and credential delegation mechanisms to allow autonomous agents to transact and authenticate on behalf of users.",
+        "source_urls": [
+          "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+          "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 777,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1387,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 4
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-15-openai-launches-chatgpt-wallet-for-autonomous-agent-purchase",
+        "title": "OpenAI launches ChatGPT Wallet for autonomous agent purchases",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
