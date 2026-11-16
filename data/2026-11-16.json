@@ -1,0 +1,666 @@
+{
+  "date": "2026-11-16",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-16-ui-as-a-projection-over-context-in-agentic-systems",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "generative-ui",
+        "agentic-ux",
+        "trust-and-explainability"
+      ],
+      "title": "UI as a projection over context in agentic systems",
+      "summary": "Researchers propose AFS-UI, a framework that reconceptualises user interfaces as dynamic projections over context built on agentic systems, moving away from fragmented request-response pipelines.",
+      "key_facts": [
+        "Proposes AFS-UI framework for generative user interfaces",
+        "Reconceptualises UI as projections over context in agentic systems",
+        "Addresses limitations of traditional request-response generative pipelines"
+      ],
+      "design_implication": "When designing interfaces driven by autonomous agent workflows, static layouts often break down the moment context shifts or multi-step execution branches. Relying on fixed component libraries leaves users guessing about the underlying state during long-horizon tasks. Start treating layouts as dynamic projections over live execution context, ensuring that interface components adapt their structure transparently as the underlying agent gathers new information.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2611.17355",
+      "source_date": "2026-11-16T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Proposes AFS-UI framework that reconceptualises UI as projections over context.",
+          "quote": "This paper proposes AFS-UI, which reconceptualises UI as projections over context built on an agentic system"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 94,
+      "discovered_date": "2026-11-16",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-16-ambiguity-in-ai-memory-permissions-and-preview-rules",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "trust-and-risk",
+        "permissions-and-identity",
+        "agents-as-users"
+      ],
+      "title": "Ambiguity in AI memory permissions and preview rules",
+      "summary": "A new research study investigates what people can infer about saved memory rules when presented with limited preview examples of allowed and blocked assistant actions.",
+      "key_facts": [
+        "Evaluates ambiguity in AI memory permissions and preview rules",
+        "Examines user inference from single allowed and blocked action previews",
+        "Analyzes rule compatibility for editors with multiple valid rules"
+      ],
+      "design_implication": "In settings where AI assistants retain cross-session memory, users frequently struggle to predict the exact boundaries of automated recall based on simple allow-or-block examples. Ambiguous permission rules lead to unexpected data exposure during routine interactions. Start designing explicit memory audit logs that display full rule implications rather than isolated test previews, so users can verify exactly what context an agent is allowed to retain.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2611.17874",
+      "source_date": "2026-11-16T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Examines what people can infer about saved memory rules from preview examples.",
+          "quote": "We ask what such a preview lets a person infer about the rule they saved."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 97,
+      "discovered_date": "2026-11-16",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-16-qwen4-max-reasoning-model-brings-native-vision-and-1m-contex",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "agents-in-tools",
+        "generative-media"
+      ],
+      "title": "Qwen4-Max reasoning model brings native vision and 1M context to Vercel AI Gateway",
+      "summary": "Vercel announced that Qwen4-Max is available on AI Gateway, featuring a reasoning model with native vision and a 1M-token context window capable of building 3D scenes and playable games in professional engines.",
+      "key_facts": [
+        "First model in the Qwen4 series available on Vercel AI Gateway",
+        "Features a 1M-token context window with native vision capabilities",
+        "Capable of building 3D scenes in Blender and games in Unity, Unreal Engine, and Godot"
+      ],
+      "design_implication": "When prototyping multi-platform experiences directly inside development gateways, managing extensive context windows shifts how engineering teams evaluate interactive concepts. Designers often struggle to bridge the gap between static design files and fully executable engine environments during early explorations. Try utilizing large-context gateway models to instantly spin up interactive prototypes in game engines directly from component specs, reducing friction in cross-tool handoff.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/qwen4-max-now-available-on-ai-gateway",
+      "source_date": "2026-11-15T20:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Qwen4-Max is available on Vercel AI Gateway with native vision and 1M context.",
+          "quote": "Qwen4-Max is now available on AI Gateway. It is the first model in the Qwen4 series: a reasoning model with native vision and a 1M-token context window"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 106,
+      "discovered_date": "2026-11-16",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2aBIEKewKIpdYSPv9E76Wn/5a0957249bafced81d33df0534df0187/Vercel_x_Qwen.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/qwen4-max-now-available-on-ai-gateway",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-16-vercel-increases-build-cache-size-limit-to-5-gb",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "design-ops",
+        "collaboration"
+      ],
+      "title": "Vercel increases build cache size limit to 5 GB",
+      "summary": "Vercel increased the build cache size limit on all build machines to 5 GB, allowing projects to save more installed dependencies and framework files between deployments to reduce build times.",
+      "key_facts": [
+        "Build cache size limit increased to 5 GB across all build machines",
+        "Replaces previous 1.5 GB cache limit threshold",
+        "Enables reuse of more installed dependencies and framework files between deployments"
+      ],
+      "design_implication": "In fast-moving prototyping workflows, deployment lag during design system updates disrupts rapid iteration cycles. When preview builds take too long to compile, feedback loops between visual adjustments and technical verification stall. Start auditing your project caching configurations to take advantage of expanded storage thresholds, ensuring that interactive component previews update near-instantly during live design critiques.",
+      "implication_lens": "workflow",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/build-cache-size-limit-on-vercel-increased-to-five-gb",
+      "source_date": "2026-11-13T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "The build cache size limit on Vercel has been increased to 5 GB.",
+          "quote": "The size limit on all build cache has been increased to 5 GB."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 94,
+      "discovered_date": "2026-11-16",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2IAhl0SUuhQvatXfUJ6fbt/e2406cd91ed04136e25398e0504e7011/download__4_.jpeg",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/build-cache-size-limit-on-vercel-increased-to-five-gb",
+      "visual_license": "official_with_credit"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 88,
+    "held": [
+      {
+        "source_url": "https://www.figma.com/blog/ai-role-in-the-creative-process/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-3d-transforms-and-figmas-agent-brought-a-launch-video-to-life/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/in-conversation-dylan-field-and-david-friedberg/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-figma-manages-sandboxes-at-scale/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/step-toward-defining-the-standard-model",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/our-new-blog-for-science",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/shield",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/amplitude",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/gondola",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/learn-the-rules-the-hacker-mindset/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/theoretical-limits-alignment",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/evaluating-evaluators-llm-judges",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/gating-memorization-in-context",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/weighted-state-souping",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/faster-retrieval",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/attention-mamba-distillation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-daemons-can-now-send-traces-to-vercel-tracing",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-token-pass-now-includes-one-hundred-fifty-dollars-of-monthly-tokens",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-security-review-no-longer-requires-a-linked-vercel-project",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-sandbox-starts-up-to-four-times-faster",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/journey-mapping-101/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/agent-harness/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/usability-101-introduction-to-usability/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/january/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.17490",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.17830",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.18230",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/13/1148551/the-download-silicon-valley-midterms-nvidia-chip-tracking/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/13/1148474/more-autonomy-fewer-ndas-volunteers-have-new-requests-for-brain-implant-trials/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/13/1148498/silicon-valley-claims-to-know-the-future-so-why-did-it-get-the-midterms-so-wrong/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/12/1148483/nvidia-chip-tracking/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/12/1148444/the-download-cop31-climate-talks-cognitive-immortality/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/11/1148308/un-climate-talks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/15/snl-gathers-all-the-tech-tycoons-for-a-lesson-in-dating-and-spycraft/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-djs-completely-kill-my-groove/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/this-ai-tamagotchi-oats-turns-everyday-objects-into-needy-virtual-pets/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/beware-the-new-ai-fueled-ransomware-boom/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/no-pilots-few-air-traffic-controllers-what-could-go-wrong/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/microsoft-365-crawls-back-to-life-after-a-24-hour-outage/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huang-and-the-end-of-the-founder-fairy-tale/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/windows-0-day-dropped-by-disgruntled-researcher-hands-hackers-system-rights/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/vulnerability-that-lets-hackers-ssh-into-linux-devices-is-under-active-exploitation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/chainalysis-says-hackers-stole-credentials-and-tokens-for-all-of-its-customers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/hackers-exploited-ios-and-android-flaws-to-infect-phones/",
+        "reason": "out_of_scope"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://uxdesign.cc/decision-theatre-or-decision-design-f1604f178685?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/schrödingers-huang-d1da36bff88c?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-crooked-plate-that-felt-more-human-than-the-algorithm-40bb4e5da147?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ai-is-the-new-old-design-material-0e7f83540c9a?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-ai-mind-tax-that-afflicts-those-who-use-ai-best-3eb67ff167d0?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/why-are-we-cloning-photoshop-52e6e165eef7?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/stateweave",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/findy-3",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/sumsung",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/nexus-11",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/zode",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/chatgpt",
+        "reason": "duplicate"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1033355/apples-new-study-lookup-to-improve-the-effectiveness-of-ai-health-tools",
+        "reason": "unsupported_claim (URL not in candidates)"
+      }
+    ],
+    "patterns": [],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 777,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1389,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 18,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 4
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-16-ui-as-a-projection-over-context-in-agentic-systems",
+        "title": "UI as a projection over context in agentic systems",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-16-ambiguity-in-ai-memory-permissions-and-preview-rules",
+        "title": "Ambiguity in AI memory permissions and preview rules",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
