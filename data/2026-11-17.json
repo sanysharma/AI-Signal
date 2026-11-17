@@ -1,0 +1,303 @@
+{
+  "date": "2026-11-17",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-17-tokeneconomizer-reuses-past-coding-agent-sessions-to-cut-tok",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "agents-in-tools",
+        "design-systems"
+      ],
+      "title": "TokenEconomizer reuses past coding agent sessions to cut token costs",
+      "summary": "Microsoft Research released TokenEconomizer, an open-source plugin that allows AI coding agents to learn from past sessions. The tool helps maintain task success rates while reducing wasted computation and token consumption.",
+      "key_facts": [
+        "Open-source plugin released by Microsoft Research",
+        "Builds on past sessions to cut token costs",
+        "Maintains task success while reducing wasted computation"
+      ],
+      "design_implication": "When engineering teams adopt coding agents, escalating token costs and repetitive prompt loops can inflate prototyping expenses. By retaining memory across sessions, agents avoid re-explaining architecture constraints during rapid UI iteration. Start by establishing shared context files in repository roots so downstream agents spend fewer tokens parsing existing component APIs.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Microsoft Research Blog",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/tokeneconomizer-learning-from-experience-to-make-ai-coding-agents-more-efficient/",
+      "source_date": "2026-11-16T17:01:35.000Z",
+      "evidence": [
+        {
+          "claim": "TokenEconomizer is an open-source plugin that cuts costs by building on past sessions.",
+          "quote": "TokenEconomizer is an open-source plugin that builds on past sessions to cut costs while maintaining task success."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 91,
+      "discovered_date": "2026-11-17",
+      "visual_type": "source_image",
+      "visual_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/11/TokenEconomizer-TWLIFB-1200x627-1.jpg",
+      "visual_credit": "Image: Microsoft",
+      "visual_source_url": "https://www.microsoft.com/en-us/research/blog/tokeneconomizer-learning-from-experience-to-make-ai-coding-agents-more-efficient/",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-17-vercel-ai-gateway-adds-private-inference-for-managed-model-e",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "agents-in-tools"
+      ],
+      "title": "Vercel AI Gateway adds Private Inference for managed model endpoints",
+      "summary": "Vercel announced that AI Gateway now supports Private Inference, allowing teams to connect self-hosted, fine-tuned, or prerelease model endpoints directly into existing centralized authentication and observability workflows.",
+      "key_facts": [
+        "Adds support for Private Inference on Vercel AI Gateway",
+        "Connects self-hosted, fine-tuned, or prerelease models",
+        "Manages authentication and observability in one place"
+      ],
+      "design_implication": "As design systems integrate proprietary, fine-tuned generative models, managing disparate API keys and scattered logging pipelines creates friction for internal tool builders. Routing custom models through unified infrastructure ensures consistent access control and telemetry during experimentation. Start by auditing internal generative prototypes to consolidate fragmented model endpoints under a single gateway.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/ai-gateway-now-supports-private-inference",
+      "source_date": "2026-11-16T07:47:00.000Z",
+      "evidence": [
+        {
+          "claim": "AI Gateway now supports Private Inference for self-hosted or fine-tuned models.",
+          "quote": "AI Gateway now supports Private Inference... connect your own model endpoints"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 88,
+      "discovered_date": "2026-11-17",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2y4c8ndvzbvOnwPqJkLJVa/d171f430e0e967f21f06c54240c0f5be/download__4_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/ai-gateway-now-supports-private-inference",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-17-vercel-spend-management-adds-project-level-budgets-and-autom",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "trust-and-risk",
+        "adoption-data"
+      ],
+      "title": "Vercel Spend Management adds project-level budgets and automatic deployment pausing",
+      "summary": "Vercel updated Spend Management to support budgets for individual projects and products alongside team budgets. Vercel sends threshold notifications at 50, 75, and 100 percent, with automatic production pausing available for teams and projects.",
+      "key_facts": [
+        "Supports budgets for individual projects and products",
+        "Sends notifications at 50%, 75%, and 100% thresholds",
+        "Supports automatic pausing of production deployments"
+      ],
+      "design_implication": "Unbounded AI workflows and automated agent loops can rapidly consume cloud resources, creating unexpected cost overruns during rapid prototyping phases. When products rely on continuous generation or agentic execution, hard financial guardrails prevent runaway loops from impacting project viability. Start by configuring automated budget alerts at fifty percent thresholds for any experimental prototype utilizing paid models.",
+      "implication_lens": "business",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/set-budgets-for-projects-and-products-in-spend-management",
+      "source_date": "2026-11-16T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Spend Management now supports budgets for individual projects and products.",
+          "quote": "now supports budgets for individual projects and products, alongside existing team budgets."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 100,
+      "discovered_date": "2026-11-17",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/70OQRkf2udoqKajYXkpRsa/623d391faec14896f98a32cf4b52060e/budgets_og_final.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/set-budgets-for-projects-and-products-in-spend-management",
+      "visual_license": "official_with_credit"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 94,
+    "held": [
+      {
+        "source_url": "https://www.figma.com/blog/1password-figma-make/",
+        "reason": "awaiting_ga"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1034581/apple-intelligence-siri-ai-daily-usage-limits-icloud-subscription",
+        "reason": "awaiting_ga"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-cost-and-budget-controls",
+        "name": "Agent Cost and Budget Controls",
+        "description": "Platforms are introducing fine-grained budget limits, automated spending thresholds, and token-saving mechanisms to manage the resource consumption of autonomous agents and automated workflows.",
+        "source_urls": [
+          "https://vercel.com/changelog/set-budgets-for-projects-and-products-in-spend-management",
+          "https://vercel.com/changelog/ai-traffic-insights-now-available-in-vercel-observability"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 778,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1400,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 79,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 3
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": []
+  }
+}
