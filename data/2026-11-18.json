@@ -1,0 +1,659 @@
+{
+  "date": "2026-11-18",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-18-github-introduces-agent-host-protocol-for-cross-device-agent",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "platform-shift"
+      ],
+      "title": "GitHub introduces Agent Host Protocol for cross-device agent sessions",
+      "summary": "GitHub introduced the open Agent Host Protocol to maintain agent sessions across editors, mobile applications, desktop software, and cloud environments. The standard preserves execution context across platforms so users can switch devices without losing active tasks.",
+      "key_facts": [
+        "Open protocol keeps agent sessions synchronized across editors, mobile, and cloud.",
+        "Preserves execution state and context during cross-device platform handoffs."
+      ],
+      "design_implication": "A designer managing an autonomous workflow often loses context when switching from a desktop environment to a phone. With session continuity standardized across surfaces, interfaces no longer need bespoke sync logic to resume multi-step agent actions. Audit handoff flows across platforms to ensure mobile and desktop surfaces present identical progress checkpoints, permissions, and cancel controls.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "GitHub Blog",
+      "source_url": "https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/",
+      "source_date": "2026-11-17",
+      "evidence": [
+        {
+          "claim": "GitHub introduced an open protocol for cross-device agent session continuity.",
+          "quote": "built the open Agent Host Protocol to keep your agent sessions accessible across editors, apps, phones, and the cloud."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "source_tier": 1,
+      "word_count": 100,
+      "discovered_date": "2026-11-18",
+      "visual_type": "source_image",
+      "visual_url": "https://github.blog/wp-content/uploads/2026/11/agents-everywhere.png",
+      "visual_credit": "Image: GitHub",
+      "visual_source_url": "https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-18-google-makes-tasks-in-gemini-free-with-deeper-workspace-acti",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "conversational-ui"
+      ],
+      "title": "Google makes Tasks in Gemini free with deeper Workspace actions",
+      "summary": "Google rebranded its Spark autonomous agent as Tasks and made it free across six countries, rolling out expanded features in the United States. The tool integrates directly into Google Workspace to execute calendar and email actions on behalf of users.",
+      "key_facts": [
+        "Rebrands Spark agent to Tasks and makes it free in six countries.",
+        "Adds deeper Google Workspace integration to perform actions on user behalf.",
+        "Rolls out additional task management features first in the United States."
+      ],
+      "design_implication": "When an assistant shifts from answering prompts to scheduling events and modifying inboxes directly, user trust hinges on execution boundaries. Designers must now build transparent checkpoints into embedded apps rather than treating automated actions as invisible background tasks. Add explicit confirmation states for irreversible external actions while letting low-risk background updates proceed without friction.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "Google AI Blog",
+      "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+      "source_date": "2026-11-17",
+      "evidence": [
+        {
+          "claim": "Tasks in Gemini is now free in six countries with deeper Google Workspace integration.",
+          "quote": "Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on your behalf."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [
+        "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free"
+      ],
+      "source_tier": 1,
+      "word_count": 104,
+      "discovered_date": "2026-11-18",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-18-multimodal-llm-text-explanations-increase-perceived-trust-in",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "trust-and-explainability",
+        "multimodal"
+      ],
+      "title": "Multimodal LLM text explanations increase perceived trust in XAI visualizations",
+      "summary": "Researchers evaluated whether augmenting explainable AI visualizations with textual descriptions generated by multimodal language models improves user comprehension. The pre-registered study found that pairing visual model outputs with generated natural-language explanations significantly improved perceived understanding and trust.",
+      "key_facts": [
+        "Evaluates multimodal language model explanations paired with complex XAI visualizations.",
+        "Pre-registered study measured effects on perceived understanding and user trust.",
+        "Textual descriptions significantly improved interpretation of difficult model outputs."
+      ],
+      "design_implication": "In high-stakes dashboards, users frequently abandon complex model visualizations because feature importance charts remain difficult to interpret alone. Augmenting visual evidence with concise, natural-language summaries bridges comprehension gaps without cluttering the display. Pair dense algorithmic charts with plain-text interpretations explaining which factors influenced the decision and why.",
+      "implication_lens": "pattern",
+      "visual_need": "none",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2611.21638",
+      "source_date": "2026-11-18",
+      "evidence": [
+        {
+          "claim": "Augmenting XAI visualizations with multimodal LLM text improves perceived understanding and trust.",
+          "quote": "evaluate whether augmenting XAI outputs with textual explanations from multimodal LLMs improves perceived understanding and perceived trust."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "source_tier": 1,
+      "word_count": 94,
+      "discovered_date": "2026-11-18",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.8-flash",
+    "candidates_reviewed": 90,
+    "held": [
+      {
+        "source_url": "https://uxdesign.cc/everyone-knows-sparkles-mean-ai-use-them-to-make-design-audits-easier-bdacc76cef11?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ui-edge-cases-a-reference-guide-e778061588ef?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/introzy",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/review-box",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/soreqen-code",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/ody-ai-business-phone",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/happo-2",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/ai-canvas-2",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [
+      {
+        "source_url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
+        "reason": "duplicate"
+      }
+    ],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/1password-figma-make/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/ai-role-in-the-creative-process/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-3d-transforms-and-figmas-agent-brought-a-launch-video-to-life/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/in-conversation-dylan-field-and-david-friedberg/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/introducing-chatgpt-for-sales",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/astra-law-6-2",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/introducing-openai-for-chile",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/can-ai-help-build-a-healthier-future/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/split-scale-latent-3d",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/theoretical-limits-alignment",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/evaluating-evaluators-llm-judges",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/gating-memorization-in-context",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/weighted-state-souping",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/private-evolution-clustering",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/standard-build-billing-new-teams",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-blob-now-supports-ttls-for-automatic-deletion",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/speed-insights-now-measures-soft-navigations",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/pull-request-only-preset-now-available-for-preview-builds",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/eve-is-now-generally-available",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/decision-1-1-now-available-on-ai-gateway",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/journey-mapping-101/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/agent-harness/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/usability-101-introduction-to-usability/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/january/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.21628",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.21629",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.21637",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.21639",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/17/1148049/roundtables-inside-the-quest-for-cognitive-immortality/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/17/1148742/hydropower-drought-colorado-river/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/17/1148203/research-reports/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/17/1148679/the-download-jensen-huang-open-source-ai-cognitive-immortality/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/16/1148565/building-trustworthy-ai-by-fencing-it-in-not-predicting-it/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1036111/satya-nadella-says-hes-agi-pilled-now",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1036032/nvidia-q3-2027-jensen-huang",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/news/1035957/meta-alexandr-wang-sam-altman-instagram-ai-deepfake",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/policy/1035410/doj-megaspeed-nvidia-investigation-update",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1035420/jensen-huang-nvidia-return-as-ceo-statement",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/17/nvidia-promises-that-revenue-will-keep-soaring-for-now/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/17/nvidia-says-it-doesnt-plan-to-reappoint-jensen-huang-as-ceo/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/lovable-wants-you-to-vibe-code-a-living/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/over-a-third-of-gen-z-rely-on-ai-for-friendship/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/nvidias-board-has-no-plans-to-reinstate-jensen-huang/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/wired-yearbook-2026-clement-delangue/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/apple-watch-audio-intelligence-live-rewind-siri-recap/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-told-these-ex-google-guys-how-to-build-a-billion-dollar-weapons-business/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/online-smashingconf-ai-2027/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/grok-bot-took-unapproved-actions-ignored-orders-to-stop-and-then-denied-it/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arstechnica.com/tech-policy/2026/11/shareholders-sue-intel-its-ceo-and-cfo-after-stock-drops-28-6-percent-in-one-day/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/windows-0-day-dropped-by-disgruntled-researcher-hands-hackers-system-rights/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/vulnerability-that-lets-hackers-ssh-into-linux-devices-is-under-active-exploitation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-is-a-researchers-worth-ea14c95c6d12?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/why-bother-paying-for-software-anymore-e1f76093f772?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/before-you-ship-your-wrapped-schr%C3%B6dingers-nvidia-infinite-tokens-64a9160bd2eb?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-trash-robot-that-doesnt-pick-up-but-hands-out-9f599d49f8d0?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "delegated-task-boundaries",
+        "name": "Delegated Task Execution Boundaries",
+        "description": "Platforms and services are introducing bounded permissions and explicit consent checkpoints as autonomous agents transition from conversational advice to executing real-world digital actions.",
+        "source_urls": [
+          "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+          "https://openai.com/index/introducing-chatgpt-wallet",
+          "https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents",
+          "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/"
+        ],
+        "confidence": "established"
+      },
+      {
+        "id": "agentic-decision-transparency",
+        "name": "Agentic Decision Transparency",
+        "description": "Systems are pairing visual execution traces and decision trees with natural language narratives to help users inspect, understand, and trust autonomous agent actions.",
+        "source_urls": [
+          "https://arxiv.org/abs/2611.21638",
+          "https://arxiv.org/abs/2611.04183",
+          "https://arxiv.org/abs/2610.30548"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 778,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1407,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 33,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 5
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-18-google-makes-tasks-in-gemini-free-with-deeper-workspace-acti",
+        "title": "Google makes Tasks in Gemini free with deeper Workspace actions",
+        "source": "Google AI Blog",
+        "reason": "image host not allowed (storage.googleapis.com). If this is the company's own image server, add \"googleapis.com\" to image_hosts for Google AI Blog in sources.json",
+        "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_2784_x_1566_1.width-1300.png"
+      },
+      {
+        "story": "2026-11-18-multimodal-llm-text-explanations-increase-perceived-trust-in",
+        "title": "Multimodal LLM text explanations increase perceived trust in XAI visualizations",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
