@@ -1,0 +1,620 @@
+{
+  "date": "2026-11-19",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-19-vercel-board-introduces-shared-message-board-for-multi-agent",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "agents-in-tools",
+        "design-ops"
+      ],
+      "title": "Vercel Board introduces shared message board for multi-agent workflows",
+      "summary": "Vercel has released Vercel Board, an experimental message board available on all plans that provides a secure, shared space for agents to coordinate tasks, keep context together, and track completion across swarms and software factories.",
+      "key_facts": [
+        "Available now on all Vercel plans as an experimental feature",
+        "Agents access Board via the Vercel CLI or JavaScript SDK",
+        "Designed to track tasks, statuses, logs, and delegation across multiple agents"
+      ],
+      "design_implication": "When multiple autonomous design agents and subagents collaborate on complex design system updates, tracking progress across fragmented terminal logs creates coordination blind spots. A shared coordination primitive moves agent oversight from opaque debugging files to a visible operational surface, shifting the designer's role from inspecting single script outputs to monitoring multi-agent state. Start by mapping out what task statuses and delegation handoffs your design system agents need to surface on a shared board.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/blog/introducing-vercel-board",
+      "source_date": "2026-11-18T08:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel Board provides a shared message board for multi-agent workflows.",
+          "quote": "It’s an experimental message board that gives agents a shared, secure place to coordinate tasks and keep context together."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [
+        "https://vercel.com/changelog/vercel-board-is-now-available"
+      ],
+      "source_tier": 1,
+      "word_count": 117,
+      "discovered_date": "2026-11-19",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/ca600397c120c7550d2d2c36/e9a2d078b2229c537525478b237c707a/og-board__1_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/blog/introducing-vercel-board",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-19-gemini-4-neon-brings-1m-context-and-multimodal-tool-calling-",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "generative-media",
+        "multimodal",
+        "design-tools"
+      ],
+      "title": "Gemini 4 Neon brings 1M context and multimodal tool calling to AI Gateway",
+      "summary": "Google has launched Gemini 4 Neon on Vercel AI Gateway, delivering output quality close to larger models with faster responses. It accepts text, images, video, and documents with a 1M-token context window and supports tool calling and structured output.",
+      "key_facts": [
+        "Major upgrade over earlier lighter Gemini 4 models",
+        "Accepts text, images, video, and documents with 1M-token context",
+        "Supports tool calling and structured output for agent workflows"
+      ],
+      "design_implication": "Prototyping multimodal design tools often hits latency bottlenecks when handling large video and document contexts. Access to a fast, high-context model with native structured output allows interface tools to parse complex design files and return actionable layout suggestions instantly. Start by testing how quickly your prototyping harness can pass annotated multi-page document states into a high-context endpoint without dropping user context.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/gemini-4-neon-now-available-on-ai-gateway",
+      "source_date": "2026-11-18T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Gemini 4 Neon offers a 1M-token context window and multimodal input support.",
+          "quote": "The model accepts text, images, video, and documents, with a 1M-token context window. It supports tool calling, stru"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 113,
+      "discovered_date": "2026-11-19",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    },
+    {
+      "id": "2026-11-19-parallel-web-search-defaults-to-fast-mode-for-agents-on-verc",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "agentic-ux",
+        "code-prototyping"
+      ],
+      "title": "Parallel web search defaults to fast mode for agents on Vercel AI Gateway",
+      "summary": "Vercel has made parallel web search in fast mode free on AI Gateway and eve through January 31, 2027. The tool works with any model, returning relevant web pages with links and short excerpts that can be filtered by website or publication date.",
+      "key_facts": [
+        "Free on AI Gateway and eve through January 31, 2027",
+        "Acts as default web search for agents in eve",
+        "Returns links and short excerpts with website and date filtering"
+      ],
+      "design_implication": "When an agentic UI dynamically queries live web data to populate interface components, inconsistent search formatting and slow response times break layout continuity. Having a standardized, fast search primitive that returns structured excerpts enables designers to predict how dynamic source cards will render. Start by building component states that gracefully handle external search snippets returned with publication metadata.",
+      "implication_lens": "pattern",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/parallel-web-search-is-free-on-ai-gateway-and-eve-through-january-31",
+      "source_date": "2026-11-18T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Parallel web search in fast mode is free on AI Gateway through January 31, 2027.",
+          "quote": "web search in fast mode is now free on through January 31, 2027, and Parallel is now the default web search for agents."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 114,
+      "discovered_date": "2026-11-19",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1JYJ9wk75kgyze16wuPDft/afc58a2c25240e39277e82324afe8e68/parallel_og_final.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/parallel-web-search-is-free-on-ai-gateway-and-eve-through-january-31",
+      "visual_license": "official_with_credit"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 88,
+    "held": [
+      {
+        "source_url": "https://www.figma.com/blog/source-material-chase-rutherford/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/1password-figma-make/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/ai-role-in-the-creative-process/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-3d-transforms-and-figmas-agent-brought-a-launch-video-to-life/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/in-conversation-dylan-field-and-david-friedberg/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/index/the-silent-consensus",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/research-acceleration-jagged-frontier",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/sumitomo-life",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/inside-the-codex-sandbox",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/index/managing-frontier-ai-risk",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/can-ai-help-build-a-healthier-future/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/split-scale-latent-3d",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/theoretical-limits-alignment",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/evaluating-evaluators-llm-judges",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/gating-memorization-in-context",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/weighted-state-souping",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/private-evolution-clustering",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/blog/vercel-x",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-drives-now-reads-files-up-to-6x-faster",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/journey-mapping-101/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/agent-harness/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/usability-101-introduction-to-usability/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/january/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.23534",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.23618",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.23691",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.23825",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.24165",
+        "reason": "out_of_scope"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/18/1148650/ai-hype-index-ai-is-everywhere/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/18/1148845/the-download-ai-learns-to-smell-hydropower-struggles/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/17/1148049/roundtables-inside-the-quest-for-cognitive-immortality/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/17/1148742/hydropower-drought-colorado-river/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/17/1148203/research-reports/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/policy/1036749/trump-ai-chip-data-center-us-philippines-pax-silica",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1035924/nvidia-visualized-revenue-profit-earnings-after-huang",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/policy/1036935/congress-forced-arbitration-deepfakes-defiance-act",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1036776/nvidia-earnings-kress-jensen-huang-petition",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1036729/disney-star-wars-anzellans-animatronic-amazon-aws-cloud-ai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/18/elon-musk-says-ousting-jensen-huang-is-like-kicking-michael-jordan-off-your-team/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/18/satya-nadella-predicts-ai-agents-will-reshuffle-the-economics-of-the-web/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/guys-really-we-got-this/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/administration-officials-dont-think-much-ai-progress-will-come-of-trumps-china-visit/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/the-ai-chip-war-meets-the-jensen-huang-affair/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/inside-nvidias-first-all-hands-without-jensen-huang-as-ceo/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/artex-ai-hacking-tools/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/just-ridiculous-a-famed-philosopher-takes-on-ai-consciousness/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/online-smashingconf-ai-2027/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/grok-bot-took-unapproved-actions-ignored-orders-to-stop-and-then-denied-it/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/tech-policy/2026/11/shareholders-sue-intel-its-ceo-and-cfo-after-stock-drops-28-6-percent-in-one-day/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/windows-0-day-dropped-by-disgruntled-researcher-hands-hackers-system-rights/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/vulnerability-that-lets-hackers-ssh-into-linux-devices-is-under-active-exploitation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/if-ai-works-from-anywhere-why-are-we-commuting-to-watch-it-f903012aaa86?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/too-claudified-9af067298b2a?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-is-a-researchers-worth-ea14c95c6d12?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/everyone-knows-sparkles-mean-ai-use-them-to-make-design-audits-easier-bdacc76cef11?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/why-bother-paying-for-software-anymore-e1f76093f772?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/ui-edge-cases-a-reference-guide-e778061588ef?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/cleared-quit-nicotine",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/verse-engine-by-ctruh",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/the-calm-creator-mastermind",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/netlify",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/tecla-3",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "patterns": [],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 779,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1413,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 5
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 37,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 5
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 5
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-19-gemini-4-neon-brings-1m-context-and-multimodal-tool-calling-",
+        "title": "Gemini 4 Neon brings 1M context and multimodal tool calling to AI Gateway",
+        "source": "Vercel Blog",
+        "reason": "generic share image (already used by another story)",
+        "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/38lhFWswSQd6xdOwRCNNKC/9d4006e436aba2c29c165b60f58e816a/image.png"
+      }
+    ]
+  }
+}
