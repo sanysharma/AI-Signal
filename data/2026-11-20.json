@@ -1,0 +1,860 @@
+{
+  "date": "2026-11-20",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-20-google-ai-introduces-tool-retrieval-in-the-gemini-api-for-ef",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "generative-media",
+        "multimodal"
+      ],
+      "title": "Google AI introduces Tool Retrieval in the Gemini API for efficient access",
+      "summary": "Google AI announced Tool Retrieval in the Gemini API, now in preview. The feature allows agents to access hundreds of tools while using fewer tokens.",
+      "key_facts": [
+        "Currently available in preview in the Gemini API",
+        "Gives agents access to hundreds of tools",
+        "Designed to use fewer tokens during retrieval"
+      ],
+      "design_implication": "When an agent interface exposes hundreds of potential tools, bloated system prompts and runaway token costs quickly degrade performance and responsiveness. Tool retrieval shifts the interaction pattern from loading every capability upfront to dynamically fetching only what the current user context demands. Start by auditing your agent's system prompt to separate core permanent actions from specialized utility tools that can be lazily loaded on demand.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "Google AI Blog",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+      "source_date": "2026-11-19T18:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Tool Retrieval in the Gemini API is now in preview.",
+          "quote": "now in preview in the Gemini API"
+        },
+        {
+          "claim": "It gives agents access to hundreds of tools while using fewer tokens.",
+          "quote": "Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 102,
+      "discovered_date": "2026-11-20",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-20-vercel-board-provides-a-shared-message-board-for-multi-agent",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "design-ops",
+        "collaboration"
+      ],
+      "title": "Vercel Board provides a shared message board for multi-agent workflows",
+      "summary": "Vercel announced the availability of Vercel Board on all plans. It is an experimental message board that gives agents a shared, secure place to coordinate tasks and maintain shared context.",
+      "key_facts": [
+        "Available now on all plans as an experimental feature",
+        "Provides a shared, secure space for agents to coordinate tasks",
+        "Accessed through the Vercel CLI or JavaScript SDK"
+      ],
+      "design_implication": "Multi-agent coding workflows often fail silently when individual agents operate in isolated silos without visibility into parallel tasks. A shared execution board transforms the handoff surface from opaque terminal logs into a transparent, inspectable artifact room where human reviewers can trace context. Start by mapping your agent swarm's communication channels so designers can monitor step-by-step progress without digging into raw code commits.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/vercel-board-is-now-available",
+      "source_date": "2026-11-18T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel Board is now available on all plans.",
+          "quote": "is now available on all plans."
+        },
+        {
+          "claim": "It is an experimental message board for agent coordination.",
+          "quote": "It’s an experimental message board that gives agents a shared, secure place to coordinate tasks and keep context together."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 102,
+      "discovered_date": "2026-11-20",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/33ItNeQcFqSJu8SRUQpMZW/c708ae3da08edf300f489fbc62457bde/vercel_board_og_final.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/vercel-board-is-now-available",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-20-vercel-ai-gateway-adds-liquid-ai-d1-2-models-with-audio-and-",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "generative-media",
+        "multimodal"
+      ],
+      "title": "Vercel AI Gateway adds Liquid AI d1.2 models with audio and bounding boxes",
+      "summary": "Vercel announced that Liquid AI's d1.2 and d1.2-ultra decision models are now available on AI Gateway with audio input and bounding box support. These models return structured Boolean, Choice, or Score answers.",
+      "key_facts": [
+        "Includes audio input and bounding box support",
+        "Returns structured answers like Boolean, Choice, or Score values",
+        "Multiple questions can share the same input in a single request"
+      ],
+      "design_implication": "Evaluating generative outputs or routing conversational intents typically requires heavy conversational parsing that introduces latency and UI stutter. Structured decision models that return discrete bounding boxes, boolean flags, or scores allow interfaces to render immediate validation feedback instead of waiting for full paragraphs of text. Start by replacing free-form classification calls in your validation views with structured scoring queries to make error states instant.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/liquid-ais-d1-2-and-d1-2-ultra-are-now-available-on-ai-gateway",
+      "source_date": "2026-11-19T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Liquid AI's d1.2 and d1.2-ultra are available on AI Gateway.",
+          "quote": "and are now available on AI Gateway with audio input and bounding box support."
+        },
+        {
+          "claim": "These models return structured answers instead of generating text.",
+          "quote": "These decision models return structured answers instead of generating text."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 109,
+      "discovered_date": "2026-11-20",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2D9pUMCOfGFSvOXKqHNRMr/0ccd519c0c1cc88930d647269ab0edf9/image__112_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/liquid-ais-d1-2-and-d1-2-ultra-are-now-available-on-ai-gateway",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-20-vercel-ai-gateway-adds-openai-gpt-live-1-1-full-duplex-voice",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "conversational-ui",
+        "multimodal"
+      ],
+      "title": "Vercel AI Gateway adds OpenAI GPT-Live 1.1 full-duplex voice model",
+      "summary": "Vercel announced that OpenAI GPT-Live 1.1 is now available on AI Gateway. The update brings a full-duplex voice model that listens while speaking and supports interruption mid-reply.",
+      "key_facts": [
+        "Full-duplex voice model listens while speaking",
+        "Supports user interruption or adding detail mid-reply",
+        "Improves speech transcription accuracy and accent consistency"
+      ],
+      "design_implication": "Voice interfaces have historically enforced turn-taking rigidity, forcing users to wait for monologues to finish before correcting mistakes. Full-duplex streaming models allow users to interrupt or interject mid-sentence, shifting conversational UI from command-and-response into fluid negotiation. Start by designing your audio state indicators to reflect immediate interruption states rather than locked recording blocks.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/gpt-live-1-1-now-available-on-ai-gateway",
+      "source_date": "2026-11-19T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "GPT-Live 1.1 from OpenAI is now available on AI Gateway.",
+          "quote": "GPT-Live 1.1 from OpenAI GPT-Live 1.1 is a full-duplex voice model, so it listens while speaks"
+        },
+        {
+          "claim": "Callers can pause, interrupt, or add detail mid-reply.",
+          "quote": "a caller can pause, interrupt, or add detail mid-reply."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 90,
+      "discovered_date": "2026-11-20",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2SwiRCJ2yQI6jiStpqx4n4/f327115564457532b4d646d8b597a55f/Vercel_x_OpenAI.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/gpt-live-1-1-now-available-on-ai-gateway",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-20-google-gemini-app-for-macos-adds-computer-use-capabilities",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "agentic-ux",
+        "trust-and-risk"
+      ],
+      "title": "Google Gemini app for macOS adds computer use capabilities",
+      "summary": "Google announced that its Gemini app for macOS now features computer use, enabling it to execute multi-step tasks across local files, desktop applications, and the web with user permission controls.",
+      "key_facts": [
+        "Added to the Gemini app for macOS",
+        "Executes multi-step tasks across local files, apps, and the web",
+        "Users decide which applications Gemini is permitted to access"
+      ],
+      "design_implication": "When an agent gains permission to control native desktop applications and local files, traditional file-picker dialogs are insufficient for managing security boundaries. Operating system level agent actions require fine-grained, app-specific permission scopes so users never guess what files were read or modified. Start by auditing your desktop app's permission grant screens to ensure users can approve or revoke granular agent access per directory.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+      "source_date": "2026-11-19T18:21:13.000Z",
+      "evidence": [
+        {
+          "claim": "Gemini app for macOS now has computer use capabilities.",
+          "quote": "Google's Gemini app for macOS now has computer use"
+        },
+        {
+          "claim": "It helps complete multi-step tasks across local files, apps, and the web.",
+          "quote": "help you get multi-step tasks done across your local files, desktop apps, and the web"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 102,
+      "discovered_date": "2026-11-20",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-20-google-updates-homepage-with-collapsible-sidebar-for-continu",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "agentic-ux",
+        "embedded-ui",
+        "trust-and-explainability"
+      ],
+      "title": "Google updates homepage with collapsible sidebar for continuous AI chats",
+      "summary": "Google is updating its homepage to include AI searches, featuring a collapsible sidebar that lets users view and continue their AI chats directly from the main search view.",
+      "key_facts": [
+        "Updates the Google homepage to include AI searches",
+        "Includes a collapsible sidebar accessed via a gray bar on the left",
+        "Allows users to view and continue existing AI chat sessions"
+      ],
+      "design_implication": "Burying generative chat threads inside dedicated subpages forces users to break search workflows whenever a query requires sustained reasoning. Integrating persistent chat histories into a collapsible sidebar on the primary search frame treats conversational memory as an ambient utility rather than a separate destination. Start by organizing your primary navigation panels to support quick-access drawers for ongoing AI context.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+      "source_date": "2026-11-19T20:05:06.000Z",
+      "evidence": [
+        {
+          "claim": "Google is updating its homepage to include AI searches.",
+          "quote": "Google is updating its homepage to include AI searches."
+        },
+        {
+          "claim": "A collapsible sidebar allows viewing and continuing AI chats.",
+          "quote": "open a collapsible sidebar to view and continue your AI chats."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 97,
+      "discovered_date": "2026-11-20",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-20-anthropic-begins-public-trading-on-nasdaq-under-ticker-symbo",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "platform-shift",
+        "cost-and-feasibility"
+      ],
+      "title": "Anthropic begins public trading on Nasdaq under ticker symbol ANT",
+      "summary": "Anthropic has officially gone public, beginning trading on the Nasdaq under the ticker symbol 'ANT' at $111.50 per share following an initial pricing of $83 per share.",
+      "key_facts": [
+        "Trades on the Nasdaq under ticker symbol ANT",
+        "Started trading at $111.50 per share",
+        "Initial pricing was set at $83 per share"
+      ],
+      "design_implication": "Public market capitalization shifts at the infrastructure layer dictate long-term API pricing stability and enterprise feature roadmaps for frontend product teams. Designing sustainable LLM features requires accounting for potential vendor margin adjustments as foundational providers face public reporting pressures. Start by building fallback provider patterns into your architecture to protect product margins against unexpected cost shifts.",
+      "implication_lens": "business",
+      "visual_need": "none",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+      "source_date": "2026-11-19T16:52:01.000Z",
+      "evidence": [
+        {
+          "claim": "Anthropic has officially gone public on the Nasdaq.",
+          "quote": "Anthropic has officially gone public. It began trading on the Nasdaq"
+        },
+        {
+          "claim": "Trading began at $111.50 per share under symbol ANT.",
+          "quote": "under the ticker symbol \"ANT\" at $111.50 per share"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 93,
+      "discovered_date": "2026-11-20",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 94,
+    "held": [],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/source-material-chase-rutherford/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/1password-figma-make/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/ai-role-in-the-creative-process/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-3d-transforms-and-figmas-agent-brought-a-launch-video-to-life/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/in-conversation-dylan-field-and-david-friedberg/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/learn/deploying-daybreak-red",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/learn/pr-scans-demo",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/learn/codex-security-plugin-demo",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/the-silent-consensus",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/genie-4-is-now-available/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/can-ai-help-build-a-healthier-future/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/split-scale-latent-3d",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/theoretical-limits-alignment",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/evaluating-evaluators-llm-judges",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/gating-memorization-in-context",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/weighted-state-souping",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/private-evolution-clustering",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-billing-cli-is-now-available",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/nov-asia-au/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/february/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/journey-mapping-101/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/agent-harness/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/usability-101-introduction-to-usability/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.25082",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.25169",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.25200",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.25259",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.25261",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/19/1148979/the-download-liver-kept-alive-sila-battery-deal-ai-hype/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/19/1148934/a-human-liver-has-been-kept-alive-outside-the-body-for-seven-weeks-setting-a-record/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/19/1148922/sila-panasonic-battery-deal/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/18/1148650/ai-hype-index-ai-is-everywhere/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/18/1148845/the-download-ai-learns-to-smell-hydropower-struggles/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/henrijs-dandzbergs-polemos-missiles-ai-warfare/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/uncanny-valley-podcast-whats-with-all-these-outages/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huangs-favorite-restaurants-are-caught-up-in-his-scandals-too/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/google-built-a-giant-mirror-dimension-internet-to-test-its-chrome-ai-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/anthropics-record-breaking-ipo-highlights-the-ai-giants-worst-enemy-itself/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/guys-really-we-got-this/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/online-smashingconf-ai-2027/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/man-charged-with-spying-on-silicon-valley-tech-and-defense-company-for-russia/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/how-to-tell-a-cyberattack-from-a-plain-old-outage/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/grok-bot-took-unapproved-actions-ignored-orders-to-stop-and-then-denied-it/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/tech-policy/2026/11/shareholders-sue-intel-its-ceo-and-cfo-after-stock-drops-28-6-percent-in-one-day/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/windows-0-day-dropped-by-disgruntled-researcher-hands-hackers-system-rights/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/everyones-got-the-tools-not-everyone-s-got-the-tricks-986a5c154924?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/send-the-firefighters-to-the-fires-6cd7b1893ae7?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/if-ai-works-from-anywhere-why-are-we-commuting-to-watch-it-f903012aaa86?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/too-claudified-9af067298b2a?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-is-a-researchers-worth-ea14c95c6d12?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/everyone-knows-sparkles-mean-ai-use-them-to-make-design-audits-easier-bdacc76cef11?source=rss----138adf9c44c---4",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/fack-d",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/groundwork-6",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/tripps",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/samiksa",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/baby-s-day-in",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/instagram",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 779,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1418,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 32,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 3
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-20-google-ai-introduces-tool-retrieval-in-the-gemini-api-for-ef",
+        "title": "Google AI introduces Tool Retrieval in the Gemini API for efficient access",
+        "source": "Google AI Blog",
+        "reason": "image host not allowed (storage.googleapis.com). If this is the company's own image server, add \"googleapis.com\" to image_hosts for Google AI Blog in sources.json",
+        "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tool_retrieval_hero.width-1300.png"
+      },
+      {
+        "story": "2026-11-20-google-gemini-app-for-macos-adds-computer-use-capabilities",
+        "title": "Google Gemini app for macOS adds computer use capabilities",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-20-google-updates-homepage-with-collapsible-sidebar-for-continu",
+        "title": "Google updates homepage with collapsible sidebar for continuous AI chats",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-20-anthropic-begins-public-trading-on-nasdaq-under-ticker-symbo",
+        "title": "Anthropic begins public trading on Nasdaq under ticker symbol ANT",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
