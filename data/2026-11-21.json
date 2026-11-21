@@ -1,0 +1,268 @@
+{
+  "date": "2026-11-21",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-21-ai-designs-improve-when-fed-synthesized-findings-instead-of-",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "research-synthesis",
+        "roles-and-skills"
+      ],
+      "title": "AI designs improve when fed synthesized findings instead of raw comments",
+      "summary": "Nielsen Norman Group reports that in their study, AI-generated designs were of higher quality when the AI received synthesized findings and recommendations rather than raw user comments alone.",
+      "key_facts": [
+        "Nielsen Norman Group tested AI design output quality",
+        "Tested using raw user comments versus synthesized findings",
+        "Synthesized findings yielded better design results"
+      ],
+      "design_implication": "When synthesizing user research for generative layout tools, feeding raw verbatim quotes often leads to noisy UI generation. Curating structured thematic insights before passing them to the model shifts the AI output from literal interpretation to purposeful design direction. Start by maintaining an intermediate synthesis layer in your research repository so generated mockups reflect core user needs rather than outlier statements.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Nielsen Norman Group",
+      "source_url": "https://www.nngroup.com/articles/raw-data-vs-synthesized-data/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "source_date": "2026-11-20T18:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "AI-generated designs were better when receiving synthesized findings instead of raw user comments.",
+          "quote": "In our study, AI-generated designs were better when the AI received synthesized findings and recommendations instead of raw user comments alone."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 100,
+      "discovered_date": "2026-11-21",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-21-signal-blocks-system-level-ai-assistants-from-reading-on-scr",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "agents-as-users",
+        "trust-and-risk"
+      ],
+      "title": "Signal blocks system-level AI assistants from reading on-screen data",
+      "summary": "Signal is restricting the ability to take screenshots and preventing operating system-level AI assistants like Gemini and Siri from scanning user messages and other data on Android and iOS devices.",
+      "key_facts": [
+        "Signal blocks screenshots and Siri or Gemini screen reading",
+        "Applies to iOS and Android Signal users",
+        "Aims to protect messaging data from system-level AI agents"
+      ],
+      "design_implication": "Operating system-level AI screen scraping compromises end-to-end encrypted messaging contexts, forcing privacy-first products to block system accessibility hooks entirely. When designing sensitive application flows, relying on platform accessibility features for contextual awareness risks user data leakage. Start auditing your app views to ensure high-security screens explicitly disable capture permissions and prevent ambient AI ingestion.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+      "source_date": "2026-11-20T12:30:47.000Z",
+      "evidence": [
+        {
+          "claim": "Signal is restricting screenshots and preventing AI agents from reading messages.",
+          "quote": "Signal is restricting the ability to take screenshots on Android and iOS devices in an effort to prevent AI agents from reading users' messages and other data."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 3,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 93,
+      "discovered_date": "2026-11-21",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 89,
+    "held": [
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+        "reason": "out_of_scope"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/workflow-lab-specs-and-the-figma-agent/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://openai.com/index/combatting-adversarial-distillation",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-screen-scraping-defenses",
+        "name": "Applications Blocking OS AI Screen Scraping",
+        "description": "Platforms and privacy-centric apps are increasingly implementing technical barriers to prevent operating system AI agents and screenshot tools from capturing sensitive UI content.",
+        "source_urls": [
+          "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 780,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1421,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 3
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-21-ai-designs-improve-when-fed-synthesized-findings-instead-of-",
+        "title": "AI designs improve when fed synthesized findings instead of raw comments",
+        "source": "Nielsen Norman Group",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-21-signal-blocks-system-level-ai-assistants-from-reading-on-scr",
+        "title": "Signal blocks system-level AI assistants from reading on-screen data",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
