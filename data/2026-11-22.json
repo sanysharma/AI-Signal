@@ -1,0 +1,578 @@
+{
+  "date": "2026-11-22",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-22-figma-updates-workflow-lab-with-specs-and-figma-agent-integr",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "agents-in-tools",
+        "design-ops"
+      ],
+      "title": "Figma updates workflow lab with Specs and Figma agent integration",
+      "summary": "Figma updated its workflow lab with Specs and the Figma agent, creating a container on the canvas to connect diagrams, designs, and technical decisions in one place.",
+      "key_facts": [
+        "Brings scattered context onto the canvas",
+        "Combines diagrams, designs, and technical decisions",
+        "Uses Specs and the Figma agent to simplify implementation"
+      ],
+      "design_implication": "When a designer pulls scattered technical documentation and architecture diagrams into a live canvas review, finding alignment across disciplines becomes less about searching wikis and more about inspecting the shared source of truth. As specification and generation merge into a single canvas artifact, review shifts from asking what was intended to verifying what is built. Start by mapping all external technical specs directly onto your primary design file before the next engineering sync.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/workflow-lab-specs-and-the-figma-agent/",
+      "source_date": "2026-11-20T22:17:00.000Z",
+      "evidence": [
+        {
+          "claim": "Figma updated workflow lab with Specs and the Figma agent to bring context onto the canvas.",
+          "quote": "Bringing scattered context onto the canvas helps teams connect the diagrams, designs, and technical decisions they need to build, all in one place."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 110,
+      "discovered_date": "2026-11-22",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-22-vercel-completes-iso-42001-certification-for-ai-management-s",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "trust-and-risk",
+        "permissions-and-identity",
+        "agents-as-users"
+      ],
+      "title": "Vercel completes ISO 42001 certification for AI management systems",
+      "summary": "Vercel completed its ISO/IEC 42001:2023 certification, meeting the international standard for AI management systems across its underlying infrastructure and core products like AI Gateway.",
+      "key_facts": [
+        "Meets international standard for AI management systems",
+        "Covers underlying infrastructure and AI Gateway",
+        "Validates governance for shipping fast with agents"
+      ],
+      "design_implication": "In an admin console configuring enterprise agent deployments, establishing verifiable compliance controls has long meant managing fragmented security attestations. With standardized AI management certifications built directly into developer infrastructure, security reviews shift from manual vendor questionnaires to verified platform compliance checks, altering how teams procure and trust automated systems. Start by auditing your product's third-party AI dependencies against recognized management standards.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/blog/vercel-completes-iso-iec-42001-2023-certification",
+      "source_date": "2026-11-20T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Vercel completed ISO/IEC 42001:2023 certification for AI management systems.",
+          "quote": "Vercel has completed its ISO/IEC 42001:2023 certification, meeting the international standard for AI management systems."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 94,
+      "discovered_date": "2026-11-22",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1Et9qkf9Ym9U2FhrvhjYDy/71ad40c39b19f5e043e9daec9dc1919d/iso-cert-og.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/blog/vercel-completes-iso-iec-42001-2023-certification",
+      "visual_license": "official_with_credit"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 87,
+    "held": [
+      {
+        "source_url": "https://www.figma.com/blog/source-material-chase-rutherford/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/1password-figma-make/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/ai-role-in-the-creative-process/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/how-3d-transforms-and-figmas-agent-brought-a-launch-video-to-life/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/index/combatting-adversarial-distillation",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/hebbia",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/index/introducing-medchembench",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/business/learn/codex-security-plugin-demo",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://openai.com/business/learn/pr-scans-demo",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/genie-4-is-now-available/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/can-ai-help-build-a-healthier-future/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/depth-pro-2-monocular",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/split-scale-latent-3d",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/theoretical-limits-alignment",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/evaluating-evaluators-llm-judges",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/gating-memorization-in-context",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/weighted-state-souping",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-functions-now-support-request-bodies-up-to-20mib",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/agents-can-now-find-vercel-cli-commands-by-describing-the-task",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/vercel-billing-cli-is-now-available",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/priority-projects-now-in-public-beta",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/qual-research-methods/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/nov-asia-au/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/february/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/journey-mapping-101/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/20/1149371/the-download-quest-to-make-minds-immortal/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/19/1148979/the-download-liver-kept-alive-sila-battery-deal-ai-hype/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/19/1148934/a-human-liver-has-been-kept-alive-outside-the-body-for-seven-weeks-setting-a-record/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/19/1148922/sila-panasonic-battery-deal/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/18/1148650/ai-hype-index-ai-is-everywhere/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/brace-yourself-for-years-of-outage-chaos/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/cops-are-being-extremely-corny-about-gta-vi/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/muse-is-unleashing-a-world-of-pettiness-on-instagram/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.wired.com/story/regular-tech-bros-are-worried-about-honeypots/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/henrijs-dandzbergs-polemos-missiles-ai-warfare/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/online-smashingconf-ai-2027/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/man-charged-with-spying-on-silicon-valley-tech-and-defense-company-for-russia/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/how-to-tell-a-cyberattack-from-a-plain-old-outage/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/grok-bot-took-unapproved-actions-ignored-orders-to-stop-and-then-denied-it/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://arstechnica.com/tech-policy/2026/11/shareholders-sue-intel-its-ceo-and-cfo-after-stock-drops-28-6-percent-in-one-day/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-judge-used-to-be-the-user-0a958f24bb32?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/everyones-got-the-tools-not-everyone-s-got-the-tricks-986a5c154924?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/send-the-firefighters-to-the-fires-6cd7b1893ae7?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/if-ai-works-from-anywhere-why-are-we-commuting-to-watch-it-f903012aaa86?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/too-claudified-9af067298b2a?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/what-is-a-researchers-worth-ea14c95c6d12?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/ulika",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/copy-haste",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/oovi",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/squint",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/raccoon-kids",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [],
+    "patterns": [],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 780,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1421,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 4
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 3
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 5
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-22-figma-updates-workflow-lab-with-specs-and-figma-agent-integr",
+        "title": "Figma updates workflow lab with Specs and Figma agent integration",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/2ca1e62056e0643145440afac47fe74aac4957ea-1056x704.jpg?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      }
+    ]
+  }
+}
