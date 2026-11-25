@@ -1,0 +1,281 @@
+{
+  "date": "2026-11-25",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-25-figma-agent-is-now-available-in-figjam-and-slides",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "agents-in-tools",
+        "collaboration"
+      ],
+      "title": "Figma agent is now available in FigJam and Slides",
+      "summary": "Figma announced that the Figma agent is now available in FigJam and Slides, helping teams explore ideas, prepare for meetings, and present designs.",
+      "key_facts": [
+        "Figma agent is now available in FigJam and Slides.",
+        "Helps users explore ideas, prepare for meetings, and present designs.",
+        "Aimed at moving collaborative work forward."
+      ],
+      "design_implication": "When a team gathers in a shared whiteboard to untangle a messy user journey, synthesizing dozens of stickies into coherent themes usually consumes half the meeting. With an integrated design agent embedded directly into FigJam and Slides, brainstorming transitions instantly into structured presentation decks without manual sorting. Start by designating specific canvas zones for agent input during workshops, turning raw discussion artifacts into review-ready formats before the session ends.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/introducing-figma-agent-in-figjam-and-slides/",
+      "source_date": "2026-11-23T20:54:00.000Z",
+      "evidence": [
+        {
+          "claim": "Figma agent is now available in FigJam and Slides",
+          "quote": "The Figma agent is now available in FigJam and Slides"
+        },
+        {
+          "claim": "Helps explore ideas, prepare meetings, and present designs",
+          "quote": "Whether you’re exploring an idea, preparing for a meeting, or presenting your designs, the Figma agent can help you move work forward."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 15
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 101,
+      "discovered_date": "2026-11-25",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-25-agents-can-now-manage-ai-gateway-through-vercel-mcp",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "agents-in-tools",
+        "design-systems"
+      ],
+      "title": "Agents can now manage AI Gateway through Vercel MCP",
+      "summary": "Vercel announced that agents can now manage AI Gateway through Vercel MCP, allowing users to create virtual models and change settings using plain language.",
+      "key_facts": [
+        "Agents can now manage AI Gateway through Vercel MCP.",
+        "Users can ask agents in plain language to create virtual models.",
+        "Allows changing model settings without updating client code or redeploying."
+      ],
+      "design_implication": "In a prototyping session where frontend designers test multiple language models for an interface, tweaking API configurations typically requires diving into environment files and redeploying code. Managing gateway infrastructure directly through natural language agent prompts removes technical friction from rapid experimentation. Start by configuring a shared MCP connection for your design engineering squad, enabling designers to swap underlying model endpoints directly from their chat environment during live prototyping.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/agents-can-now-manage-ai-gateway-through-vercel-mcp",
+      "source_date": "2026-11-24T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Agents can manage AI Gateway through Vercel MCP",
+          "quote": "Your agent can now manage AI Gateway through Vercel MCP."
+        },
+        {
+          "claim": "Create virtual models using plain language",
+          "quote": "Ask it in plain language to: To create a virtual model, for example, ask your agent"
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 101,
+      "discovered_date": "2026-11-25",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7rHmsTTl3crybF0jN8W0BM/324ef97bd124f1e16b0816e3622f90f7/gateway_mcp_og.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/agents-can-now-manage-ai-gateway-through-vercel-mcp",
+      "visual_license": "official_with_credit"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 87,
+    "held": [
+      {
+        "source_url": "https://openai.com/index/introducing-shirudo",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arxiv.org/abs/2611.31739",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/source-material-chase-rutherford/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/standard-builds-for-existing-pro-teams-have-moved-to-usage-based-billing",
+        "reason": "out_of_scope"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "canvas-agents-expansion",
+        "name": "Expansion of Design Agents into Core Collaboration Canvases",
+        "description": "Design and collaboration platforms are embedding conversational agents directly into whiteboarding and presentation environments to automate ideation and workflow transitions.",
+        "source_urls": [
+          "https://www.figma.com/blog/introducing-figma-agent-in-figjam-and-slides/"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 781,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1430,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 5
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 3
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 3
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 23,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 3
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 6
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-25-figma-agent-is-now-available-in-figjam-and-slides",
+        "title": "Figma agent is now available in FigJam and Slides",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/788c8b94cba16df5c795728f974aca117a196962-1694x948.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      }
+    ]
+  }
+}
