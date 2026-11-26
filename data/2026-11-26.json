@@ -1,0 +1,314 @@
+{
+  "date": "2026-11-26",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-26-dynamics-of-collective-diversity-in-human-ai-co-creation-for",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "research-synthesis",
+        "collaboration"
+      ],
+      "title": "Dynamics of collective diversity in human-AI co-creation for creative tasks",
+      "summary": "Generative AI systems are increasingly deployed at scale to support human users in creative tasks across various domains. However, as more users adopt the same AI agent, the resulting artifacts may become increasingly homogeneous, leading to a collapse in collective diversity.",
+      "key_facts": [
+        "Generative AI scales across creative user tasks",
+        "Shared agent adoption risks artifact homogenization",
+        "Prior work lacks a systematic framework for diversity"
+      ],
+      "design_implication": "When multiple designers rely on the same default foundational model during ideation, concept generation tends to converge on predictable median outputs rather than divergent paths. In a collaborative critique, teams risk reviewing variations of a single crowded idea space instead of distinct conceptual directions. Start by introducing randomized style parameters and custom constraint libraries into initial AI brainstorming sessions to deliberately push outputs away from uniformity.",
+      "implication_lens": "pattern",
+      "visual_need": "illustrate",
+      "source_name": "arXiv cs.HC",
+      "source_url": "https://arxiv.org/abs/2611.33192",
+      "source_date": "2026-11-26T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Generative AI adoption across shared tasks risks a collapse in collective diversity.",
+          "quote": "as more users adopt the same AI agent, the resulting artifacts may become increasingly homogeneous, leading to a collapse in collective diversity"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 117,
+      "discovered_date": "2026-11-26",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-26-vercel-flags-sdk-now-functions-natively-without-feature-flag",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "design-systems"
+      ],
+      "title": "Vercel Flags SDK now functions natively without feature flags secret",
+      "summary": "Vercel announced that projects can use Flags Explorer and precompute features without requiring a shared FLAGS_SECRET. The update cuts setup steps and removes the need to keep shared secrets in sync across microfrontends.",
+      "key_facts": [
+        "Works with flags at version 4.5.0 and later",
+        "Removes the need to manage shared secrets",
+        "Vercel signs discovery requests and encrypts toolbar values"
+      ],
+      "design_implication": "Configuring feature flags across distributed microfrontends often introduces friction between design engineering teams maintaining experimental UI variants and backend developers managing environment variables. Removing shared secrets streamlines component testing by letting design systems pass overrides directly through the preview toolbar. Audit current prototyping workflows to eliminate manual secret distribution steps before onboarding junior contributors.",
+      "implication_lens": "workflow",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/flags-sdk-now-works-on-vercel-without-flags-secret",
+      "source_date": "2026-11-24T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Projects on Vercel can use Flags Explorer without FLAGS_SECRET.",
+          "quote": "projects on Vercel can use and precompute without . That cuts out a setup step for new projects and removes the need to keep a shared secret in sync across microfrontends."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 97,
+      "discovered_date": "2026-11-26",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6Uk8MQA0lzWQDa3w5Ioa5E/e882a2b68173ce2799dd7002a0257cbc/flags_secret_og_final.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/flags-sdk-now-works-on-vercel-without-flags-secret",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-26-apple-publishes-depth-pro-2-for-consistent-monocular-metric-",
+      "status": "draft",
+      "category": "design_trends",
+      "tags": [
+        "multimodal",
+        "trust-and-explainability"
+      ],
+      "title": "Apple publishes Depth Pro 2 for consistent monocular metric depth",
+      "summary": "Apple Machine Learning Research presents Depth Pro 2, an approach to estimating dense metric depth for images and video at full resolution. The single scalable network overcomes traditional trade-offs between temporal consistency and boundary sharpness.",
+      "key_facts": [
+        "Estimates dense metric depth for images and video",
+        "Operates at full resolution via a single scalable network",
+        "Resolves past trade-offs between temporal consistency and sharpness"
+      ],
+      "design_implication": "Accurate depth estimation has historically forced interface designers to choose between jittery frame-by-frame precision or sluggish multi-frame smoothing in spatial applications. With full-resolution metric depth streaming consistently from a single pass, spatial UI elements can anchor cleanly to moving physical surfaces without edge shimmering. Try mapping occlusion layers directly to the new depth maps during prototyping to evaluate how virtual components interact with complex real-world foreground geometry.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "Apple Machine Learning Research",
+      "source_url": "https://machinelearning.apple.com/research/depth-pro-2-monocular",
+      "source_date": "2026-11-20T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Depth Pro 2 estimates dense metric depth for images and video at full resolution.",
+          "quote": "We present Depth Pro 2, an approach to estimating dense metric depth for images and video at full resolution."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 112,
+      "discovered_date": "2026-11-26",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 79,
+    "held": [
+      {
+        "source_url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+        "reason": "out_of_scope"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/source-material-chase-rutherford/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/qual-research-methods/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "stale"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agent-boundary-guardrails",
+        "name": "Platform restrictions on autonomous shopping and scraping agents",
+        "description": "Major online marketplaces and platforms are implementing technical blocks to prevent autonomous AI shopping agents from executing actions, scraping listings, or managing user credentials without merchant approval.",
+        "source_urls": [
+          "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
+          "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping"
+        ],
+        "confidence": "established"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 781,
+        "fresh": 6
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1430,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 3
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 2
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 31,
+        "fresh": 5
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 2
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 4
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-26-dynamics-of-collective-diversity-in-human-ai-co-creation-for",
+        "title": "Dynamics of collective diversity in human-AI co-creation for creative tasks",
+        "source": "arXiv cs.HC",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-26-apple-publishes-depth-pro-2-for-consistent-monocular-metric-",
+        "title": "Apple publishes Depth Pro 2 for consistent monocular metric depth",
+        "source": "Apple Machine Learning Research",
+        "reason": "image host not allowed (mlr.cdn-apple.com). If this is the company's own image server, add \"cdn-apple.com\" to image_hosts for Apple Machine Learning Research in sources.json",
+        "image": "https://mlr.cdn-apple.com/media/Home_1200x630_48225d82e9.png"
+      }
+    ]
+  }
+}
