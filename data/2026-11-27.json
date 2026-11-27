@@ -1,0 +1,523 @@
+{
+  "date": "2026-11-27",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-27-openai-announces-gpt-6-models-with-protein-design-capabiliti",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "agents-in-tools",
+        "code-prototyping"
+      ],
+      "title": "OpenAI announces GPT-6 models with protein-design capabilities",
+      "summary": "OpenAI announced GPT-6 models designed to build protein structures and sequences utilizing reasoning and code. Laboratory tests demonstrated evidence of binding across five distinct targets.",
+      "key_facts": [
+        "Models design protein structures and sequences using reasoning and code.",
+        "Lab tests showed evidence of binding across five targets."
+      ],
+      "design_implication": "When scientific capabilities enter model tooling, domain-specific parameters move from abstract data tables directly into generative design canvases. A designer building visualization workflows for biotech tools now faces complex molecular outputs that require intuitive multi-layered inspection rather than static charts. Start by mapping out domain constraints as explicit UI tokens so non-technical users can safely manipulate complex algorithmic generation.",
+      "implication_lens": "capability",
+      "visual_need": "illustrate",
+      "source_name": "OpenAI News",
+      "source_url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+      "source_date": "2026-11-24T13:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "GPT-6 models design protein structures and sequences using reasoning and code.",
+          "quote": "GPT-6 models design protein structures and sequences using reasoning and code."
+        },
+        {
+          "claim": "Lab tests found evidence of binding across five targets.",
+          "quote": "Lab tests found evidence of binding across five targets."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 3,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 14
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 91,
+      "discovered_date": "2026-11-27",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-27-google-search-launches-personal-intelligence-across-wallet-a",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "permissions-and-identity",
+        "agents-as-users",
+        "trust-and-risk"
+      ],
+      "title": "Google Search launches Personal Intelligence across Wallet and Drive",
+      "summary": "Google Search introduced Personal Intelligence in AI Mode, allowing users to securely opt in to connect Google Wallet, Drive, and the Gemini app for more tailored search responses.",
+      "key_facts": [
+        "Connects Google Wallet, Drive, and Gemini app to Personal Intelligence.",
+        "Requires users to securely opt in for tailored search responses."
+      ],
+      "design_implication": "Cross-application personal data aggregation turns standard search inputs into deeply context-aware assistant interfaces. In an settings screen handling cross-app permissions, users struggle to evaluate what data streams an AI model accesses simultaneously. Start by auditing your product's permission consent flows to ensure data linkage boundaries remain immediately transparent to users before activation.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "Google AI Blog",
+      "source_url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+      "source_date": "2026-11-23T17:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Users can securely opt in to connect Google Wallet, Drive, and the Gemini app.",
+          "quote": "Get more helpful Search responses by securely opting in to connect Google Wallet, Drive, and the Gemini app to Personal Intelligence in AI Mode."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 12
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 89,
+      "discovered_date": "2026-11-27",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 71,
+    "held": [
+      {
+        "source_url": "https://www.figma.com/blog/source-material-chase-rutherford/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/1password-figma-make/",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.figma.com/blog/ai-role-in-the-creative-process/",
+        "reason": "below_bar"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/intentful-dots",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/ifood",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://openai.com/index/introducing-shirudo",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/can-ai-help-build-a-healthier-future/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/split-scale-latent-3d",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/art-of-play-in-the-age-of-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/these-are-the-gifts-developers-will-actually-want/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/standard-builds-for-existing-pro-teams-have-moved-to-usage-based-billing",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/blog/how-cozey-turns-its-operators-into-software-builders-on-vercel",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/workflows-speculative-execution",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/all-sandbox-runtimes-now-use-vercel-managed-images",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/aws-privatelink-endpoints-are-now-available-on-secure-compute",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/qual-research-methods/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/nov-asia-au/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/february/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/journey-mapping-101/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/27/1149946/cutting-edge-prosthetics-allow-researchers-to-probe-the-human-mind/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/26/1149934/the-download-better-bionic-hands-ai-natural-gas-boom/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/26/1149923/the-next-generation-of-bionic-hands-is-here-and-they-can-feel/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/25/1149836/data-centers-gas-power-plants/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/25/1149808/the-download-ai-open-records-permafrost-fires/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/ai-artificial-intelligence/1040081/vibe-coding-open-source-music-firmware",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/airplane-turbulence-is-extremely-hard-to-predict-and-avoid/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huang-nvidia-us-national-security-risks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huang-apologizes-to-nvidia-employees-in-first-all-hands-since-his-return/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-agents-can-get-honeypotted-too-aw/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/online-smashingconf-ai-2027/",
+        "reason": "promotional"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/11/backblaze-explains-why-its-sharing-customer-information-with-advertisers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/man-charged-with-spying-on-silicon-valley-tech-and-defense-company-for-russia/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/how-to-tell-a-cyberattack-from-a-plain-old-outage/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/machines-are-trying-to-get-gut-feelings-while-youre-telling-me-to-ignore-mine-17095e56f22d",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/things-youre-not-supposed-to-say-on-linkedin-a9c2ec2a0185",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/future-proofing-is-dead-and-ai-killed-it-23368ce3cc02",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/futures-thinking-as-an-everyday-design-practice-465146ee6db8",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/four-hidden-dimensions-of-effective-teams-be268c61cf44",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/if-you-want-to-grow-beyond-senior-designer-you-have-to-address-this-one-thing-15f94ba5b1f7",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/wizstar",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/form-action-store",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/spark-ai-7",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/gpyou",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/depost-ai",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "patterns": [],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 781,
+        "fresh": 5
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1430,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": false,
+        "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 2
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 2
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 2
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 5
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-27-openai-announces-gpt-6-models-with-protein-design-capabiliti",
+        "title": "OpenAI announces GPT-6 models with protein-design capabilities",
+        "source": "OpenAI News",
+        "reason": "image host not allowed (images.ctfassets.net). If this is the company's own image server, add \"ctfassets.net\" to image_hosts for OpenAI News in sources.json",
+        "image": "https://images.ctfassets.net/kftzwdyauwt9/Eg5mCwwaA3KqnznOVCh0n/8e6deaef25fd508d9853ff86a95187c1/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities-social.png?w=1600&amp;h=900&amp;fit=fill"
+      },
+      {
+        "story": "2026-11-27-google-search-launches-personal-intelligence-across-wallet-a",
+        "title": "Google Search launches Personal Intelligence across Wallet and Drive",
+        "source": "Google AI Blog",
+        "reason": "image host not allowed (storage.googleapis.com). If this is the company's own image server, add \"googleapis.com\" to image_hosts for Google AI Blog in sources.json",
+        "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_pContext_Drive_1118.width-1300.png"
+      }
+    ]
+  }
+}
