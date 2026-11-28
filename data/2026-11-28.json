@@ -1,0 +1,664 @@
+{
+  "date": "2026-11-28",
+  "engine_version": "editorial-v1",
+  "status": "draft",
+  "stories": [
+    {
+      "id": "2026-11-28-cozey-turns-non-engineering-operators-into-software-builders",
+      "status": "draft",
+      "category": "design_process",
+      "tags": [
+        "design-ops",
+        "roles-and-skills",
+        "code-prototyping"
+      ],
+      "title": "Cozey turns non-engineering operators into software builders on Vercel",
+      "summary": "Cozey employees outside engineering, including warehouse, finance, and support staff, are building and deploying applications on Vercel, enabling the finance team to review profit and loss weekly instead of monthly.",
+      "key_facts": [
+        "Non-engineers build and deploy apps on Vercel",
+        "Finance team runs weekly P&L reviews",
+        "Helped retire a separate tool costing $80,000 annually"
+      ],
+      "design_implication": "As non-technical operators build custom internal applications, product teams must shift from designing end-user software to crafting internal tools that empower domain experts. A designer structuring internal workflows faces staff creating bespoke operational dashboards without traditional engineering handoffs. Start by establishing flexible component primitives and guardrails in your design system that non-developers can safely assemble into functional apps.",
+      "implication_lens": "workflow",
+      "visual_need": "illustrate",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/blog/how-cozey-turns-its-operators-into-software-builders-on-vercel",
+      "source_date": "2026-11-25T05:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Employees outside engineering are building applications and deploying them to Vercel.",
+          "quote": "Employees outside engineering, including warehouse, finance, and support staff, are now building applications and deploying them to Vercel"
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 97,
+      "discovered_date": "2026-11-28",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6vCsTO8uJtmuNyaEQQ7H9M/4e5dfd1385cac0194c529b0e3d8874ee/partnership__2_.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/blog/how-cozey-turns-its-operators-into-software-builders-on-vercel",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-28-vercel-brings-10x-faster-execution-to-durable-ai-agent-workf",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "code-prototyping",
+        "design-systems"
+      ],
+      "title": "Vercel brings 10x faster execution to durable AI agent workflows",
+      "summary": "Vercel released an execution engine for workflows that lowers step-to-step latency by 12x and uses 14x less function time outside step code during large fan-outs.",
+      "key_facts": [
+        "Step-to-step latency is 12x lower",
+        "Large fan-outs use 14x less function time",
+        "Upgrades durable AI agent workflow performance"
+      ],
+      "design_implication": "When multi-step agent workflows execute with near-instantaneous speed, UI feedback loops must evolve from static loading states to continuous, responsive streaming views. A designer building complex agentic interfaces can now design live visualization loops without fearing sluggish interface updates. Start by replacing traditional loading spinners with granular progress indicators that reflect real-time backend step execution.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Vercel Blog",
+      "source_url": "https://vercel.com/changelog/workflows-speculative-execution",
+      "source_date": "2026-11-25T00:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "Step-to-step latency is 12x lower on the new Vercel execution engine.",
+          "quote": "Step-to-step latency is 12x lower, and large fan-outs, like running 256 steps in parallel, use 14x less function time outside your step code."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 3,
+        "design_leverage": 2,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 90,
+      "discovered_date": "2026-11-28",
+      "visual_type": "source_image",
+      "visual_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7tAiCbAE55zQh4pcmjhm5s/440e89b07055b9672878f5e3572aa4ba/workflow-10x-faster.png",
+      "visual_credit": "Image: Vercel",
+      "visual_source_url": "https://vercel.com/changelog/workflows-speculative-execution",
+      "visual_license": "official_with_credit"
+    },
+    {
+      "id": "2026-11-28-1password-uses-figma-make-to-prototype-agent-approvals",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "design-tools",
+        "agents-in-tools",
+        "trust-and-explainability"
+      ],
+      "title": "1Password uses Figma Make to prototype agent approvals",
+      "summary": "1Password's design team uses Figma Make to craft moments for user trust and certainty across interactions ranging from autofill to AI agent approvals.",
+      "key_facts": [
+        "Figma Make powers 1Password design workflows",
+        "Focuses on autofill and AI agent approvals",
+        "Aims to build high-trust user interactions"
+      ],
+      "design_implication": "When designing high-risk authentication flows and automated agent permissions, user trust often hinges on clear, frictionless approval states. A designer prototyping security boundaries must visualize how users inspect and authorize autonomous actions before execution. Start by mapping out explicit consent checkpoints in Figma Make, treating every approval prompt as a critical design touchpoint rather than a generic system dialog.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "illustrate",
+      "source_name": "Figma Blog",
+      "source_url": "https://www.figma.com/blog/1password-figma-make/",
+      "source_date": "2026-11-16T18:03:00.000Z",
+      "evidence": [
+        {
+          "claim": "1Password design team uses Figma Make to design moments users trust.",
+          "quote": "Here's how the design team uses Figma Make to design moments users trust."
+        }
+      ],
+      "scores": {
+        "relevance": 3,
+        "novelty": 2,
+        "concreteness": 2,
+        "source_quality": 3,
+        "design_leverage": 3,
+        "total": 13
+      },
+      "related_sources": [],
+      "source_tier": 1,
+      "word_count": 90,
+      "discovered_date": "2026-11-28",
+      "visual_type": "generated",
+      "visual_url": null,
+      "visual_credit": "Illustration: AI Signal",
+      "visual_source_url": null,
+      "visual_license": "original"
+    },
+    {
+      "id": "2026-11-28-state-attorneys-general-block-character-ai-from-selling-user",
+      "status": "draft",
+      "category": "design_impact",
+      "tags": [
+        "trust-and-risk",
+        "agents-as-users",
+        "embedded-ui"
+      ],
+      "title": "State attorneys general block Character.AI from selling user chat logs",
+      "summary": "A coalition of 42 state attorneys general is working to prevent Character.AI from selling private chat histories of over 21 million U.S. accounts during Chapter 11 bankruptcy proceedings.",
+      "key_facts": [
+        "Coalition of 42 state attorneys general involved",
+        "Targeting Character.AI bankruptcy data sale",
+        "Involves over 21 million accounts including minors"
+      ],
+      "design_implication": "When conversational platforms face financial restructuring, the long-term persistence of intimate user chat histories becomes a severe privacy vulnerability. A designer structuring conversational data retention must account for how personal conversational logs are cataloged, stored, and protected during corporate insolvency. Start by auditing data portability policies and establishing strict client-side deletion controls for sensitive conversational history.",
+      "implication_lens": "trust_and_risk",
+      "visual_need": "none",
+      "source_name": "The Verge (AI)",
+      "source_url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+      "source_date": "2026-11-26T09:54:40.000Z",
+      "evidence": [
+        {
+          "claim": "A coalition of 42 state attorneys general is trying to prevent Character.AI from selling user data.",
+          "quote": "A coalition of 42 state attorneys general is trying to prevent Character.AI from selling off user data as it navigates Chapter 11 bankruptcy proceedings."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 2,
+        "concreteness": 3,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 94,
+      "discovered_date": "2026-11-28",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    },
+    {
+      "id": "2026-11-28-q-ant-introduces-optical-chip-running-ai-models-using-waves-",
+      "status": "draft",
+      "category": "design_tools",
+      "tags": [
+        "generative-media",
+        "multimodal",
+        "design-tools"
+      ],
+      "title": "Q.ANT introduces optical chip running AI models using waves of light",
+      "summary": "German company Q.ANT developed a new breed of processor chip that utilizes light waves to execute AI model calculations and reduce energy requirements.",
+      "key_facts": [
+        "Developed by German company Q.ANT",
+        "Uses waves of light instead of electricity",
+        "Aims to reduce energy required to run AI models"
+      ],
+      "design_implication": "As hardware architectures shift toward optical processing to handle dense multimodal models, local client capabilities will expand dramatically. A designer handling resource-heavy generative interfaces can anticipate running complex local models without severe cloud latency bottlenecks. Start exploring local-first multimodal prototypes that leverage high-throughput hardware to deliver instant generative feedback.",
+      "implication_lens": "capability",
+      "visual_need": "none",
+      "source_name": "Wired (AI)",
+      "source_url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+      "source_date": "2026-11-27T07:00:00.000Z",
+      "evidence": [
+        {
+          "claim": "German company Q.ANT is trying to cut energy by using light to perform calculations.",
+          "quote": "German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations."
+        }
+      ],
+      "scores": {
+        "relevance": 2,
+        "novelty": 3,
+        "concreteness": 2,
+        "source_quality": 2,
+        "design_leverage": 2,
+        "total": 11
+      },
+      "related_sources": [],
+      "source_tier": 2,
+      "word_count": 83,
+      "discovered_date": "2026-11-28",
+      "visual_type": "none",
+      "visual_url": null,
+      "visual_credit": null,
+      "visual_source_url": null,
+      "visual_license": null
+    }
+  ],
+  "review": {
+    "model": "gemini-3.5-flash-lite",
+    "candidates_reviewed": 71,
+    "held": [
+      {
+        "source_url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+        "reason": "below_bar"
+      },
+      {
+        "source_url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
+        "reason": "below_bar"
+      }
+    ],
+    "consolidated": [],
+    "rejected": [
+      {
+        "source_url": "https://www.figma.com/blog/source-material-chase-rutherford/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/intentful-dots",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/ifood",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://openai.com/index/introducing-shirudo",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://deepmind.google/blog/genie-4-is-now-available/",
+        "reason": "stale"
+      },
+      {
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.microsoft.com/en-us/research/podcast/can-ai-help-build-a-healthier-future/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://machinelearning.apple.com/research/split-scale-latent-3d",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/art-of-play-in-the-age-of-ai/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/news-insights/company-news/these-are-the-gifts-developers-will-actually-want/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/standard-builds-for-existing-pro-teams-have-moved-to-usage-based-billing",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/all-sandbox-runtimes-now-use-vercel-managed-images",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://vercel.com/changelog/aws-privatelink-endpoints-are-now-available-on-secure-compute",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/usability-testing-101/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/articles/qual-research-methods/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/nov-asia-au/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.nngroup.com/training/february/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/27/1149960/the-download-the-download-innovators-under-35-nominations-bionic-hand/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/27/1149857/2027-innovators-under-35-competition-nominate/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/27/1149946/cutting-edge-prosthetics-allow-researchers-to-probe-the-human-mind/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/26/1149934/the-download-better-bionic-hands-ai-natural-gas-boom/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/26/1149923/the-next-generation-of-bionic-hands-is-here-and-they-can-feel/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.technologyreview.com/2026/11/25/1149836/data-centers-gas-power-plants/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/airplane-turbulence-is-extremely-hard-to-predict-and-avoid/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huang-nvidia-us-national-security-risks/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/jensen-huang-apologizes-to-nvidia-employees-in-first-all-hands-since-his-return/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://www.wired.com/story/ai-agents-can-get-honeypotted-too-aw/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/online-smashingconf-ai-2027/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/information-technology/2026/11/backblaze-explains-why-its-sharing-customer-information-with-advertisers/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/man-charged-with-spying-on-silicon-valley-tech-and-defense-company-for-russia/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/how-to-tell-a-cyberattack-from-a-plain-old-outage/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/",
+        "reason": "out_of_scope"
+      },
+      {
+        "source_url": "https://uxdesign.cc/how-i-cut-claude-tokens-by-up-to-95-in-product-design-and-improved-design-quality-d9dc7cec148f?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-day-after-a-holiday-japan-doesnt-have-2060c9e6b093?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/the-end-of-the-interface-is-the-beginning-of-design-69752781d066?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/how-do-i-use-ai-as-a-solo-designer-956a3954614e?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/machines-are-trying-to-get-gut-feelings-while-youre-telling-me-to-ignore-mine-17095e56f22d?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://uxdesign.cc/things-youre-not-supposed-to-say-on-linkedin-a9c2ec2a0185?source=rss----138adf9c44c---4",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/microsoft-decision-1-1",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/slopie",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/tano",
+        "reason": "needs_primary_source"
+      },
+      {
+        "source_url": "https://www.producthunt.com/products/gutcheck-2",
+        "reason": "needs_primary_source"
+      }
+    ],
+    "patterns": [
+      {
+        "id": "agentic-workflow-optimization",
+        "name": "Agentic Workflow and Multi-Agent Collaboration Frameworks",
+        "description": "Organizations are rapidly building and deploying multi-agent runtime frameworks and performance optimizations that transform how operational teams build applications.",
+        "source_urls": [
+          "https://vercel.com/changelog/workflows-speculative-execution",
+          "https://vercel.com/blog/how-cozey-turns-its-operators-into-software-builders-on-vercel",
+          "https://www.figma.com/blog/1password-figma-make/"
+        ],
+        "confidence": "emerging"
+      }
+    ],
+    "feed_health": [
+      {
+        "source": "Figma Blog",
+        "ok": true,
+        "items": 781,
+        "fresh": 4
+      },
+      {
+        "source": "OpenAI News",
+        "ok": true,
+        "items": 1430,
+        "fresh": 6
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 4
+      },
+      {
+        "source": "Google AI Blog",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Microsoft Design",
+        "ok": true,
+        "items": 10,
+        "fresh": 0
+      },
+      {
+        "source": "Microsoft Research Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 2
+      },
+      {
+        "source": "Apple Machine Learning Research",
+        "ok": true,
+        "items": 10,
+        "fresh": 2
+      },
+      {
+        "source": "GitHub Blog",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Vercel Blog",
+        "ok": true,
+        "items": 100,
+        "fresh": 6
+      },
+      {
+        "source": "Nielsen Norman Group",
+        "ok": true,
+        "items": 20,
+        "fresh": 5
+      },
+      {
+        "source": "arXiv cs.HC",
+        "ok": true,
+        "items": 0,
+        "fresh": 0
+      },
+      {
+        "source": "MIT Technology Review",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "The Verge (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "TechCrunch (AI)",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "Wired (AI)",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Design Week",
+        "ok": false,
+        "error": "Status code 403"
+      },
+      {
+        "source": "Smashing Magazine",
+        "ok": true,
+        "items": 40,
+        "fresh": 2
+      },
+      {
+        "source": "Ars Technica",
+        "ok": true,
+        "items": 20,
+        "fresh": 6
+      },
+      {
+        "source": "UX Collective",
+        "ok": true,
+        "items": 10,
+        "fresh": 6
+      },
+      {
+        "source": "Product Hunt",
+        "ok": true,
+        "items": 50,
+        "fresh": 4
+      }
+    ],
+    "visual_log": [
+      {
+        "story": "2026-11-28-1password-uses-figma-make-to-prototype-agent-approvals",
+        "title": "1Password uses Figma Make to prototype agent approvals",
+        "source": "Figma Blog",
+        "reason": "image host not allowed (cdn.sanity.io). If this is the company's own image server, add \"sanity.io\" to image_hosts for Figma Blog in sources.json",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/bbbd715863ae9596492a6b6eda14af49a9b802de-2400x1260.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+      },
+      {
+        "story": "2026-11-28-state-attorneys-general-block-character-ai-from-selling-user",
+        "title": "State attorneys general block Character.AI from selling user chat logs",
+        "source": "The Verge (AI)",
+        "reason": "source policy is \"never\""
+      },
+      {
+        "story": "2026-11-28-q-ant-introduces-optical-chip-running-ai-models-using-waves-",
+        "title": "Q.ANT introduces optical chip running AI models using waves of light",
+        "source": "Wired (AI)",
+        "reason": "source policy is \"never\""
+      }
+    ]
+  }
+}
